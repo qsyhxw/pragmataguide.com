@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       META & SEO — /walkthrough/
+       Title: 57 chars | Desc: 152 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Walkthrough – All 5 Sectors Guide (2026)</title>
+  <meta name="description" content="Complete Pragmata walkthrough for all 5 sectors: Solar Power Plant, Mass Production Array, Terra Dome, Lunum Mines & Central Port. Bosses, collectibles & tips." />
+  <link rel="canonical" href="https://www.pragmataguide.com/walkthrough/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Pragmata Walkthrough – All 5 Sectors Guide (2026)" />
+  <meta property="og:description" content="Step-by-step walkthrough for every Pragmata sector. Boss strategies, collectible tips, key ability unlocks & backtracking notes." />
+  <meta property="og:url"         content="https://www.pragmataguide.com/walkthrough/" />
+  <meta property="og:site_name"   content="PragmataGuide" />
+  <meta property="og:image"       content="https://www.pragmataguide.com/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Pragmata Walkthrough – All 5 Sectors Guide (2026)" />
+  <meta name="twitter:description" content="Step-by-step walkthrough for every Pragmata sector. Boss tips, collectibles & key ability unlock points." />
+  <meta name="twitter:image"       content="https://www.pragmataguide.com/og-cover.jpg" />
+
+  <!-- Tailwind CDN (same as homepage) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts (same as homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind config — identical to homepage -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space':  '#060810',
+            'hull':   '#0c0f1a',
+            'panel':  '#111827',
+            'cyan':   '#00e5ff',
+            'cyan2':  '#00b4d8',
+            'amber':  '#ffb703',
+            'muted':  '#8892a4',
+            'border': '#1e2d45',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body:    ['Rajdhani', 'sans-serif'],
+            mono:    ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ── Base (copied from homepage for style parity) ─────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: repeating-linear-gradient(
+        0deg, transparent, transparent 2px,
+        rgba(0,229,255,0.015) 2px, rgba(0,229,255,0.015) 4px
+      );
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── Grid background ──────────────────────────────────── */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    /* ── Glow utilities ───────────────────────────────────── */
+    .glow-cyan { text-shadow: 0 0 18px rgba(0,229,255,0.55); }
+    .glow-box  { box-shadow: 0 0 0 1px rgba(0,229,255,0.2), 0 0 28px rgba(0,229,255,0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0,229,255,0.5), 0 0 40px rgba(0,229,255,0.14); }
+
+    /* ── Corner-clip card ─────────────────────────────────── */
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    /* ── Blink ────────────────────────────────────────────── */
+    .blink { animation: blink 1.1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* ── Fade-up ──────────────────────────────────────────── */
+    .fade-up {
+      opacity: 0; transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
+
+    /* ── Card hover ───────────────────────────────────────── */
+    .card-hover { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+    .card-hover:hover { transform: translateY(-4px); }
+
+    /* ── Nav link ─────────────────────────────────────────── */
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: ''; position: absolute;
+      left: 0; bottom: -2px; width: 0; height: 1px;
+      background: #00e5ff; transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── Buttons ──────────────────────────────────────────── */
+    .btn-cyan {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: transparent; color: #00e5ff;
+      border: 1px solid rgba(0,229,255,0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif; font-size: 0.72rem;
+      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0,229,255,0.12); color: #fff; }
+
+    /* ── Section typography ───────────────────────────────── */
+    .section-title {
+      font-family: 'Orbitron', sans-serif; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0;
+    }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem;
+      color: #00e5ff; letter-spacing: 0.18em;
+      text-transform: uppercase; margin-bottom: 0.5rem;
+    }
+
+    /* ── HR ───────────────────────────────────────────────── */
+    .hr-cyan {
+      border: none; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,229,255,0.3), transparent);
+    }
+
+    /* ── Sector card accent colours ───────────────────────── */
+    .sector-s1 { border-color: rgba(0,229,255,0.35); }
+    .sector-s2 { border-color: rgba(255,183,3,0.35); }
+    .sector-s3 { border-color: rgba(74,222,128,0.35); }
+    .sector-s4 { border-color: rgba(167,139,250,0.35); }
+    .sector-s5 { border-color: rgba(251,146,60,0.35); }
+
+    /* ── FAQ accordion ────────────────────────────────────── */
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.2s ease; }
+    details[open] summary ~ * { animation: fadeUp 0.3s ease forwards; }
+
+    /* ── Breadcrumb ───────────────────────────────────────── */
+    .breadcrumb a { color: #8892a4; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #00e5ff; }
+
+    /* ── Pro-tip box ──────────────────────────────────────── */
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0,229,255,0.04);
+      padding: 0.75rem 1rem;
+    }
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255,183,3,0.04);
+      padding: 0.75rem 1rem;
+    }
+
+    /* ── Prose headings ───────────────────────────────────── */
+    .prose-h2 {
+      font-family: 'Orbitron', sans-serif; font-size: 1.1rem;
+      font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      color: #e2e8f0; margin-bottom: 1rem; margin-top: 2rem;
+    }
+    .prose-h3 {
+      font-family: 'Orbitron', sans-serif; font-size: 0.85rem;
+      font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      color: #00e5ff; margin-bottom: 0.5rem; margin-top: 1.5rem;
+    }
+
+    /* ── Table ────────────────────────────────────────────── */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .data-table th {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #00e5ff; border-bottom: 1px solid #1e2d45;
+      padding: 0.5rem 0.75rem; text-align: left;
+    }
+    .data-table td {
+      padding: 0.55rem 0.75rem; border-bottom: 1px solid rgba(30,45,69,0.6);
+      font-family: 'Rajdhani', sans-serif; color: #c9d1e0; vertical-align: top;
+    }
+    .data-table tr:hover td { background: rgba(0,229,255,0.03); }
+  </style>
+
+  <!-- ============================================================
+       JSON-LD: BreadcrumbList + HowTo + FAQPage
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",        "item": "https://www.pragmataguide.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Walkthrough", "item": "https://www.pragmataguide.com/walkthrough/" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Pragmata Walkthrough – All 5 Sectors Guide (2026)",
+        "description": "Complete step-by-step walkthrough for all five Pragmata sectors, including boss strategies, key ability unlock locations, and collectible backtracking notes.",
+        "datePublished": "2026-04-21",
+        "dateModified":  "2026-04-21",
+        "author": { "@type": "Organization", "name": "PragmataGuide" },
+        "publisher": {
+          "@type": "Organization", "name": "PragmataGuide",
+          "url": "https://www.pragmataguide.com/"
+        },
+        "mainEntityOfPage": "https://www.pragmataguide.com/walkthrough/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many sectors are in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pragmata has 5 numbered sectors (Solar Power Plant, Mass Production Array, Terra Dome, Lunum Mines, and Central Port) plus a Prologue, totalling 6 chapters. After completing the story, a post-game area called Hidden Chamber unlocks via Unknown Signal mode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I miss collectibles permanently in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All collectibles can be retrieved after completing the main story via Unknown Signal mode (also called Cleanup Mode). Some items require story-unlocked abilities like Lim Eraser (Sector 2) or Cleanse (Sector 5) and are flagged for backtracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When do I unlock the Lim Eraser in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Lim Eraser is unlocked automatically during Sector 2 (Mass Production Array), in the Lim Recycling Facility block near the end of that sector. No Pure Lunum or special materials are needed — it is a mandatory story unlock."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Shelter in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Shelter is Pragmata's central hub area. It contains the Firmware Updater (spend Upgrade Components to improve Hugh's suit, Grip Gun, and Diana's Hacking), Unit Printer (manufacture weapons and mods using Lunafilament), Cabin's Stamp Club (a bingo-style reward board), and the Tram Terminal (fast travel to any unlocked sector or Escape Hatch)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the boss order in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Confirmed main story bosses in order: Sector Guard (Sector 1 – Solar Power Plant), Creator/Gigantic Bot (Sector 2 – Mass Production Array), Garden Keeper (Sector 3 – Terra Dome), LunaDigger (Sector 4 – Lunum Mines), and Idea/Eight (Sector 5 – Central Port)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="relative z-10">
+
+  <!-- ============================================================
+       [MODULE 1] HEADER — identical structure to homepage
+  ============================================================ -->
+  <header class="sticky top-0 z-50 border-b border-border bg-hull/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 group" aria-label="PragmataGuide Home">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+          <polygon points="14,6 21,10 21,18 14,22 7,18 7,10" fill="rgba(0,229,255,0.1)" stroke="rgba(0,229,255,0.4)" stroke-width="1"/>
+          <circle cx="14" cy="14" r="2.5" fill="#00e5ff"/>
+        </svg>
+        <span class="font-display font-bold text-sm tracking-widest text-white uppercase">
+          Pragmata<span class="text-cyan">Guide</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+        <a href="/walkthrough/"   class="nav-link text-sm font-medium font-body text-cyan">Walkthrough</a>
+        <a href="/bosses/"        class="nav-link text-sm font-medium font-body">Bosses</a>
+        <a href="/weapons/"       class="nav-link text-sm font-medium font-body">Weapons</a>
+        <a href="/collectibles/"  class="nav-link text-sm font-medium font-body">Collectibles</a>
+        <a href="/endings/"       class="nav-link text-sm font-medium font-body">Endings</a>
+        <a href="/hacking-guide/" class="nav-link text-sm font-medium font-body">Hacking</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden p-2 text-muted hover:text-cyan transition-colors" aria-label="Open menu" aria-expanded="false">
+        <svg id="icon-menu" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" class="hidden" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-nav" class="hidden md:hidden border-t border-border bg-hull px-4 py-3 flex-col gap-3" aria-label="Mobile navigation">
+      <a href="/walkthrough/"   class="nav-link text-sm py-1 font-body text-cyan">Walkthrough</a>
+      <a href="/bosses/"        class="nav-link text-sm py-1 font-body">Bosses</a>
+      <a href="/weapons/"       class="nav-link text-sm py-1 font-body">Weapons</a>
+      <a href="/collectibles/"  class="nav-link text-sm py-1 font-body">Collectibles</a>
+      <a href="/endings/"       class="nav-link text-sm py-1 font-body">Endings</a>
+      <a href="/hacking-guide/" class="nav-link text-sm py-1 font-body">Hacking</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         [MODULE 2] PAGE HERO — Walkthrough Hub Header
+    ============================================================ -->
+    <section class="relative overflow-hidden grid-bg border-b border-border" aria-label="Walkthrough page hero">
+      <!-- Glow -->
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full"
+          style="background: radial-gradient(ellipse, rgba(0,180,216,0.09) 0%, transparent 70%);"></div>
+      </div>
+      <div class="absolute top-6 left-6 w-10 h-10 border-l border-t border-cyan/30 pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute bottom-6 right-6 w-10 h-10 border-r border-b border-cyan/30 pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb flex items-center gap-2 text-xs font-mono text-muted mb-5 fade-up" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="text-border" aria-hidden="true">/</span>
+          <span class="text-cyan">Walkthrough</span>
+        </nav>
+
+        <!-- Eyebrow -->
+        <p class="section-eyebrow fade-up">// Main Story · 6 Chapters · ~10–20 Hours</p>
+
+        <!-- H1 -->
+        <h1 class="fade-up delay-1 section-title text-2xl sm:text-4xl lg:text-5xl leading-tight max-w-4xl mb-4">
+          Pragmata <span>Complete Walkthrough</span><br class="hidden sm:block"/>
+          All 5 Sectors, Bosses &amp; Collectibles
+        </h1>
+
+        <!-- Intro paragraph (doubles as Meta Description draft) -->
+        <p class="fade-up delay-2 text-muted text-base sm:text-lg max-w-2xl mb-8 font-body">
+          Step-by-step walkthrough for every sector in Pragmata — from the Solar Power Plant opening to the Central Port finale.
+          Covers boss strategies, key ability unlock points, backtracking flags, and collectible counts per sector.
+          All facts verified against multiple sources; version: <strong class="text-white">Launch (April 17, 2026)</strong>.
+        </p>
+
+        <!-- Stat chips -->
+        <div class="fade-up delay-3 flex flex-wrap gap-4 text-xs font-mono">
+          <span class="border border-border px-3 py-1 text-muted">5 Sectors</span>
+          <span class="border border-border px-3 py-1 text-muted">6 Chapters inc. Prologue</span>
+          <span class="border border-border px-3 py-1 text-muted">184 Collectibles</span>
+          <span class="border border-cyan/30 px-3 py-1 text-cyan">Nothing Missable</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         [MODULE 3] QUICK-NAV — Jump to Sector
+    ============================================================ -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8 border-b border-border" aria-label="Sector quick navigation">
+      <p class="section-eyebrow mb-3">// Jump to Sector</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#sector-1" class="btn-cyan text-xs">S1 Solar Power Plant</a>
+        <a href="#sector-2" class="btn-cyan text-xs">S2 Mass Production Array</a>
+        <a href="#sector-3" class="btn-cyan text-xs">S3 Terra Dome</a>
+        <a href="#sector-4" class="btn-cyan text-xs">S4 Lunum Mines</a>
+        <a href="#sector-5" class="btn-cyan text-xs">S5 Central Port</a>
+        <a href="#shelter"  class="btn-cyan text-xs">Shelter / Hub Guide</a>
+        <a href="#faq"      class="btn-cyan text-xs">FAQ</a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         [MODULE 4] BEFORE YOU START — Core Walkthrough Tips
+    ============================================================ -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" aria-labelledby="before-start-heading">
+      <div class="max-w-3xl">
+        <p class="section-eyebrow">// Read First</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6" id="before-start-heading">
+          Before You <span>Start</span> — How Pragmata's Structure Works
+        </h2>
+
+        <div class="space-y-4 text-base font-body text-muted leading-relaxed">
+          <p>
+            Pragmata is divided into <strong class="text-white">five numbered sectors</strong> plus a Prologue, totalling six chapters.
+            All five sectors take place inside <strong class="text-white">The Cradle</strong>, Capcom's name for the game's lunar research station.
+            Sectors are linear during your first visit but open up for free exploration via the <strong class="text-white">Tram Terminal</strong> after completion.
+          </p>
+          <p>
+            Between missions, you return to the <strong class="text-white">Shelter</strong> — your hub area — to upgrade equipment, spend Cabin Coins, and fast-travel.
+            See the <a href="#shelter" class="text-cyan hover:underline">Shelter Guide section</a> below for a full breakdown of every station.
+          </p>
+
+          <div class="tip-box rounded mt-4">
+            <p class="text-sm font-body">
+              <strong class="text-cyan font-mono text-xs tracking-widest uppercase">Pro Tip ·</strong>
+              Prioritise upgrading <strong class="text-white">Diana's Hacking</strong> at the Firmware Updater before every sector.
+              It directly increases damage output and extends enemy vulnerability windows — the single most impactful upgrade in the game.
+              See the full <a href="/upgrades/" class="text-cyan hover:underline">Upgrade Priority Guide</a>.
+            </p>
+          </div>
+
+          <div class="warn-box rounded mt-3">
+            <p class="text-sm font-body">
+              <strong class="text-amber font-mono text-xs tracking-widest uppercase">Backtracking Note ·</strong>
+              Two story abilities unlock paths to previously unreachable collectibles:
+              <strong class="text-white">Lim Eraser</strong> (Sector 2, destroys blue filament barriers) and
+              <strong class="text-white">Cleanse</strong> (Sector 5, destroys red/dead filament barriers).
+              The game flags locked items — <em>nothing is permanently missable</em>.
+              Unknown Signal mode (post-game) lets you return to any sector for cleanup.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ability unlock timeline table -->
+        <h3 class="prose-h3 mt-8">Key Story-Unlocked Abilities</h3>
+        <div class="overflow-x-auto rounded border border-border mt-3">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Ability</th>
+                <th>Unlocked In</th>
+                <th>What It Opens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="text-white">Lim Eraser</strong></td>
+                <td class="text-cyan font-mono text-xs">Sector 2 · Block 05<br/>(Lim Recycling Facility)</td>
+                <td>Destroys blue Lunafilament barriers. Required to reach several Sector 1 and early Sector 2 collectibles.</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Object Scan</strong></td>
+                <td class="text-cyan font-mono text-xs">Unit Printer purchase</td>
+                <td>Highlights nearby collectibles, interactables, and hidden items. Highly recommended before any backtracking sweep.</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Cleanse</strong></td>
+                <td class="text-cyan font-mono text-xs">Sector 5<br/>(Experimental Pragmatics)</td>
+                <td>Destroys red/dead filament barriers. Required for full 100% completion in later sectors.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+    <!-- ============================================================
+         [MODULE 5] SECTOR OVERVIEW CARDS — All 5 Sectors
+    ============================================================ -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" aria-labelledby="sectors-overview-heading">
+      <p class="section-eyebrow">// All Sectors at a Glance</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8" id="sectors-overview-heading">
+        Sector <span>Overview</span>
+      </h2>
+
+      <div class="space-y-4">
+
+        <!-- ── SECTOR 1 ──────────────────────────────────────── -->
+        <div id="sector-1" class="bg-panel border sector-s1 clip-card p-0 glow-box card-hover scroll-mt-20" aria-label="Sector 1: Solar Power Plant">
+          <div class="flex flex-col sm:flex-row">
+
+            <!-- Sector label strip -->
+            <div class="sm:w-36 flex-shrink-0 flex flex-col items-center justify-center p-5 border-b sm:border-b-0 sm:border-r border-border bg-hull/40">
+              <span class="font-mono text-xs text-cyan tracking-widest uppercase">Sector</span>
+              <span class="font-display text-4xl font-black text-cyan glow-cyan">01</span>
+              <span class="font-mono text-xs text-muted tracking-wider mt-1 text-center leading-tight">Solar Power<br/>Plant</span>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 p-6">
+              <div class="flex flex-wrap gap-3 mb-3">
+                <span class="text-xs font-mono text-muted border border-border px-2 py-0.5">15 Collectibles</span>
+                <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">Boss: Sector Guard</span>
+                <span class="text-xs font-mono text-green-400 border border-green-400/30 px-2 py-0.5">Prologue + Sector 1</span>
+              </div>
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Solar Power Plant</h3>
+              <p class="text-muted text-sm font-body mb-3 max-w-2xl">
+                The opening sector introduces Hugh and Diana's dual-character mechanics. The Shelter hub unlocks here,
+                along with your first access to the Firmware Updater and Unit Printer.
+                The sector ends with the <strong class="text-white">Sector Guard</strong> boss fight —
+                the game's tutorial for the Overdrive Protocol mechanic.
+                Defeating it drops your first <strong class="text-white">Shelter License Key</strong>, unlocking expanded upgrade options and Cabin's Stamp Club.
+              </p>
+              <div class="tip-box text-xs font-body rounded mb-4">
+                <strong class="text-cyan">Backtrack flag:</strong> One Storage Expander and two collectibles in the Generator Entrance area require the
+                <strong class="text-white">Lim Eraser</strong> (Sector 2 unlock). Leave them and return after finishing Sector 2.
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="/walkthrough/solar-power-plant/" class="btn-cyan text-xs" aria-label="Full Solar Power Plant Walkthrough">Full Walkthrough →</a>
+                <a href="/collectibles/" class="text-xs font-mono text-muted hover:text-cyan transition-colors self-center">All 15 Collectibles →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SECTOR 2 ──────────────────────────────────────── -->
+        <div id="sector-2" class="bg-panel border sector-s2 clip-card p-0 glow-box card-hover scroll-mt-20" aria-label="Sector 2: Mass Production Array">
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-36 flex-shrink-0 flex flex-col items-center justify-center p-5 border-b sm:border-b-0 sm:border-r border-border bg-hull/40">
+              <span class="font-mono text-xs text-amber-400 tracking-widest uppercase">Sector</span>
+              <span class="font-display text-4xl font-black text-amber-400" style="text-shadow:0 0 18px rgba(255,183,3,0.5)">02</span>
+              <span class="font-mono text-xs text-muted tracking-wider mt-1 text-center leading-tight">Mass Production<br/>Array</span>
+            </div>
+            <div class="flex-1 p-6">
+              <div class="flex flex-wrap gap-3 mb-3">
+                <span class="text-xs font-mono text-muted border border-border px-2 py-0.5">39 Collectibles</span>
+                <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">Boss: Creator (Gigantic Bot)</span>
+                <span class="text-xs font-mono text-amber-400 border border-amber-400/30 px-2 py-0.5">Unlocks: Lim Eraser</span>
+              </div>
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Mass Production Array</h3>
+              <p class="text-muted text-sm font-body mb-3 max-w-2xl">
+                The largest sector in the game, set inside a Lunafilament-printed replica of New York City.
+                Six beacons must be hacked to unlock the sector's main gate.
+                The <strong class="text-white">Lim Eraser</strong> is unlocked automatically near the end of this sector
+                in the <em>Lim Recycling Facility</em> block — a mandatory story event, no resources required.
+                The sector boss is the <strong class="text-white">Creator</strong>
+                (displayed on-screen as "Gigantic Bot"; its proper name appears in the Bot Data entry at the Shelter).
+                New weapon unlocked here: <strong class="text-white">Charge Piercer</strong>.
+              </p>
+              <div class="warn-box text-xs font-body rounded mb-4">
+                <strong class="text-amber">After the Lim Eraser unlocks:</strong> return to Sector 1 immediately.
+                Multiple Safe Boxes, a Storage Expander, and Pure Lunum items blocked by blue filament
+                are now reachable. Don't wait until post-game.
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="/walkthrough/mass-production-array/" class="btn-cyan text-xs" aria-label="Full Mass Production Array Walkthrough">Full Walkthrough →</a>
+                <a href="/collectibles/" class="text-xs font-mono text-muted hover:text-cyan transition-colors self-center">All 39 Collectibles →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SECTOR 3 ──────────────────────────────────────── -->
+        <div id="sector-3" class="bg-panel border sector-s3 clip-card p-0 glow-box card-hover scroll-mt-20" aria-label="Sector 3: Terra Dome">
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-36 flex-shrink-0 flex flex-col items-center justify-center p-5 border-b sm:border-b-0 sm:border-r border-border bg-hull/40">
+              <span class="font-mono text-xs text-green-400 tracking-widest uppercase">Sector</span>
+              <span class="font-display text-4xl font-black text-green-400" style="text-shadow:0 0 18px rgba(74,222,128,0.4)">03</span>
+              <span class="font-mono text-xs text-muted tracking-wider mt-1 text-center leading-tight">Terra<br/>Dome</span>
+            </div>
+            <div class="flex-1 p-6">
+              <div class="flex flex-wrap gap-3 mb-3">
+                <span class="text-xs font-mono text-muted border border-border px-2 py-0.5">Collectibles: TBC</span>
+                <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">Boss: Garden Keeper</span>
+                <span class="text-xs font-mono text-green-400 border border-green-400/30 px-2 py-0.5">2nd Shelter License Key</span>
+              </div>
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Terra Dome</h3>
+              <p class="text-muted text-sm font-body mb-3 max-w-2xl">
+                Terra Dome is set inside an artificial biosphere — a 3D-printed forest environment with climbable trees and cave systems.
+                The main objective involves placing three Gen Chips across the sector.
+                The <strong class="text-white">Pulse Carbine</strong> — a second Primary weapon that regenerates ammo —
+                becomes available midway through this sector, giving you a sustained-fire alternative to the Grip Gun.
+                The sector boss is the <strong class="text-white">Garden Keeper</strong>, described by reviewers as one of the game's
+                most hectic fights, rewarding patience over aggression.
+              </p>
+              <div class="tip-box text-xs font-body rounded mb-4">
+                <strong class="text-cyan">Strategy note:</strong> The Garden Keeper punishes impatience.
+                Wait for the boss to commit to an attack before opening a hack window.
+                Bring Stasis Net to freeze openings and avoid forcing damage outside vulnerability phases.
+                See the <a href="/bosses/" class="text-cyan hover:underline">full Boss Guide</a> for phase-by-phase strategy.
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="/walkthrough/terra-dome/" class="btn-cyan text-xs" aria-label="Full Terra Dome Walkthrough">Full Walkthrough →</a>
+                <a href="/bosses/" class="text-xs font-mono text-muted hover:text-cyan transition-colors self-center">Boss Strategy →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SECTOR 4 ──────────────────────────────────────── -->
+        <div id="sector-4" class="bg-panel border sector-s4 clip-card p-0 glow-box card-hover scroll-mt-20" aria-label="Sector 4: Lunum Mines">
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-36 flex-shrink-0 flex flex-col items-center justify-center p-5 border-b sm:border-b-0 sm:border-r border-border bg-hull/40">
+              <span class="font-mono text-xs text-purple-400 tracking-widest uppercase">Sector</span>
+              <span class="font-display text-4xl font-black text-purple-400" style="text-shadow:0 0 18px rgba(167,139,250,0.4)">04</span>
+              <span class="font-mono text-xs text-muted tracking-wider mt-1 text-center leading-tight">Lunum<br/>Mines</span>
+            </div>
+            <div class="flex-1 p-6">
+              <div class="flex flex-wrap gap-3 mb-3">
+                <span class="text-xs font-mono text-muted border border-border px-2 py-0.5">Collectibles: TBC</span>
+                <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">Boss: LunaDigger</span>
+                <span class="text-xs font-mono text-purple-400 border border-purple-400/30 px-2 py-0.5">Low Gravity Combat</span>
+              </div>
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Lunum Mines</h3>
+              <p class="text-muted text-sm font-body mb-3 max-w-2xl">
+                The Lunum Mines shift between standard and low-gravity zones, fundamentally changing movement and combat.
+                The sector's boss, the <strong class="text-white">LunaDigger</strong>, is unique among Pragmata's encounters:
+                you encounter it multiple times throughout the sector before the final fight.
+                In earlier sub-areas, you can choose to <strong class="text-white">repel it</strong> (bait it from sand, hack, and deal enough damage to drive it away)
+                — earning the <em>Courage In Desperation</em> achievement — before the mandatory final confrontation.
+                The final LunaDigger fight takes place in low gravity.
+                Defeating it unlocks the <strong class="text-white">Director Board</strong> at Cabin's Stamp Club.
+              </p>
+              <div class="tip-box text-xs font-body rounded mb-4">
+                <strong class="text-cyan">Loadout recommendation:</strong> Bring Code Generator and Sticky Bombs.
+                The LunaDigger's hacking matrix becomes increasingly complex as its health drops.
+                These two items shrink the grid and reduce red node density, significantly easing Phase 2.
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="/walkthrough/lunum-mines/" class="btn-cyan text-xs" aria-label="Full Lunum Mines Walkthrough">Full Walkthrough →</a>
+                <a href="/bosses/" class="text-xs font-mono text-muted hover:text-cyan transition-colors self-center">LunaDigger Strategy →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SECTOR 5 ──────────────────────────────────────── -->
+        <div id="sector-5" class="bg-panel border sector-s5 clip-card p-0 glow-box card-hover scroll-mt-20" aria-label="Sector 5: Central Port">
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-36 flex-shrink-0 flex flex-col items-center justify-center p-5 border-b sm:border-b-0 sm:border-r border-border bg-hull/40">
+              <span class="font-mono text-xs text-orange-400 tracking-widest uppercase">Sector</span>
+              <span class="font-display text-4xl font-black text-orange-400" style="text-shadow:0 0 18px rgba(251,146,60,0.4)">05</span>
+              <span class="font-mono text-xs text-muted tracking-wider mt-1 text-center leading-tight">Central<br/>Port</span>
+            </div>
+            <div class="flex-1 p-6">
+              <div class="flex flex-wrap gap-3 mb-3">
+                <span class="text-xs font-mono text-muted border border-border px-2 py-0.5">Collectibles: TBC</span>
+                <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">Final Boss: Idea / Eight</span>
+                <span class="text-xs font-mono text-orange-400 border border-orange-400/30 px-2 py-0.5">Unlocks: Cleanse</span>
+              </div>
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Central Port</h3>
+              <p class="text-muted text-sm font-body mb-3 max-w-2xl">
+                The final story sector. A short mandatory chapter called <em>Experimental Pragmatics</em> follows the LunaDigger boss
+                and grants the <strong class="text-white">Cleanse</strong> ability before you reach Central Port proper.
+                Cleanse destroys red/dead filament barriers and enables some combat techniques against corrupted enemies.
+                The sector culminates in a fight against <strong class="text-white">Idea</strong> (also referred to as Eight) —
+                the true final boss of the game's main story.
+                Idea has three distinct, cutscene-marked phases with an increasingly hostile hacking matrix.
+              </p>
+              <div class="warn-box text-xs font-body rounded mb-4">
+                <strong class="text-amber">Critical warning:</strong> Defeating Idea triggers an automatic march toward the finale credits.
+                <strong class="text-white">Complete all outstanding collectibles, Red Zone challenges, and side content before entering this fight.</strong>
+                Post-game Unknown Signal mode allows cleanup, but finish what you can beforehand.
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="/walkthrough/central-port/" class="btn-cyan text-xs" aria-label="Full Central Port Walkthrough">Full Walkthrough →</a>
+                <a href="/endings/" class="text-xs font-mono text-muted hover:text-cyan transition-colors self-center">All Endings Guide →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+    <!-- ============================================================
+         [MODULE 6] SHELTER / HUB GUIDE
+    ============================================================ -->
+    <section id="shelter" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 scroll-mt-20" aria-labelledby="shelter-heading">
+      <div class="max-w-3xl">
+        <p class="section-eyebrow">// Between Sectors</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6" id="shelter-heading">
+          The <span>Shelter</span> — Hub Guide
+        </h2>
+        <p class="text-muted text-sm font-body mb-6 max-w-2xl">
+          The Shelter is your central hub between missions. Every major upgrade, fast-travel, and reward system is managed here.
+          You return automatically after activating an Escape Hatch or completing a sector.
+        </p>
+
+        <div class="overflow-x-auto rounded border border-border">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Station</th>
+                <th>Function</th>
+                <th>Currency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="text-white">Firmware Updater</strong></td>
+                <td>Upgrades Hugh's Suit (durability), Grip Gun (damage), and Diana's Hacking (damage + vulnerability duration). Priority order: Hacking → Suit → Grip Gun. See <a href="/upgrades/" class="text-cyan hover:underline">Upgrade Guide</a>.</td>
+                <td class="text-amber font-mono text-xs">Upgrade Components</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Unit Printer</strong></td>
+                <td>Manufactures weapon and hacking node blueprints. Purchased weapons become available in your starting loadout at the Tram Terminal. Note: field-found copies still provide limited ammo.</td>
+                <td class="text-amber font-mono text-xs">Lunafilament / Pure Lunum</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Tram Terminal</strong></td>
+                <td>Fast-travel to any unlocked sector start or activated Escape Hatch. Also the loadout customisation screen — set weapons and mods before each mission.</td>
+                <td class="text-muted font-mono text-xs">Free</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Cabin's Stamp Club</strong></td>
+                <td>Bingo-style reward boards. Four tiers: Trainee Board (after S1 boss), Associate Board, Specialist Board, Director Board (after LunaDigger). Three reward tiers per board: 1 Bingo, 3 Bingos, and Blackout (all tiles). Some tiles locked behind Red Zone completion.</td>
+                <td class="text-amber font-mono text-xs">Cabin Coins</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Replicator</strong></td>
+                <td>Gift Read Earth Memory (REM) collectibles to Diana to 3D-print replica Earth locations inside the Shelter. Earns Cabin Coins and unlocks Diana dialogue about Earth.</td>
+                <td class="text-muted font-mono text-xs">REM collectibles</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tip-box rounded mt-5 text-sm font-body">
+          <strong class="text-cyan">Talk to Diana every visit.</strong>
+          She has unique dialogue tied to your progress and will eventually draw you pictures if you speak with her regularly.
+          These interactions also advance story context between sectors.
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+    <!-- ============================================================
+         [MODULE 7] RELATED GUIDES — Internal Links
+    ============================================================ -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" aria-labelledby="related-heading">
+      <p class="section-eyebrow">// Companion Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6" id="related-heading">
+        Related <span>Guides</span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <a href="/bosses/" class="bg-panel border border-border p-5 card-hover glow-box group" aria-label="All Bosses Guide">
+          <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5 inline-block mb-3">BOSSES</span>
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">All Bosses Guide</h3>
+          <p class="text-muted text-xs font-body">Phase breakdowns, weak points, and recommended loadouts for every sector boss.</p>
+          <span class="mt-3 block text-cyan text-xs font-mono">READ →</span>
+        </a>
+
+        <a href="/collectibles/" class="bg-panel border border-border p-5 card-hover glow-box group" aria-label="All 184 Collectibles">
+          <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5 inline-block mb-3">COLLECTIBLES</span>
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">All 184 Collectibles</h3>
+          <p class="text-muted text-xs font-body">Every Safe Box, Mini Cabin, Pure Lunum, REM, and Mod — sector by sector.</p>
+          <span class="mt-3 block text-cyan text-xs font-mono">READ →</span>
+        </a>
+
+        <a href="/hacking-guide/" class="bg-panel border border-border p-5 card-hover glow-box group" aria-label="Hacking System Guide">
+          <span class="text-xs font-mono text-purple-400 border border-purple-400/30 px-2 py-0.5 inline-block mb-3">HACKING</span>
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Diana's Hacking Guide</h3>
+          <p class="text-muted text-xs font-body">Yellow, Blue, Purple nodes decoded. Master the hacking matrix for every encounter.</p>
+          <span class="mt-3 block text-cyan text-xs font-mono">READ →</span>
+        </a>
+
+        <a href="/upgrades/" class="bg-panel border border-border p-5 card-hover glow-box group" aria-label="Upgrade Priority Guide">
+          <span class="text-xs font-mono text-amber-400 border border-amber-400/30 px-2 py-0.5 inline-block mb-3">UPGRADES</span>
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">What to Upgrade First</h3>
+          <p class="text-muted text-xs font-body">Hacking → Suit → Grip Gun. The definitive Unit Printer priority order.</p>
+          <span class="mt-3 block text-cyan text-xs font-mono">READ →</span>
+        </a>
+
+        <a href="/endings/" class="bg-panel border border-border p-5 card-hover glow-box group" aria-label="All Endings Guide">
+          <span class="text-xs font-mono text-green-400 border border-green-400/30 px-2 py-0.5 inline-block mb-3">STORY</span>
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">All Endings Explained</h3>
+          <p class="text-muted text-xs font-body">How to unlock the Normal Ending and Extended Ending via Unknown Signal Mode.</p>
+          <span class="mt-3 block text-cyan text-xs font-mono">READ →</span>
+        </a>
+
+        <a href="/post-game/" class="bg-panel border border-border p-5 card-hover glow-box group" aria-label="Post-Game Guide">
+          <span class="text-xs font-mono text-orange-400 border border-orange-400/30 px-2 py-0.5 inline-block mb-3">POST-GAME</span>
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Post-Game Guide</h3>
+          <p class="text-muted text-xs font-body">NG+, Lunatic difficulty, Unknown Signal mode, and Hidden Chamber explained.</p>
+          <span class="mt-3 block text-cyan text-xs font-mono">READ →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+    <!-- ============================================================
+         [MODULE 8] COMPLIANCE NOTICE
+    ============================================================ -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8" aria-label="Disclaimer">
+      <div class="bg-panel border border-border/60 rounded p-5 flex flex-col sm:flex-row gap-4 items-start">
+        <div class="flex-shrink-0" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="12" stroke="#8892a4" stroke-width="1.5"/>
+            <path d="M14 9v5M14 18v1" stroke="#8892a4" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="text-muted text-xs font-body leading-relaxed">
+          <strong class="text-white">Not affiliated with Capcom.</strong>
+          PRAGMATA™ is a trademark of CAPCOM CO., LTD. All game content is the property of its respective owners.
+          All factual claims on this page have been cross-verified against at least two independent sources.
+          Version: Launch build, April 17, 2026. If Capcom releases patches that alter sector structure, ability unlocks, or collectible counts,
+          this page will be updated. Collectible counts for Sectors 3–5 are marked "TBC" pending full data availability.
+          <a href="/privacy/" class="text-cyan hover:underline ml-1">Privacy Policy</a> ·
+          <a href="/disclosure/" class="text-cyan hover:underline ml-1">Ad Disclosure</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         [MODULE 9] FAQ — Schema FAQPage
+    ============================================================ -->
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20" aria-labelledby="faq-heading">
+      <p class="section-eyebrow">// Questions</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8" id="faq-heading">
+        Walkthrough <span>FAQ</span>
+      </h2>
+
+      <div class="max-w-3xl space-y-3">
+
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            How many sectors are in Pragmata?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Pragmata has <strong class="text-white">5 numbered sectors</strong> plus a Prologue, totalling 6 chapters: Solar Power Plant, Mass Production Array, Terra Dome, Lunum Mines, and Central Port. After completing the story, a post-game area called <em>Hidden Chamber</em> unlocks via Unknown Signal mode.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            Can I miss collectibles permanently?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p><strong class="text-white">No.</strong> All collectibles can be retrieved post-story via Unknown Signal mode (also called Cleanup Mode). Some items require story-unlocked abilities — the Lim Eraser (Sector 2) for blue filament barriers and Cleanse (Sector 5) for red filament barriers. The game flags these for backtracking.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            When do I unlock the Lim Eraser?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>The Lim Eraser unlocks automatically during <strong class="text-white">Sector 2 (Mass Production Array)</strong>, specifically in the Lim Recycling Facility block near the end of the sector. It is a mandatory story progression event — no Pure Lunum or special materials required. It allows Diana to destroy blue Lunafilament barriers across the game.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            What is the Shelter and what can I do there?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>The Shelter is Pragmata's central hub. It contains the <strong class="text-white">Firmware Updater</strong> (upgrade Hugh and Diana), <strong class="text-white">Unit Printer</strong> (manufacture weapons and mods), <strong class="text-white">Tram Terminal</strong> (fast travel and loadout selection), and <strong class="text-white">Cabin's Stamp Club</strong> (bingo-style reward boards). Always return to the Shelter before starting a new sector to spend upgrade resources and configure your loadout.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            What is the boss order in Pragmata?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Confirmed main story bosses in sector order: <strong class="text-white">Sector Guard</strong> (Sector 1), <strong class="text-white">Creator</strong> — also displayed as "Gigantic Bot" (Sector 2), <strong class="text-white">Garden Keeper</strong> (Sector 3), <strong class="text-white">LunaDigger</strong> (Sector 4 — fought in low gravity), and <strong class="text-white">Idea / Eight</strong> (Sector 5 — 3-phase final boss). See the <a href="/bosses/" class="text-cyan hover:underline">full Boss Guide</a> for phase strategies.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            Do I have to use Escape Hatches? What happens when I use one?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Escape Hatches are optional checkpoints — you don't have to use them. When you activate one, it becomes a fast-travel point via the Tram Terminal. Using a hatch sends you back to the Shelter, which <strong class="text-white">respawns all enemies</strong> in the sector (similar to a Souls-game bonfire), but you keep all resources and collectibles gathered since your last visit. Crucially, any field-found weapons and hacking modules collected since the last checkpoint are <strong class="text-white">removed from your inventory</strong> upon using a hatch — bank resources at the Shelter before activating one.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            What's available after I finish the main story?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Completing the main story unlocks: <strong class="text-white">New Game Plus</strong> (restart with all gear and upgrades), <strong class="text-white">Lunatic difficulty</strong> (harder enemies, new weapon upgrades), and <strong class="text-white">Unknown Signal mode</strong> — post-campaign content in the Hidden Chamber with new Sim Pod challenges, special weapons, and outfits. Completing Unknown Signal with 100% sector collectibles also unlocks the <strong class="text-white">Extended Ending</strong>. See the <a href="/post-game/" class="text-cyan hover:underline">Post-Game Guide</a> for the full breakdown.</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       [MODULE 10] FOOTER — identical to homepage
+  ============================================================ -->
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff"/>
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <!-- Guides -->
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/walkthrough/"           class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/bosses/"                class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/weapons/"               class="hover:text-cyan transition-colors">Best Weapons</a></li>
+            <li><a href="/collectibles/"          class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/endings/"               class="hover:text-cyan transition-colors">All Endings</a></li>
+            <li><a href="/trophies-achievements/" class="hover:text-cyan transition-colors">Trophies</a></li>
+          </ul>
+        </nav>
+
+        <!-- Site -->
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/about/"      class="hover:text-cyan transition-colors">About</a></li>
+            <li><a href="/contact/"    class="hover:text-cyan transition-colors">Contact</a></li>
+            <li><a href="/privacy/"    class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p class="text-right">PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu JS (same as homepage) -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav    = document.getElementById('mobile-nav');
+    const iconM  = document.getElementById('icon-menu');
+    const iconC  = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+
+</body>
+</html>
