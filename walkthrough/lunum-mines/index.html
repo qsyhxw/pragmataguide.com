@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /walkthrough/lunum-mines/
+       Title: 59 chars | Desc: 153 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Lunum Mines Guide – All 45 Collectibles &amp; Route</title>
+  <meta name="description"
+    content="Verified Pragmata Lunum Mines guide with all 45 collectibles, 5 sub-areas, low-gravity route notes, LunaDigger prep, and backtracking warnings." />
+  <link rel="canonical" href="https://pragmataguide.com/walkthrough/lunum-mines/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Lunum Mines Guide – All 45 Collectibles &amp; Route" />
+  <meta property="og:description"
+    content="All 45 Lunum Mines collectibles, 5 sub-areas, LunaDigger overview, and verified backtracking notes for Pragmata Sector 4." />
+  <meta property="og:url" content="https://pragmataguide.com/walkthrough/lunum-mines/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Lunum Mines Guide – All 45 Collectibles &amp; Route" />
+  <meta name="twitter:description"
+    content="Sector 4 route guide for Pragmata: 45 collectibles, low-gravity navigation, and verified Lunum Mines backtracking notes." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'violet': '#a78bfa',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .breadcrumb a {
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+  </style>
+</head>
+
+<body class="relative">
+  <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden="true"></div>
+
+  <header class="relative z-10 border-b border-border bg-space/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0" aria-label="PragmataGuide home">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+              stroke-width="1.5" />
+            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm font-bold tracking-widest text-white uppercase">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/collectibles/" class="nav-link">Collectibles</a>
+          <a href="/hacking-guide/" class="nav-link">Hacking Guide</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/collectibles/" class="nav-link py-1">Collectibles</a>
+      <a href="/hacking-guide/" class="nav-link py-1">Hacking Guide</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <a href="/walkthrough/">Walkthrough</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Lunum Mines</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.75fr] gap-6 items-stretch">
+        <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8 fade-up">
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="text-xs font-mono text-violet border border-violet/30 px-2 py-0.5">Sector 4</span>
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">45 Collectibles</span>
+            <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">5 Sub-Areas</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Verified Apr 16–20, 2026</span>
+          </div>
+          <p class="section-eyebrow">// Sector Route</p>
+          <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+            Pragmata <span class="text-violet">Lunum Mines</span> Guide
+          </h1>
+          <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+            Lunum Mines is Pragmata's fourth sector and a clear shift in pace: more lunar-surface traversal, more
+            low-gravity movement, and more collectible routes that only make full sense once you know which paths are
+            meant for later cleanup. This page focuses on the verified route, the confirmed collectible structure, and
+            the points most likely to waste your time on a blind first pass.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#route" class="btn-cyan">Route Overview</a>
+            <a href="#collectibles" class="btn-cyan">Collectible Counts</a>
+            <a href="/collectibles/" class="btn-cyan">All Collectibles</a>
+          </div>
+        </div>
+
+        <aside class="grid gap-4 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Quick Facts</p>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><strong class="text-white">Area order:</strong> Mine Entrance, Crane Operation Yard, Warehouse, Main Excavation Site, Nexus Tower.</li>
+              <li><strong class="text-white">Boss:</strong> LunaDigger recurs through the sector before the final fight.</li>
+              <li><strong class="text-white">Traversal:</strong> low-gravity platforming matters more here than in earlier sectors.</li>
+              <li><strong class="text-white">Cleanup:</strong> nothing in this sector is confirmed missable.</li>
+            </ul>
+          </div>
+
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Version note:</strong> guides agree on the progression gate itself, but disagree
+            on the exact name of the later crystal-clearing ability used for some Lunum Mines cleanup. This page keeps
+            those references generic where naming conflicts exist.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-1">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Sector Scope</p>
+          <p class="font-display text-3xl text-white mb-2">45</p>
+          <p class="text-sm text-muted">Confirmed collectible total in Lunum Mines for 100% sector cleanup.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-2">
+          <p class="text-xs font-mono text-violet tracking-widest uppercase mb-2">Sub-Areas</p>
+          <p class="font-display text-3xl text-white mb-2">5</p>
+          <p class="text-sm text-muted">The sector is consistently broken into five main route blocks across guide coverage.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-amber tracking-widest uppercase mb-2">Backtracking</p>
+          <p class="font-display text-3xl text-white mb-2">Yes</p>
+          <p class="text-sm text-muted">Some pickups are confirmed to be locked behind later story progression.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Boss Flow</p>
+          <p class="font-display text-3xl text-white mb-2">Recurring</p>
+          <p class="text-sm text-muted">LunaDigger appears before the end-of-sector boss arena, so early encounters are not the finale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="route" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      <p class="section-eyebrow">// Verified Route</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Lunum Mines <span>Walkthrough Structure</span></h2>
+
+      <div class="space-y-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">1. Mine Entrance</h3>
+          <p class="text-muted mb-3">
+            The Mine Entrance opens the sector with the first strong reminder that route reading matters. Verified
+            guides place <strong class="text-white">Mod 1 (Equilibrium)</strong> in the early thruster-platforming
+            section behind erasable crystals, and <strong class="text-white">Safe Box 1</strong> in the first enemy
+            encounter room. This is also where the game starts teaching you that some apparently nearby rewards are not
+            meant to be taken immediately on a first pass.
+          </p>
+          <div class="tip-box text-sm">
+            If you see a blocked branch near the first LunaDigger encounter, mark it mentally and move on. Multiple
+            sources agree that at least part of this opening area is designed for later return rather than immediate brute-force routing.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">2. Crane Operation Yard</h3>
+          <p class="text-muted mb-3">
+            Crane Operation Yard leans into environmental traversal. The collectible path here repeatedly uses vertical
+            landmarks: a construction elevator for <strong class="text-white">Analog Aggression</strong>, crane and
+            crate routes for <strong class="text-white">Digital Dominance</strong>, and a Holo-Wall detour for one of
+            the Safe Boxes. If you only follow the obvious forward path, this is one of the easiest sub-areas to leave incomplete.
+          </p>
+          <p class="text-sm text-muted">
+            The cleanest first-pass habit here is simple: before leaving each building, do one full exterior sweep for
+            alternate elevation routes and hidden entries.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">3. Warehouse</h3>
+          <p class="text-muted mb-3">
+            Warehouse is the densest confirmed collectible cluster in the sector. GAMES.GG explicitly calls out
+            <strong class="text-white">11 collectibles</strong> in this block, and both VGC and PowerPyx map it as a
+            container-maze area with multiple crate-pushing routes. The Warehouse Red Zone is also a key checkpoint for
+            completion because its reward is consistently listed as <strong class="text-white">Storage Expander 2 +
+              Pure Lunum 1</strong>.
+          </p>
+          <div class="ok-box text-sm">
+            First-pass priority here: activate the nearby Escape Hatch, clear the Red Zone if you're equipped for it,
+            then finish the block-pushing rooms before moving on. This prevents the most common double-back inside the sector.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">4. Main Excavation Site</h3>
+          <p class="text-muted mb-3">
+            Main Excavation Site is where Lunum Mines starts mixing platforming, Holo-Walls, and late-cleanup gates
+            more aggressively. Verified sources place <strong class="text-white">Mod 5 (Eagle Eye)</strong> and
+            <strong class="text-white">Safe Box 12</strong> in a glass-visible room reachable from above, put
+            <strong class="text-white">REM 3 (Tent)</strong> behind a broken wall route, and agree that this block
+            contains another crystal-gated Safe Box that may need to wait for later.
+          </p>
+          <div class="warn-box text-sm">
+            One tracker quirk is worth remembering: guides agree that the Red Zone physically found in this block
+            credits its reward to <strong class="text-white">Nexus Tower / Area 5</strong> in completion tracking.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">5. Nexus Tower</h3>
+          <p class="text-muted mb-3">
+            Nexus Tower closes the sector with a more vertical collectible pattern. Confirmed placements here include
+            <strong class="text-white">Training Data 2</strong> near the first building interior,
+            <strong class="text-white">Safe Box 16</strong> across a top-floor gap,
+            <strong class="text-white">Safe Box 17</strong> behind a Holo-Wall on the next floor down, and
+            <strong class="text-white">Mini Cabin 3</strong> above one of the tower gaps.
+          </p>
+          <p class="text-sm text-muted">
+            If your area count looks off near the end, check the Main Excavation Site Red Zone first before assuming
+            you missed something inside the tower itself.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="collectibles" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Count Breakdown</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Confirmed <span>Collectible Totals</span></h2>
+
+      <div class="bg-hull/70 border border-border clip-card glow-box overflow-hidden">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Safe Boxes</p>
+            <p class="font-display text-3xl text-white">17</p>
+          </div>
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Escape Hatches</p>
+            <p class="font-display text-3xl text-white">7</p>
+          </div>
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Mods</p>
+            <p class="font-display text-3xl text-white">7</p>
+          </div>
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Pure Lunum</p>
+            <p class="font-display text-3xl text-white">4</p>
+          </div>
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Mini Cabins</p>
+            <p class="font-display text-3xl text-white">3</p>
+          </div>
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">REM</p>
+            <p class="font-display text-3xl text-white">3</p>
+          </div>
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Storage Expanders</p>
+            <p class="font-display text-3xl text-white">2</p>
+          </div>
+          <div class="bg-panel p-5">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Training Data</p>
+            <p class="font-display text-3xl text-white">2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-5 mt-6">
+        <div class="tip-box text-sm">
+          <strong class="text-cyan">What this count means:</strong> these numbers match the full sector tally
+          published by PowerPyx and repeated by other launch-week guide coverage. They are safe to use as your checklist
+          target for Lunum Mines completion.
+        </div>
+        <div class="warn-box text-sm">
+          <strong class="text-amber">What this count does not settle:</strong> guide writers disagree on the exact
+          in-game naming of one later crystal-clearing progression ability, so count accuracy is high, but ability
+          naming around late cleanup should still be treated carefully.
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+      <p class="section-eyebrow">// Practical Notes</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">What To Prioritize <span>On A First Pass</span></h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Activate Hatches Early</h3>
+          <p class="text-sm text-muted">
+            Warehouse, Main Excavation Site, and Nexus Tower all benefit from having fast-travel points online before
+            you start cleanup. This shortens later return loops dramatically.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Do Not Force Blocked Paths</h3>
+          <p class="text-sm text-muted">
+            Multiple launch-week guides agree that some blocked crystal routes in Lunum Mines are intentional
+            progression gates. If a path looks possible but not currently solvable, move on and revisit later.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Track Red Zone Rewards</h3>
+          <p class="text-sm text-muted">
+            The Main Excavation Site Red Zone affects Nexus Tower completion tracking. If your area totals do not line
+            up, this is one of the first places to audit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Boss Context</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">LunaDigger <span>What Is Verified</span></h2>
+
+      <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8">
+        <p class="text-muted mb-4">
+          The safest verified summary is this: <strong class="text-white">LunaDigger</strong> is the recurring threat
+          of Lunum Mines, and the final boss of the sector is fought at the end of the area in
+          <strong class="text-white">low gravity</strong>. That matters because earlier encounters teach positioning
+          and spacing, but they are not the same as the end-of-sector arena.
+        </p>
+        <p class="text-muted mb-4">
+          If you want a clean first clear, treat the early LunaDigger appearances as route knowledge rather than a
+          damage race. Focus on surviving, learning the environmental tells, and reaching the later checkpoints with a
+          stable kit instead of overcommitting to every optional confrontation.
+        </p>
+        <p class="text-sm text-muted">
+          For broader system help before the boss, the most reliable internal support pages are the
+          <a href="/hacking-guide/" class="text-cyan hover:underline">Hacking Guide</a> and the sector hub on
+          <a href="/walkthrough/" class="text-cyan hover:underline">Walkthrough</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Lunum Mines <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            How many collectibles are in Lunum Mines?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Lunum Mines has 45 confirmed collectibles: 17 Safe Boxes, 7 Escape Hatches, 7 Mods, 4
+              Pure Lunum, 3 Mini Cabins, 3 REM, 2 Storage Expanders, and 2 Training Data items.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Can I miss anything permanently in Lunum Mines?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current launch-week guide coverage agrees that Lunum Mines has no permanently missable
+              collectibles. If a route is blocked, it is usually better to return later via post-story cleanup than to
+              force it on the first visit.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Which Lunum Mines sub-area is the most item-dense?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Warehouse is the clearest answer in launch-week coverage. GAMES.GG explicitly describes
+              it as the densest collectible cluster in the sector, with 11 collectibles concentrated into one block.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What makes Lunum Mines different from earlier sectors?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The main differences are stronger low-gravity emphasis, more lunar-surface traversal,
+              and more routes that only resolve cleanly once later progression abilities are available.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/hacking-guide/" class="hover:text-cyan transition-colors">Hacking Guide</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
