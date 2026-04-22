@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /weapons/
+       Title: 56 chars | Desc: 152 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Best Weapons Guide – Loadouts, Categories &amp; Upgrades</title>
+  <meta name="description"
+    content="Verified Pragmata weapons guide with all 15 weapons, category basics, best loadouts, unlock timing, and safe upgrade priorities for first runs." />
+  <link rel="canonical" href="https://pragmataguide.com/weapons/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Best Weapons Guide – Loadouts, Categories &amp; Upgrades" />
+  <meta property="og:description"
+    content="All 15 Pragmata weapons explained, with the safest first-run loadouts, category rules, and upgrade priorities." />
+  <meta property="og:url" content="https://pragmataguide.com/weapons/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Best Weapons Guide – Loadouts, Categories &amp; Upgrades" />
+  <meta name="twitter:description"
+    content="Verified Pragmata weapon picks, loadouts, category rules, and upgrade order for first runs and late game." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .danger-box {
+      border-left: 2px solid #f87171;
+      background: rgba(248, 113, 113, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .breadcrumb a {
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+  </style>
+</head>
+
+<body class="relative">
+  <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden="true"></div>
+
+  <header class="relative z-10 border-b border-border bg-space/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0" aria-label="PragmataGuide home">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+              stroke-width="1.5" />
+            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm font-bold tracking-widest text-white uppercase">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/collectibles/" class="nav-link">Collectibles</a>
+          <a href="/bosses/" class="nav-link">Bosses</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/collectibles/" class="nav-link py-1">Collectibles</a>
+      <a href="/bosses/" class="nav-link py-1">Bosses</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Weapons</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.75fr] gap-6 items-stretch">
+        <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8 fade-up">
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">15 Weapons Verified</span>
+            <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">4 Categories</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Updated Apr 22, 2026</span>
+          </div>
+          <p class="section-eyebrow">// Loadout Index</p>
+          <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+            Pragmata <span class="text-cyan">Weapons</span> Guide
+          </h1>
+          <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+            This page focuses on the safest high-confidence weapon advice for a first run: how the four weapon
+            categories work, which Units stay valuable the longest, which tools scale best with Diana's hacking, and
+            which late-game or post-game picks are worth planning around. When exact numerical upgrade data varies by
+            outlet, this guide stays on the conservative side.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#best" class="btn-cyan">Best Weapons</a>
+            <a href="#all-weapons" class="btn-cyan">All Weapons</a>
+            <a href="/hacking-guide/" class="btn-cyan">Hacking Guide</a>
+          </div>
+        </div>
+
+        <aside class="grid gap-4 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">At A Glance</p>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><strong class="text-white">Primary Units:</strong> Grip Gun and Pulse Carbine are permanent.</li>
+              <li><strong class="text-white">Breakable Units:</strong> Attack, Tactical, and Defense weapons vanish when ammo hits zero.</li>
+              <li><strong class="text-white">Safest core trio:</strong> Shockwave Gun, Sticky Bombs, and Decoy Generator.</li>
+              <li><strong class="text-white">Best boss burst:</strong> Charge Piercer is the most consistent mid-to-late recommendation.</li>
+            </ul>
+          </div>
+
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Important:</strong> picking up a field weapon is not the same as owning it
+            permanently. You still need to return to the Shelter and print it before assigning it to a regular loadout.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-1">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Weapon Count</p>
+          <p class="font-display text-3xl text-white mb-2">15</p>
+          <p class="text-sm text-muted">Reliable launch-week lists agree that Pragmata has 15 weapons across all categories.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-2">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Best Early Attack</p>
+          <p class="font-display text-3xl text-white mb-2">Shockwave</p>
+          <p class="text-sm text-muted">Shockwave Gun is the most consistently recommended first-run Attack Unit.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Late Boss Staple</p>
+          <p class="font-display text-3xl text-white mb-2">Charge Piercer</p>
+          <p class="text-sm text-muted">Charge Piercer shows up repeatedly in boss and sector loadout advice.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Late Matrix Tool</p>
+          <p class="font-display text-3xl text-white mb-2">Code Generator</p>
+          <p class="text-sm text-muted">Late-game matrix pressure is where Code Generator becomes most valuable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="system" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      <p class="section-eyebrow">// Weapon Rules</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">How The <span>Weapon System</span> Works</h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">4 Categories</h3>
+          <p class="text-sm text-muted">
+            Public weapon lists consistently split the arsenal into <strong class="text-white">Primary</strong>,
+            <strong class="text-white">Attack</strong>, <strong class="text-white">Tactical</strong>, and
+            <strong class="text-white">Defense</strong> Units. That split matters more than raw damage numbers because
+            each category solves a different part of Pragmata's combat loop.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Primary Vs. Breakable</h3>
+          <p class="text-sm text-muted">
+            <strong class="text-white">Grip Gun</strong> and <strong class="text-white">Pulse Carbine</strong> are the
+            only permanent guns. Everything in Attack, Tactical, or Defense is effectively consumable: once the ammo is
+            gone, the Unit disappears until you print another copy at the Shelter.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Slot Expansion Matters</h3>
+          <p class="text-sm text-muted">
+            Early on, you are limited to one slot per category. Later progression opens the ability to carry
+            <strong class="text-white">two Attack Units and two Tactical Units</strong>, which is when more advanced
+            loadout planning starts to matter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="best" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Best Picks</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Best <span>Weapons</span> By Category</h2>
+
+      <div class="space-y-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="flex flex-wrap gap-3 mb-3">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Primary</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Permanent Ammo Logic</span>
+          </div>
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Pulse Carbine</h3>
+          <p class="text-muted mb-4">
+            For general use, <strong class="text-white">Pulse Carbine</strong> is the safer long-term Primary pick once
+            you reach <a href="/walkthrough/terra-dome/" class="text-cyan hover:underline">Terra Dome</a>. Reliable
+            coverage describes it as the second Primary Unit, unlocked in Sector 3, with stronger sustained damage and
+            better heat-focused synergy than the starting <strong class="text-white">Grip Gun</strong>.
+          </p>
+          <div class="tip-box text-sm">
+            <strong class="text-cyan">Keep in mind:</strong> the Grip Gun still matters early, and it remains the
+            cleaner fallback if you prefer slower, more deliberate shots while reading the hacking grid.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="flex flex-wrap gap-3 mb-3">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Attack</span>
+            <span class="text-xs font-mono text-redline border border-redline/30 px-2 py-0.5">Burst Damage</span>
+          </div>
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Shockwave Gun + Charge Piercer</h3>
+          <p class="text-muted mb-4">
+            These are the two safest Attack recommendations to build around. <strong class="text-white">Shockwave Gun</strong>
+            is the most consistent early-game burst choice, while <strong class="text-white">Charge Piercer</strong>
+            becomes the more common boss and late-sector recommendation once damage windows get tighter.
+          </p>
+          <div class="grid lg:grid-cols-2 gap-4 text-sm">
+            <div class="ok-box"><strong class="text-greenline">Shockwave Gun:</strong> best first Attack Unit for close
+              burst, stagger, and easy early value.</div>
+            <div class="ok-box"><strong class="text-greenline">Charge Piercer:</strong> safer mid-to-late investment
+              for bosses, line pierce, and short vulnerability windows.</div>
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="flex flex-wrap gap-3 mb-3">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Tactical</span>
+            <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Hacking Support</span>
+          </div>
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Sticky Bombs + Stasis Net</h3>
+          <p class="text-muted mb-4">
+            If you only want one Tactical pairing to remember, make it <strong class="text-white">Sticky Bombs</strong>
+            plus <strong class="text-white">Stasis Net</strong>. Sticky Bombs are repeatedly recommended because they
+            simplify the hacking matrix on hard targets, while Stasis Net remains one of the most reliable tools for
+            crowd control and safe hack openings.
+          </p>
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Late-game note:</strong> <strong class="text-white">Code Generator</strong>
+            becomes a serious contender once you unlock it, especially if your main problem is late-game matrix pressure
+            rather than raw damage.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="flex flex-wrap gap-3 mb-3">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Defense</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Safety Slot</span>
+          </div>
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Decoy Generator</h3>
+          <p class="text-muted mb-4">
+            The most conservative Defense recommendation is still <strong class="text-white">Decoy Generator</strong>.
+            It appears more often than <strong class="text-white">Impact Barrier</strong> or
+            <strong class="text-white">Drone Hive</strong> in first-run guidance because aggro control creates clean
+            reposition and hacking windows without demanding much setup.
+          </p>
+          <div class="tip-box text-sm">
+            <strong class="text-cyan">When to deviate:</strong> use Impact Barrier when you need literal cover, and
+            consider Drone Hive more seriously once you are deep into higher-pressure late-game or post-game content.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+      <p class="section-eyebrow">// Safe Progression</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Recommended <span>Upgrade Order</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">First-Run Priority</h3>
+          <ol class="space-y-3 text-sm text-muted list-decimal list-inside">
+            <li><strong class="text-white">Shockwave Gun</strong> for the cleanest early Attack payoff.</li>
+            <li><strong class="text-white">Stasis Net</strong> because it stays useful across sectors and bosses.</li>
+            <li><strong class="text-white">Charge Piercer</strong> once Sector 2 is done and bosses get stricter.</li>
+            <li><strong class="text-white">Sticky Bombs</strong> before Sector 4 and final-boss prep.</li>
+            <li><strong class="text-white">Decoy Generator</strong> if survivability, not DPS, is the current problem.</li>
+          </ol>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Late-Game Additions</h3>
+          <p class="text-sm text-muted mb-3">
+            Once you have dual Attack and Tactical slots, the strongest general-purpose setup trends toward
+            <strong class="text-white">Shockwave Gun + Charge Piercer</strong> and
+            <strong class="text-white">Sticky Bombs + Stasis Net</strong>. If you unlock
+            <strong class="text-white">Code Generator</strong>, it becomes one of the most meaningful flex options for
+            matrix-heavy encounters and tougher boss pages under <a href="/bosses/" class="text-cyan hover:underline">Bosses</a>.
+          </p>
+          <div class="ok-box text-sm">
+            <strong class="text-greenline">Post-game edge:</strong> <strong class="text-white">Jackhammer</strong> is
+            consistently described as a late unlock with extremely high damage, but it is not part of a standard first
+            playthrough plan.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="all-weapons" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Full List</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">All <span>15 Weapons</span></h2>
+
+      <div class="overflow-x-auto rounded border border-border">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-hull text-white font-display uppercase text-xs tracking-widest">
+            <tr>
+              <th class="px-4 py-3">Weapon</th>
+              <th class="px-4 py-3">Category</th>
+              <th class="px-4 py-3">Safe Summary</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Grip Gun</td>
+              <td class="px-4 py-3 text-cyan">Primary</td>
+              <td class="px-4 py-3 text-muted">Starting weapon and permanent fallback sidearm.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Pulse Carbine</td>
+              <td class="px-4 py-3 text-cyan">Primary</td>
+              <td class="px-4 py-3 text-muted">Second Primary Unit, unlocked in Sector 3, favored for sustained fire.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Shockwave Gun</td>
+              <td class="px-4 py-3 text-cyan">Attack</td>
+              <td class="px-4 py-3 text-muted">Most common early-game burst recommendation.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Charge Piercer</td>
+              <td class="px-4 py-3 text-cyan">Attack</td>
+              <td class="px-4 py-3 text-muted">High-value boss and mid-to-late game burst pick.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Photon Laser</td>
+              <td class="px-4 py-3 text-cyan">Attack</td>
+              <td class="px-4 py-3 text-muted">More niche sustained-fire option for exposed weak points.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Homing Missiles</td>
+              <td class="px-4 py-3 text-cyan">Attack</td>
+              <td class="px-4 py-3 text-muted">Better for multi-target clearing than single-target boss damage.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Jackhammer</td>
+              <td class="px-4 py-3 text-cyan">Attack</td>
+              <td class="px-4 py-3 text-muted">Post-story heavy hitter, not a standard first-run weapon.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Stasis Net</td>
+              <td class="px-4 py-3 text-cyan">Tactical</td>
+              <td class="px-4 py-3 text-muted">Reliable crowd control and safe hacking setup tool.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Riot Blaster</td>
+              <td class="px-4 py-3 text-cyan">Tactical</td>
+              <td class="px-4 py-3 text-muted">Area disruption option with more situational value.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Sticky Bombs</td>
+              <td class="px-4 py-3 text-cyan">Tactical</td>
+              <td class="px-4 py-3 text-muted">Shrinks complex hacking grids and scales well into late game.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Code Generator</td>
+              <td class="px-4 py-3 text-cyan">Tactical</td>
+              <td class="px-4 py-3 text-muted">Late unlock focused on making difficult hacking phases safer.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Hacking Mines</td>
+              <td class="px-4 py-3 text-cyan">Tactical</td>
+              <td class="px-4 py-3 text-muted">More specialized late/post-game Tactical option.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Decoy Generator</td>
+              <td class="px-4 py-3 text-cyan">Defense</td>
+              <td class="px-4 py-3 text-muted">Safest default defensive recommendation for most players.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Impact Barrier</td>
+              <td class="px-4 py-3 text-cyan">Defense</td>
+              <td class="px-4 py-3 text-muted">Literal cover tool, especially useful for stationary setups.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Drone Hive</td>
+              <td class="px-4 py-3 text-cyan">Defense</td>
+              <td class="px-4 py-3 text-muted">More aggressive late-game defensive alternative.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Internal Links</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Guides</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="/hacking-guide/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Hacking Guide</p>
+          <p class="text-xs text-muted">Sticky Bombs, Code Generator, and matrix pressure all make more sense here.</p>
+        </a>
+        <a href="/bosses/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Bosses</p>
+          <p class="text-xs text-muted">See which weapons show up most often in SectorGuard, LunaDigger, and final boss prep.</p>
+        </a>
+        <a href="/walkthrough/terra-dome/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Terra Dome</p>
+          <p class="text-xs text-muted">Sector 3 is where Pulse Carbine and Sticky Bombs start to reshape loadouts.</p>
+        </a>
+        <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+          <p class="text-xs text-muted">Unknown Signal and post-story content matter if you want Jackhammer builds.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Weapons <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            How many weapons are in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current launch-week weapon lists agree that Pragmata has 15 weapons divided across
+              Primary, Attack, Tactical, and Defense categories.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What are the best first-run weapons in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The safest broad recommendations are Shockwave Gun, Charge Piercer, Sticky Bombs,
+              Stasis Net, and Decoy Generator, with Pulse Carbine becoming the more attractive Primary once Sector 3 is reached.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Do weapons break permanently in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Only the two Primary Units are permanent. Attack, Tactical, and Defense Units disappear
+              when their ammo is spent and need to be printed again at the Shelter.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Is Jackhammer a normal story weapon?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">No. Current coverage consistently treats Jackhammer as a post-story unlock tied to finishing
+              the game and entering New Game Plus or Unknown Signal-related late content.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
