@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ============================================================
+       META & SEO — /walkthrough/terra-dome/
+       Title: 58 chars | Desc: 154 chars
+  ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pragmata Terra Dome Walkthrough – All 47 Collectibles</title>
+    <meta name="description"
+        content="Complete Pragmata Terra Dome walkthrough. All 47 collectibles, 5 sub-areas, Gen Chip locations, invisible enemies & Garden Keeper boss guide." />
+    <link rel="canonical" href="https://pragmataguide.com/walkthrough/terra-dome/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Pragmata Terra Dome Walkthrough – All 47 Collectibles" />
+    <meta property="og:description"
+        content="All 47 Terra Dome collectibles across 5 sub-areas. Gen Chips, invisible enemies, Terrarium Red Zone & Garden Keeper boss strategy." />
+    <meta property="og:url" content="https://pragmataguide.com/walkthrough/terra-dome/" />
+    <meta property="og:site_name" content="PragmataGuide" />
+    <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pragmata Terra Dome Walkthrough – All 47 Collectibles" />
+    <meta name="twitter:description"
+        content="47 collectibles, 5 sub-areas, Gen Chips & Garden Keeper boss guide for Pragmata Sector 3." />
+    <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'space': '#060810', 'hull': '#0c0f1a', 'panel': '#111827', 'cyan': '#00e5ff', 'cyan2': '#00b4d8', 'amber': '#ffb703', 'muted': '#8892a4', 'border': '#1e2d45' }, fontFamily: { display: ['Orbitron', 'sans-serif'], body: ['Rajdhani', 'sans-serif'], mono: ['"Space Mono"', 'monospace'] } } } }
+    </script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background-color: #060810;
+            color: #c9d1e0;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 17px;
+            line-height: 1.7
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, .015) 2px, rgba(0, 229, 255, .015) 4px);
+            pointer-events: none;
+            z-index: 0
+        }
+
+        .grid-bg {
+            background-image: linear-gradient(rgba(0, 229, 255, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, .04) 1px, transparent 1px);
+            background-size: 48px 48px
+        }
+
+        .glow-box {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, .2), 0 0 28px rgba(0, 229, 255, .07)
+        }
+
+        .glow-box:hover {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, .5), 0 0 40px rgba(0, 229, 255, .14)
+        }
+
+        .clip-card {
+            clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%)
+        }
+
+        .blink {
+            animation: blink 1.1s step-end infinite
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp .65s ease forwards
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .delay-1 {
+            animation-delay: .1s
+        }
+
+        .delay-2 {
+            animation-delay: .22s
+        }
+
+        .delay-3 {
+            animation-delay: .34s
+        }
+
+        .card-hover {
+            transition: transform .22s ease, box-shadow .22s ease
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px)
+        }
+
+        .nav-link {
+            position: relative;
+            color: #8892a4;
+            transition: color .2s
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: #00e5ff;
+            transition: width .25s ease
+        }
+
+        .nav-link:hover {
+            color: #00e5ff
+        }
+
+        .nav-link:hover::after {
+            width: 100%
+        }
+
+        .btn-cyan {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: transparent;
+            color: #00e5ff;
+            border: 1px solid rgba(0, 229, 255, .5);
+            padding: .55rem 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+            transition: background .2s, color .2s
+        }
+
+        .btn-cyan:hover {
+            background: rgba(0, 229, 255, .12);
+            color: #fff
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            color: #e2e8f0
+        }
+
+        .section-title span {
+            color: #00e5ff
+        }
+
+        .section-eyebrow {
+            font-family: 'Space Mono', monospace;
+            font-size: .7rem;
+            color: #00e5ff;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            margin-bottom: .5rem
+        }
+
+        .hr-cyan {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 229, 255, .3), transparent)
+        }
+
+        .tip-box {
+            border-left: 2px solid #00e5ff;
+            background: rgba(0, 229, 255, .04);
+            padding: .75rem 1rem;
+            border-radius: 2px
+        }
+
+        .warn-box {
+            border-left: 2px solid #ffb703;
+            background: rgba(255, 183, 3, .04);
+            padding: .75rem 1rem;
+            border-radius: 2px
+        }
+
+        .ok-box {
+            border-left: 2px solid #4ade80;
+            background: rgba(74, 222, 128, .04);
+            padding: .75rem 1rem;
+            border-radius: 2px
+        }
+
+        .danger-box {
+            border-left: 2px solid #f87171;
+            background: rgba(248, 113, 113, .04);
+            padding: .75rem 1rem;
+            border-radius: 2px
+        }
+
+        .breadcrumb a {
+            color: #8892a4;
+            transition: color .2s
+        }
+
+        .breadcrumb a:hover {
+            color: #00e5ff
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .87rem
+        }
+
+        .data-table th {
+            font-family: 'Space Mono', monospace;
+            font-size: .62rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #00e5ff;
+            border-bottom: 1px solid #1e2d45;
+            padding: .5rem .75rem;
+            text-align: left
+        }
+
+        .data-table td {
+            padding: .55rem .75rem;
+            border-bottom: 1px solid rgba(30, 45, 69, .6);
+            font-family: 'Rajdhani', sans-serif;
+            color: #c9d1e0;
+            vertical-align: top
+        }
+
+        .data-table tr:hover td {
+            background: rgba(0, 229, 255, .03)
+        }
+
+        .badge-back {
+            display: inline-block;
+            background: rgba(255, 183, 3, .12);
+            color: #ffb703;
+            border: 1px solid rgba(255, 183, 3, .35);
+            font-family: 'Space Mono', monospace;
+            font-size: .58rem;
+            padding: 1px 6px;
+            white-space: nowrap
+        }
+
+        .badge-free {
+            display: inline-block;
+            background: rgba(74, 222, 128, .1);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, .3);
+            font-family: 'Space Mono', monospace;
+            font-size: .58rem;
+            padding: 1px 6px;
+            white-space: nowrap
+        }
+
+        .badge-rz {
+            display: inline-block;
+            background: rgba(248, 113, 113, .1);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, .3);
+            font-family: 'Space Mono', monospace;
+            font-size: .58rem;
+            padding: 1px 6px;
+            white-space: nowrap
+        }
+
+        .step-num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            border: 1px solid rgba(0, 229, 255, .4);
+            border-radius: 2px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: .65rem;
+            font-weight: 700;
+            color: #00e5ff
+        }
+
+        .phase-bar {
+            height: 4px;
+            border-radius: 2px
+        }
+
+        details>summary {
+            list-style: none;
+            cursor: pointer
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none
+        }
+
+        details[open] .faq-icon {
+            transform: rotate(45deg)
+        }
+
+        .faq-icon {
+            transition: transform .2s ease;
+            display: inline-block
+        }
+
+        details[open] summary~* {
+            animation: fadeUp .3s ease forwards
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: .65rem;
+            padding: .5rem .75rem;
+            border-bottom: 1px solid rgba(30, 45, 69, .4);
+            cursor: pointer;
+            transition: background .15s
+        }
+
+        .check-item:hover {
+            background: rgba(0, 229, 255, .03)
+        }
+
+        .check-item input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            accent-color: #00e5ff;
+            cursor: pointer
+        }
+
+        .check-item label {
+            cursor: pointer;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: .88rem;
+            color: #c9d1e0;
+            flex: 1;
+            line-height: 1.4
+        }
+
+        .check-item input:checked+label {
+            color: #4ade80;
+            text-decoration: line-through;
+            text-decoration-color: rgba(74, 222, 128, .4)
+        }
+
+        /* gen chip badge */
+        .chip-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .3rem;
+            background: rgba(74, 222, 128, .1);
+            border: 1px solid rgba(74, 222, 128, .3);
+            color: #4ade80;
+            font-family: 'Space Mono', monospace;
+            font-size: .6rem;
+            padding: 2px 7px;
+            border-radius: 2px;
+            letter-spacing: .06em
+        }
+    </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://pragmataguide.com/"},
+          {"@type":"ListItem","position":2,"name":"Walkthrough","item":"https://pragmataguide.com/walkthrough/"},
+          {"@type":"ListItem","position":3,"name":"Terra Dome","item":"https://pragmataguide.com/walkthrough/terra-dome/"}
+        ]
+      },
+      {
+        "@type":"Article",
+        "headline":"Pragmata Terra Dome Walkthrough – All 47 Collectibles & Garden Keeper Boss",
+        "description":"Complete walkthrough for Pragmata Sector 3: Terra Dome. All 47 collectibles across 5 sub-areas, Gen Chip locations, invisible enemy tips, and the Garden Keeper boss strategy.",
+        "datePublished":"2026-04-22",
+        "dateModified":"2026-04-22",
+        "author":{"@type":"Organization","name":"PragmataGuide"},
+        "publisher":{"@type":"Organization","name":"PragmataGuide","url":"https://pragmataguide.com/"},
+        "mainEntityOfPage":"https://pragmataguide.com/walkthrough/terra-dome/"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"How many collectibles are in the Terra Dome in Pragmata?",
+            "acceptedAnswer":{"@type":"Answer","text":"The Terra Dome contains 47 collectibles across 5 sub-areas: Terra Dome Entrance (10), Eco Modeling Lab (13), GeoScience Lab, Soil Research (13), and the Terrarium (2 items, both from the Red Zone). Safe Boxes 8 and 9 plus Pure Lunum 3 require the Cleansing ability from Sector 5 to reach. Nothing is permanently missable."}
+          },
+          {
+            "@type":"Question",
+            "name":"How do I beat the Garden Keeper boss in Pragmata?",
+            "acceptedAnswer":{"@type":"Answer","text":"The Garden Keeper has 3 weak points: head (least damage), underside (middling), tail (most damage). Prioritise the tail whenever accessible — especially during the Tail Shock Explosion when the tail stays planted in the ground. Dodge the Wide Tail Spin LATE, not early. At below 50% HP, the boss mounts arena walls and gains Lightning Strikes and Aerial Tail Lasers — use Code Generator and Sticky Bombs for the expanded hacking matrix, and redirect homing missiles back at the boss with Diana."}
+          },
+          {
+            "@type":"Question",
+            "name":"What are Gen Chips in Pragmata's Terra Dome?",
+            "acceptedAnswer":{"@type":"Answer","text":"Gen Chips are collectible items in the Terra Dome that fuel tree-printing terminals. When inserted into a terminal, Diana prints a tree branch or platform you can jump across to progress. There are 4 Gen Chips in the sector, spread across the Eco Modeling Lab and related areas. Collecting all four is required to activate both Lim Regulators and unlock the path to the Garden Keeper."}
+          },
+          {
+            "@type":"Question",
+            "name":"Where is the only Storage Expander in the Terra Dome?",
+            "acceptedAnswer":{"@type":"Answer","text":"The Terra Dome's only Storage Expander is found in the Terrarium Red Zone. Complete the Red Zone challenge to receive both the Storage Expander and a Pure Lunum as rewards. This is the only Storage Expander in the entire sector, so do not skip this Red Zone."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="relative z-10">
+
+    <!-- ============================================================
+       [MODULE 1] HEADER
+  ============================================================ -->
+    <header class="sticky top-0 z-50 border-b border-border bg-hull/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 group" aria-label="PragmataGuide Home">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                    <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                        stroke-width="1.5" />
+                    <polygon points="14,6 21,10 21,18 14,22 7,18 7,10" fill="rgba(0,229,255,0.1)"
+                        stroke="rgba(0,229,255,0.4)" stroke-width="1" />
+                    <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+                </svg>
+                <span class="font-display font-bold text-sm tracking-widest text-white uppercase">Pragmata<span
+                        class="text-cyan">Guide</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                <a href="/walkthrough/" class="nav-link text-sm font-medium font-body text-cyan">Walkthrough</a>
+                <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+                <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+                <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
+                <a href="/endings/" class="nav-link text-sm font-medium font-body">Endings</a>
+                <a href="/hacking-guide/" class="nav-link text-sm font-medium font-body">Hacking</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden p-2 text-muted hover:text-cyan transition-colors"
+                aria-label="Open menu" aria-expanded="false">
+                <svg id="icon-menu" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="icon-close" class="hidden" width="22" height="22" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-nav" class="hidden md:hidden border-t border-border bg-hull px-4 py-3 flex-col gap-3"
+            aria-label="Mobile navigation">
+            <a href="/walkthrough/" class="nav-link text-sm py-1 font-body text-cyan">Walkthrough</a>
+            <a href="/bosses/" class="nav-link text-sm py-1 font-body">Bosses</a>
+            <a href="/weapons/" class="nav-link text-sm py-1 font-body">Weapons</a>
+            <a href="/collectibles/" class="nav-link text-sm py-1 font-body">Collectibles</a>
+            <a href="/endings/" class="nav-link text-sm py-1 font-body">Endings</a>
+            <a href="/hacking-guide/" class="nav-link text-sm py-1 font-body">Hacking</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+         [MODULE 2] HERO
+    ============================================================ -->
+        <section class="relative overflow-hidden grid-bg border-b border-border" aria-label="Page hero">
+            <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[640px] h-[280px] rounded-full"
+                    style="background:radial-gradient(ellipse,rgba(74,222,128,.07) 0%,transparent 70%)"></div>
+                <div class="absolute bottom-0 right-0 w-64 h-64 rounded-full"
+                    style="background:radial-gradient(ellipse,rgba(0,229,255,.06) 0%,transparent 70%)"></div>
+            </div>
+            <div class="absolute top-6 left-6 w-10 h-10 border-l border-t border-cyan/30 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute bottom-6 right-6 w-10 h-10 border-r border-b border-cyan/30 pointer-events-none"
+                aria-hidden="true"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-12">
+                <nav class="breadcrumb flex items-center gap-2 text-xs font-mono text-muted mb-5 fade-up"
+                    aria-label="Breadcrumb">
+                    <a href="/">Home</a><span aria-hidden="true">/</span>
+                    <a href="/walkthrough/">Walkthrough</a><span aria-hidden="true">/</span>
+                    <span class="text-cyan">Terra Dome</span>
+                </nav>
+
+                <p class="section-eyebrow fade-up">// Sector 03 · 5 Sub-Areas · 47 Collectibles · 4 Gen Chips</p>
+                <h1 class="fade-up delay-1 section-title text-2xl sm:text-4xl lg:text-5xl leading-tight max-w-4xl mb-4">
+                    Pragmata <span>Terra Dome</span><br class="hidden sm:block" />
+                    Walkthrough, Collectibles &amp; Garden Keeper Boss
+                </h1>
+                <p class="fade-up delay-2 text-muted text-base sm:text-lg max-w-2xl mb-6 font-body">
+                    Full walkthrough for Sector 3 — a Lunafilament-printed forest biosphere on the moon.
+                    All 47 collectibles across 5 sub-areas, Gen Chip locations, invisible enemy tactics,
+                    and the Garden Keeper boss guide. Version: <strong class="text-white">Launch, April 17,
+                        2026.</strong>
+                </p>
+                <div class="fade-up delay-3 flex flex-wrap gap-4 text-xs font-mono">
+                    <span class="border border-border px-3 py-1 text-muted">47 Collectibles</span>
+                    <span class="border border-border px-3 py-1 text-muted">5 Sub-Areas</span>
+                    <span class="border border-green-400/30 px-3 py-1 text-green-400">4 Gen Chips</span>
+                    <span class="border border-red-400/30 px-3 py-1 text-red-400">Boss: Garden Keeper</span>
+                    <span class="border border-red-400/30 px-3 py-1 text-red-400">Mid-Boss: SectorGuard Rematch</span>
+                    <span class="border border-cyan/30 px-3 py-1 text-cyan">Nothing Missable</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 3] QUICK JUMP
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-5 border-b border-border" aria-label="Quick navigation">
+            <div class="flex flex-wrap gap-3">
+                <a href="#before-start" class="btn-cyan text-xs">Before You Go</a>
+                <a href="#entrance" class="btn-cyan text-xs">Terra Dome Entrance</a>
+                <a href="#eco-lab" class="btn-cyan text-xs">Eco Modeling Lab</a>
+                <a href="#geo-lab" class="btn-cyan text-xs">GeoScience Lab</a>
+                <a href="#soil-research" class="btn-cyan text-xs">Soil Research</a>
+                <a href="#terrarium" class="btn-cyan text-xs">Terrarium</a>
+                <a href="#boss" class="btn-cyan text-xs">Boss: Garden Keeper</a>
+                <a href="#minicabins" class="btn-cyan text-xs">Mini Cabins</a>
+                <a href="#checklist" class="btn-cyan text-xs">✓ Checklist</a>
+                <a href="#faq" class="btn-cyan text-xs">FAQ</a>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 4] OVERVIEW TABLE
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border" aria-labelledby="overview-heading">
+            <div class="max-w-3xl">
+                <p class="section-eyebrow">// At a Glance</p>
+                <h2 class="section-title text-lg sm:text-xl mb-5" id="overview-heading">Sector 03 —
+                    <span>Overview</span></h2>
+                <div class="overflow-x-auto rounded border border-border mb-5">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Sub-Area</th>
+                                <th>Items</th>
+                                <th>Key Events</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong class="text-white">Terra Dome Entrance</strong></td>
+                                <td class="text-muted text-xs">10 collectibles</td>
+                                <td class="text-muted text-xs">New enemy: Lancer. Collect Safe Box 1 before entering
+                                    building.</td>
+                            </tr>
+                            <tr>
+                                <td><strong class="text-white">Eco Modeling Lab</strong></td>
+                                <td class="text-muted text-xs">13 collectibles (densest)</td>
+                                <td class="text-muted text-xs">Gen Chips, tree-platform puzzles, Mini Cabin 1, Terrarium
+                                    Red Zone.</td>
+                            </tr>
+                            <tr>
+                                <td><strong class="text-white">GeoScience Lab</strong></td>
+                                <td class="text-muted text-xs">Multiple Safe Boxes + REMs</td>
+                                <td class="text-muted text-xs">Many Holo-Walls. Swing REM. Leads to Soil Research.</td>
+                            </tr>
+                            <tr>
+                                <td><strong class="text-white">Soil Research</strong></td>
+                                <td class="text-muted text-xs">13 collectibles</td>
+                                <td class="text-muted text-xs">Invisible enemies appear. Mini Cabin 2 & 3. Training Data
+                                    2 on beach.</td>
+                            </tr>
+                            <tr>
+                                <td><strong class="text-white">Terrarium</strong></td>
+                                <td class="text-muted text-xs">2 collectibles (Red Zone only)</td>
+                                <td class="text-muted text-xs"><span class="badge-rz">Red Zone</span> rewards: Storage
+                                    Expander (only one in sector) + Pure Lunum. Final boss: Garden Keeper.</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-xs font-mono text-muted pt-2">Total: <strong
+                                        class="text-white">47 collectibles</strong> · Mid-boss: <strong
+                                        class="text-white">SectorGuard Rematch + 2 Lancers</strong> · Final boss:
+                                    <strong class="text-white">Garden Keeper</strong> · Reward: Shelter License Key #3
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- Backtrack alert -->
+                <div class="warn-box text-xs font-body">
+                    <strong class="text-amber">Cleansing backtrack:</strong> Safe Boxes 8 & 9 and Pure Lunum 3 require
+                    the <strong class="text-white">Cleansing ability</strong>, unlocked in Sector 5 (Central Port 01).
+                    These items are flagged in-game — collect everything else now and return post-Sector 5.
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 5] BEFORE YOU START
+    ============================================================ -->
+        <section id="before-start" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="before-heading">
+            <div class="max-w-3xl">
+                <p class="section-eyebrow">// Read First</p>
+                <h2 class="section-title text-lg sm:text-xl mb-5" id="before-heading">Before You <span>Enter</span></h2>
+                <div class="space-y-3 text-sm font-body text-muted">
+                    <p>The Terra Dome is a dramatic change of setting from the Mass Production Array: a dense artificial
+                        forest environment that recreates Earth's flora using Lunafilament. The sector introduces
+                        <strong class="text-white">two new enemy types</strong> and a unique puzzle mechanic — <strong
+                            class="text-white">Gen Chips</strong> — that gates progression throughout.</p>
+
+                    <!-- Gen Chip explanation -->
+                    <div class="bg-panel border border-green-400/20 rounded p-4 mt-2">
+                        <p class="font-mono text-xs text-green-400 tracking-widest uppercase mb-2">★ New Mechanic — Gen
+                            Chips</p>
+                        <p class="text-sm font-body text-muted">Gen Chips are collectible items scattered through the
+                            sector. When inserted into tree-printing terminals, Diana uses them to generate branch
+                            platforms that let Hugh traverse gaps or reach new areas. There are <strong
+                                class="text-white">4 Gen Chips</strong> in the sector — finding them is tied to
+                            unlocking both Lim Regulators, which is the sector's main objective. Always check side rooms
+                            and platforms when the path seems blocked.</p>
+                    </div>
+
+                    <div class="tip-box mt-2">
+                        <p><strong class="text-cyan font-mono text-xs uppercase tracking-widest">Shelter prep ·</strong>
+                            Spend your Shelter License Key #2 rewards first. Unlock the Associate Board at Cabin's Stamp
+                            Club. Upgrade Diana's Hacking to Tier 2 if possible — the SectorGuard rematch mid-sector is
+                            easier with improved hacking speed. Bring the Decoy Generator and Code Generator; both are
+                            valuable throughout this sector and for the Garden Keeper boss.</p>
+                    </div>
+
+                    <div class="warn-box">
+                        <p><strong class="text-amber font-mono text-xs uppercase tracking-widest">New enemies ·</strong>
+                            <strong class="text-white">Lancer</strong>: agile full-sized bot that closes range fast,
+                            first seen in the outdoor entry area. <strong class="text-white">Invisible enemies</strong>:
+                            appear in Soil Research — impossible to see until they attack. Dodge at the last second when
+                            they grab — that is when they fully reveal themselves and become hackable.</p>
+                    </div>
+
+                    <div class="ok-box">
+                        <p><strong class="text-green-400 font-mono text-xs uppercase tracking-widest">Holo-Walls
+                                ·</strong> The Terra Dome contains more hidden Holo-Walls than any previous sector. If a
+                            room looks too empty, scan the walls — many Safe Boxes are behind panels that look identical
+                            to solid walls. Use Diana's Object Scan after every combat encounter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 6] TERRA DOME ENTRANCE
+    ============================================================ -->
+        <section id="entrance" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="entrance-heading">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-3 mb-5">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 border border-cyan/40 rounded font-display text-xs font-bold text-cyan">
+                        S1</div>
+                    <div>
+                        <p class="section-eyebrow mb-0">// Sub-Area 1 · 10 Collectibles</p>
+                        <h2 class="section-title text-lg sm:text-xl" id="entrance-heading"><span>Terra Dome
+                                Entrance</span></h2>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm font-body text-muted">
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5">1</div>
+                        <p>After arriving by tram and crossing the bridge, you encounter a <strong
+                                class="text-white">Lancer</strong> — the new enemy type for this sector. They're fast
+                            and aggressive; hack quickly to expose the core, then use the Grip Gun or Charge Piercer.
+                            More Lancers appear throughout the sector.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5">2</div>
+                        <p>Before entering the main building, look left and jump to the <strong class="text-white">box
+                                suspended by a crane</strong>. From the box, jump to the white platform, then right onto
+                            the grassy ledge — <strong class="text-white">Safe Box 1</strong> is there. This is the
+                            easiest collectible in the sector to miss because it's outdoors before the "real" sector
+                            begins.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5">3</div>
+                        <p>Inside the building, IDUS triggers and roots overgrow the facility. The path from the main
+                            elevator <strong class="text-white">splits into two routes (A and B)</strong>. Both must be
+                            completed — take whichever first. Safe Boxes 2 and 3 are at the end of each branch; Safe Box
+                            4 is between the two exits.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5">4</div>
+                        <p>Find <strong class="text-white">Escape Hatch 1</strong> in the room where the cutscene with
+                            shrinking branches plays (before IDUS interrupts). Take the left route from the main
+                            elevator first to find it.</p>
+                    </div>
+                </div>
+                <div class="tip-box mt-4 text-xs font-body">
+                    <strong class="text-cyan">REM 1 (Flowers):</strong> Ride the elevator up from near the Soil Research
+                    entrance. Mod 2 (Precision Shot) is on a ledge at the top. Drop back down to find REM 1 (Flowers)
+                    directly beneath the Mod. Drop further left to reach Safe Box 5. All three items use the same
+                    elevator — don't miss the drops back down.
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 7] ECO MODELING LAB
+    ============================================================ -->
+        <section id="eco-lab" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="eco-heading">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-3 mb-5">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 border border-green-400/40 rounded font-display text-xs font-bold text-green-400">
+                        S2</div>
+                    <div>
+                        <p class="section-eyebrow mb-0">// Sub-Area 2 · 13 Collectibles (Densest)</p>
+                        <h2 class="section-title text-lg sm:text-xl" id="eco-heading"><span>Eco Modeling Lab</span></h2>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm font-body text-muted">
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(74,222,128,.4);color:#4ade80">1</div>
+                        <p>The Eco Modeling Lab introduces the <strong class="text-white">Gen Chip system</strong>. The
+                            first terminal requires one Gen Chip to grow a tree platform. Find it in the lower section
+                            just below the first terminal. After inserting it, a branch grows — jump across to continue.
+                        </p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(74,222,128,.4);color:#4ade80">2</div>
+                        <p><strong class="text-white">Mini Cabin 1</strong> is in the room with the tree-growing
+                            terminal — look up at the tree branches above the terminal on the right side. Shoot it
+                            before inserting the Gen Chip (the branches change after activation).</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(74,222,128,.4);color:#4ade80">3</div>
+                        <p>After creating the first tree platform: <strong class="text-white">do not go left through the
+                                door immediately</strong>. Instead, go right — there's a Holo-Wall hiding <strong
+                                class="text-white">Safe Box 6</strong>. This is the most frequently missed item in the
+                            sub-area.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(74,222,128,.4);color:#4ade80">4</div>
+                        <p>Find <strong class="text-white">Escape Hatch 2</strong> in the room where you grow multiple
+                            branches to cross a gap. Right next to it is the entrance to the <strong
+                                class="text-white">Terrarium Red Zone</strong> — clear it for the sector's <strong
+                                class="text-white">only Storage Expander + Pure Lunum 2</strong> (see Terrarium
+                            section).</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(74,222,128,.4);color:#4ade80">5</div>
+                        <p>The second set of terminals requires <strong class="text-white">3 Gen Chips</strong>. One is
+                            on a raised platform guarded by an enemy. Another is on the lower level down a passage. The
+                            last is inside an interior area. After activating both Lim Regulators, you return to the
+                            central area and take the elevator upward.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(74,222,128,.4);color:#4ade80">6</div>
+                        <p>You then face a <strong class="text-white">SectorGuard Rematch</strong> — functionally the
+                            same fight as Sector 1, but now accompanied by two Lancers. Eliminate the Lancers first to
+                            make the fight manageable. Use Confuse and Multihack hacking nodes if you have them
+                            unlocked.</p>
+                    </div>
+                </div>
+                <div class="warn-box mt-4 text-xs font-body">
+                    <strong class="text-amber">Backtrack items here:</strong> Several Safe Boxes in the Eco Modeling Lab
+                    area are blocked by dead filament. <span class="badge-back ml-1">Cleansing required — Sector
+                        5</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 8] GEOSCIENCE LAB
+    ============================================================ -->
+        <section id="geo-lab" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="geo-heading">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-3 mb-5">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 border border-amber-400/40 rounded font-display text-xs font-bold text-amber-400">
+                        S3</div>
+                    <div>
+                        <p class="section-eyebrow mb-0">// Sub-Area 3 · Safe Boxes + REMs</p>
+                        <h2 class="section-title text-lg sm:text-xl" id="geo-heading"><span>GeoScience Lab</span></h2>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm font-body text-muted">
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(255,183,3,.4);color:#ffb703">1</div>
+                        <p>Access via the elevator from the Eco Modeling Lab. As the elevator descends, <strong
+                                class="text-white">swing right immediately</strong> — there is a hidden room behind a
+                            Holo-Wall containing a Safe Box. Many rooms in this sub-area look empty but conceal Safe
+                            Boxes this way.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(255,183,3,.4);color:#ffb703">2</div>
+                        <p>In the soil research area: look for an orange pipe and head behind it to find items. Continue
+                            through the area clearing enemies and finding the scattered Safe Boxes behind Holo-Walls and
+                            inside side rooms. Always scan walls after combat encounters end.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(255,183,3,.4);color:#ffb703">3</div>
+                        <p>Find the <strong class="text-white">Swing REM</strong> — past a Lunafilament barrier (Lim
+                            Eraser), through a hacked door, at the end of a path on the left side. Back at the Shelter,
+                            give it to Diana at the Replicator — a swing appears in the Shelter and she reacts to it.
+                        </p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(255,183,3,.4);color:#ffb703">4</div>
+                        <p>Activate <strong class="text-white">Escape Hatch 4</strong> at the top of the elevator, in
+                            front of the locked door. This is the GeoScience Lab Station fast-travel point — use it to
+                            return to the Shelter for upgrades before continuing to Soil Research.</p>
+                    </div>
+                </div>
+                <div class="tip-box mt-4 text-xs font-body">
+                    <strong class="text-cyan">Holo-Wall density:</strong> GeoScience Lab has the highest concentration
+                    of Holo-Walls in the sector. If Diana's Object Scan shows there should be more items nearby but you
+                    can't find them, check every wall surface — especially at T-junctions and at the end of short
+                    corridors.
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 9] SOIL RESEARCH
+    ============================================================ -->
+        <section id="soil-research" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="soil-heading">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-3 mb-5">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 border border-purple-400/40 rounded font-display text-xs font-bold text-purple-400">
+                        S4</div>
+                    <div>
+                        <p class="section-eyebrow mb-0">// Sub-Area 4 · 13 Collectibles</p>
+                        <h2 class="section-title text-lg sm:text-xl" id="soil-heading"><span>Soil Research</span></h2>
+                    </div>
+                </div>
+
+                <!-- Invisible enemy alert -->
+                <div class="danger-box mb-5 rounded">
+                    <p class="text-sm font-body"><strong
+                            class="text-red-400 font-mono text-xs uppercase tracking-widest">New enemy —
+                            Invisible:</strong> Soil Research introduces invisible enemies. You cannot see them until
+                        they initiate an attack. <strong class="text-white">Dodge at the last second</strong> when they
+                        go for a grab — that is the exact moment they reveal themselves and become hackable. Dodging too
+                        early will miss the reveal window. Listen for audio cues: their movement creates faint sounds.
+                    </p>
+                </div>
+
+                <div class="space-y-4 text-sm font-body text-muted">
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(167,139,250,.4);color:#a855f7">1</div>
+                        <p>Enter from the door labeled Soil Research. The path <strong class="text-white">splits
+                                immediately — take the right fork first</strong>. <strong class="text-white">Safe Box
+                                11</strong> is at the dead end of the right path.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(167,139,250,.4);color:#a855f7">2</div>
+                        <p>On the beach section: after the cutscene, turn right and <strong class="text-white">use the
+                                Lim Eraser on the filament mass</strong>, then drop down the hatch below. Inside is a
+                            broken Cabin holding <strong class="text-white">Training Data 2</strong>. From the surface,
+                            use the rocks to reach the high metal platform — follow the Lunafilament string down to a
+                            lower cave ledge for another Safe Box.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(167,139,250,.4);color:#a855f7">3</div>
+                        <p>After the invisible enemy fight area, take the elevator up. Once on the balcony, <strong
+                                class="text-white">look left into the trees</strong> — <strong class="text-white">Mini
+                                Cabin 2</strong> is sitting in the tree canopy. Shoot it from the balcony.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(167,139,250,.4);color:#a855f7">4</div>
+                        <p>Hack the <strong class="text-white">four-lock door</strong> to unlock it (four separate
+                            terminals in the area). Behind it is <strong class="text-white">Escape Hatch 5</strong>.
+                            After the next elevator descent, immediately check right for a Holo-Wall hiding <strong
+                                class="text-white">Safe Box 14</strong>.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="step-num flex-shrink-0 mt-0.5"
+                            style="border-color:rgba(167,139,250,.4);color:#a855f7">5</div>
+                        <p>Deactivate the jammer in the area to reveal <strong class="text-white">Safe Box 15</strong>.
+                            Continue through to reach the Terrarium section where the final boss awaits.</p>
+                    </div>
+                </div>
+                <div class="warn-box mt-4 text-xs font-body">
+                    <strong class="text-amber">Cleansing backtrack items:</strong> <strong class="text-white">Safe Box
+                        8, Safe Box 9, and Pure Lunum 3</strong> are behind dead (red) filament barriers. <span
+                        class="badge-back ml-1">Cleansing required — Sector 5</span>. These three items are the reason
+                    you'll need to return to Terra Dome after Sector 5.
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 10] TERRARIUM
+    ============================================================ -->
+        <section id="terrarium" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="terrarium-heading">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-3 mb-5">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 border border-red-400/40 rounded font-display text-xs font-bold text-red-400">
+                        S5</div>
+                    <div>
+                        <p class="section-eyebrow mb-0">// Sub-Area 5 · 2 Collectibles (Red Zone) · Boss Arena</p>
+                        <h2 class="section-title text-lg sm:text-xl" id="terrarium-heading"><span>Terrarium</span></h2>
+                    </div>
+                </div>
+                <div class="space-y-3 text-sm font-body text-muted">
+                    <p>The Terrarium is the final sub-area and the smallest — it contains only 2 collectibles, and both
+                        are gated behind the <strong class="text-white">Terrarium Red Zone</strong>.</p>
+
+                    <div class="bg-panel border border-red-400/20 rounded p-4">
+                        <p class="font-mono text-xs text-red-400 tracking-widest uppercase mb-2">⚠ Terrarium Red Zone —
+                            Do Not Skip</p>
+                        <p class="text-sm font-body text-muted">The Red Zone is located near the Cultivation Lab Station
+                            Escape Hatch. Complete the challenge to receive:</p>
+                        <ul class="text-sm text-muted mt-2 space-y-1">
+                            <li class="flex gap-2"><span class="text-red-400">▸</span><strong class="text-white">Storage
+                                    Expander</strong> — the only Storage Expander in all of Terra Dome. Directly
+                                increases Diana's Hacking Gauge capacity.</li>
+                            <li class="flex gap-2"><span class="text-red-400">▸</span><strong class="text-white">Pure
+                                    Lunum 6</strong> — rare upgrade material needed for high-tier weapon upgrades.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-box mt-3">
+                        <p class="text-sm font-body"><strong class="text-cyan">Before the boss:</strong> After the Red
+                            Zone, find the <strong class="text-white">Cultivation Lab Station Escape Hatch</strong>.
+                            <strong class="text-white">Return to the Shelter to fully stock up</strong> before
+                            proceeding. The boss arena is accessed by dropping through a hole in the ground — once you
+                            drop in, the fight begins immediately. Do not drop in accidentally.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         [MODULE 11] BOSS — GARDEN KEEPER
+    ============================================================ -->
+        <section id="boss" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-b border-border scroll-mt-20"
+            aria-labelledby="boss-heading">
+            <div class="max-w-3xl">
+                <p class="section-eyebrow">// End of Sector 3</p>
+                <h2 class="section-title text-xl sm:text-2xl mb-2" id="boss-heading">
+                    Boss: <span>Garden Keeper</span>
+                    <span class="text-muted text-sm font-body normal-case ml-2">(on-screen: "Large Bot")</span>
+                </h2>
+                <p class="text-sm text-muted font-body mb-6">A fast, scorpion-shaped mech with huge range. Unlike the
+                    slow Creator, the Garden Keeper closes distance in one leap and punishes impatient players hard. The
+                    fight rewards patience and precise dodge timing above all else.</p>
+
+                <!-- Loadout -->
+                <div class="bg-panel border border-border rounded p-4 mb-6">
+                    <p class="font-mono text-xs text-green-400 tracking-widest uppercase mb-3">Recommended Loadout</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-body text-muted">
+                        <div class="flex gap-2"><span class="text-green-400">▸</span><span><strong
+                                    class="text-white">Shockwave Gun</strong> — close burst when tail or head is
+                                exposed</span></div>
+                        <div class="flex gap-2"><span class="text-green-400">▸</span><span><strong
+                                    class="text-white">Code Generator</strong> — reduces Phase 2 hacking matrix
+                                complexity</span></div>
+                        <div class="flex gap-2"><span class="text-green-400">▸</span><span><strong
+                                    class="text-white">Sticky Bombs</strong> — additional hacking matrix relief in Phase
+                                2</span></div>
+                        <div class="flex gap-2"><span class="text-green-400">▸</span><span><strong
+                                    class="text-white">Decoy Generator</strong> — redirect boss attention during
+                                hacking</span></div>
+                    </div>
+                    <p class="text-xs text-muted font-mono mt-3">Pick up extra Shockwave Gun and Code Generator ammo
+                        scattered around the arena before triggering the fight.</p>
+                </div>
+
+                <!-- Weak points table -->
+                <h3 class="font-display text-xs text-white uppercase tracking-widest mb-3">Weak Points</h3>
+                <div class="overflow-x-auto rounded border border-border mb-5">
+                    <table class="data-table text-xs">
+                        <thead>
+                            <tr>
+                                <th>Weak Point</th>
+                                <th>Damage</th>
+                                <th>Best Window</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-red-400 font-bold">Tail</td>
+                                <td><strong class="text-white">Most damage</strong></td>
+                                <td>Tail Shock Explosion — tail stays planted for several seconds. Dump everything into
+                                    it.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-amber-400">Underside / Chest</td>
+                                <td>Middling</td>
+                                <td>When boss is stunned or after dodge. Harder angle.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted">Head</td>
+                                <td>Least damage</td>
+                                <td>Always exposed after hack. Easy to hit.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Phase 1 -->
+                <h3 class="font-display text-xs text-white uppercase tracking-widest mb-4">Phase Breakdown</h3>
+                <div class="space-y-4">
+
+                    <div class="bg-panel border border-border rounded overflow-hidden">
+                        <div class="flex items-center gap-3 px-4 py-3 border-b border-border">
+                            <div class="phase-bar bg-green-400/60" style="width:5rem"></div>
+                            <span class="font-display text-xs text-white uppercase tracking-wide">Phase 1 — 100% → 50%
+                                HP</span>
+                        </div>
+                        <div class="p-4 space-y-2 text-sm font-body text-muted">
+                            <div class="flex gap-2"><span class="text-cyan flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Leaping Pincer Swipe:</strong> Most common attack. Chains
+                                    into a second swipe or Arm Slam. Stay mobile after the first hit.</span></div>
+                            <div class="flex gap-2"><span class="text-cyan flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Wide Tail Spin:</strong> <em>Dodge LATE</em> — not when the
+                                    animation starts. Wait until the tail is nearly on you. Early dodges still
+                                    connect.</span></div>
+                            <div class="flex gap-2"><span class="text-cyan flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Tail Shock Explosion:</strong> Boss stabs tail into the
+                                    ground and it stays planted. This is your <strong class="text-white">primary damage
+                                        window</strong> — hit the tail continuously until it pulls out.</span></div>
+                            <div class="flex gap-2"><span class="text-cyan flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Shock Mines:</strong> Boss plants mines across the arena.
+                                    Contact freezes Hugh and leads into a Trapped Tail Grab — escape via Diana's hacking
+                                    minigame. Avoid standing in them; hack mines when the boss is on top of one to stun
+                                    it.</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="bg-panel border border-red-400/20 rounded overflow-hidden">
+                        <div class="flex items-center gap-3 px-4 py-3 border-b border-border">
+                            <div class="phase-bar bg-red-400/70" style="width:2.5rem"></div>
+                            <span class="font-display text-xs text-white uppercase tracking-wide">Phase 2 — Below 50%
+                                HP</span>
+                        </div>
+                        <div class="p-4 space-y-2 text-sm font-body text-muted">
+                            <div class="flex gap-2"><span class="text-red-400 flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Lightning Strikes:</strong> Boss stands still and raises its
+                                    tail, raining strikes across the arena for several seconds. Keep moving.</span>
+                            </div>
+                            <div class="flex gap-2"><span class="text-red-400 flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Aerial Tail Lasers (Wall Phase):</strong> Boss mounts the
+                                    arena walls and fires a prong laser that spreads outward — it cannot be cancelled.
+                                    Dodge the spread until the attack ends on its own. The tail is hard to reach from
+                                    this angle — target the belly or head instead.</span></div>
+                            <div class="flex gap-2"><span class="text-red-400 flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Homing Missiles (Wall Phase):</strong> During the wall phase,
+                                    use <strong class="text-white">Diana to redirect missiles back at the Garden
+                                        Keeper</strong>. This damages both HP and the heat-up gauge.</span></div>
+                            <div class="flex gap-2"><span class="text-red-400 flex-shrink-0">▸</span><span><strong
+                                        class="text-white">Expanded Hacking Matrix:</strong> The matrix grows and fills
+                                    with impassable and error nodes. Use <strong class="text-white">Code Generator +
+                                        Sticky Bombs</strong> to manage complexity. Overdrive Protocol also clears a
+                                    full panel if the gauge is ready.</span></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Reward -->
+                <div class="ok-box mt-6">
+                    <p class="text-sm font-body"><strong class="text-green-400">Reward:</strong> Defeating the Garden
+                        Keeper drops <strong class="text-white">Shelter License Key #3</strong>. Return to the Shelter
+                        to unlock Tier 3 upgrades at the Firmware Updater and Unit Printer, and the <strong
+                            class="text-white">Specialist Board</strong> at Cabin's Stamp Club. The next sector —
+                        <strong class="text-white">Lunum Mines</strong> — is now accessible on the tram map.</p>
+                </div>
+                <p class="text-xs text-muted font-mono mt-4">Full Garden Keeper strategy including advanced tactics: <a
+                        href="/bosses/" class="text-cyan hover:underline">All Bosses Guide →</a></p>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         [MODULE 12] MINI CABINS
+    ============================================================ -->
+        <section id="minicabins" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="mc-heading">
+            <div class="max-w-3xl">
+                <p class="section-eyebrow">// Hidden Collectibles</p>
+                <h2 class="section-title text-lg sm:text-xl mb-4" id="mc-heading">Mini Cabin <span>Figures</span> — All
+                    3 Locations</h2>
+                <p class="text-xs text-muted font-mono mb-4">Shoot to collect. No Object Scan detection. Listen for
+                    "ta-da" sound.</p>
+                <div class="space-y-3">
+                    <div class="bg-panel border border-purple-400/20 rounded p-4 flex gap-3">
+                        <div
+                            class="flex-shrink-0 font-display text-purple-400 font-bold text-sm w-6 text-center mt-0.5">
+                            1</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold mb-1">Eco Modeling Lab — tree branch
+                                above the Gen Chip terminal</p>
+                            <p class="text-xs text-muted font-body">In the room with the terminal that grows the first
+                                tree platform. Before inserting the Gen Chip, look up at the tree branches on the right
+                                side of the room — the Mini Cabin is perched on one of them. Shoot it from the ground.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-panel border border-purple-400/20 rounded p-4 flex gap-3">
+                        <div
+                            class="flex-shrink-0 font-display text-purple-400 font-bold text-sm w-6 text-center mt-0.5">
+                            2</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold mb-1">Soil Research — tree to the left
+                                from upper balcony</p>
+                            <p class="text-xs text-muted font-body">After defeating the invisible enemy, take the
+                                elevator up to the balcony. Run along the balcony and look left into the tree canopy —
+                                the Mini Cabin is in the branches. Shoot it from the balcony ledge; you have enough
+                                range.</p>
+                        </div>
+                    </div>
+                    <div class="bg-panel border border-purple-400/20 rounded p-4 flex gap-3">
+                        <div
+                            class="flex-shrink-0 font-display text-purple-400 font-bold text-sm w-6 text-center mt-0.5">
+                            3</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold mb-1">Soil Research / GeoScience area —
+                                on a vine in outdoor section</p>
+                            <p class="text-xs text-muted font-body">In an outdoor area near a locked door, a vine climbs
+                                the wall across from you. Reach it via the upper walkway — the Mini Cabin is hanging on
+                                the vine. You'll pass this area naturally during story progression; look at the vines
+                                when you cross the gap.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 13] CHECKLIST
+    ============================================================ -->
+        <section id="checklist" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border scroll-mt-20"
+            aria-labelledby="checklist-heading">
+            <div class="max-w-3xl">
+                <p class="section-eyebrow">// Progress Tracker</p>
+                <h2 class="section-title text-lg sm:text-xl mb-2" id="checklist-heading">Terra Dome
+                    <span>Checklist</span></h2>
+                <p class="text-xs text-muted font-mono mb-4">Saves in your browser. Red items require Cleansing (Sector
+                    5). Orange items need Lim Eraser.</p>
+                <div class="bg-panel border border-border rounded p-4 mb-5">
+                    <div class="flex justify-between text-xs font-mono text-muted mb-2"><span>Sector 3
+                            Progress</span><span id="s3-prog-text">0 / 47</span></div>
+                    <div class="h-1.5 bg-border rounded">
+                        <div id="s3-prog-bar" class="h-1.5 bg-green-400 rounded transition-all duration-500"
+                            style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="bg-panel border border-border rounded overflow-hidden divide-y divide-border/40"
+                    id="s3-checklist"></div>
+                <button id="s3-reset" class="mt-3 btn-cyan text-xs">Reset Sector 3 Checklist</button>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 14] WHAT NEXT
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border" aria-labelledby="next-heading">
+            <div class="max-w-3xl">
+                <p class="section-eyebrow">// After Sector 3</p>
+                <h2 class="section-title text-lg sm:text-xl mb-4" id="next-heading">What to Do <span>Next</span></h2>
+                <div class="space-y-3 text-sm font-body text-muted">
+                    <div class="flex gap-3"><span class="text-cyan font-mono text-xs mt-0.5 flex-shrink-0">01</span>
+                        <p><strong class="text-white">Spend Shelter License Key #3 rewards</strong> — Tier 3 Firmware
+                            Updater upgrades are now available. This is the largest upgrade gate in the game so far.
+                            Prioritise Diana's Hacking third tier, then Suit.</p>
+                    </div>
+                    <div class="flex gap-3"><span class="text-cyan font-mono text-xs mt-0.5 flex-shrink-0">02</span>
+                        <p><strong class="text-white">Unlock the Specialist Board</strong> at Cabin's Stamp Club. Some
+                            tiles require Red Gate Keys obtained from specific Red Zones — check what's available and
+                            plan ahead.</p>
+                    </div>
+                    <div class="flex gap-3"><span class="text-cyan font-mono text-xs mt-0.5 flex-shrink-0">03</span>
+                        <p><strong class="text-white">Head to Sector 4: Lunum Mines.</strong> Low gravity combat awaits.
+                            <a href="/walkthrough/lunum-mines/" class="text-cyan hover:underline">Full walkthrough →</a>
+                        </p>
+                    </div>
+                    <div class="flex gap-3"><span class="text-amber-400 font-mono text-xs mt-0.5 flex-shrink-0">↩</span>
+                        <p><strong class="text-white">Return here after Sector 5</strong> with the Cleansing ability to
+                            collect Safe Boxes 8 & 9 and Pure Lunum 3. Fast-travel to the GeoScience Lab Station or
+                            Central Lift Escape Hatch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 15] RELATED GUIDES
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-b border-border" aria-labelledby="related-heading">
+            <p class="section-eyebrow">// Continue</p>
+            <h2 class="section-title text-lg sm:text-xl mb-6" id="related-heading">Related <span>Guides</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="/walkthrough/mass-production-array/"
+                    class="bg-panel border border-border p-4 card-hover glow-box group"><span
+                        class="text-xs font-mono text-amber-400 border border-amber-400/30 px-2 py-0.5 inline-block mb-2">SECTOR
+                        2</span>
+                    <h3
+                        class="font-display text-xs text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Mass Production Array</h3>
+                    <p class="text-xs text-muted font-body">Previous sector — 39 collectibles and Creator boss.</p><span
+                        class="mt-2 block text-cyan text-xs font-mono">READ →</span>
+                </a>
+                <a href="/walkthrough/lunum-mines/"
+                    class="bg-panel border border-border p-4 card-hover glow-box group"><span
+                        class="text-xs font-mono text-purple-400 border border-purple-400/30 px-2 py-0.5 inline-block mb-2">SECTOR
+                        4</span>
+                    <h3
+                        class="font-display text-xs text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Lunum Mines</h3>
+                    <p class="text-xs text-muted font-body">Low gravity zone — LunaDigger boss guide.</p><span
+                        class="mt-2 block text-cyan text-xs font-mono">READ →</span>
+                </a>
+                <a href="/bosses/" class="bg-panel border border-border p-4 card-hover glow-box group"><span
+                        class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5 inline-block mb-2">BOSSES</span>
+                    <h3
+                        class="font-display text-xs text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        All Bosses Guide</h3>
+                    <p class="text-xs text-muted font-body">All 5 sector bosses — full phase strategies.</p><span
+                        class="mt-2 block text-cyan text-xs font-mono">READ →</span>
+                </a>
+                <a href="/collectibles/" class="bg-panel border border-border p-4 card-hover glow-box group"><span
+                        class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5 inline-block mb-2">COLLECTIBLES</span>
+                    <h3
+                        class="font-display text-xs text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        All 184 Collectibles</h3>
+                    <p class="text-xs text-muted font-body">Full cross-sector checklist with 100% completion rules.</p>
+                    <span class="mt-2 block text-cyan text-xs font-mono">READ →</span>
+                </a>
+                <a href="/upgrades/" class="bg-panel border border-border p-4 card-hover glow-box group"><span
+                        class="text-xs font-mono text-amber-400 border border-amber-400/30 px-2 py-0.5 inline-block mb-2">UPGRADES</span>
+                    <h3
+                        class="font-display text-xs text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Firmware Updater Guide</h3>
+                    <p class="text-xs text-muted font-body">Tier 3 upgrade priority order after the Garden Keeper.</p>
+                    <span class="mt-2 block text-cyan text-xs font-mono">READ →</span>
+                </a>
+                <a href="/walkthrough/" class="bg-panel border border-border p-4 card-hover glow-box group"><span
+                        class="text-xs font-mono text-muted border border-border px-2 py-0.5 inline-block mb-2">HUB</span>
+                    <h3
+                        class="font-display text-xs text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Walkthrough Hub</h3>
+                    <p class="text-xs text-muted font-body">All 5 sectors overview and Shelter hub guide.</p><span
+                        class="mt-2 block text-cyan text-xs font-mono">READ →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 16] COMPLIANCE
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-7" aria-label="Disclaimer">
+            <div class="bg-panel border border-border/60 rounded p-5 flex gap-4 items-start">
+                <svg width="20" height="20" viewBox="0 0 28 28" fill="none" class="flex-shrink-0 mt-0.5"
+                    aria-hidden="true">
+                    <circle cx="14" cy="14" r="12" stroke="#8892a4" stroke-width="1.5" />
+                    <path d="M14 9v5M14 18v1" stroke="#8892a4" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <p class="text-muted text-xs font-body leading-relaxed"><strong class="text-white">Not affiliated with
+                        Capcom.</strong> PRAGMATA™ is a trademark of CAPCOM CO., LTD. All facts cross-verified against
+                    multiple independent sources. Version: Launch build, April 17, 2026. <a href="/privacy/"
+                        class="text-cyan hover:underline ml-1">Privacy Policy</a> · <a href="/disclosure/"
+                        class="text-cyan hover:underline ml-1">Ad Disclosure</a></p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         [MODULE 17] FAQ
+    ============================================================ -->
+        <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 scroll-mt-20" aria-labelledby="faq-heading">
+            <p class="section-eyebrow">// Questions</p>
+            <h2 class="section-title text-lg sm:text-xl mb-6" id="faq-heading">Terra Dome <span>FAQ</span></h2>
+            <div class="max-w-3xl space-y-3">
+
+                <details class="bg-panel border border-border group">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+                        How many collectibles are in the Terra Dome?
+                        <span class="faq-icon text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm font-body text-muted">
+                        <p>Terra Dome contains <strong class="text-white">47 collectibles</strong> — the largest haul in
+                            the early game. They're spread across 5 sub-areas: Entrance (10), Eco Modeling Lab (13),
+                            GeoScience Lab, Soil Research (13), and Terrarium (2, both from the Red Zone). Safe Boxes 8
+                            & 9 plus Pure Lunum 3 require the Cleansing ability from Sector 5.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+                        What are Gen Chips and how do I use them?
+                        <span class="faq-icon text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm font-body text-muted">
+                        <p>Gen Chips are items scattered through the Terra Dome. When collected, they can be inserted
+                            into tree-printing terminals — Diana uses them to grow branch platforms that let Hugh cross
+                            gaps or reach new areas. There are <strong class="text-white">4 Gen Chips</strong> in the
+                            sector; collecting and using all four is required to activate both Lim Regulators and unlock
+                            the path to the Garden Keeper.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+                        Where is the Storage Expander in Terra Dome?
+                        <span class="faq-icon text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm font-body text-muted">
+                        <p>The Terra Dome's <strong class="text-white">only Storage Expander</strong> is inside the
+                            <strong class="text-white">Terrarium Red Zone</strong>, near the Cultivation Lab Station
+                            Escape Hatch. Complete the Red Zone challenge to receive both the Storage Expander and Pure
+                            Lunum 6 as rewards. Do not skip this Red Zone.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+                        How do I fight invisible enemies in Soil Research?
+                        <span class="faq-icon text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm font-body text-muted">
+                        <p>Invisible enemies cannot be seen until they attack. <strong class="text-white">Dodge at the
+                                last second</strong> when they initiate a grab — this is the exact moment they fully
+                            reveal themselves and become hackable. Dodging too early misses the reveal window. Listen
+                            for audio cues: their movement generates faint sounds before the attack connects.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+                        How do I beat the Garden Keeper?
+                        <span class="faq-icon text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm font-body text-muted">
+                        <p>Target the <strong class="text-white">tail</strong> — it deals the most damage of the 3 weak
+                            points. The best opportunity is during the <strong class="text-white">Tail Shock
+                                Explosion</strong> when the tail stays planted in the ground. For the Wide Tail Spin:
+                            dodge <strong class="text-white">late</strong>, not when the animation starts. Below 50% HP,
+                            the boss mounts arena walls and the hacking matrix expands — use <strong
+                                class="text-white">Code Generator + Sticky Bombs</strong> for the matrix, and redirect
+                            homing missiles back at the boss with Diana.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+                        Is there a mid-sector boss in the Terra Dome?
+                        <span class="faq-icon text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm font-body text-muted">
+                        <p>Yes. In the Eco Modeling Lab, after collecting Gen Chips for the second regulator, you face
+                            an <strong class="text-white">enhanced SectorGuard</strong> — functionally the same fight as
+                            Sector 1, but now accompanied by <strong class="text-white">two Lancers</strong>. Eliminate
+                            the Lancers first using Confuse or Multihack nodes, then handle the SectorGuard the same way
+                            as before.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+       [MODULE 18] FOOTER
+  ============================================================ -->
+    <footer class="border-t border-border bg-hull mt-4" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+                            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                                stroke-width="1.5" />
+                            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+                        </svg>
+                        <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                                class="text-cyan">Guide</span></span>
+                    </div>
+                    <p class="text-muted text-sm font-body max-w-xs">Independent guide site for Pragmata (2026) by
+                        Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.</p>
+                </div>
+                <nav aria-label="Guide pages footer links">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+                        <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+                        <li><a href="/weapons/" class="hover:text-cyan transition-colors">Best Weapons</a></li>
+                        <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+                        <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+                        <li><a href="/trophies-achievements/" class="hover:text-cyan transition-colors">Trophies</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav aria-label="Site pages footer links">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li><a href="/about/" class="hover:text-cyan transition-colors">About</a></li>
+                        <li><a href="/contact/" class="hover:text-cyan transition-colors">Contact</a></li>
+                        <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+                        <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+                        <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr class="hr-cyan mb-5" aria-hidden="true" />
+            <div
+                class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+                <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+                <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+       JAVASCRIPT — Mobile menu + Sector 3 Checklist
+  ============================================================ -->
+    <script>
+        /* ── Mobile menu ────────────────────────────────────────── */
+        const toggle = document.getElementById('menu-toggle'), mobNav = document.getElementById('mobile-nav'), iconM = document.getElementById('icon-menu'), iconC = document.getElementById('icon-close');
+        toggle.addEventListener('click', () => { const o = !mobNav.classList.contains('hidden'); mobNav.classList.toggle('hidden'); mobNav.classList.toggle('flex'); iconM.classList.toggle('hidden', !o); iconC.classList.toggle('hidden', o); toggle.setAttribute('aria-expanded', String(!o)) });
+
+        /* ── Sector 3 Checklist data ────────────────────────────── */
+        const S3 = [
+            // Terra Dome Entrance
+            { id: 's3-sb1', label: 'Entrance — Safe Box 1 (crane crate jump before main building)', back: false },
+            { id: 's3-sb2', label: 'Entrance — Safe Box 2 (left route from main elevator)', back: false },
+            { id: 's3-sb3', label: 'Entrance — Safe Box 3 (right route from main elevator)', back: false },
+            { id: 's3-sb4', label: 'Entrance — Safe Box 4 (between two branch exits)', back: false },
+            { id: 's3-eh1', label: 'Entrance — Escape Hatch 1 (branch cutscene room, left elevator route)', back: false },
+            { id: 's3-mod2', label: 'Entrance — Mod 2 (Precision Shot) (elevator up, ledge at top)', back: false },
+            { id: 's3-rem1', label: 'Entrance — REM 1 (Flowers) (beneath Mod 2, drop down after elevator)', back: false },
+            { id: 's3-sb5', label: 'Entrance — Safe Box 5 (drop left from Soil Research entrance)', back: false },
+            { id: 's3-misc1', label: 'Entrance — additional collectibles (see full guide)', back: false },
+            { id: 's3-misc2', label: 'Entrance — additional collectibles (see full guide)', back: false },
+            // Eco Modeling Lab
+            { id: 's3-mc1', label: 'Eco Modeling Lab — Mini Cabin 1 (tree branch above Gen Chip terminal, right side)', back: false },
+            { id: 's3-sb6', label: 'Eco Modeling Lab — Safe Box 6 (Holo-Wall right of tree platform, do not go left)', back: false },
+            { id: 's3-eh2', label: 'Eco Modeling Lab — Escape Hatch 2 (multiple branch room)', back: false },
+            { id: 's3-rz1', label: 'Eco Modeling Lab — Red Zone near Escape Hatch 2 → Mod 3 (Collateral Damage) + Pure Lunum 2', back: false },
+            { id: 's3-rem2', label: 'Eco Modeling Lab — REM 2 (Ballons) (forest downstairs from Escape Hatch 2)', back: false },
+            { id: 's3-eh3', label: 'Eco Modeling Lab — Escape Hatch 3 (after SectorGuard Rematch area)', back: false },
+            { id: 's3-sb7', label: 'Eco Modeling Lab — Safe Box 7 (hidden room at dead end, interact wall)', back: false },
+            { id: 's3-sb8', label: '[Cleansing] Eco Modeling Lab — Safe Box 8', back: true },
+            { id: 's3-sb9', label: '[Cleansing] Eco Modeling Lab — Safe Box 9', back: true },
+            { id: 's3-pl3', label: '[Cleansing] Eco Modeling Lab — Pure Lunum 3', back: true },
+            { id: 's3-misc3', label: 'Eco Modeling Lab — additional Safe Boxes & items (see full guide)', back: false },
+            { id: 's3-misc4', label: 'Eco Modeling Lab — additional Safe Boxes & items (see full guide)', back: false },
+            { id: 's3-misc5', label: 'Eco Modeling Lab — additional Safe Boxes & items (see full guide)', back: false },
+            // GeoScience Lab
+            { id: 's3-gsbA', label: 'GeoScience Lab — Safe Box (Holo-Wall right of elevator descent)', back: false },
+            { id: 's3-gsbB', label: 'GeoScience Lab — Safe Box (past Lim eraser in same room)', back: false },
+            { id: 's3-remS', label: 'GeoScience Lab — REM: Swing (hacked door + Lim path on left)', back: false },
+            { id: 's3-eh4', label: 'GeoScience Lab — Escape Hatch 4 (Central Lift / GeoScience Lab Station)', back: false },
+            { id: 's3-misc6', label: 'GeoScience Lab — remaining Safe Boxes in side rooms and upper level', back: false },
+            { id: 's3-misc7', label: 'GeoScience Lab — remaining items', back: false },
+            // Soil Research
+            { id: 's3-sb11', label: 'Soil Research — Safe Box 11 (right fork from entrance split)', back: false },
+            { id: 's3-td2', label: 'Soil Research — Training Data 2 (beach: Lim erase + drop hatch to broken Cabin)', back: false },
+            { id: 's3-mc2', label: 'Soil Research — Mini Cabin 2 (balcony after invisible enemy fight, look left into trees)', back: false },
+            { id: 's3-sb12', label: 'Soil Research — Safe Box 12 (next room right after Mini Cabin 2, invisible enemy guards it)', back: false },
+            { id: 's3-sb13', label: 'Soil Research — Safe Box 13 (drop down ledge from high view toward 4-lock door)', back: false },
+            { id: 's3-eh5', label: 'Soil Research — Escape Hatch 5 (behind 4-lock door)', back: false },
+            { id: 's3-sb14', label: 'Soil Research — Safe Box 14 (Holo-Wall after elevator descent)', back: false },
+            { id: 's3-sb15', label: 'Soil Research — Safe Box 15 (after deactivating jammer)', back: false },
+            { id: 's3-mc3', label: 'Soil Research — Mini Cabin 3 (vine, outdoor area, via upper walkway)', back: false },
+            { id: 's3-misc8', label: 'Soil Research — remaining Safe Boxes & Pure Lunum (see full guide)', back: false },
+            { id: 's3-misc9', label: 'Soil Research — remaining items', back: false },
+            { id: 's3-mscA', label: 'Soil Research — remaining items', back: false },
+            // Terrarium
+            { id: 's3-rz2', label: 'Terrarium — Red Zone → Storage Expander 1 + Pure Lunum 6 (only SE in sector!)', back: false },
+            { id: 's3-eh6', label: 'Terrarium — Escape Hatch 6 (Cultivation Lab Station, before boss)', back: false },
+        ];
+
+        const s3Con = document.getElementById('s3-checklist');
+        let s3Count = 0;
+        const S3_TOTAL = 47;
+
+        S3.forEach(item => {
+            const saved = localStorage.getItem('pg_' + item.id) === '1';
+            if (saved) s3Count++;
+            const row = document.createElement('div');
+            row.className = 'check-item';
+            if (item.back) row.style.cssText = 'border-left:2px solid rgba(248,113,113,0.4)';
+            const cb = document.createElement('input');
+            cb.type = 'checkbox'; cb.id = item.id; cb.checked = saved;
+            cb.setAttribute('aria-label', item.label);
+            const lbl = document.createElement('label');
+            lbl.htmlFor = item.id; lbl.textContent = item.label;
+            cb.addEventListener('change', () => {
+                localStorage.setItem('pg_' + item.id, cb.checked ? '1' : '0');
+                s3Count += cb.checked ? 1 : -1;
+                s3Update();
+            });
+            row.appendChild(cb); row.appendChild(lbl);
+            s3Con.appendChild(row);
+        });
+
+        function s3Update() {
+            const pct = Math.round((s3Count / S3_TOTAL) * 100);
+            document.getElementById('s3-prog-text').textContent = s3Count + ' / ' + S3_TOTAL;
+            document.getElementById('s3-prog-bar').style.width = pct + '%';
+        }
+        s3Update();
+
+        document.getElementById('s3-reset').addEventListener('click', () => {
+            if (!confirm('Reset Sector 3 checklist?')) return;
+            S3.forEach(item => {
+                localStorage.removeItem('pg_' + item.id);
+                const cb = document.getElementById(item.id);
+                if (cb) cb.checked = false;
+            });
+            s3Count = 0; s3Update();
+        });
+    </script>
+
+</body>
+
+</html>
