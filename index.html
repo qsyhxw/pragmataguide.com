@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- ============================================================
        META & SEO
@@ -7,14 +8,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pragmata Guide – Walkthrough, Bosses &amp; Collectibles</title>
-  <meta name="description" content="Complete Pragmata guide for PS5, Xbox &amp; PC. Walkthroughs, boss strategies, all 184 collectibles, best weapons, endings &amp; hacking tips." />
+  <meta name="description"
+    content="Complete Pragmata guide for PS5, Xbox &amp; PC. Walkthroughs, boss strategies, all 184 collectibles, best weapons, endings &amp; hacking tips." />
   <link rel="canonical" href="https://www.pragmataguide.com/" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Pragmata Guide – Walkthrough, Bosses &amp; Collectibles" />
-  <meta property="og:description" content="Complete Pragmata guide for PS5, Xbox &amp; PC. Walkthroughs, boss strategies, all 184 collectibles, best weapons, endings &amp; hacking tips." />
+  <meta property="og:description"
+    content="Complete Pragmata guide for PS5, Xbox &amp; PC. Walkthroughs, boss strategies, all 184 collectibles, best weapons, endings &amp; hacking tips." />
   <meta property="og:url" content="https://www.pragmataguide.com/" />
   <meta property="og:site_name" content="PragmataGuide" />
   <meta property="og:image" content="https://www.pragmataguide.com/og-cover.jpg" />
@@ -22,7 +25,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pragmata Guide – Walkthrough, Bosses &amp; Collectibles" />
-  <meta name="twitter:description" content="Complete Pragmata guide for PS5, Xbox &amp; PC. All collectibles, boss strategies, endings &amp; hacking tips." />
+  <meta name="twitter:description"
+    content="Complete Pragmata guide for PS5, Xbox &amp; PC. All collectibles, boss strategies, endings &amp; hacking tips." />
   <meta name="twitter:image" content="https://www.pragmataguide.com/og-cover.jpg" />
 
   <!-- Tailwind CDN -->
@@ -31,7 +35,9 @@
   <!-- Google Fonts: Orbitron (display) + Space Grotesk replaced by Syne (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Tailwind config + CSS custom properties -->
   <script>
@@ -40,18 +46,18 @@
         extend: {
           colors: {
             'space': '#060810',
-            'hull':  '#0c0f1a',
+            'hull': '#0c0f1a',
             'panel': '#111827',
-            'cyan':  '#00e5ff',
+            'cyan': '#00e5ff',
             'cyan2': '#00b4d8',
             'amber': '#ffb703',
             'muted': '#8892a4',
-            'border':'#1e2d45',
+            'border': '#1e2d45',
           },
           fontFamily: {
             display: ['Orbitron', 'sans-serif'],
-            body:    ['Rajdhani', 'sans-serif'],
-            mono:    ['"Space Mono"', 'monospace'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
           },
         }
       }
@@ -60,8 +66,16 @@
 
   <style>
     /* ── Base ─────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #060810;
       color: #c9d1e0;
@@ -75,13 +89,11 @@
       content: '';
       position: fixed;
       inset: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0,229,255,0.015) 2px,
-        rgba(0,229,255,0.015) 4px
-      );
+      background: repeating-linear-gradient(0deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px,
+          rgba(0, 229, 255, 0.015) 4px);
       pointer-events: none;
       z-index: 0;
     }
@@ -89,15 +101,23 @@
     /* ── Grid background ──────────────────────────────────── */
     .grid-bg {
       background-image:
-        linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
       background-size: 48px 48px;
     }
 
     /* ── Glow utilities ───────────────────────────────────── */
-    .glow-cyan  { text-shadow: 0 0 18px rgba(0,229,255,0.55); }
-    .glow-box   { box-shadow: 0 0 0 1px rgba(0,229,255,0.2), 0 0 32px rgba(0,229,255,0.08); }
-    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0,229,255,0.5), 0 0 48px rgba(0,229,255,0.15); }
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 32px rgba(0, 229, 255, 0.08);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 48px rgba(0, 229, 255, 0.15);
+    }
 
     /* ── Corner-clip card ─────────────────────────────────── */
     .clip-card {
@@ -105,8 +125,15 @@
     }
 
     /* ── Blink cursor ─────────────────────────────────────── */
-    .blink { animation: blink 1.1s step-end infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
 
     /* ── Fade-in-up on load ───────────────────────────────── */
     .fade-up {
@@ -114,17 +141,38 @@
       transform: translateY(24px);
       animation: fadeUp 0.7s ease forwards;
     }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.22s; }
-    .delay-3 { animation-delay: 0.34s; }
-    .delay-4 { animation-delay: 0.46s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.46s;
+    }
 
     /* ── Card hover lift ──────────────────────────────────── */
     .card-hover {
       transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
-    .card-hover:hover { transform: translateY(-4px); }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
 
     /* ── Nav link underline ───────────────────────────────── */
     .nav-link {
@@ -132,16 +180,25 @@
       color: #8892a4;
       transition: color 0.2s;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
-      left: 0; bottom: -2px;
-      width: 0; height: 1px;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
       background: #00e5ff;
       transition: width 0.25s ease;
     }
-    .nav-link:hover { color: #00e5ff; }
-    .nav-link:hover::after { width: 100%; }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
 
     /* ── Cyan button ──────────────────────────────────────── */
     .btn-cyan {
@@ -150,7 +207,7 @@
       gap: 0.4rem;
       background: transparent;
       color: #00e5ff;
-      border: 1px solid rgba(0,229,255,0.5);
+      border: 1px solid rgba(0, 229, 255, 0.5);
       padding: 0.6rem 1.5rem;
       font-family: 'Orbitron', sans-serif;
       font-size: 0.75rem;
@@ -160,17 +217,19 @@
       clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
       transition: background 0.2s, color 0.2s;
     }
+
     .btn-cyan:hover {
-      background: rgba(0,229,255,0.12);
+      background: rgba(0, 229, 255, 0.12);
       color: #fff;
     }
+
     .btn-amber {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       background: transparent;
       color: #ffb703;
-      border: 1px solid rgba(255,183,3,0.45);
+      border: 1px solid rgba(255, 183, 3, 0.45);
       padding: 0.6rem 1.5rem;
       font-family: 'Orbitron', sans-serif;
       font-size: 0.75rem;
@@ -180,8 +239,9 @@
       clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
       transition: background 0.2s, color 0.2s;
     }
+
     .btn-amber:hover {
-      background: rgba(255,183,3,0.12);
+      background: rgba(255, 183, 3, 0.12);
       color: #fff;
     }
 
@@ -193,9 +253,11 @@
       text-transform: uppercase;
       color: #e2e8f0;
     }
+
     .section-title span {
       color: #00e5ff;
     }
+
     .section-eyebrow {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
@@ -206,17 +268,32 @@
     }
 
     /* ── FAQ accordion ────────────────────────────────────── */
-    details > summary { list-style: none; cursor: pointer; }
-    details > summary::-webkit-details-marker { display: none; }
-    details[open] .faq-icon { transform: rotate(45deg); }
-    .faq-icon { transition: transform 0.2s ease; }
-    details[open] summary ~ * { animation: fadeUp 0.3s ease forwards; }
+    details>summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details>summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-icon {
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary~* {
+      animation: fadeUp 0.3s ease forwards;
+    }
 
     /* ── Horizontal rule ──────────────────────────────────── */
     .hr-cyan {
       border: none;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(0,229,255,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
     }
   </style>
 
@@ -351,11 +428,10 @@
       <a href="/" class="flex items-center gap-2.5 group" aria-label="PragmataGuide Home">
         <!-- Hexagon SVG icon -->
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5"
-            fill="none" stroke="#00e5ff" stroke-width="1.5"/>
-          <polygon points="14,6 21,10 21,18 14,22 7,18 7,10"
-            fill="rgba(0,229,255,0.1)" stroke="rgba(0,229,255,0.4)" stroke-width="1"/>
-          <circle cx="14" cy="14" r="2.5" fill="#00e5ff"/>
+          <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5" />
+          <polygon points="14,6 21,10 21,18 14,22 7,18 7,10" fill="rgba(0,229,255,0.1)" stroke="rgba(0,229,255,0.4)"
+            stroke-width="1" />
+          <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
         </svg>
         <span class="font-display font-bold text-sm tracking-widest text-white uppercase">
           Pragmata<span class="text-cyan">Guide</span>
@@ -365,31 +441,35 @@
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
         <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
-        <a href="/bosses/"     class="nav-link text-sm font-medium font-body">Bosses</a>
-        <a href="/weapons/"    class="nav-link text-sm font-medium font-body">Weapons</a>
+        <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+        <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
         <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
-        <a href="/endings/"    class="nav-link text-sm font-medium font-body">Endings</a>
+        <a href="/endings/" class="nav-link text-sm font-medium font-body">Endings</a>
         <a href="/hacking-guide/" class="nav-link text-sm font-medium font-body">Hacking</a>
       </nav>
 
       <!-- Mobile hamburger -->
-      <button id="menu-toggle" class="md:hidden p-2 text-muted hover:text-cyan transition-colors" aria-label="Open menu" aria-expanded="false">
-        <svg id="icon-menu" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
+      <button id="menu-toggle" class="md:hidden p-2 text-muted hover:text-cyan transition-colors" aria-label="Open menu"
+        aria-expanded="false">
+        <svg id="icon-menu" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-        <svg id="icon-close" class="hidden" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 18L18 6M6 6l12 12"/>
+        <svg id="icon-close" class="hidden" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
 
     <!-- Mobile Nav -->
-    <nav id="mobile-nav" class="hidden md:hidden border-t border-border bg-hull px-4 py-3 flex-col gap-3" aria-label="Mobile navigation">
-      <a href="/walkthrough/"   class="nav-link text-sm py-1 font-body">Walkthrough</a>
-      <a href="/bosses/"        class="nav-link text-sm py-1 font-body">Bosses</a>
-      <a href="/weapons/"       class="nav-link text-sm py-1 font-body">Weapons</a>
-      <a href="/collectibles/"  class="nav-link text-sm py-1 font-body">Collectibles</a>
-      <a href="/endings/"       class="nav-link text-sm py-1 font-body">Endings</a>
+    <nav id="mobile-nav" class="hidden md:hidden border-t border-border bg-hull px-4 py-3 flex-col gap-3"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link text-sm py-1 font-body">Walkthrough</a>
+      <a href="/bosses/" class="nav-link text-sm py-1 font-body">Bosses</a>
+      <a href="/weapons/" class="nav-link text-sm py-1 font-body">Weapons</a>
+      <a href="/collectibles/" class="nav-link text-sm py-1 font-body">Collectibles</a>
+      <a href="/endings/" class="nav-link text-sm py-1 font-body">Endings</a>
       <a href="/hacking-guide/" class="nav-link text-sm py-1 font-body">Hacking</a>
     </nav>
   </header>
@@ -410,8 +490,10 @@
       </div>
 
       <!-- Decorative corner lines -->
-      <div class="absolute top-8 left-8 w-16 h-16 border-l border-t border-cyan/30 pointer-events-none" aria-hidden="true"></div>
-      <div class="absolute bottom-8 right-8 w-16 h-16 border-r border-b border-cyan/30 pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute top-8 left-8 w-16 h-16 border-l border-t border-cyan/30 pointer-events-none"
+        aria-hidden="true"></div>
+      <div class="absolute bottom-8 right-8 w-16 h-16 border-r border-b border-cyan/30 pointer-events-none"
+        aria-hidden="true"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-24 w-full">
 
@@ -420,7 +502,7 @@
 
         <!-- H1 -->
         <h1 class="fade-up delay-1 section-title text-3xl sm:text-5xl lg:text-6xl leading-tight max-w-4xl mb-4">
-          Pragmata <span>Complete Guide</span><br/>
+          Pragmata <span>Complete Guide</span><br />
           Walkthrough · Bosses · Hacking · 100%
         </h1>
 
@@ -434,11 +516,17 @@
         <!-- CTA buttons -->
         <div class="fade-up delay-3 flex flex-wrap gap-4 mb-12">
           <a href="/walkthrough/" class="btn-cyan" aria-label="Start main story walkthrough">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3l6 5-6 5V3z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M5 3l6 5-6 5V3z" />
+            </svg>
             Start Walkthrough
           </a>
           <a href="/collectibles/" class="btn-amber" aria-label="View 100% collectibles guide">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5v4l2 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <circle cx="8" cy="8" r="6" />
+              <path d="M8 5v4l2 2" />
+            </svg>
             100% Collectibles
           </a>
         </div>
@@ -488,56 +576,73 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
         <!-- Card 1: Beginner Guide -->
-        <a href="/beginners-guide/" class="block bg-panel border border-border clip-card p-6 glow-box card-hover group" aria-label="Pragmata Beginner's Guide">
+        <a href="/beginners-guide/" class="block bg-panel border border-border clip-card p-6 glow-box card-hover group"
+          aria-label="Pragmata Beginner's Guide">
           <div class="mb-4" aria-hidden="true">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <rect x="4" y="4" width="24" height="24" rx="3" stroke="#00e5ff" stroke-width="1.5"/>
-              <path d="M10 16h12M10 11h8M10 21h6" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="4" y="4" width="24" height="24" rx="3" stroke="#00e5ff" stroke-width="1.5" />
+              <path d="M10 16h12M10 11h8M10 21h6" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" />
             </svg>
           </div>
-          <h3 class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Beginner's Guide</h3>
-          <p class="text-muted text-sm font-body">10 things to know before your first sector. Systems, mechanics, and mistakes to avoid.</p>
+          <h3
+            class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            Beginner's Guide</h3>
+          <p class="text-muted text-sm font-body">10 things to know before your first sector. Systems, mechanics, and
+            mistakes to avoid.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ GUIDE →</span>
         </a>
 
         <!-- Card 2: Hacking Guide -->
-        <a href="/hacking-guide/" class="block bg-panel border border-border clip-card p-6 glow-box card-hover group" aria-label="Pragmata Hacking System Guide">
+        <a href="/hacking-guide/" class="block bg-panel border border-border clip-card p-6 glow-box card-hover group"
+          aria-label="Pragmata Hacking System Guide">
           <div class="mb-4" aria-hidden="true">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="10" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="4 2"/>
-              <circle cx="16" cy="16" r="4" fill="rgba(0,229,255,0.2)" stroke="#00e5ff" stroke-width="1.5"/>
-              <path d="M16 6V4M16 28v-2M26 16h2M4 16H6" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="16" cy="16" r="10" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="4 2" />
+              <circle cx="16" cy="16" r="4" fill="rgba(0,229,255,0.2)" stroke="#00e5ff" stroke-width="1.5" />
+              <path d="M16 6V4M16 28v-2M26 16h2M4 16H6" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" />
             </svg>
           </div>
-          <h3 class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Hacking System</h3>
-          <p class="text-muted text-sm font-body">Diana's node colors decoded: Yellow, Blue, Purple. Master the hacking grid for every encounter.</p>
+          <h3
+            class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            Hacking System</h3>
+          <p class="text-muted text-sm font-body">Diana's node colors decoded: Yellow, Blue, Purple. Master the hacking
+            grid for every encounter.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ GUIDE →</span>
         </a>
 
         <!-- Card 3: Upgrades -->
-        <a href="/upgrades/" class="block bg-panel border border-border clip-card p-6 glow-box card-hover group" aria-label="Pragmata Upgrade Priority Guide">
+        <a href="/upgrades/" class="block bg-panel border border-border clip-card p-6 glow-box card-hover group"
+          aria-label="Pragmata Upgrade Priority Guide">
           <div class="mb-4" aria-hidden="true">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <path d="M16 4 L28 10 L28 22 L16 28 L4 22 L4 10 Z" stroke="#00e5ff" stroke-width="1.5"/>
-              <path d="M16 12v8M12 16h8" stroke="#ffb703" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 4 L28 10 L28 22 L16 28 L4 22 L4 10 Z" stroke="#00e5ff" stroke-width="1.5" />
+              <path d="M16 12v8M12 16h8" stroke="#ffb703" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
-          <h3 class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">What to Upgrade First</h3>
-          <p class="text-muted text-sm font-body">Unit Printer priority order: Hacking → Suit → Primary Unit. Spend your components wisely.</p>
+          <h3
+            class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            What to Upgrade First</h3>
+          <p class="text-muted text-sm font-body">Firmware Updater priority order:
+            Hacking → Suit → Primary Unit. Spend your Upgrade Components wisely.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ GUIDE →</span>
         </a>
 
         <!-- Card 4: Trophies -->
-        <a href="/trophies-achievements/" class="block bg-panel border border-border clip-card p-6 glow-box card-hover group" aria-label="Pragmata Trophies and Achievements Guide">
+        <a href="/trophies-achievements/"
+          class="block bg-panel border border-border clip-card p-6 glow-box card-hover group"
+          aria-label="Pragmata Trophies and Achievements Guide">
           <div class="mb-4" aria-hidden="true">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <path d="M10 4h12v10a6 6 0 01-12 0V4z" stroke="#00e5ff" stroke-width="1.5"/>
-              <path d="M10 8H6a2 2 0 000 4h4M22 8h4a2 2 0 010 4h-4" stroke="#00e5ff" stroke-width="1.5"/>
-              <path d="M16 20v6M12 28h8" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 4h12v10a6 6 0 01-12 0V4z" stroke="#00e5ff" stroke-width="1.5" />
+              <path d="M10 8H6a2 2 0 000 4h4M22 8h4a2 2 0 010 4h-4" stroke="#00e5ff" stroke-width="1.5" />
+              <path d="M16 20v6M12 28h8" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" />
             </svg>
           </div>
-          <h3 class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Trophies &amp; Achievements</h3>
-          <p class="text-muted text-sm font-body">Full trophy list with unlock conditions. Nothing is missable — Unknown Signal Mode cleans up everything.</p>
+          <h3
+            class="font-display font-semibold text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            Trophies &amp; Achievements</h3>
+          <p class="text-muted text-sm font-body">Full trophy list with unlock conditions. Nothing is missable — Unknown
+            Signal Mode cleans up everything.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ GUIDE →</span>
         </a>
       </div>
@@ -553,28 +658,34 @@
       <h2 class="section-title text-2xl sm:text-3xl mb-2" id="tools-heading">
         <span>Interactive Tools</span> — Built for Completionists
       </h2>
-      <p class="text-muted mb-10 max-w-xl">Track your progress. Never miss a collectible. Understand Diana's node system visually.</p>
+      <p class="text-muted mb-10 max-w-xl">Track your progress. Never miss a collectible. Understand Diana's node system
+        visually.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
         <!-- Tool 1: Collectibles Checklist -->
-        <a href="/collectibles/" class="relative block bg-panel border border-border clip-card p-8 glow-box card-hover group overflow-hidden" aria-label="Interactive Pragmata Collectibles Checklist">
+        <a href="/collectibles/"
+          class="relative block bg-panel border border-border clip-card p-8 glow-box card-hover group overflow-hidden"
+          aria-label="Interactive Pragmata Collectibles Checklist">
           <!-- BG decoration -->
           <div class="absolute right-0 top-0 w-48 h-48 opacity-10 pointer-events-none" aria-hidden="true"
             style="background: radial-gradient(ellipse at top right, #00e5ff, transparent 70%);"></div>
           <div class="flex items-start gap-5">
             <div class="flex-shrink-0 mt-1" aria-hidden="true">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <rect x="4" y="4" width="32" height="32" rx="4" stroke="#00e5ff" stroke-width="1.5"/>
-                <path d="M11 20l5 5 13-13" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="4" y="4" width="32" height="32" rx="4" stroke="#00e5ff" stroke-width="1.5" />
+                <path d="M11 20l5 5 13-13" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
             </div>
             <div>
-              <h3 class="font-display font-semibold text-base text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+              <h3
+                class="font-display font-semibold text-base text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
                 Collectibles Checklist
               </h3>
               <p class="text-muted text-sm font-body mb-4">
-                Interactive sector-by-sector tracker for all 184 items — Safe Boxes, Pure Lunum, REMs, Mini Cabins, Mods &amp; more. Check off as you go.
+                Interactive sector-by-sector tracker for all 184 items — Safe Boxes, Pure Lunum, REMs, Mini Cabins, Mods
+                &amp; more. Check off as you go.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="text-xs border border-border text-muted px-2 py-0.5 font-mono">184 Items</span>
@@ -587,32 +698,37 @@
         </a>
 
         <!-- Tool 2: Hacking Node Visual Guide -->
-        <a href="/hacking-guide/" class="relative block bg-panel border border-border clip-card p-8 glow-box card-hover group overflow-hidden" aria-label="Pragmata Hacking Node Visual Guide">
+        <a href="/hacking-guide/"
+          class="relative block bg-panel border border-border clip-card p-8 glow-box card-hover group overflow-hidden"
+          aria-label="Pragmata Hacking Node Visual Guide">
           <div class="absolute right-0 top-0 w-48 h-48 opacity-10 pointer-events-none" aria-hidden="true"
             style="background: radial-gradient(ellipse at top right, #ffb703, transparent 70%);"></div>
           <div class="flex items-start gap-5">
             <div class="flex-shrink-0 mt-1" aria-hidden="true">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <circle cx="20" cy="20" r="14" stroke="#ffb703" stroke-width="1.5" stroke-dasharray="5 3"/>
-                <circle cx="20" cy="12" r="3" fill="#ffb703" opacity="0.8"/>
-                <circle cx="12" cy="24" r="3" fill="#00e5ff" opacity="0.8"/>
-                <circle cx="28" cy="24" r="3" fill="#a855f7" opacity="0.8"/>
-                <path d="M20 15l-5 7M20 15l5 7" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <circle cx="20" cy="20" r="14" stroke="#ffb703" stroke-width="1.5" stroke-dasharray="5 3" />
+                <circle cx="20" cy="12" r="3" fill="#ffb703" opacity="0.8" />
+                <circle cx="12" cy="24" r="3" fill="#00e5ff" opacity="0.8" />
+                <circle cx="28" cy="24" r="3" fill="#a855f7" opacity="0.8" />
+                <path d="M20 15l-5 7M20 15l5 7" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
               </svg>
             </div>
             <div>
-              <h3 class="font-display font-semibold text-base text-white uppercase tracking-wide mb-2 group-hover:text-amber-400 transition-colors">
+              <h3
+                class="font-display font-semibold text-base text-white uppercase tracking-wide mb-2 group-hover:text-amber-400 transition-colors">
                 Hacking Node Guide
               </h3>
               <p class="text-muted text-sm font-body mb-4">
-                Visual breakdown of Diana's hacking matrix. Every node color explained: Yellow (crowd control), Blue (Diana upgrades), Purple (critical shots &lt;30% HP).
+                Visual breakdown of Diana's hacking matrix. Every node color explained: Yellow (crowd control), Blue
+                (Diana upgrades), Purple (critical shots &lt;30% HP).
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="text-xs border border-yellow-500/30 text-yellow-400 px-2 py-0.5 font-mono">■ Yellow</span>
                 <span class="text-xs border border-cyan/30 text-cyan px-2 py-0.5 font-mono">■ Blue</span>
                 <span class="text-xs border border-purple-500/30 text-purple-400 px-2 py-0.5 font-mono">■ Purple</span>
               </div>
-              <span class="text-amber-400 text-xs font-mono tracking-widest group-hover:underline">VIEW VISUAL GUIDE →</span>
+              <span class="text-amber-400 text-xs font-mono tracking-widest group-hover:underline">VIEW VISUAL GUIDE
+                →</span>
             </div>
           </div>
         </a>
@@ -635,68 +751,93 @@
         <!-- Guide Card Template × 6 -->
 
         <!-- 1. All Bosses -->
-        <a href="/bosses/" class="block bg-panel border border-border p-5 card-hover glow-box group" aria-label="Pragmata All Bosses Guide">
+        <a href="/bosses/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+          aria-label="Pragmata All Bosses Guide">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">BOSS</span>
             <span class="text-xs text-muted font-mono">5 Encounters</span>
           </div>
-          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">All Bosses Guide</h3>
-          <p class="text-muted text-sm font-body">Sector Guard · Creator · Luna Digger · Idea (Eight). Phase breakdowns, weak points, recommended loadouts.</p>
+          <h3
+            class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            All Bosses Guide</h3>
+          <p class="text-muted text-sm font-body">Sector Guard · Creator · Garden Keeper ·
+            Luna Digger · Idea (Eight). Phase breakdowns, weak points, recommended loadouts.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ →</span>
         </a>
 
         <!-- 2. Best Weapons -->
-        <a href="/weapons/" class="block bg-panel border border-border p-5 card-hover glow-box group" aria-label="Pragmata Best Weapons Tier List">
+        <a href="/weapons/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+          aria-label="Pragmata Best Weapons Tier List">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs font-mono text-amber-400 border border-amber-400/30 px-2 py-0.5">LOADOUT</span>
             <span class="text-xs text-muted font-mono">4 Categories</span>
           </div>
-          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Best Weapons Tier List</h3>
-          <p class="text-muted text-sm font-body">Primary / Attack / Tactical / Defensive weapons ranked. Best starting loadouts and upgrade priority per weapon class.</p>
+          <h3
+            class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            Best Weapons Tier List</h3>
+          <p class="text-muted text-sm font-body">Primary / Attack / Tactical / Defensive weapons ranked. Best starting
+            loadouts and upgrade priority per weapon class.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ →</span>
         </a>
 
         <!-- 3. All Endings -->
-        <a href="/endings/" class="block bg-panel border border-border p-5 card-hover glow-box group" aria-label="Pragmata All Endings Guide">
+        <a href="/endings/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+          aria-label="Pragmata All Endings Guide">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs font-mono text-purple-400 border border-purple-400/30 px-2 py-0.5">STORY</span>
             <span class="text-xs text-muted font-mono">2 Endings</span>
           </div>
-          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">All Endings Explained</h3>
-          <p class="text-muted text-sm font-body">How to unlock the Normal Ending and the Extended Ending via Unknown Signal Mode. Full story breakdown included.</p>
+          <h3
+            class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            All Endings Explained</h3>
+          <p class="text-muted text-sm font-body">How to unlock the Normal Ending and the Extended Ending via Unknown
+            Signal Mode. Full story breakdown included.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ →</span>
         </a>
 
         <!-- 4. Solar Power Plant Walkthrough -->
-        <a href="/walkthrough/solar-power-plant/" class="block bg-panel border border-border p-5 card-hover glow-box group" aria-label="Pragmata Solar Power Plant Walkthrough">
+        <a href="/walkthrough/solar-power-plant/"
+          class="block bg-panel border border-border p-5 card-hover glow-box group"
+          aria-label="Pragmata Solar Power Plant Walkthrough">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">SECTOR 1</span>
             <span class="text-xs text-muted font-mono">15 Collectibles</span>
           </div>
-          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Solar Power Plant</h3>
-          <p class="text-muted text-sm font-body">Full walkthrough for the opening sector. All Safe Boxes, Escape Hatches, and Mini Cabin locations with backtracking notes.</p>
+          <h3
+            class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            Solar Power Plant</h3>
+          <p class="text-muted text-sm font-body">Full walkthrough for the opening sector. All Safe Boxes, Escape
+            Hatches, and Mini Cabin locations with backtracking notes.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ →</span>
         </a>
 
         <!-- 5. Post-Game -->
-        <a href="/post-game/" class="block bg-panel border border-border p-5 card-hover glow-box group" aria-label="Pragmata Post-Game and Unknown Signal Guide">
+        <a href="/post-game/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+          aria-label="Pragmata Post-Game and Unknown Signal Guide">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs font-mono text-green-400 border border-green-400/30 px-2 py-0.5">POST-GAME</span>
             <span class="text-xs text-muted font-mono">NG+ · Unknown Signal</span>
           </div>
-          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Post-Game Guide</h3>
-          <p class="text-muted text-sm font-body">Unknown Signal mode, New Game Plus, Lunatic difficulty, Sim Pod challenges, and exclusive late-game weapons.</p>
+          <h3
+            class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            Post-Game Guide</h3>
+          <p class="text-muted text-sm font-body">Unknown Signal mode, New Game Plus, Lunatic difficulty, Sim Pod
+            challenges, and exclusive late-game weapons.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ →</span>
         </a>
 
         <!-- 6. Best Builds -->
-        <a href="/builds/" class="block bg-panel border border-border p-5 card-hover glow-box group" aria-label="Pragmata Best Builds and Mods Guide">
+        <a href="/builds/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+          aria-label="Pragmata Best Builds and Mods Guide">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs font-mono text-orange-400 border border-orange-400/30 px-2 py-0.5">BUILDS</span>
             <span class="text-xs text-muted font-mono">Mods · Perks</span>
           </div>
-          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">Best Builds &amp; Mods</h3>
-          <p class="text-muted text-sm font-body">Eagle Eye + Multihack combos, top perk stackings, and the most effective node routings for late-game encounters.</p>
+          <h3
+            class="font-display text-sm text-white uppercase tracking-wide mb-2 group-hover:text-cyan transition-colors">
+            Best Builds &amp; Mods</h3>
+          <p class="text-muted text-sm font-body">Eagle Eye + Multihack combos, top perk stackings, and the most
+            effective node routings for late-game encounters.</p>
           <span class="mt-4 block text-cyan text-xs font-mono tracking-widest">READ →</span>
         </a>
 
@@ -716,17 +857,19 @@
          [MODULE 6] COMPLIANCE — Disclaimer / Non-Affiliation Notice
     ============================================================ -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10" aria-label="Site disclaimer and compliance notice">
-      <div class="bg-panel border border-border/60 rounded p-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+      <div
+        class="bg-panel border border-border/60 rounded p-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
         <div class="flex-shrink-0" aria-hidden="true">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <circle cx="14" cy="14" r="12" stroke="#8892a4" stroke-width="1.5"/>
-            <path d="M14 9v5M14 18v1" stroke="#8892a4" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="14" cy="14" r="12" stroke="#8892a4" stroke-width="1.5" />
+            <path d="M14 9v5M14 18v1" stroke="#8892a4" stroke-width="2" stroke-linecap="round" />
           </svg>
         </div>
         <p class="text-muted text-sm font-body leading-relaxed">
           <strong class="text-white">Not affiliated with Capcom.</strong>
           PragmataGuide is an independent, fan-made resource.
-          PRAGMATA™ is a trademark of CAPCOM CO., LTD. All game data, characters, and assets are the property of their respective owners.
+          PRAGMATA™ is a trademark of CAPCOM CO., LTD. All game data, characters, and assets are the property of their
+          respective owners.
           Guide content is produced independently for informational and educational purposes.
           This site may display advertisements via Google AdSense.
           <a href="/privacy/" class="text-cyan hover:underline ml-1">Privacy Policy</a> ·
@@ -747,103 +890,172 @@
       <div class="max-w-3xl space-y-3">
 
         <!-- FAQ Item macro -->
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             How long does it take to beat Pragmata?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">The main story takes approximately <strong class="text-white">10–12 hours</strong> on Standard difficulty. A completionist run (all 184 collectibles, Training Sims, side content) takes <strong class="text-white">15–20 hours</strong>. Post-game modes like Unknown Signal and NG+ add further playtime.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The main story takes approximately <strong class="text-white">10–12 hours</strong> on
+              Standard difficulty. A completionist run (all 184 collectibles, Training Sims, side content) takes <strong
+                class="text-white">15–20 hours</strong>. Post-game modes like Unknown Signal and NG+ add further
+              playtime.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             How many endings does Pragmata have?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Pragmata has <strong class="text-white">two endings</strong>: a Normal Ending and an Extended Ending. The Extended Ending requires completing the post-game <em>Unknown Signal</em> mode after the main story. See our <a href="/endings/" class="text-cyan hover:underline">All Endings Guide</a> for full unlock steps.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Pragmata has <strong class="text-white">two endings</strong>: a Normal Ending and an
+              Extended Ending. The Extended Ending requires completing the post-game <em>Unknown Signal</em> mode after
+              the main story. See our <a href="/endings/" class="text-cyan hover:underline">All Endings Guide</a> for
+              full unlock steps.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             How many collectibles are in Pragmata?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Pragmata contains <strong class="text-white">184 collectibles</strong> across five sectors: 15 Mini Cabins, 27 Escape Hatches, 70 Safe Boxes, 21 Pure Lunum, 16 REM, 22 Mods, 5 Storage Expanders, 2 Cartridge Holders, and 6 Training Data items. Nothing is missable — Unknown Signal Mode lets you clean up after finishing the story.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Pragmata contains <strong class="text-white">184 collectibles</strong> across five
+              sectors: 15 Mini Cabins, 27 Escape Hatches, 70 Safe Boxes, 21 Pure Lunum, 16 REM, 22 Mods, 5 Storage
+              Expanders, 2 Cartridge Holders, and 6 Training Data items. Nothing is missable — Unknown Signal Mode lets
+              you clean up after finishing the story.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             What should I upgrade first in Pragmata?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Prioritize: <strong class="text-white">1. Diana's Hacking</strong> (most critical — increases damage and vulnerability windows), <strong class="text-white">2. Hugh's Suit</strong> (survivability vs. bosses), <strong class="text-white">3. Primary Unit / Grip Gun</strong>. Visit our <a href="/upgrades/" class="text-cyan hover:underline">Upgrade Guide</a> for the full breakdown.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Prioritize: <strong class="text-white">1. Diana's Hacking</strong> (most critical —
+              increases damage and vulnerability windows), <strong class="text-white">2. Hugh's Suit</strong>
+              (survivability vs. bosses), <strong class="text-white">3. Primary Unit / Grip Gun</strong>. Visit our <a
+                href="/upgrades/" class="text-cyan hover:underline">Upgrade Guide</a> for the full breakdown.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             How does Diana's hacking system work?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Diana displays a hacking grid on each enemy. Guide the cursor through colored nodes to reach the goal — this opens the enemy's armor for Hugh's weapons. <strong class="text-white">Yellow nodes</strong> provide crowd control, <strong class="text-white">Blue nodes</strong> boost Diana's hacking speed/damage, <strong class="text-white">Purple nodes</strong> appear at &lt;30% HP for a stagger/execution. See the <a href="/hacking-guide/" class="text-cyan hover:underline">Hacking Node Guide</a> for a visual breakdown.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Diana displays a hacking grid on each enemy. Guide the cursor through colored nodes to
+              reach the goal — this opens the enemy's armor for Hugh's weapons. <strong class="text-white">Yellow
+                nodes</strong> provide crowd control, <strong class="text-white">Blue nodes</strong> boost Diana's
+              hacking speed/damage, <strong class="text-white">Purple nodes</strong> appear at &lt;30% HP for a
+              stagger/execution. See the <a href="/hacking-guide/" class="text-cyan hover:underline">Hacking Node
+                Guide</a> for a visual breakdown.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             Does Pragmata have multiplayer or co-op?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">No. Pragmata is a <strong class="text-white">single-player only</strong> game. The dual-character system (Hugh and Diana) is fully controlled by one player. No co-op, online, or PvP modes exist.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">No. Pragmata is a <strong class="text-white">single-player only</strong> game. The
+              dual-character system (Hugh and Diana) is fully controlled by one player. No co-op, online, or PvP modes
+              exist.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             What platforms is Pragmata on?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Pragmata is available on <strong class="text-white">PlayStation 5, Xbox Series X|S, PC (Steam), and Nintendo Switch 2</strong>. It was released on April 17, 2026. PC supports path tracing with compatible NVIDIA RTX hardware.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Pragmata is available on <strong class="text-white">PlayStation 5, Xbox Series X|S, PC
+                (Steam), and Nintendo Switch 2</strong>. It was released on April 17, 2026. PC supports path tracing
+              with compatible NVIDIA RTX hardware.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             What is Unknown Signal mode?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Unknown Signal is Pragmata's post-campaign content, unlocked after finishing the main story. It adds new Sim Pod challenges in the Hidden Chamber with rewards including special weapons and outfits — and completing it at 100% collectibles unlocks the Extended Ending. See our <a href="/post-game/" class="text-cyan hover:underline">Post-Game Guide</a>.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Unknown Signal is Pragmata's post-campaign content, unlocked after finishing the main
+              story. It adds new Sim Pod challenges in the Hidden Chamber with rewards including special weapons and
+              outfits — and completing it at 100% collectibles unlocks the Extended Ending. See our <a
+                href="/post-game/" class="text-cyan hover:underline">Post-Game Guide</a>.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             Can you miss collectibles permanently?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text"><strong class="text-white">No.</strong> All collectibles can be retrieved after the main story via Unknown Signal Mode (Cleanup Mode). Some items require story-unlocked abilities (e.g. Lim Eraser) — the game will mark these for backtracking. Nothing is permanently missable.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text"><strong class="text-white">No.</strong> All collectibles can be retrieved after the main
+              story via Unknown Signal Mode (Cleanup Mode). Some items require story-unlocked abilities (e.g. Lim
+              Eraser) — the game will mark these for backtracking. Nothing is permanently missable.</p>
           </div>
         </details>
 
-        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
             Is Pragmata worth buying in 2026?
             <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
           </summary>
-          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Pragmata holds an <strong class="text-white">86 on Metacritic</strong>, 97% positive reviews on Steam (4,747+ reviews), and sold over 1 million copies in its first 48 hours. Critics praised the inventive dual-character hacking combat, heartfelt story, and substantial post-game content. See third-party reviews for detailed opinions.</p>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Pragmata holds an <strong class="text-white">86 on Metacritic</strong>, 97% positive
+              reviews on Steam (4,747+ reviews), and sold over 1 million copies in its first 48 hours. Critics praised
+              the inventive dual-character hacking combat, heartfelt story, and substantial post-game content. See
+              third-party reviews for detailed opinions.</p>
           </div>
         </details>
 
@@ -863,10 +1075,12 @@
         <div class="lg:col-span-2">
           <div class="flex items-center gap-2 mb-3" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
-              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
-              <circle cx="14" cy="14" r="2.5" fill="#00e5ff"/>
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
             </svg>
-            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span class="text-cyan">Guide</span></span>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
           </div>
           <p class="text-muted text-sm font-body max-w-xs">
             Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
@@ -877,11 +1091,11 @@
         <nav aria-label="Guide pages footer links">
           <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
           <ul class="space-y-2 text-sm font-body text-muted">
-            <li><a href="/walkthrough/"          class="hover:text-cyan transition-colors">Walkthrough</a></li>
-            <li><a href="/bosses/"               class="hover:text-cyan transition-colors">Boss Guides</a></li>
-            <li><a href="/weapons/"              class="hover:text-cyan transition-colors">Best Weapons</a></li>
-            <li><a href="/collectibles/"         class="hover:text-cyan transition-colors">All Collectibles</a></li>
-            <li><a href="/endings/"              class="hover:text-cyan transition-colors">All Endings</a></li>
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/weapons/" class="hover:text-cyan transition-colors">Best Weapons</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
             <li><a href="/trophies-achievements/" class="hover:text-cyan transition-colors">Trophies</a></li>
           </ul>
         </nav>
@@ -890,11 +1104,11 @@
         <nav aria-label="Site pages footer links">
           <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
           <ul class="space-y-2 text-sm font-body text-muted">
-            <li><a href="/about/"       class="hover:text-cyan transition-colors">About</a></li>
-            <li><a href="/contact/"     class="hover:text-cyan transition-colors">Contact</a></li>
-            <li><a href="/privacy/"     class="hover:text-cyan transition-colors">Privacy Policy</a></li>
-            <li><a href="/disclosure/"  class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
-            <li><a href="/sitemap.xml"  class="hover:text-cyan transition-colors">Sitemap</a></li>
+            <li><a href="/about/" class="hover:text-cyan transition-colors">About</a></li>
+            <li><a href="/contact/" class="hover:text-cyan transition-colors">Contact</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
           </ul>
         </nav>
 
@@ -902,9 +1116,11 @@
 
       <hr class="hr-cyan mb-6" aria-hidden="true" />
 
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
         <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
-        <p class="text-right">PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+        <p class="text-right">PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span>
+        </p>
       </div>
     </div>
   </footer>
@@ -912,9 +1128,9 @@
   <!-- Mobile menu JS -->
   <script>
     const toggle = document.getElementById('menu-toggle');
-    const nav    = document.getElementById('mobile-nav');
-    const iconM  = document.getElementById('icon-menu');
-    const iconC  = document.getElementById('icon-close');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
 
     toggle.addEventListener('click', () => {
       const isOpen = !nav.classList.contains('hidden');
@@ -927,4 +1143,5 @@
   </script>
 
 </body>
+
 </html>
