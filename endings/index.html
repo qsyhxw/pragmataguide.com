@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ============================================================
+       META & SEO
+  ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pragmata All Endings Guide – Default, Abandonment & True Ending (2026)</title>
+    <meta name="description"
+        content="Complete Pragmata endings guide for 2026. How to unlock all 3 endings: Default, Abandonment, and True Ending via Unknown Signal mode. Black Box Mod steps explained." />
+    <link rel="canonical" href="https://www.pragmataguide.com/endings/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Pragmata All Endings Guide – Default, Abandonment & True Ending (2026)" />
+    <meta property="og:description"
+        content="Complete Pragmata endings guide. Unlock all 3 endings: Default, Abandonment, and the True Ending via Unknown Signal & Black Box Mod." />
+    <meta property="og:url" content="https://www.pragmataguide.com/endings/" />
+    <meta property="og:site_name" content="PragmataGuide" />
+    <meta property="og:image" content="https://www.pragmataguide.com/og-cover.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pragmata All Endings Guide – Default, Abandonment & True Ending (2026)" />
+    <meta name="twitter:description"
+        content="How to unlock every ending in Pragmata, including the True Ending via Unknown Signal mode and the Black Box Mod." />
+    <meta name="twitter:image" content="https://www.pragmataguide.com/og-cover.jpg" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'space': '#060810',
+                        'hull': '#0c0f1a',
+                        'panel': '#111827',
+                        'cyan': '#00e5ff',
+                        'cyan2': '#00b4d8',
+                        'amber': '#ffb703',
+                        'muted': '#8892a4',
+                        'border': '#1e2d45',
+                    },
+                    fontFamily: {
+                        display: ['Orbitron', 'sans-serif'],
+                        body: ['Rajdhani', 'sans-serif'],
+                        mono: ['"Space Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #060810;
+            color: #c9d1e0;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        .glow-cyan {
+            text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+        }
+
+        .glow-box {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 32px rgba(0, 229, 255, 0.08);
+        }
+
+        .glow-box:hover {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 48px rgba(0, 229, 255, 0.15);
+        }
+
+        .clip-card {
+            clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+        }
+
+        .blink {
+            animation: blink 1.1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            animation: fadeUp 0.7s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.22s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.34s;
+        }
+
+        .card-hover {
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+        }
+
+        .nav-link {
+            position: relative;
+            color: #8892a4;
+            transition: color 0.2s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: #00e5ff;
+            transition: width 0.25s ease;
+        }
+
+        .nav-link:hover {
+            color: #00e5ff;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-cyan {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: transparent;
+            color: #00e5ff;
+            border: 1px solid rgba(0, 229, 255, 0.5);
+            padding: 0.6rem 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-cyan:hover {
+            background: rgba(0, 229, 255, 0.12);
+            color: #fff;
+        }
+
+        .btn-amber {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: transparent;
+            color: #ffb703;
+            border: 1px solid rgba(255, 183, 3, 0.45);
+            padding: 0.6rem 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-amber:hover {
+            background: rgba(255, 183, 3, 0.12);
+            color: #fff;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #e2e8f0;
+        }
+
+        .section-title span {
+            color: #00e5ff;
+        }
+
+        .section-eyebrow {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: #00e5ff;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        details>summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.2s ease;
+        }
+
+        details[open] summary~* {
+            animation: fadeUp 0.3s ease forwards;
+        }
+
+        .hr-cyan {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+        }
+
+        /* Ending cards */
+        .ending-card-default {
+            border-color: rgba(0, 229, 255, 0.3);
+        }
+
+        .ending-card-abandonment {
+            border-color: rgba(239, 68, 68, 0.35);
+        }
+
+        .ending-card-true {
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+
+        .ending-badge-default {
+            color: #00e5ff;
+            border-color: rgba(0, 229, 255, 0.3);
+        }
+
+        .ending-badge-abandonment {
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.35);
+        }
+
+        .ending-badge-true {
+            color: #c084fc;
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+
+        .ending-glow-default {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.15), 0 0 40px rgba(0, 229, 255, 0.06);
+        }
+
+        .ending-glow-abandonment {
+            box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.15), 0 0 40px rgba(239, 68, 68, 0.06);
+        }
+
+        .ending-glow-true {
+            box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.2), 0 0 40px rgba(168, 85, 247, 0.08);
+        }
+
+        .ending-glow-default:hover {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.4), 0 0 48px rgba(0, 229, 255, 0.12);
+        }
+
+        .ending-glow-abandonment:hover {
+            box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.4), 0 0 48px rgba(239, 68, 68, 0.12);
+        }
+
+        .ending-glow-true:hover {
+            box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.4), 0 0 48px rgba(168, 85, 247, 0.12);
+        }
+
+        /* Step list */
+        .step-item {
+            counter-increment: steps;
+        }
+
+        .step-num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            color: #c084fc;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Warning / spoiler box */
+        .spoiler-box {
+            border-left: 3px solid rgba(255, 183, 3, 0.6);
+            background: rgba(255, 183, 3, 0.05);
+        }
+
+        .warning-box {
+            border-left: 3px solid rgba(239, 68, 68, 0.6);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .tip-box {
+            border-left: 3px solid rgba(0, 229, 255, 0.5);
+            background: rgba(0, 229, 255, 0.05);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-sep {
+            color: #1e2d45;
+        }
+
+        /* Table */
+        .data-table th {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #8892a4;
+        }
+
+        .data-table td {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(0, 229, 255, 0.03);
+        }
+    </style>
+
+    <!-- JSON-LD: FAQPage + HowTo + BreadcrumbList -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "PragmataGuide", "item": "https://www.pragmataguide.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Endings Guide", "item": "https://www.pragmataguide.com/endings/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many endings does Pragmata have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pragmata has three endings: the Default Ending (most players' first-run outcome), the Abandonment Ending (triggered by very low Synchronization with Diana), and the True Ending (requires completing Unknown Signal mode and equipping the Black Box Mod before the final boss)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I unlock the True Ending in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To unlock the True Ending: 1) Complete the main story for the Default Ending. 2) Start Unknown Signal mode from the main menu. 3) Achieve 100% sector completion in all five areas (collectibles excluding Mini Cabins and Upgrade Components). 4) Defeat all four Enhanced Bosses. 5) Complete all 10 Sim Pod challenges in the Hidden Chamber. 6) Collect the Black Box Mod from the Architect's vault. 7) Equip the Black Box Mod and defeat the final boss again."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Black Box Mod in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Black Box Mod is a special Mod obtained by completing all 10 Sim Pod challenges in the Hidden Chamber during Unknown Signal mode. Equipping it and defeating the final boss a second time unlocks the True Ending with an additional post-credits scene implying Hugh survives his dead filament infection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What rewards do you get from Unknown Signal mode?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Completing all 10 Sim Pod challenges in the Hidden Chamber unlocks: the Lim Cannon (Attack Unit weapon), the Obsidia and Black Neon outfits for Hugh and Diana, and the Black Box Mod required for the True Ending."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you miss endings permanently in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No endings are permanently missable. The Abandonment Ending can be triggered intentionally on any playthrough by keeping Synchronization low. The True Ending requires Unknown Signal mode, which is only available post-story — but all collectibles can be completed retroactively via that same mode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the True Ending unlock on a first playthrough?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The True Ending requires completing Unknown Signal mode, which only unlocks after you finish the main story and roll credits at least once. It cannot be obtained on a first playthrough."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="relative z-10">
+
+    <!-- ============================================================
+       HEADER
+  ============================================================ -->
+    <header class="sticky top-0 z-50 border-b border-border bg-hull/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 group" aria-label="PragmataGuide Home">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                    <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                        stroke-width="1.5" />
+                    <polygon points="14,6 21,10 21,18 14,22 7,18 7,10" fill="rgba(0,229,255,0.1)"
+                        stroke="rgba(0,229,255,0.4)" stroke-width="1" />
+                    <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+                </svg>
+                <span class="font-display font-bold text-sm tracking-widest text-white uppercase">
+                    Pragmata<span class="text-cyan">Guide</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+                <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+                <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+                <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
+                <a href="/endings/" class="nav-link text-sm font-medium font-body" style="color:#00e5ff;">Endings</a>
+                <a href="/hacking-guide/" class="nav-link text-sm font-medium font-body">Hacking</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden p-2 text-muted hover:text-cyan transition-colors"
+                aria-label="Open menu" aria-expanded="false">
+                <svg id="icon-menu" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="icon-close" class="hidden" width="22" height="22" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-nav" class="hidden md:hidden border-t border-border bg-hull px-4 py-3 flex-col gap-3"
+            aria-label="Mobile navigation">
+            <a href="/walkthrough/" class="nav-link text-sm py-1 font-body">Walkthrough</a>
+            <a href="/bosses/" class="nav-link text-sm py-1 font-body">Bosses</a>
+            <a href="/weapons/" class="nav-link text-sm py-1 font-body">Weapons</a>
+            <a href="/collectibles/" class="nav-link text-sm py-1 font-body">Collectibles</a>
+            <a href="/endings/" class="nav-link text-sm py-1 font-body">Endings</a>
+            <a href="/hacking-guide/" class="nav-link text-sm py-1 font-body">Hacking</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+         HERO / PAGE HEADER
+    ============================================================ -->
+        <section class="relative overflow-hidden grid-bg py-14 sm:py-20" aria-label="Page header">
+            <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full"
+                    style="background: radial-gradient(ellipse, rgba(168,85,247,0.09) 0%, transparent 70%);"></div>
+            </div>
+            <div class="absolute top-6 left-6 w-12 h-12 border-l border-t border-purple-500/20 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute bottom-6 right-6 w-12 h-12 border-r border-b border-purple-500/20 pointer-events-none"
+                aria-hidden="true"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+                <!-- Breadcrumb -->
+                <nav aria-label="Breadcrumb" class="mb-6">
+                    <ol class="flex items-center gap-2 text-xs font-mono text-muted">
+                        <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+                        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+                        <li class="text-white" aria-current="page">Endings Guide</li>
+                    </ol>
+                </nav>
+
+                <p class="section-eyebrow fade-up">// Story · Post-Game · 3 Endings</p>
+                <h1 class="fade-up delay-1 section-title text-3xl sm:text-4xl lg:text-5xl leading-tight max-w-3xl mb-4">
+                    Pragmata <span>All Endings</span> Guide<br />
+                    <span class="text-white text-2xl sm:text-3xl">Default · Abandonment · True Ending</span>
+                </h1>
+                <p class="fade-up delay-2 text-muted text-lg max-w-2xl mb-8 font-body">
+                    Pragmata has <strong class="text-white">three distinct endings</strong> determined by your
+                    Synchronization level with Diana and post-game Unknown Signal completion. This guide covers every
+                    ending, all unlock requirements, Points of No Return, and the True Ending's Black Box Mod steps —
+                    fully spoiler-tagged.
+                </p>
+
+                <!-- Quick stat strip -->
+                <div class="fade-up delay-3 flex flex-wrap gap-6 mb-4">
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-purple-400">3</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Total Endings</span>
+                    </div>
+                    <div class="w-px bg-border self-stretch hidden sm:block" aria-hidden="true"></div>
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-cyan glow-cyan">10</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Sim Pod Challenges</span>
+                    </div>
+                    <div class="w-px bg-border self-stretch hidden sm:block" aria-hidden="true"></div>
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-amber-400">0</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Missable Endings</span>
+                    </div>
+                    <div class="w-px bg-border self-stretch hidden sm:block" aria-hidden="true"></div>
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-green-400">Apr 17</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Release · 2026</span>
+                    </div>
+                </div>
+
+                <!-- Spoiler warning -->
+                <div class="fade-up delay-3 spoiler-box rounded px-5 py-4 max-w-2xl mt-6">
+                    <p class="text-sm font-body">
+                        <span class="font-display text-xs text-amber-400 uppercase tracking-widest">⚠ Spoiler
+                            Notice</span><br />
+                        The sections below describe each ending's story content. The <strong class="text-white">unlock
+                            steps</strong> are safe to read without spoilers. Ending story details are collapsed inside
+                        spoiler toggles — open only if you've completed the main campaign.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr-cyan" aria-hidden="true" />
+
+        <!-- ============================================================
+         TABLE OF CONTENTS
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8" aria-label="Table of contents">
+            <div class="bg-panel border border-border clip-card p-5 max-w-lg">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">// Contents</p>
+                <ol class="space-y-1.5 text-sm font-body">
+                    <li><a href="#how-many-endings" class="text-muted hover:text-cyan transition-colors">1. How Many
+                            Endings Does Pragmata Have?</a></li>
+                    <li><a href="#default-ending" class="text-muted hover:text-cyan transition-colors">2. Default Ending
+                            — Unlock Steps &amp; Story</a></li>
+                    <li><a href="#abandonment-ending" class="text-muted hover:text-cyan transition-colors">3.
+                            Abandonment Ending — How to Trigger</a></li>
+                    <li><a href="#true-ending" class="text-muted hover:text-cyan transition-colors">4. True Ending —
+                            Full Unknown Signal Steps</a></li>
+                    <li><a href="#black-box-mod" class="text-muted hover:text-cyan transition-colors">5. Black Box Mod
+                            Explained</a></li>
+                    <li><a href="#points-of-no-return" class="text-muted hover:text-cyan transition-colors">6. Points of
+                            No Return</a></li>
+                    <li><a href="#endings-comparison" class="text-muted hover:text-cyan transition-colors">7. Endings
+                            Comparison Table</a></li>
+                    <li><a href="#faq" class="text-muted hover:text-cyan transition-colors">8. FAQ</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         HOW MANY ENDINGS
+    ============================================================ -->
+        <section id="how-many-endings" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="how-many-heading">
+            <p class="section-eyebrow">// Overview</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="how-many-heading">How Many Endings Does
+                <span>Pragmata</span> Have?</h2>
+
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                Pragmata has <strong class="text-white">three endings</strong>. Unlike games with a clean branching
+                choice menu, Pragmata builds your outcome across the entire campaign through your <strong
+                    class="text-white">Synchronization level</strong> with Diana — and one ending is gated behind
+                post-game content. Here's a quick orientation:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+
+                <!-- Default Ending card -->
+                <div
+                    class="bg-panel border ending-card-default clip-card p-5 card-hover ending-glow-default transition-all">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-mono border ending-badge-default px-2 py-0.5">DEFAULT</span>
+                        <span class="text-xs text-muted font-mono">First Run</span>
+                    </div>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Default Ending</h3>
+                    <p class="text-muted text-sm font-body mb-3">The most common outcome. Finish Sector 06 and defeat
+                        the final boss on any Synchronization level. Diana returns to Earth; Hugh remains behind.</p>
+                    <a href="#default-ending"
+                        class="text-cyan text-xs font-mono tracking-widest hover:underline">DETAILS →</a>
+                </div>
+
+                <!-- Abandonment Ending card -->
+                <div
+                    class="bg-panel border ending-card-abandonment clip-card p-5 card-hover ending-glow-abandonment transition-all">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-mono border ending-badge-abandonment px-2 py-0.5">ABANDONMENT</span>
+                        <span class="text-xs text-muted font-mono">Low Sync</span>
+                    </div>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Abandonment Ending</h3>
+                    <p class="text-muted text-sm font-body mb-3">Triggered by a very low Synchronization level with
+                        Diana — typically from speedrunning or skipping Diana interactions and escort moments.</p>
+                    <a href="#abandonment-ending"
+                        class="text-red-400 text-xs font-mono tracking-widest hover:underline">DETAILS →</a>
+                </div>
+
+                <!-- True Ending card -->
+                <div class="bg-panel border ending-card-true clip-card p-5 card-hover ending-glow-true transition-all">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-mono border ending-badge-true px-2 py-0.5">TRUE ENDING</span>
+                        <span class="text-xs text-muted font-mono">Post-Game</span>
+                    </div>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">True Ending</h3>
+                    <p class="text-muted text-sm font-body mb-3">Requires completing Unknown Signal mode and equipping
+                        the Black Box Mod. Adds an extended post-credits scene implying Hugh's survival.</p>
+                    <a href="#true-ending"
+                        class="text-purple-400 text-xs font-mono tracking-widest hover:underline">DETAILS →</a>
+                </div>
+
+            </div>
+
+            <div class="tip-box rounded px-5 py-4 max-w-2xl">
+                <p class="text-sm font-body text-muted">
+                    <span class="font-display text-xs text-cyan uppercase tracking-widest">ℹ Note on "2 vs 3
+                        endings"</span><br />
+                    Some guides (Wccftech, NME) describe only two endings, treating the Default and Abandonment as one.
+                    Detailed sources including Shacknews, Game Rant, GamerGuides, and Phrasemaker confirm <strong
+                        class="text-white">three distinct story outcomes</strong>. The difference in outcome between
+                    Default and Abandonment is meaningful — see the comparison table below.
+                </p>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         DEFAULT ENDING
+    ============================================================ -->
+        <section id="default-ending" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="default-heading">
+            <p class="section-eyebrow">// Ending 1 of 3</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="default-heading">
+                <span style="color:#00e5ff;">Default Ending</span> — The Standard Conclusion
+            </h2>
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                The Default Ending is the outcome virtually every player reaches on their first playthrough. It requires
+                no special conditions — simply complete the main story.
+            </p>
+
+            <!-- Unlock steps -->
+            <div class="bg-panel border ending-card-default clip-card p-6 max-w-2xl mb-6 ending-glow-default">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-4">Unlock Requirements</p>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 step-item">
+                        <div class="step-num"
+                            style="background:rgba(0,229,255,0.15);border-color:rgba(0,229,255,0.4);color:#00e5ff;">1
+                        </div>
+                        <p class="text-sm font-body text-muted pt-0.5">Play through the main story in any order and on
+                            any difficulty.</p>
+                    </div>
+                    <div class="flex items-start gap-3 step-item">
+                        <div class="step-num"
+                            style="background:rgba(0,229,255,0.15);border-color:rgba(0,229,255,0.4);color:#00e5ff;">2
+                        </div>
+                        <p class="text-sm font-body text-muted pt-0.5">Reach <strong class="text-white">Sector 06:
+                                Central Port</strong> and defeat the final boss.</p>
+                    </div>
+                    <div class="flex items-start gap-3 step-item">
+                        <div class="step-num"
+                            style="background:rgba(0,229,255,0.15);border-color:rgba(0,229,255,0.4);color:#00e5ff;">3
+                        </div>
+                        <p class="text-sm font-body text-muted pt-0.5">Proceed through the set-piece sequence. Watch the
+                            credits and post-credits scene.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post-completion unlocks -->
+            <div class="bg-panel border border-border p-5 max-w-2xl mb-6">
+                <p class="text-xs font-mono text-amber-400 tracking-widest uppercase mb-3">Rewards Unlocked After
+                    Credits</p>
+                <ul class="space-y-1.5 text-sm font-body text-muted">
+                    <li class="flex items-center gap-2"><span class="text-cyan text-xs">▸</span> <strong
+                            class="text-white">New Game+</strong> — carry over upgrades and equipment</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan text-xs">▸</span> <strong
+                            class="text-white">Lunatic Mode</strong> — reset upgrades but rebuild faster via Unit
+                        Printer</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan text-xs">▸</span> <strong
+                            class="text-white">Jackhammer Assault Unit</strong> — exclusive melee weapon</li>
+                    <li class="flex items-center gap-2"><span class="text-cyan text-xs">▸</span> <strong
+                            class="text-white">Unknown Signal Mode</strong> — unlocks the path to the True Ending</li>
+                </ul>
+            </div>
+
+            <!-- Story spoiler toggle -->
+            <details class="bg-panel border ending-card-default max-w-2xl">
+                <summary
+                    class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors cursor-pointer">
+                    <span>▼ Story Summary (Spoilers — click to expand)</span>
+                    <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                        aria-hidden="true">+</span>
+                </summary>
+                <div class="px-5 pb-5 text-muted text-sm font-body">
+                    <p>In the Default Ending, Diana successfully escapes the lunar research station and returns to
+                        Earth. Hugh chooses to remain behind on the moon to address the failing AI systems and stabilize
+                        the station. The post-credits scene is brief and emotionally weighted. It does not confirm
+                        Hugh's fate explicitly — that ambiguity is what the True Ending resolves.</p>
+                </div>
+            </details>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         ABANDONMENT ENDING
+    ============================================================ -->
+        <section id="abandonment-ending" class="max-w-7xl mx-auto px-4 sm:px-6 py-14"
+            aria-labelledby="abandonment-heading">
+            <p class="section-eyebrow">// Ending 2 of 3</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="abandonment-heading">
+                <span style="color:#f87171;">Abandonment Ending</span> — Low Synchronization Route
+            </h2>
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                The Abandonment Ending is triggered when your <strong class="text-white">Synchronization level with
+                    Diana</strong> remains very low throughout the campaign — typically by skipping interactions,
+                failing escort sequences, and ignoring optional Diana content. Most players will not encounter this
+                ending unless intentionally speedrunning or neglecting the game's systems.
+            </p>
+
+            <!-- Warning -->
+            <div class="warning-box rounded px-5 py-4 max-w-2xl mb-6">
+                <p class="text-sm font-body text-muted">
+                    <span class="font-display text-xs text-red-400 uppercase tracking-widest">⚠ How to Avoid This
+                        Ending</span><br />
+                    Engage regularly with Diana's hacking system, complete escort sequences without failure, collect
+                    Memory Fragments, and interact with optional Diana story moments. Keeping Synchronization above the
+                    minimum threshold ensures you land on the Default or True ending route instead.
+                </p>
+            </div>
+
+            <!-- What triggers it -->
+            <div class="bg-panel border ending-card-abandonment clip-card p-6 max-w-2xl mb-6 ending-glow-abandonment">
+                <p class="text-xs font-mono text-red-400 tracking-widest uppercase mb-4">What Triggers the Abandonment
+                    Ending</p>
+                <ul class="space-y-2 text-sm font-body text-muted">
+                    <li class="flex items-start gap-2"><span class="text-red-400 text-xs mt-1 flex-shrink-0">▸</span>
+                        Skipping most or all optional Diana interactions across sectors</li>
+                    <li class="flex items-start gap-2"><span class="text-red-400 text-xs mt-1 flex-shrink-0">▸</span>
+                        Failing a significant number of escort and protection moments</li>
+                    <li class="flex items-start gap-2"><span class="text-red-400 text-xs mt-1 flex-shrink-0">▸</span>
+                        Missing large numbers of Memory Fragments (REMs / Read Earth Memories)</li>
+                    <li class="flex items-start gap-2"><span class="text-red-400 text-xs mt-1 flex-shrink-0">▸</span>
+                        Keeping Diana's hacking module at minimal upgrade levels throughout</li>
+                </ul>
+            </div>
+
+            <!-- Story spoiler toggle -->
+            <details class="bg-panel border ending-card-abandonment max-w-2xl">
+                <summary
+                    class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-red-400 transition-colors cursor-pointer">
+                    <span>▼ Story Summary (Spoilers — click to expand)</span>
+                    <span class="faq-icon flex-shrink-0 text-red-400 font-mono text-xl leading-none"
+                        aria-hidden="true">+</span>
+                </summary>
+                <div class="px-5 pb-5 text-muted text-sm font-body">
+                    <p>In the Abandonment Ending, Diana ultimately succeeds in restoring Earth's atmosphere — but at the
+                        cost of Hugh's consciousness. The bond between the two characters, never fully developed due to
+                        low Synchronization, is reflected in the bleaker resolution. This is described by multiple
+                        sources as a harsher and more somber version of the story's conclusion.</p>
+                </div>
+            </details>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         TRUE ENDING
+    ============================================================ -->
+        <section id="true-ending" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="true-heading">
+            <p class="section-eyebrow">// Ending 3 of 3 · Post-Game Required</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="true-heading">
+                <span style="color:#c084fc;">True Ending</span> — Full Unknown Signal Route
+            </h2>
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                The True Ending is Pragmata's most complete story resolution. It requires finishing the main campaign
+                first, then fully completing the <strong class="text-white">Unknown Signal</strong> post-game mode —
+                including 100% sector completion, four Enhanced Boss defeats, and all 10 Sim Pod challenges in the
+                Hidden Chamber. The reward is the <strong class="text-white">Black Box Mod</strong>, which when equipped
+                changes the ending's post-credits scene.
+            </p>
+
+            <!-- Step-by-step -->
+            <div class="bg-panel border ending-card-true clip-card p-6 max-w-2xl mb-6 ending-glow-true">
+                <p class="text-xs font-mono text-purple-400 tracking-widest uppercase mb-5">True Ending — Step by Step
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">1</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Complete the main story</p>
+                            <p class="text-xs text-muted font-body">Reach Sector 06: Central Port, defeat the final
+                                boss, and roll credits for the Default Ending. This unlocks Unknown Signal mode.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">2</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Start Unknown Signal from the main
+                                menu</p>
+                            <p class="text-xs text-muted font-body">Load your completed save file via the Unknown Signal
+                                option. You will return to the Shelter and gain access to the <strong
+                                    class="text-white">Hidden Chamber</strong> — a new area containing 10 Sim Pods.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">3</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Complete the first Sim Pod
+                                (auto-unlocked)</p>
+                            <p class="text-xs text-muted font-body">Pod #1 unlocks automatically after speaking to Big
+                                Cabin. You must finish it before accessing any other sector for cleanup.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">4</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Achieve 100% sector completion in all
+                                five areas</p>
+                            <p class="text-xs text-muted font-body">Collect all items in each sector: Safe Boxes, REMs,
+                                Pure Lunum, Escape Hatches, Mods, Cartridge Holders, and Training Data. <strong
+                                    class="text-white">Mini Cabins and Upgrade Components do not count</strong> toward
+                                100% completion.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">5</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Defeat all four Enhanced Bosses</p>
+                            <p class="text-xs text-muted font-body">Enhanced versions of the Sector Guard, Creator,
+                                Garden Keeper, and Luna Digger appear in their original sectors. Each defeat unlocks an
+                                additional Sim Pod in the Hidden Chamber. Note: the final boss (Eight / Idea) does not
+                                have an enhanced version.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">6</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Complete all 10 Sim Pod challenges</p>
+                            <p class="text-xs text-muted font-body">These are unique challenges — combat, platforming,
+                                and puzzles — separate from the standard Training Simulations (Bad Blood, Floor It,
+                                etc.). All 10 must be cleared to open the Architect's vault.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">7</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Collect the Black Box Mod from the
+                                Architect's vault</p>
+                            <p class="text-xs text-muted font-body">The vault opens after all 10 Pods are complete. It
+                                also contains the <strong class="text-white">Lim Cannon</strong> (Attack Unit weapon)
+                                and the <strong class="text-white">Obsidia &amp; Black Neon outfits</strong> for Hugh
+                                and Diana.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num">8</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Equip the Black Box Mod and defeat the
+                                final boss again</p>
+                            <p class="text-xs text-muted font-body">Return to Central Port with the Black Box Mod
+                                equipped. Defeat the final boss — the set-piece sequence remains identical. The ending
+                                triggers automatically.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story spoiler toggle -->
+            <details class="bg-panel border ending-card-true max-w-2xl">
+                <summary
+                    class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-purple-400 transition-colors cursor-pointer">
+                    <span>▼ True Ending Story Details (Full Spoilers)</span>
+                    <span class="faq-icon flex-shrink-0 text-purple-400 font-mono text-xl leading-none"
+                        aria-hidden="true">+</span>
+                </summary>
+                <div class="px-5 pb-5 text-muted text-sm font-body space-y-3">
+                    <p>The True Ending plays identically to the Default Ending's main sequence. The difference appears
+                        in two places:</p>
+                    <ol class="list-decimal list-inside space-y-2 pl-2">
+                        <li><strong class="text-white">During the credits</strong>, black-and-white concept art of Hugh
+                            and Diana is shown — artwork that does not appear in the Default Ending credits.</li>
+                        <li><strong class="text-white">After the beach scene</strong> (Diana arriving on Earth), a new
+                            audio cue plays: Cabin — the Shelter's AI — greets someone returning to the Shelter and says
+                            something along the lines of "Welcome back! What's this? Traveling alone today?" The
+                            implication is that Hugh survived his dead filament infection and found his way back to
+                            safety.</li>
+                    </ol>
+                    <p class="text-xs text-muted font-mono mt-2">Source: Shacknews (April 19, 2026), Game Rant (April
+                        22, 2026), GamerGuides (April 20, 2026)</p>
+                </div>
+            </details>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         BLACK BOX MOD
+    ============================================================ -->
+        <section id="black-box-mod" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="bbm-heading">
+            <p class="section-eyebrow">// Key Item</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="bbm-heading">The <span>Black Box Mod</span>
+                Explained</h2>
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                The Black Box Mod is the key item required to trigger the True Ending. It has <strong
+                    class="text-white">no gameplay effect</strong> during combat — its role is purely narrative.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mb-6">
+                <div class="bg-panel border border-border p-5">
+                    <p class="text-xs font-mono text-purple-400 tracking-widest uppercase mb-3">Item Details</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li class="flex items-start gap-2"><span class="text-purple-400 text-xs mt-1">▸</span> <strong
+                                class="text-white">Type:</strong> Mod (equip at Shelter)</li>
+                        <li class="flex items-start gap-2"><span class="text-purple-400 text-xs mt-1">▸</span> <strong
+                                class="text-white">Effect:</strong> None (narrative-only trigger)</li>
+                        <li class="flex items-start gap-2"><span class="text-purple-400 text-xs mt-1">▸</span> <strong
+                                class="text-white">Description (in-game):</strong> "May suppress the spread of dead
+                            filament in organic life"</li>
+                        <li class="flex items-start gap-2"><span class="text-purple-400 text-xs mt-1">▸</span> <strong
+                                class="text-white">Located:</strong> Architect's vault, Hidden Chamber (Unknown Signal)
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-panel border border-border p-5">
+                    <p class="text-xs font-mono text-amber-400 tracking-widest uppercase mb-3">Also in the Vault</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">▸</span> <strong
+                                class="text-white">Lim Cannon</strong> — exclusive Attack Unit weapon</li>
+                        <li class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">▸</span> <strong
+                                class="text-white">Obsidia Outfit</strong> — for Hugh and Diana</li>
+                        <li class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">▸</span> <strong
+                                class="text-white">Black Neon Outfit</strong> — for Hugh and Diana</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip-box rounded px-5 py-4 max-w-2xl">
+                <p class="text-sm font-body text-muted">
+                    <span class="font-display text-xs text-cyan uppercase tracking-widest">ℹ Equip before the final
+                        boss</span><br />
+                    Make sure the Black Box Mod is in your active Mod slot at the Shelter <em>before</em> heading into
+                    the final boss fight. The game does not give you a prompt to equip it mid-fight. If you forget,
+                    simply reload before the boss encounter.
+                </p>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         POINTS OF NO RETURN
+    ============================================================ -->
+        <section id="points-of-no-return" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="ponr-heading">
+            <p class="section-eyebrow">// Warning</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="ponr-heading"><span>Points of No Return</span> to
+                Watch For</h2>
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                Pragmata has at least three story checkpoints that, once passed, can lock you into a specific ending or
+                cut off lore content. None of these make endings <em>permanently</em> missable (Unknown Signal mode
+                allows cleanup) — but they matter if you want to see everything in a single run.
+            </p>
+
+            <div class="space-y-4 max-w-2xl">
+                <div class="bg-panel border border-red-500/25 p-5 clip-card">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <span class="font-display text-lg font-bold text-red-400">01</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-body font-semibold text-white mb-1">Chapter 3 · Sector 4 — Deep Space
+                                Comm Relay</p>
+                            <p class="text-sm font-body text-muted">Activating the Deep Space Comm Relay before
+                                collecting 3 Encrypted Logs in the Residential Ruins locks the "Old Earth" lore database
+                                permanently. This is a lore/collectible lock, not an ending lock — but affects 100%
+                                completion context.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-panel border border-red-500/25 p-5 clip-card">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <span class="font-display text-lg font-bold text-red-400">02</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-body font-semibold text-white mb-1">Chapter 6 · Sector 7 — Mag-Lev
+                                Transport</p>
+                            <p class="text-sm font-body text-muted">Boarding the Mag-Lev Transport without fully
+                                upgrading Diana's hacking module locks you out of a hidden armory code in Sector 7. This
+                                affects access to a secret content area; upgrade Diana's hacking at the Shelter
+                                beforehand.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-panel border border-amber-500/25 p-5 clip-card">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <span class="font-display text-lg font-bold text-amber-400">03</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-body font-semibold text-white mb-1">Chapter 9 · Sector 9 — Orbital
+                                Elevator</p>
+                            <p class="text-sm font-body text-muted">Entering the Orbital Elevator without achieving
+                                sufficient Synchronization with Diana and collecting Memory Fragments can lock you out
+                                of the True Ending <em>on that run</em>. However, Unknown Signal mode gives you a clean
+                                retry path for the True Ending post-story — so this is only truly critical on a
+                                single-run attempt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box rounded px-5 py-4 max-w-2xl mt-6">
+                <p class="text-sm font-body text-muted">
+                    <span class="font-display text-xs text-cyan uppercase tracking-widest">ℹ Good News for
+                        Completionists</span><br />
+                    No ending is permanently locked out across all playthroughs. The Abandonment Ending can be triggered
+                    intentionally. The True Ending is always available via Unknown Signal mode after finishing the
+                    story. Some Sector 4 lore content may be the most genuinely missable element in the game.
+                </p>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         ENDINGS COMPARISON TABLE
+    ============================================================ -->
+        <section id="endings-comparison" class="max-w-7xl mx-auto px-4 sm:px-6 py-14"
+            aria-labelledby="comparison-heading">
+            <p class="section-eyebrow">// At a Glance</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-6" id="comparison-heading">Endings <span>Comparison</span>
+                Table</h2>
+
+            <div class="overflow-x-auto">
+                <table class="w-full bg-panel border border-border data-table text-sm"
+                    aria-label="Pragmata endings comparison">
+                    <thead>
+                        <tr class="border-b border-border">
+                            <th class="text-left px-4 py-3">Ending</th>
+                            <th class="text-left px-4 py-3">Sync Level</th>
+                            <th class="text-left px-4 py-3">When Available</th>
+                            <th class="text-left px-4 py-3">Key Requirement</th>
+                            <th class="text-left px-4 py-3">Diana Fate</th>
+                            <th class="text-left px-4 py-3">Hugh Fate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-border">
+                        <tr>
+                            <td class="px-4 py-3"><span class="text-cyan font-semibold">Default</span></td>
+                            <td class="px-4 py-3 text-muted">Any</td>
+                            <td class="px-4 py-3 text-muted">First run</td>
+                            <td class="px-4 py-3 text-muted">Beat the final boss</td>
+                            <td class="px-4 py-3 text-muted">Returns to Earth</td>
+                            <td class="px-4 py-3 text-muted">Stays on moon (fate unclear)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3"><span class="text-red-400 font-semibold">Abandonment</span></td>
+                            <td class="px-4 py-3 text-muted">Very Low</td>
+                            <td class="px-4 py-3 text-muted">Any run</td>
+                            <td class="px-4 py-3 text-muted">Neglect Diana interactions</td>
+                            <td class="px-4 py-3 text-muted">Restores atmosphere</td>
+                            <td class="px-4 py-3 text-muted">Consciousness lost</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3"><span class="text-purple-400 font-semibold">True Ending</span></td>
+                            <td class="px-4 py-3 text-muted">Maximum</td>
+                            <td class="px-4 py-3 text-muted">Post-game only</td>
+                            <td class="px-4 py-3 text-muted">Unknown Signal + Black Box Mod</td>
+                            <td class="px-4 py-3 text-muted">Returns to Earth</td>
+                            <td class="px-4 py-3 text-muted">Implied to survive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         RELATED GUIDES CTA
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10" aria-label="Related guides">
+            <p class="section-eyebrow">// Continue Your Playthrough</p>
+            <h2 class="section-title text-xl sm:text-2xl mb-6">Related <span>Guides</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <a href="/post-game/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+                    aria-label="Pragmata Post-Game and Unknown Signal Guide">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span
+                            class="text-xs font-mono text-green-400 border border-green-400/30 px-2 py-0.5">POST-GAME</span>
+                    </div>
+                    <h3
+                        class="font-display text-sm text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Unknown Signal Mode Guide</h3>
+                    <p class="text-muted text-xs font-body">All 10 Sim Pod unlock conditions, enhanced boss tips, and
+                        reward breakdowns — full post-game walkthrough.</p>
+                    <span class="mt-3 block text-cyan text-xs font-mono tracking-widest">READ →</span>
+                </a>
+
+                <a href="/collectibles/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+                    aria-label="Pragmata All Collectibles Guide">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">COLLECTIBLES</span>
+                    </div>
+                    <h3
+                        class="font-display text-sm text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        All 184 Collectibles Checklist</h3>
+                    <p class="text-muted text-xs font-body">Interactive checklist for 100% sector completion — required
+                        for unlocking the True Ending via Unknown Signal.</p>
+                    <span class="mt-3 block text-cyan text-xs font-mono tracking-widest">READ →</span>
+                </a>
+
+                <a href="/bosses/" class="block bg-panel border border-border p-5 card-hover glow-box group"
+                    aria-label="Pragmata All Bosses Guide">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">BOSSES</span>
+                    </div>
+                    <h3
+                        class="font-display text-sm text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Enhanced Boss Guide</h3>
+                    <p class="text-muted text-xs font-body">Beat the four Enhanced Bosses in Unknown Signal mode —
+                        strategies for SectorGuard, Creator, Garden Keeper, and Luna Digger.</p>
+                    <span class="mt-3 block text-cyan text-xs font-mono tracking-widest">READ →</span>
+                </a>
+
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         FAQ
+    ============================================================ -->
+        <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-16" aria-labelledby="faq-heading">
+            <p class="section-eyebrow">// Frequently Asked</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-10" id="faq-heading">Endings <span>FAQ</span></h2>
+
+            <div class="max-w-3xl space-y-3">
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        How many endings does Pragmata have?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Pragmata has <strong class="text-white">three endings</strong>: the Default
+                            Ending (most players' first-run result), the Abandonment Ending (triggered by very low
+                            Synchronization with Diana), and the True Ending (requires Unknown Signal mode and the Black
+                            Box Mod). Some sources describe only two endings, combining Default and Abandonment — but
+                            these produce meaningfully different story outcomes.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        Can you get the True Ending on your first playthrough?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text"><strong class="text-white">No.</strong> The True Ending requires Unknown
+                            Signal mode, which only unlocks after finishing the main story for the first time. It cannot
+                            be obtained during a first playthrough, regardless of collectible completion or
+                            Synchronization level.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        Do Mini Cabins count toward the 100% needed for the True Ending?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text"><strong class="text-white">No.</strong> Mini Cabin figures and Upgrade
+                            Components are excluded from the 100% sector completion tracked for Unknown Signal. You
+                            still need to collect all Safe Boxes, REMs, Pure Lunum, Escape Hatches, Mods, Cartridge
+                            Holders, and Training Data items — but Mini Cabins are purely optional (they count only
+                            toward the Platinum/full trophy list).</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        What exactly is different about the True Ending?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The True Ending plays identically to the Default Ending — the set-piece and
+                            final boss fight are unchanged. Two additions appear: <strong
+                                class="text-white">(1)</strong> Black-and-white concept art of Hugh and Diana plays
+                            during the credits. <strong class="text-white">(2)</strong> After the beach scene, Cabin's
+                            dialogue implies Hugh survived his dead filament infection and returned to the Shelter. The
+                            True Ending is less of a dramatic divergence and more of a hopeful epilogue to the Default
+                            story.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        Are any endings permanently missable?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text"><strong class="text-white">No.</strong> All three endings can be experienced
+                            across multiple playthroughs. The Abandonment Ending can be triggered intentionally at any
+                            time by maintaining low Synchronization. The True Ending is accessible via Unknown Signal
+                            mode after any completed save. Unknown Signal also functions as a cleanup mode for all
+                            collectibles needed for 100%.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        What rewards come from completing Unknown Signal?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Completing all 10 Sim Pods in the Hidden Chamber unlocks the <strong
+                                class="text-white">Architect's vault</strong>, which contains: the <strong
+                                class="text-white">Lim Cannon</strong> (Attack Unit), the <strong
+                                class="text-white">Obsidia</strong> and <strong class="text-white">Black Neon</strong>
+                            outfits for Hugh and Diana, and the <strong class="text-white">Black Box Mod</strong>
+                            required for the True Ending. See our <a href="/post-game/"
+                                class="text-cyan hover:underline">Post-Game Guide</a> for the full Sim Pod unlock
+                            conditions.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- ============================================================
+         COMPLIANCE
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8" aria-label="Site disclaimer">
+            <div class="bg-panel border border-border/60 rounded p-5 flex flex-col sm:flex-row gap-4 items-start">
+                <div class="flex-shrink-0" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="12" stroke="#8892a4" stroke-width="1.5" />
+                        <path d="M14 9v5M14 18v1" stroke="#8892a4" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <p class="text-muted text-sm font-body leading-relaxed">
+                    <strong class="text-white">Not affiliated with Capcom.</strong> PragmataGuide is an independent
+                    fan-made resource. PRAGMATA™ is a trademark of CAPCOM CO., LTD. Guide content produced independently
+                    for informational purposes. This site may display advertisements via Google AdSense.
+                    <a href="/privacy/" class="text-cyan hover:underline ml-1">Privacy Policy</a> ·
+                    <a href="/disclosure/" class="text-cyan hover:underline ml-1">Affiliate Disclosure</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+                            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                                stroke-width="1.5" />
+                            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+                        </svg>
+                        <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                                class="text-cyan">Guide</span></span>
+                    </div>
+                    <p class="text-muted text-sm font-body max-w-xs">Independent guide site for Pragmata (2026) by
+                        Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.</p>
+                </div>
+                <nav aria-label="Guide pages footer links">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+                        <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+                        <li><a href="/weapons/" class="hover:text-cyan transition-colors">Best Weapons</a></li>
+                        <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+                        <li><a href="/endings/" class="text-cyan">All Endings</a></li>
+                        <li><a href="/trophies-achievements/" class="hover:text-cyan transition-colors">Trophies</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav aria-label="Site pages footer links">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li><a href="/about/" class="hover:text-cyan transition-colors">About</a></li>
+                        <li><a href="/contact/" class="hover:text-cyan transition-colors">Contact</a></li>
+                        <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+                        <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+                        <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr class="hr-cyan mb-6" aria-hidden="true" />
+            <div
+                class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+                <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+                <p class="text-right">PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span
+                        class="blink ml-1 text-cyan">_</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('mobile-nav');
+        const iconM = document.getElementById('icon-menu');
+        const iconC = document.getElementById('icon-close');
+        toggle.addEventListener('click', () => {
+            const isOpen = !nav.classList.contains('hidden');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            iconM.classList.toggle('hidden', !isOpen);
+            iconC.classList.toggle('hidden', isOpen);
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+    </script>
+
+</body>
+
+</html>
