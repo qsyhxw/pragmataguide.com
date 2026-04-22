@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /bosses/idea-eight/
+       Title: 58 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Idea / Eight Boss Guide – Final Boss Phases &amp; Tips</title>
+  <meta name="description"
+    content="Verified Pragmata Idea / Eight boss guide with final-boss phase notes, hacking prep, and safe pre-ending checklist for Central Port." />
+  <link rel="canonical" href="https://pragmataguide.com/bosses/idea-eight/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Idea / Eight Boss Guide – Final Boss Phases &amp; Tips" />
+  <meta property="og:description"
+    content="Idea / Eight final-boss prep, hacking matrix tips, and safe Central Port boss strategy for Pragmata." />
+  <meta property="og:url" content="https://pragmataguide.com/bosses/idea-eight/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Idea / Eight Boss Guide – Final Boss Phases &amp; Tips" />
+  <meta name="twitter:description"
+    content="How to beat Idea / Eight in Pragmata: final-boss prep, phase overview, and safe endgame planning." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .danger-box {
+      border-left: 2px solid #f87171;
+      background: rgba(248, 113, 113, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .breadcrumb a {
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+  </style>
+</head>
+
+<body class="relative">
+  <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden="true"></div>
+
+  <header class="relative z-10 border-b border-border bg-space/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0" aria-label="PragmataGuide home">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+              stroke-width="1.5" />
+            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm font-bold tracking-widest text-white uppercase">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/collectibles/" class="nav-link">Collectibles</a>
+          <a href="/bosses/" class="nav-link text-cyan">Bosses</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/collectibles/" class="nav-link py-1">Collectibles</a>
+      <a href="/bosses/" class="nav-link py-1 text-cyan">Bosses</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <a href="/bosses/">Bosses</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Idea / Eight</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.75fr] gap-6 items-stretch">
+        <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8 fade-up">
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Boss 5</span>
+            <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Central Port</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Verified Apr 14–22, 2026</span>
+          </div>
+          <p class="section-eyebrow">// Final Boss</p>
+          <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+            Pragmata <span class="text-cyan">Idea / Eight</span> Boss Guide
+          </h1>
+          <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+            `Idea`, also widely referred to as `Eight`, is the true final boss of Pragmata. Public guide coverage is
+            consistent on the broad shape of the encounter: this is the sharpest difficulty spike in the game, it uses
+            explicit multi-phase transitions, and beating it pushes the story straight into the finale. The safest way
+            to approach it is as an endgame checklist first and a damage race second.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#fight" class="btn-cyan">Fight Plan</a>
+            <a href="#prep" class="btn-cyan">Best Prep</a>
+            <a href="/walkthrough/central-port/" class="btn-cyan">Final Sector Guide</a>
+          </div>
+        </div>
+
+        <aside class="grid gap-4 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Quick Facts</p>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><strong class="text-white">Location:</strong> end of `Central Port`.</li>
+              <li><strong class="text-white">Role:</strong> true final boss and biggest endgame spike.</li>
+              <li><strong class="text-white">Reliable traits:</strong> explicit multi-phase structure and an increasingly hostile hacking matrix.</li>
+              <li><strong class="text-white">Best common tools:</strong> `Sticky Bombs`, `Code Generator`, and conservative endgame prep.</li>
+            </ul>
+          </div>
+
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Interpretation note:</strong> the biggest current uncertainty is naming and some
+            fine phase details. Public sources strongly support `Idea` and `Eight` referring to the same final encounter,
+            but not every guide explains that relationship the same way.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-1">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Fight Trait</p>
+          <p class="font-display text-3xl text-white mb-2">3 Phases</p>
+          <p class="text-sm text-muted">Current final-boss coverage consistently describes a three-phase structure.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-2">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Main Threat</p>
+          <p class="font-display text-3xl text-white mb-2">Hostile Matrix</p>
+          <p class="text-sm text-muted">The hacking matrix is widely described as the fight's real difficulty escalator.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Best Utility</p>
+          <p class="font-display text-3xl text-white mb-2">Sticky Bombs</p>
+          <p class="text-sm text-muted">Frequently recommended because they simplify or stabilize the toughest hacking windows.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Warning</p>
+          <p class="font-display text-3xl text-white mb-2">Point Of No Return</p>
+          <p class="text-sm text-muted">Beating this boss is consistently described as sending the game straight into the finale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prep" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      <p class="section-eyebrow">// Recommended Prep</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Best <span>First-Clear Setup</span></h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Finish Your Cleanup First</h3>
+          <p class="text-sm text-muted">
+            The single most consistent non-combat warning in public final-boss coverage is to finish any side tasks,
+            collectibles, or exploration you care about before walking into this fight.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Bring `Sticky Bombs`</h3>
+          <p class="text-sm text-muted">
+            Across launch-week guides, `Sticky Bombs` keep showing up for the same reason: the hacking matrix gets less
+            forgiving the deeper the fight goes, and any tool that shrinks that burden becomes high value.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Bring `Code Generator` If Available</h3>
+          <p class="text-sm text-muted">
+            `Code Generator` is another recurring recommendation because the final boss asks more of Diana's hacking than
+            any earlier fight. Stabilizing OPEN windows matters more here than squeezing tiny extra damage elsewhere.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="fight" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Boss Plan</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">How To Beat <span>Idea / Eight</span></h2>
+
+      <div class="space-y-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">1. Treat It As A Real Endgame Check</h3>
+          <p class="text-muted">
+            Public guide coverage is unusually aligned that this is the hardest fight in the campaign and a genuine
+            endgame spike. Go in expecting a longer encounter, more punishing mistakes, and less room for sloppy hacking
+            than any earlier boss demanded.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">2. Plan Around The Three-Phase Structure</h3>
+          <p class="text-muted mb-3">
+            The safest cross-source takeaway is simple:
+          </p>
+          <div class="tip-box text-sm">
+            <strong class="text-cyan">Do not expect one repeating loop:</strong> current coverage consistently describes
+            three explicit phases with transitions, which means the fight keeps changing its rules instead of simply
+            becoming a bit faster at low health.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">3. Respect The Hacking Matrix More Than The Raw Damage Race</h3>
+          <p class="text-muted">
+            The most stable advice across final-boss guides is that the hacking matrix becomes the real wall, especially
+            deeper into the encounter. If your setup only looks good on paper but leaves Diana struggling to keep the
+            boss OPEN, it is probably the wrong setup for a first clear.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">4. Expect New Defensive Checks In Later Phases</h3>
+          <p class="text-muted">
+            Even when sources disagree on exact move names, they broadly agree on the pattern: later phases add more
+            disruption, more follow-up pressure, and more situations where you must hack or cleanse before meaningful
+            damage returns. That means survival and state management matter as much as aim.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">5. Do Not Enter If You Still Want To Explore</h3>
+          <p class="text-muted mb-3">
+            This is one of the rare boss pages where the most useful practical tip is outside the arena itself: multiple
+            sources state that beating Idea / Eight pushes the game directly into the ending flow. If you still want
+            side cleanup, do it before committing.
+          </p>
+          <div class="ok-box text-sm">
+            The cleanest practical rule is simple: prepare like this is the last real checkpoint, because for the normal
+            story path, it effectively is.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+      <p class="section-eyebrow">// After The Fight</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">What Idea / Eight <span>Triggers</span></h2>
+
+      <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8">
+        <p class="text-muted mb-4">
+          The most stable cross-source conclusion is that defeating `Idea / Eight`
+          <strong class="text-white">pushes the game directly into the finale</strong>. That is why most final-boss
+          guides warn you to finish optional cleanup first.
+        </p>
+        <p class="text-muted mb-4">
+          Public endings coverage also consistently frames this fight as the checkpoint that unlocks or resolves the
+          normal story ending path. For that reason, this page avoids making hard claims about a conventional
+          boss-reward item and focuses instead on the reliable progression consequence.
+        </p>
+        <p class="text-sm text-muted">
+          After the fight, the best internal next step is the
+          <a href="/walkthrough/central-port/" class="text-cyan hover:underline">Central Port walkthrough</a>
+          if you are still cleaning up the final sector, or the full
+          <a href="/bosses/" class="text-cyan hover:underline">Bosses guide</a> if you want to plan the campaign ahead.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Idea / Eight <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Is Idea the same boss as Eight?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current public final-boss coverage strongly suggests yes. Multiple guides use Idea and Eight for the same final encounter, while official promo coverage clearly uses the name Eight.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Where do you fight Idea / Eight in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The safest current answer is at the end of Central Port, as the true final boss encounter of the main story.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What tools are commonly recommended?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Sticky Bombs and Code Generator are the most consistently repeated support recommendations because the hacking matrix is widely described as the real difficulty spike.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            How many phases does the final boss have?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current cross-source coverage most often describes three phases, with explicit transitions rather than just a simple low-health speed-up.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What happens after you beat Idea / Eight?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The safest current answer is that the game proceeds directly into the finale, so most guides advise finishing all desired side content before entering the fight.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/hacking-guide/" class="hover:text-cyan transition-colors">Hacking Guide</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
