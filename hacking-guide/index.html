@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ============================================================
+       META & SEO
+  ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pragmata Hacking Guide 2026 – All Node Colors, Overdrive & Best Nodes Explained</title>
+    <meta name="description"
+        content="Master Pragmata's hacking system. Every node color decoded (Blue, Yellow, Purple, Red, Gray), Overdrive Protocol, Deletion Protocol, Auto-Hacking, upgrade priorities, and best node combos." />
+    <link rel="canonical" href="https://pragmataguide.com/hacking-guide/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title"
+        content="Pragmata Hacking Guide 2026 – All Node Colors, Overdrive & Best Nodes Explained" />
+    <meta property="og:description"
+        content="Every node color decoded, Overdrive & Deletion Protocol explained, upgrade priorities, best node combos — the complete Pragmata hacking system guide." />
+    <meta property="og:url" content="https://www.pragmataguide.com/hacking-guide/" />
+    <meta property="og:site_name" content="PragmataGuide" />
+    <meta property="og:image" content="https://www.pragmataguide.com/og-cover.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pragmata Hacking Guide 2026 – Node Colors, Overdrive & Best Nodes" />
+    <meta name="twitter:description"
+        content="Blue, Yellow, Purple, Red, Gray nodes decoded. Overdrive Protocol, Auto-Hacking, Deletion Protocol, and upgrade priorities for Diana's hacking system." />
+    <meta name="twitter:image" content="https://www.pragmataguide.com/og-cover.jpg" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'space': '#060810',
+                        'hull': '#0c0f1a',
+                        'panel': '#111827',
+                        'cyan': '#00e5ff',
+                        'cyan2': '#00b4d8',
+                        'amber': '#ffb703',
+                        'muted': '#8892a4',
+                        'border': '#1e2d45',
+                    },
+                    fontFamily: {
+                        display: ['Orbitron', 'sans-serif'],
+                        body: ['Rajdhani', 'sans-serif'],
+                        mono: ['"Space Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #060810;
+            color: #c9d1e0;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        .glow-cyan {
+            text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+        }
+
+        .glow-box {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 32px rgba(0, 229, 255, 0.08);
+        }
+
+        .glow-box:hover {
+            box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 48px rgba(0, 229, 255, 0.15);
+        }
+
+        .clip-card {
+            clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+        }
+
+        .blink {
+            animation: blink 1.1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            animation: fadeUp 0.7s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.22s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.34s;
+        }
+
+        .card-hover {
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+        }
+
+        .nav-link {
+            position: relative;
+            color: #8892a4;
+            transition: color 0.2s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: #00e5ff;
+            transition: width 0.25s ease;
+        }
+
+        .nav-link:hover {
+            color: #00e5ff;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-cyan {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: transparent;
+            color: #00e5ff;
+            border: 1px solid rgba(0, 229, 255, 0.5);
+            padding: 0.6rem 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-cyan:hover {
+            background: rgba(0, 229, 255, 0.12);
+            color: #fff;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #e2e8f0;
+        }
+
+        .section-title span {
+            color: #00e5ff;
+        }
+
+        .section-eyebrow {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: #00e5ff;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        details>summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.2s ease;
+        }
+
+        details[open] summary~* {
+            animation: fadeUp 0.3s ease forwards;
+        }
+
+        .hr-cyan {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+        }
+
+        .tip-box {
+            border-left: 3px solid rgba(0, 229, 255, 0.5);
+            background: rgba(0, 229, 255, 0.05);
+        }
+
+        .warning-box {
+            border-left: 3px solid rgba(239, 68, 68, 0.6);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .amber-box {
+            border-left: 3px solid rgba(255, 183, 3, 0.6);
+            background: rgba(255, 183, 3, 0.05);
+        }
+
+        /* Node color badges */
+        .node-blue {
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #93c5fd;
+        }
+
+        .node-yellow {
+            background: rgba(234, 179, 8, 0.15);
+            border: 1px solid rgba(234, 179, 8, 0.4);
+            color: #fde047;
+        }
+
+        .node-purple {
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            color: #c084fc;
+        }
+
+        .node-red {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
+        }
+
+        .node-gray {
+            background: rgba(107, 114, 128, 0.2);
+            border: 1px solid rgba(107, 114, 128, 0.4);
+            color: #9ca3af;
+        }
+
+        .node-green {
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            color: #86efac;
+        }
+
+        /* Hacking grid visual */
+        .hack-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 4px;
+            max-width: 280px;
+        }
+
+        .hack-cell {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #1e2d45;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.6rem;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .hack-cell:hover {
+            transform: scale(1.08);
+        }
+
+        .cell-start {
+            background: rgba(0, 229, 255, 0.12);
+            border-color: rgba(0, 229, 255, 0.5);
+            color: #00e5ff;
+        }
+
+        .cell-blue {
+            background: rgba(59, 130, 246, 0.12);
+            border-color: rgba(59, 130, 246, 0.4);
+            color: #93c5fd;
+        }
+
+        .cell-yellow {
+            background: rgba(234, 179, 8, 0.12);
+            border-color: rgba(234, 179, 8, 0.4);
+            color: #fde047;
+        }
+
+        .cell-purple {
+            background: rgba(168, 85, 247, 0.12);
+            border-color: rgba(168, 85, 247, 0.4);
+            color: #c084fc;
+        }
+
+        .cell-red {
+            background: rgba(239, 68, 68, 0.12);
+            border-color: rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
+        }
+
+        .cell-gray {
+            background: rgba(107, 114, 128, 0.15);
+            border-color: rgba(107, 114, 128, 0.4);
+            color: #9ca3af;
+        }
+
+        .cell-goal {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: rgba(34, 197, 94, 0.5);
+            color: #86efac;
+            font-weight: 700;
+        }
+
+        .cell-empty {
+            background: rgba(255, 255, 255, 0.02);
+            border-color: #1e2d45;
+            color: #2a3a50;
+        }
+
+        /* Data table */
+        .data-table th {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8892a4;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #1e2d45;
+        }
+
+        .data-table td {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.95rem;
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid rgba(30, 45, 69, 0.6);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(0, 229, 255, 0.025);
+        }
+
+        /* Tier badges */
+        .tier-s {
+            background: rgba(168, 85, 247, 0.2);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+        }
+
+        .tier-a {
+            background: rgba(0, 229, 255, 0.15);
+            color: #00e5ff;
+            border: 1px solid rgba(0, 229, 255, 0.35);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+        }
+
+        .tier-b {
+            background: rgba(234, 179, 8, 0.15);
+            color: #fde047;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+        }
+
+        .tier-c {
+            background: rgba(107, 114, 128, 0.2);
+            color: #9ca3af;
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            padding: 2px 8px;
+        }
+
+        /* Step number */
+        .step-num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.4);
+            color: #00e5ff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-sep {
+            color: #1e2d45;
+        }
+
+        /* Animate grid pulse */
+        @keyframes gridPulse {
+
+            0%,
+            100% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+            }
+        }
+
+        .cell-start {
+            animation: gridPulse 2s ease-in-out infinite;
+        }
+    </style>
+
+    <!-- JSON-LD: FAQPage + HowTo + BreadcrumbList -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "PragmataGuide", "item": "https://www.pragmataguide.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Hacking Guide", "item": "https://www.pragmataguide.com/hacking-guide/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What do the node colors mean in Pragmata hacking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In Pragmata's hacking grid: Blue nodes boost hack damage and extend the enemy's Open state. Yellow nodes are equipped hacking abilities (like Decode or Multihack) that trigger special effects. Purple nodes are high-tier abilities purchased at the Unit Printer with Pure Lunum. Red (Error) nodes instantly cancel the hack if touched. Gray nodes act as physical barriers. The Green node is the EXE goal that completes the hack."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I activate Overdrive Protocol in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Overdrive Protocol is activated by pressing L3 + R3 simultaneously (clicking both sticks) when Diana's Hacking Gauge (the segmented ring next to Hugh's health bar) is full. It releases a hacking pulse that opens, damages, and briefly stuns all nearby enemies. The gauge fills through successful hacking, not from weapon kills."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best hacking node in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Decode is widely considered the strongest general-purpose hacking node as it increases damage output when routed through. Multihack is the top choice for crowd control, allowing simultaneous hacking of multiple enemies. For bosses, Decode is preferred since bosses are solo targets. Note: using the same node twice on the same enemy yields diminishing returns — always mix nodes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if you touch a red node in Pragmata hacking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Touching a Red (Error) node immediately ejects Diana from the hacking matrix and briefly jams her hacking ability. The hack fails completely and you must restart from scratch. Avoid red nodes at all costs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I upgrade first for hacking in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At the Firmware Updater, upgrade Diana's Hacking first — it increases base hack damage and extends the Weakpoint Exposure (Open) duration, which amplifies every subsequent hacking node and weapon hit. At the Unit Printer, prioritize Decode for bosses and Multihack for groups. Auto-Hacking is a convenient quality-of-life upgrade but lower priority than core damage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Auto-Hacking in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Auto-Hacking automatically completes the basic hacking grid (hitting all standard nodes) in exchange for two bars of Diana's Hacking Gauge. It does not activate limited-use Yellow nodes like Multihack or Confuse. It's useful when overwhelmed but should not replace manual hacking as a default strategy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you hack environmental terminals in Pragmata?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Environmental terminal hacks use a different interface from combat hacking. Instead of a navigation grid, terminals display a circular interface with button prompts. Press the correct inputs starting from the outer ring and working inward to complete the terminal hack. Terminals are typically marked by a red glow in the environment."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="relative z-10">
+
+    <!-- ============================================================
+       HEADER
+  ============================================================ -->
+    <header class="sticky top-0 z-50 border-b border-border bg-hull/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5 group" aria-label="PragmataGuide Home">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                    <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                        stroke-width="1.5" />
+                    <polygon points="14,6 21,10 21,18 14,22 7,18 7,10" fill="rgba(0,229,255,0.1)"
+                        stroke="rgba(0,229,255,0.4)" stroke-width="1" />
+                    <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+                </svg>
+                <span class="font-display font-bold text-sm tracking-widest text-white uppercase">
+                    Pragmata<span class="text-cyan">Guide</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+                <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+                <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+                <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+                <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
+                <a href="/endings/" class="nav-link text-sm font-medium font-body">Endings</a>
+                <a href="/hacking-guide/" class="nav-link text-sm font-medium font-body"
+                    style="color:#00e5ff;">Hacking</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden p-2 text-muted hover:text-cyan transition-colors"
+                aria-label="Open menu" aria-expanded="false">
+                <svg id="icon-menu" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="icon-close" class="hidden" width="22" height="22" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-nav" class="hidden md:hidden border-t border-border bg-hull px-4 py-3 flex-col gap-3"
+            aria-label="Mobile navigation">
+            <a href="/walkthrough/" class="nav-link text-sm py-1 font-body">Walkthrough</a>
+            <a href="/bosses/" class="nav-link text-sm py-1 font-body">Bosses</a>
+            <a href="/weapons/" class="nav-link text-sm py-1 font-body">Weapons</a>
+            <a href="/collectibles/" class="nav-link text-sm py-1 font-body">Collectibles</a>
+            <a href="/endings/" class="nav-link text-sm py-1 font-body">Endings</a>
+            <a href="/hacking-guide/" class="nav-link text-sm py-1 font-body">Hacking</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+         HERO
+    ============================================================ -->
+        <section class="relative overflow-hidden grid-bg py-14 sm:py-20" aria-label="Page header">
+            <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] rounded-full"
+                    style="background: radial-gradient(ellipse, rgba(0,180,216,0.1) 0%, transparent 70%);"></div>
+                <div class="absolute bottom-0 right-0 w-80 h-80 rounded-full"
+                    style="background: radial-gradient(ellipse, rgba(234,179,8,0.06) 0%, transparent 70%);"></div>
+            </div>
+            <div class="absolute top-6 left-6 w-12 h-12 border-l border-t border-cyan/20 pointer-events-none"
+                aria-hidden="true"></div>
+            <div class="absolute bottom-6 right-6 w-12 h-12 border-r border-b border-cyan/20 pointer-events-none"
+                aria-hidden="true"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+                <!-- Breadcrumb -->
+                <nav aria-label="Breadcrumb" class="mb-6">
+                    <ol class="flex items-center gap-2 text-xs font-mono text-muted">
+                        <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+                        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+                        <li class="text-white" aria-current="page">Hacking Guide</li>
+                    </ol>
+                </nav>
+
+                <p class="section-eyebrow fade-up">// Diana · Combat System · Nodes · Overdrive</p>
+                <h1 class="fade-up delay-1 section-title text-3xl sm:text-4xl lg:text-5xl leading-tight max-w-4xl mb-4">
+                    Pragmata <span>Hacking Guide</span><br />
+                    <span class="text-white text-xl sm:text-2xl font-body font-normal normal-case tracking-normal">All
+                        Node Colors · Overdrive Protocol · Best Nodes &amp; Upgrade Priority</span>
+                </h1>
+                <p class="fade-up delay-2 text-muted text-lg max-w-2xl mb-8 font-body">
+                    Diana's hacking matrix is the engine of every fight in Pragmata. This guide decodes every node
+                    color, explains the Overdrive and Deletion Protocols, ranks the best Yellow nodes, and tells you
+                    exactly what to upgrade first — all cross-verified against multiple sources.
+                </p>
+
+                <!-- Quick stat strip -->
+                <div class="fade-up delay-3 flex flex-wrap gap-6">
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-cyan glow-cyan">5</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Node Colors</span>
+                    </div>
+                    <div class="w-px bg-border self-stretch hidden sm:block" aria-hidden="true"></div>
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-yellow-400">L3+R3</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Overdrive Activation</span>
+                    </div>
+                    <div class="w-px bg-border self-stretch hidden sm:block" aria-hidden="true"></div>
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-purple-400">Decode</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Best Solo Node</span>
+                    </div>
+                    <div class="w-px bg-border self-stretch hidden sm:block" aria-hidden="true"></div>
+                    <div class="flex flex-col">
+                        <span class="font-display text-2xl font-bold text-white">#1</span>
+                        <span class="text-xs text-muted font-mono tracking-wider uppercase">Priority Upgrade</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr-cyan" aria-hidden="true" />
+
+        <!-- ============================================================
+         TABLE OF CONTENTS
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8" aria-label="Table of contents">
+            <div class="bg-panel border border-border clip-card p-5 max-w-lg">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">// Contents</p>
+                <ol class="space-y-1.5 text-sm font-body columns-2 gap-6">
+                    <li><a href="#how-hacking-works" class="text-muted hover:text-cyan transition-colors">1. How Hacking
+                            Works</a></li>
+                    <li><a href="#node-colors" class="text-muted hover:text-cyan transition-colors">2. All Node Colors
+                            Decoded</a></li>
+                    <li><a href="#visual-grid" class="text-muted hover:text-cyan transition-colors">3. Interactive Grid
+                            Visual</a></li>
+                    <li><a href="#yellow-nodes-ranked" class="text-muted hover:text-cyan transition-colors">4. Yellow
+                            Nodes Ranked</a></li>
+                    <li><a href="#overdrive" class="text-muted hover:text-cyan transition-colors">5. Overdrive
+                            Protocol</a></li>
+                    <li><a href="#advanced-mechanics" class="text-muted hover:text-cyan transition-colors">6. Advanced
+                            Mechanics</a></li>
+                    <li><a href="#upgrade-priority" class="text-muted hover:text-cyan transition-colors">7. Upgrade
+                            Priority</a></li>
+                    <li><a href="#hacking-modes" class="text-muted hover:text-cyan transition-colors">8. Hacking
+                            Modes</a></li>
+                    <li><a href="#tips" class="text-muted hover:text-cyan transition-colors">9. Pro Tips</a></li>
+                    <li><a href="#faq" class="text-muted hover:text-cyan transition-colors">10. FAQ</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         HOW HACKING WORKS
+    ============================================================ -->
+        <section id="how-hacking-works" class="max-w-7xl mx-auto px-4 sm:px-6 py-14"
+            aria-labelledby="how-hacking-heading">
+            <p class="section-eyebrow">// The Basics</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="how-hacking-heading">How <span>Hacking</span> Works
+            </h2>
+
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                Hacking is Diana's core contribution to every combat encounter. Enemies in Pragmata have armored plating
+                that blocks Hugh's weapons — the only way to deal full damage is to <strong
+                    class="text-white">Open</strong> the enemy first via a successful hack. This is the foundational
+                loop the entire game is built on.
+            </p>
+
+            <!-- Combat loop -->
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-0 max-w-3xl mb-8">
+                <div class="bg-panel border border-border p-4 sm:border-r-0 flex flex-col items-center text-center">
+                    <span class="font-display text-cyan text-xs tracking-widest uppercase mb-2">Step 1</span>
+                    <span class="text-2xl mb-2">🎯</span>
+                    <p class="text-xs text-muted font-body">Hold <strong class="text-white">L2 / LT</strong> and aim at
+                        an enemy to open the hacking matrix</p>
+                </div>
+                <div class="bg-panel border border-border p-4 sm:border-r-0 flex flex-col items-center text-center">
+                    <span class="font-display text-cyan text-xs tracking-widest uppercase mb-2">Step 2</span>
+                    <span class="text-2xl mb-2">⬡</span>
+                    <p class="text-xs text-muted font-body">Navigate the cursor through the grid using face buttons to
+                        reach the <strong class="text-white">green EXE node</strong></p>
+                </div>
+                <div class="bg-panel border border-border p-4 sm:border-r-0 flex flex-col items-center text-center">
+                    <span class="font-display text-cyan text-xs tracking-widest uppercase mb-2">Step 3</span>
+                    <span class="text-2xl mb-2">⚡</span>
+                    <p class="text-xs text-muted font-body">Enemy armor opens — <strong class="text-white">Hugh deals
+                            full damage</strong> during the Open window</p>
+                </div>
+                <div class="bg-panel border border-border p-4 flex flex-col items-center text-center">
+                    <span class="font-display text-cyan text-xs tracking-widest uppercase mb-2">Step 4</span>
+                    <span class="text-2xl mb-2">🔄</span>
+                    <p class="text-xs text-muted font-body">Enemy re-armors — repeat the loop. Hacking fills the <strong
+                            class="text-white">Overdrive Gauge</strong></p>
+                </div>
+            </div>
+
+            <div class="tip-box rounded px-5 py-4 max-w-2xl">
+                <p class="text-sm font-body text-muted">
+                    <span class="font-display text-xs text-cyan uppercase tracking-widest">ℹ Key Rule</span><br />
+                    Damage <strong class="text-white">only applies at full value when the enemy's armor is
+                        Open</strong>. Shooting a still-armored enemy deals negligible damage. Every combat encounter in
+                    Pragmata is structured around hacking windows — missing one pushes the fight back by a full attack
+                    rotation.
+                </p>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         NODE COLORS
+    ============================================================ -->
+        <section id="node-colors" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="nodes-heading">
+            <p class="section-eyebrow">// Core Knowledge</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="nodes-heading">All <span>Node Colors</span> Decoded
+            </h2>
+            <p class="text-muted max-w-2xl mb-8 font-body">
+                Six distinct node types appear across Pragmata's hacking grids. Understanding each one — especially
+                which to chase and which to avoid — is the difference between fast, efficient hacking and a cancelled
+                hack mid-fight.
+            </p>
+
+            <div class="space-y-4 max-w-3xl">
+
+                <!-- Blue -->
+                <div class="bg-panel border border-blue-500/25 clip-card p-6 card-hover transition-all"
+                    style="box-shadow: 0 0 0 1px rgba(59,130,246,0.1);">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 hack-cell cell-blue text-lg font-bold">OPEN</div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="node-blue text-xs font-mono px-2 py-0.5">■ BLUE NODES</span>
+                                <span class="text-xs text-muted font-mono">Built into the grid</span>
+                            </div>
+                            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Open Nodes — Damage
+                                Boost &amp; Extended Window</h3>
+                            <p class="text-muted text-sm font-body mb-3">Blue nodes are <strong class="text-white">built
+                                    directly into every hacking grid</strong> from the start of the game. Routing
+                                through them boosts hack damage and extends the duration of the enemy's Open
+                                (vulnerable) state. They are not equipped from your loadout — they appear automatically
+                                based on the enemy's grid layout.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs border border-blue-500/30 text-blue-300 px-2 py-0.5 font-mono">Increases
+                                    hack damage</span>
+                                <span
+                                    class="text-xs border border-blue-500/30 text-blue-300 px-2 py-0.5 font-mono">Extends
+                                    Open duration</span>
+                                <span class="text-xs border border-blue-500/30 text-blue-300 px-2 py-0.5 font-mono">Can
+                                    be routed repeatedly</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 tip-box rounded px-4 py-3">
+                        <p class="text-xs font-body text-muted"><strong class="text-white">Routing tip:</strong> Route
+                            through 1–2 blue nodes per hack whenever the time cost is low. Extended Open windows give
+                            Hugh more shots — and more Overdrive gauge charge.</p>
+                    </div>
+                </div>
+
+                <!-- Yellow -->
+                <div class="bg-panel border border-yellow-500/25 clip-card p-6 card-hover transition-all"
+                    style="box-shadow: 0 0 0 1px rgba(234,179,8,0.1);">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 hack-cell cell-yellow text-lg font-bold">YLW</div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="node-yellow text-xs font-mono px-2 py-0.5">■ YELLOW NODES</span>
+                                <span class="text-xs text-muted font-mono">Equipped from loadout</span>
+                            </div>
+                            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Hacking Nodes —
+                                Equipped Special Abilities</h3>
+                            <p class="text-muted text-sm font-body mb-3">Yellow nodes are the <strong
+                                    class="text-white">hacking abilities you choose from your loadout screen</strong>
+                                before entering a sector. They appear on the enemy's grid at specific positions and
+                                trigger their effect when your cursor passes through them. Each has a different tactical
+                                function — from amplifying damage to hitting multiple enemies simultaneously.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs border border-yellow-500/30 text-yellow-300 px-2 py-0.5 font-mono">Equipped
+                                    pre-sector</span>
+                                <span
+                                    class="text-xs border border-yellow-500/30 text-yellow-300 px-2 py-0.5 font-mono">Diminishing
+                                    returns (same enemy)</span>
+                                <span
+                                    class="text-xs border border-yellow-500/30 text-yellow-300 px-2 py-0.5 font-mono">Unlocked
+                                    via Unit Printer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 amber-box rounded px-4 py-3">
+                        <p class="text-xs font-body text-muted"><strong class="text-white">Diminishing returns
+                                warning:</strong> Using the same Yellow node twice on the same enemy gives reduced
+                            effect. Always mix two different nodes on one grid — never route through the same Yellow
+                            node twice if an alternative path exists.</p>
+                    </div>
+                </div>
+
+                <!-- Purple -->
+                <div class="bg-panel border border-purple-500/25 clip-card p-6 card-hover transition-all"
+                    style="box-shadow: 0 0 0 1px rgba(168,85,247,0.1);">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 hack-cell cell-purple text-lg font-bold">PRP</div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="node-purple text-xs font-mono px-2 py-0.5">■ PURPLE NODES</span>
+                                <span class="text-xs text-muted font-mono">Unit Printer · Pure Lunum</span>
+                            </div>
+                            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">High-Tier Abilities
+                                — Unit Printer Unlocks</h3>
+                            <p class="text-muted text-sm font-body mb-3">Purple nodes are <strong
+                                    class="text-white">rare, high-tier abilities unlocked at the Unit Printer</strong>
+                                using Pure Lunum — one of the game's rarer upgrade currencies. The most notable purple
+                                node ability triggers after an enemy's HP drops below approximately 30%, enabling a
+                                stagger/execution-style critical attack with the "Heat Gauge" mechanic. They function
+                                similarly to Yellow nodes but represent the top tier of Diana's hacking capabilities.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs border border-purple-500/30 text-purple-300 px-2 py-0.5 font-mono">Requires
+                                    Pure Lunum</span>
+                                <span
+                                    class="text-xs border border-purple-500/30 text-purple-300 px-2 py-0.5 font-mono">High-damage
+                                    execution trigger</span>
+                                <span
+                                    class="text-xs border border-purple-500/30 text-purple-300 px-2 py-0.5 font-mono">Late-game
+                                    availability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Red -->
+                <div class="bg-panel border border-red-500/30 clip-card p-6 card-hover transition-all"
+                    style="box-shadow: 0 0 0 1px rgba(239,68,68,0.12);">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 hack-cell cell-red text-lg font-bold">ERR</div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="node-red text-xs font-mono px-2 py-0.5">■ RED NODES (Error)</span>
+                                <span class="text-xs text-muted font-mono">Instant hack failure</span>
+                            </div>
+                            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Error Nodes — Avoid
+                                At All Costs</h3>
+                            <p class="text-muted text-sm font-body mb-3"><strong class="text-white">Touching a red Error
+                                    node immediately cancels the hack</strong> and briefly jams Diana, preventing her
+                                from hacking again for a short period. The hack fails entirely and must be restarted.
+                                Red nodes appear as red triangles on the grid and become more common in later sectors.
+                                Red blotch areas also appear on the grid from enemy Hacking Shields — you must shoot
+                                these shields off before hacking those enemies.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs border border-red-500/30 text-red-300 px-2 py-0.5 font-mono">Cancels
+                                    hack instantly</span>
+                                <span
+                                    class="text-xs border border-red-500/30 text-red-300 px-2 py-0.5 font-mono">Briefly
+                                    jams Diana</span>
+                                <span class="text-xs border border-red-500/30 text-red-300 px-2 py-0.5 font-mono">More
+                                    frequent in late sectors</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 warning-box rounded px-4 py-3">
+                        <p class="text-xs font-body text-muted"><strong class="text-white">Sticky Bombs
+                                counter:</strong> Later in the game, Sticky Bombs can strip Error nodes from the grid
+                            before hacking, making them a near-essential tactical item for late-game boss fights.</p>
+                    </div>
+                </div>
+
+                <!-- Gray -->
+                <div class="bg-panel border border-gray-500/25 clip-card p-6 card-hover transition-all"
+                    style="box-shadow: 0 0 0 1px rgba(107,114,128,0.1);">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 hack-cell cell-gray text-lg font-bold">BLK</div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="node-gray text-xs font-mono px-2 py-0.5">■ GRAY NODES</span>
+                                <span class="text-xs text-muted font-mono">Impassable barrier</span>
+                            </div>
+                            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Barrier Nodes —
+                                Route Blockers</h3>
+                            <p class="text-muted text-sm font-body mb-3">Gray nodes act as <strong
+                                    class="text-white">physical barriers</strong> on the grid — your cursor cannot pass
+                                through them. They force you to take longer, less direct routes to the EXE node, often
+                                past more Red nodes and away from Blue and Yellow nodes. They become more prevalent on
+                                boss grids and in advanced sectors, increasing routing complexity and time pressure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Green / EXE -->
+                <div class="bg-panel border border-green-500/25 clip-card p-6 card-hover transition-all"
+                    style="box-shadow: 0 0 0 1px rgba(34,197,94,0.1);">
+                    <div class="flex items-start gap-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-14 h-14 hack-cell cell-goal text-lg font-bold">EXE</div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="node-green text-xs font-mono px-2 py-0.5">■ GREEN NODE (EXE Goal)</span>
+                                <span class="text-xs text-muted font-mono">Complete the hack</span>
+                            </div>
+                            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">EXE Node — The Hack
+                                Goal</h3>
+                            <p class="text-muted text-sm font-body">The green EXE node is the <strong
+                                    class="text-white">destination of every hack</strong>. Reaching it completes the
+                                hack, opens the enemy's armor, and deploys all effects from any Blue or Yellow nodes you
+                                routed through. There is always exactly one EXE node per enemy grid.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         VISUAL GRID DEMO
+    ============================================================ -->
+        <section id="visual-grid" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="grid-heading">
+            <p class="section-eyebrow">// Visual Reference</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="grid-heading"><span>Interactive</span> Grid
+                Reference</h2>
+            <p class="text-muted max-w-2xl mb-8 font-body">
+                A typical mid-game enemy grid (5×5) visualized. Hover over cells to see node types. The optimal path
+                routes from START → through Blue and Yellow nodes → to EXE.
+            </p>
+
+            <div class="flex flex-col lg:flex-row gap-10 items-start">
+                <!-- Grid -->
+                <div>
+                    <div class="hack-grid mb-4" role="img" aria-label="Example Pragmata hacking grid 5 by 5">
+                        <!-- Row 1 -->
+                        <div class="hack-cell cell-start" title="START — your cursor begins here">START</div>
+                        <div class="hack-cell cell-blue" title="Blue Open Node — boosts damage">OPEN</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-red" title="Red Error Node — avoid!">ERR</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <!-- Row 2 -->
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-blue" title="Blue Open Node">OPEN</div>
+                        <div class="hack-cell cell-gray" title="Gray Barrier — cannot pass">BLK</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-yellow" title="Yellow Hacking Node — Decode">YLOW</div>
+                        <!-- Row 3 -->
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-red" title="Red Error Node">ERR</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-blue" title="Blue Open Node">OPEN</div>
+                        <!-- Row 4 -->
+                        <div class="hack-cell cell-gray" title="Gray Barrier">BLK</div>
+                        <div class="hack-cell cell-yellow" title="Yellow Hacking Node — Multihack">YLOW</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-purple" title="Purple Node — high-tier ability">PRP</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <!-- Row 5 -->
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-red" title="Red Error Node">ERR</div>
+                        <div class="hack-cell cell-empty" title="Empty node">·</div>
+                        <div class="hack-cell cell-blue" title="Blue Open Node">OPEN</div>
+                        <div class="hack-cell cell-goal" title="EXE Goal — complete the hack here">EXE</div>
+                    </div>
+                    <p class="text-xs font-mono text-muted">Example: 5×5 grid · Mid-game enemy</p>
+                </div>
+
+                <!-- Legend -->
+                <div class="space-y-3">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-4">Grid Legend</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 hack-cell cell-start text-xs">S</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">START</p>
+                            <p class="text-xs text-muted">Your cursor's starting position</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 hack-cell cell-goal text-xs">EXE</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">EXE Goal (Green)</p>
+                            <p class="text-xs text-muted">Reach this to complete the hack</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 hack-cell cell-blue text-xs">▣</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Open Node (Blue)</p>
+                            <p class="text-xs text-muted">+Damage &amp; +Open duration</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 hack-cell cell-yellow text-xs">★</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Hacking Node (Yellow)</p>
+                            <p class="text-xs text-muted">Equipped ability (Decode, Multihack…)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 hack-cell cell-purple text-xs">◆</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">High-Tier Node (Purple)</p>
+                            <p class="text-xs text-muted">Unit Printer ability</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 hack-cell cell-red text-xs">✕</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Error Node (Red)</p>
+                            <p class="text-xs text-muted">Instantly cancels hack — AVOID</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 hack-cell cell-gray text-xs">■</div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Barrier (Gray)</p>
+                            <p class="text-xs text-muted">Impassable — routes around it</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Optimal path note -->
+                <div class="bg-panel border border-border clip-card p-5 max-w-xs self-start">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Optimal Path Logic</p>
+                    <ol class="space-y-2 text-xs font-body text-muted">
+                        <li class="flex items-start gap-2"><span class="text-cyan flex-shrink-0">1.</span> Map the route
+                            to EXE before moving</li>
+                        <li class="flex items-start gap-2"><span class="text-cyan flex-shrink-0">2.</span> Identify Red
+                            nodes and plan around them</li>
+                        <li class="flex items-start gap-2"><span class="text-cyan flex-shrink-0">3.</span> Include 1–2
+                            Blue nodes if the detour is short</li>
+                        <li class="flex items-start gap-2"><span class="text-cyan flex-shrink-0">4.</span> Route through
+                            your Yellow node if it's near the path</li>
+                        <li class="flex items-start gap-2"><span class="text-cyan flex-shrink-0">5.</span> Speed &gt;
+                            perfection — a fast hack beats a slow optimal one</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         YELLOW NODES RANKED
+    ============================================================ -->
+        <section id="yellow-nodes-ranked" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="yellow-heading">
+            <p class="section-eyebrow">// Node Tier List</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="yellow-heading">Yellow Hacking <span>Nodes
+                    Ranked</span></h2>
+            <p class="text-muted max-w-2xl mb-3 font-body">
+                Yellow nodes are your equipped hacking abilities — selecting the right ones for each encounter type is
+                critical. Rankings are based on cross-verified community and media sources (Steam Guide, The Gamer,
+                NeonLightsMedia).
+            </p>
+            <p class="text-xs text-muted font-mono mb-8">Note: Node availability expands as you progress through sectors
+                and unlock blueprints at the Unit Printer.</p>
+
+            <div class="overflow-x-auto max-w-3xl">
+                <table class="w-full bg-panel border border-border data-table"
+                    aria-label="Pragmata yellow hacking nodes tier list">
+                    <thead>
+                        <tr>
+                            <th>Tier</th>
+                            <th>Node Name</th>
+                            <th>Effect</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="tier-s">S</span></td>
+                            <td class="text-white font-semibold">Decode</td>
+                            <td class="text-muted">Disrupts enemy systems and deals significant bonus damage when routed
+                                through</td>
+                            <td class="text-yellow-300 text-xs font-mono">Bosses, all single targets</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tier-s">S</span></td>
+                            <td class="text-white font-semibold">Multihack</td>
+                            <td class="text-muted">Simultaneously hacks multiple nearby enemies, opening all of them at
+                                once</td>
+                            <td class="text-yellow-300 text-xs font-mono">Group encounters, add waves</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tier-a">A</span></td>
+                            <td class="text-white font-semibold">Expose</td>
+                            <td class="text-muted">Significantly reduces enemy defense, extending the effective damage
+                                window</td>
+                            <td class="text-yellow-300 text-xs font-mono">Elite enemies, damage builds</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tier-a">A</span></td>
+                            <td class="text-white font-semibold">Critical Shot</td>
+                            <td class="text-muted">Triggers a powerful follow-up gunshot window on low-HP enemies; often
+                                fatal</td>
+                            <td class="text-yellow-300 text-xs font-mono">Finishing enemies quickly</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tier-b">B</span></td>
+                            <td class="text-white font-semibold">Confuse</td>
+                            <td class="text-muted">Causes enemies to briefly attack each other; useful as a displacement
+                                tool</td>
+                            <td class="text-yellow-300 text-xs font-mono">Crowd control, flying enemies</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tier-b">B</span></td>
+                            <td class="text-white font-semibold">Heat</td>
+                            <td class="text-muted">Applies a heat/burn effect on hack completion, dealing damage over
+                                time</td>
+                            <td class="text-yellow-300 text-xs font-mono">Specific enemy types</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tier-b">B</span></td>
+                            <td class="text-white font-semibold">Freeze</td>
+                            <td class="text-muted">Applies a freeze slow on hacked targets; overlaps with Stasis Net
+                                function</td>
+                            <td class="text-yellow-300 text-xs font-mono">Situational crowd control</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tier-c">C</span></td>
+                            <td class="text-white font-semibold">Drain</td>
+                            <td class="text-muted">Siphons resources from hacked enemies; useful in narrow resource
+                                situations</td>
+                            <td class="text-yellow-300 text-xs font-mono">Resource management runs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tip-box rounded px-5 py-4 max-w-2xl mt-6">
+                <p class="text-sm font-body text-muted">
+                    <span class="font-display text-xs text-cyan uppercase tracking-widest">ℹ Best Combo</span><br />
+                    <strong class="text-white">Decode + Expose</strong> is the recommended general-purpose pairing.
+                    Decode amplifies per-hack damage while Expose stretches the window Hugh has to shoot. For crowd
+                    rooms, swap Decode for <strong class="text-white">Multihack</strong>.
+                </p>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         OVERDRIVE PROTOCOL
+    ============================================================ -->
+        <section id="overdrive" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="overdrive-heading">
+            <p class="section-eyebrow">// Ultimate Ability</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="overdrive-heading"><span>Overdrive Protocol</span>
+                &amp; Deletion Protocol</h2>
+            <p class="text-muted max-w-2xl mb-8 font-body">
+                Overdrive Protocol is Diana's most powerful hacking ability — a full-area pulse that opens and stuns
+                every nearby enemy simultaneously. It's your primary tool for regaining control of chaotic encounters.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mb-8">
+
+                <!-- Overdrive -->
+                <div class="bg-panel border border-cyan/25 clip-card p-6"
+                    style="box-shadow: 0 0 0 1px rgba(0,229,255,0.1);">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Overdrive Protocol</p>
+                    <div class="space-y-2 text-sm font-body text-muted">
+                        <div class="flex items-start gap-2"><span class="text-cyan text-xs mt-1">▸</span><span><strong
+                                    class="text-white">Activation:</strong> L3 + R3 (both sticks) when gauge is
+                                full</span></div>
+                        <div class="flex items-start gap-2"><span class="text-cyan text-xs mt-1">▸</span><span><strong
+                                    class="text-white">Gauge charges:</strong> via successful hacking — not kills or
+                                weapon shots</span></div>
+                        <div class="flex items-start gap-2"><span class="text-cyan text-xs mt-1">▸</span><span><strong
+                                    class="text-white">Effect:</strong> Releases a hacking pulse that Opens, damages,
+                                and stuns all nearby enemies</span></div>
+                        <div class="flex items-start gap-2"><span class="text-cyan text-xs mt-1">▸</span><span><strong
+                                    class="text-white">Display:</strong> Segmented ring gauge next to Hugh's health bar
+                                (bottom-left)</span></div>
+                        <div class="flex items-start gap-2"><span class="text-cyan text-xs mt-1">▸</span><span><strong
+                                    class="text-white">Upgradeable:</strong> Via Unit Printer — increases damage,
+                                extends stun, reduces charge time</span></div>
+                    </div>
+                </div>
+
+                <!-- Deletion Protocol -->
+                <div class="bg-panel border border-purple-500/25 clip-card p-6"
+                    style="box-shadow: 0 0 0 1px rgba(168,85,247,0.1);">
+                    <p class="text-xs font-mono text-purple-400 tracking-widest uppercase mb-3">Deletion Protocol</p>
+                    <div class="space-y-2 text-sm font-body text-muted">
+                        <div class="flex items-start gap-2"><span
+                                class="text-purple-400 text-xs mt-1">▸</span><span><strong
+                                    class="text-white">Unlocked:</strong> Later in the story — an upgrade to Overdrive
+                                Protocol</span></div>
+                        <div class="flex items-start gap-2"><span
+                                class="text-purple-400 text-xs mt-1">▸</span><span><strong
+                                    class="text-white">Effect:</strong> A more powerful variant — hits harder and
+                                charges faster with upgrades</span></div>
+                        <div class="flex items-start gap-2"><span
+                                class="text-purple-400 text-xs mt-1">▸</span><span><strong class="text-white">Upgrade
+                                    path:</strong> Shares the same Unit Printer upgrade track as Overdrive</span></div>
+                        <div class="flex items-start gap-2"><span
+                                class="text-purple-400 text-xs mt-1">▸</span><span><strong class="text-white">Best
+                                    use:</strong> Boss phase transitions and overwhelming ambush rooms</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto-Hacking -->
+            <div class="bg-panel border border-border p-6 max-w-3xl mb-6">
+                <p class="text-xs font-mono text-amber-400 tracking-widest uppercase mb-3">Auto-Hacking — Quality of
+                    Life Unlock</p>
+                <p class="text-sm font-body text-muted mb-3">
+                    Auto-Hacking, unlocked via the Unit Printer, automatically resolves the hacking grid by hitting all
+                    basic (Blue) nodes — at the cost of <strong class="text-white">two bars of Diana's Hacking
+                        Gauge</strong>.
+                </p>
+                <ul class="space-y-1.5 text-sm font-body text-muted">
+                    <li class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">▸</span> Does <strong
+                            class="text-white">not</strong> activate limited-use Yellow nodes (Multihack, Confuse) —
+                        manual hacking still required for those</li>
+                    <li class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">▸</span> Draining the
+                        gauge too frequently with Auto-Hacking leaves you unable to use Overdrive when needed</li>
+                    <li class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">▸</span> Best treated
+                        as a breathing-room tool in overwhelming situations, not a default replacement</li>
+                    <li class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">▸</span> Upgrade
+                        priority: lower — unlock after core damage and survivability upgrades</li>
+                </ul>
+            </div>
+
+            <div class="amber-box rounded px-5 py-4 max-w-2xl">
+                <p class="text-sm font-body text-muted">
+                    <span class="font-display text-xs text-amber-400 uppercase tracking-widest">⚠ Timing is
+                        Everything</span><br />
+                    Save Overdrive Protocol for boss phase transitions or when surrounded by multiple armored units.
+                    Don't waste it on single standard enemies — those are faster to hack manually.
+                </p>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         ADVANCED MECHANICS
+    ============================================================ -->
+        <section id="advanced-mechanics" class="max-w-7xl mx-auto px-4 sm:px-6 py-14"
+            aria-labelledby="advanced-heading">
+            <p class="section-eyebrow">// Late-Game Systems</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-6" id="advanced-heading">Advanced <span>Hacking
+                    Mechanics</span></h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl">
+
+                <div class="bg-panel border border-border p-5 clip-card card-hover glow-box">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span
+                            class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5">ADVANCED</span>
+                    </div>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Hacking Shields (Red
+                        Blotches)</h3>
+                    <p class="text-sm font-body text-muted">Some late-game enemies carry Hacking Shields — red blotch
+                        areas that block portions of the hacking grid. You must shoot these shields off before those
+                        grid areas become accessible. Clearing multiple shields before initiating the hack gives you
+                        more routing freedom.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card card-hover glow-box">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span
+                            class="text-xs font-mono text-orange-400 border border-orange-400/30 px-2 py-0.5">ADVANCED</span>
+                    </div>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Jammers (Terra Dome Onward)
+                    </h3>
+                    <p class="text-sm font-body text-muted">Jammers emit red pulses that interrupt hacking signals. You
+                        must wait for the pulse to expand and find the brief window of downtime between pulses to
+                        initiate and complete your hack. Locating and destroying the jammer source disables the mechanic
+                        permanently in that area.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card card-hover glow-box">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">MECHANIC</span>
+                    </div>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Environmental Terminal
+                        Hacking</h3>
+                    <p class="text-sm font-body text-muted">Terminals use a different interface — a circular prompt
+                        system rather than a grid. Press button inputs starting from the outer ring and working inward.
+                        Terminals are often marked by a red environmental glow and used to open doors, activate
+                        elevators, and alter the environment.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card card-hover glow-box">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span
+                            class="text-xs font-mono text-yellow-400 border border-yellow-400/30 px-2 py-0.5">MECHANIC</span>
+                    </div>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Boss Grid Complexity</h3>
+                    <p class="text-sm font-body text-muted">Standard androids use grids of roughly 12–16 tiles. Bosses
+                        have significantly larger grids with more complex arrow patterns, more Red nodes, and more Gray
+                        barriers. Boss grids change between health thresholds — expect a new grid layout at each phase
+                        transition.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         UPGRADE PRIORITY
+    ============================================================ -->
+        <section id="upgrade-priority" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="upgrade-heading">
+            <p class="section-eyebrow">// Spend Wisely</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="upgrade-heading">Hacking <span>Upgrade
+                    Priority</span></h2>
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                Pragmata's upgrade system splits between the <strong class="text-white">Firmware Updater</strong>
+                (Upgrade Components — permanent, non-refundable) and the <strong class="text-white">Unit
+                    Printer</strong> (Lunafilament + Pure Lunum). Spend carefully — Firmware Updater upgrades cannot be
+                undone.
+            </p>
+
+            <!-- Firmware Updater -->
+            <div class="bg-panel border border-cyan/20 clip-card p-6 max-w-2xl mb-6">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-4">Firmware Updater Priority (Upgrade
+                    Components)</p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="step-num"
+                            style="background:rgba(0,229,255,0.15);border-color:rgba(0,229,255,0.4);color:#00e5ff;">1
+                        </div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Diana's Hacking — Always First</p>
+                            <p class="text-xs text-muted font-body">Increases base hack damage and extends Weakpoint
+                                Exposure (Open) duration. Every subsequent hacking node — Decode, Expose, Multihack —
+                                scales off this foundation. Upgrading here first multiplies the value of every other
+                                hacking investment.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num"
+                            style="background:rgba(0,229,255,0.15);border-color:rgba(0,229,255,0.4);color:#00e5ff;">2
+                        </div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Hugh's Suit — Survivability Floor</p>
+                            <p class="text-xs text-muted font-body">Without Suit upgrades, elite enemies from Sector 2
+                                onward deal enough damage to interrupt hacks repeatedly. A higher HP floor also makes
+                                damage-reduction Mods more effective in absolute terms.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="step-num"
+                            style="background:rgba(0,229,255,0.15);border-color:rgba(0,229,255,0.4);color:#00e5ff;">3
+                        </div>
+                        <div>
+                            <p class="text-sm font-body text-white font-semibold">Primary Unit (Grip Gun) — Lowest
+                                Priority</p>
+                            <p class="text-xs text-muted font-body">The Grip Gun is the only weapon that never depletes
+                                — but improved hacking and secondary weapons compensate for early-game primary unit
+                                limitations. Upgrade this last among the three Firmware options.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unit Printer -->
+            <div class="bg-panel border border-amber/20 clip-card p-6 max-w-2xl">
+                <p class="text-xs font-mono text-amber-400 tracking-widest uppercase mb-4">Unit Printer Priority
+                    (Lunafilament + Pure Lunum)</p>
+                <div class="space-y-3 text-sm font-body text-muted">
+                    <div class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">1.</span><span><strong
+                                class="text-white">Decode node</strong> — unlock and upgrade early; best general-purpose
+                            damage amplifier</span></div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">2.</span><span><strong
+                                class="text-white">Multihack node</strong> — essential for group encounters; unlock
+                            alongside Decode for flexibility</span></div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">3.</span><span><strong
+                                class="text-white">Overdrive Protocol upgrades</strong> — reduce charge time and boost
+                            damage; valuable investment</span></div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">4.</span><span><strong
+                                class="text-white">Thruster Charger</strong> — reduces dash/dodge gauge consumption;
+                            high survivability value</span></div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">5.</span><span><strong
+                                class="text-white">Auto-Hacking</strong> — unlock later; higher levels only speed the
+                            animation, not effectiveness</span></div>
+                    <div class="flex items-start gap-2"><span class="text-amber-400 text-xs mt-1">6.</span><span><strong
+                                class="text-white">Confuse / Freeze / Drain</strong> — situational; upgrade only after
+                            core options are maxed</span></div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         HACKING MODES
+    ============================================================ -->
+        <section id="hacking-modes" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="modes-heading">
+            <p class="section-eyebrow">// Shelter Level Unlocks</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-4" id="modes-heading"><span>Hacking Modes</span> —
+                Equippable Grid Modifiers</h2>
+            <p class="text-muted max-w-2xl mb-6 font-body">
+                As your Shelter Level increases, you unlock <strong class="text-white">Hacking Modes</strong> at the
+                Unit Printer. These are equippable loadout options (one at a time) that fundamentally change how Blue
+                nodes behave during combat hacking. They are distinct from Yellow hacking nodes.
+            </p>
+
+            <div class="overflow-x-auto max-w-3xl">
+                <table class="w-full bg-panel border border-border data-table" aria-label="Pragmata hacking modes">
+                    <thead>
+                        <tr>
+                            <th>Mode</th>
+                            <th>Unlock</th>
+                            <th>Effect on Blue Nodes</th>
+                            <th>Best Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-cyan font-semibold">Offense Mode</td>
+                            <td class="text-muted text-xs font-mono">Shelter Level 2</td>
+                            <td class="text-muted">Turns Blue nodes into offensive nodes — weapon damage dealt while
+                                this is active multiplies next hack's damage</td>
+                            <td class="text-yellow-300 text-xs font-mono">General purpose, flexible pairing with
+                                Multihack</td>
+                        </tr>
+                        <tr>
+                            <td class="text-cyan font-semibold">Strike Mode</td>
+                            <td class="text-muted text-xs font-mono">Shelter Level 3</td>
+                            <td class="text-muted">Converts Blue nodes to raw strike damage nodes — enemies immediately
+                                re-armor after the hack finishes</td>
+                            <td class="text-yellow-300 text-xs font-mono">High burst damage, aggressive burst windows
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-muted font-mono mt-3">Note: Only one Hacking Mode can be equipped at a time.
+                Additional modes may become available at higher Shelter Levels — confirm in-game for current
+                availability.</p>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         PRO TIPS
+    ============================================================ -->
+        <section id="tips" class="max-w-7xl mx-auto px-4 sm:px-6 py-14" aria-labelledby="tips-heading">
+            <p class="section-eyebrow">// Expert Knowledge</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-6" id="tips-heading">Pro <span>Hacking Tips</span></h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl">
+
+                <div class="bg-panel border border-border p-5 clip-card">
+                    <span class="font-display text-cyan text-xs tracking-widest block mb-2">TIP 01</span>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Scan the Grid Before Moving
+                    </h3>
+                    <p class="text-xs font-body text-muted">Take 1–2 seconds to map your intended route before moving
+                        the cursor. Identify Red nodes and plan detours. A planned route is always faster than reactive
+                        backtracking.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card">
+                    <span class="font-display text-cyan text-xs tracking-widest block mb-2">TIP 02</span>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Move &amp; Dodge While
+                        Hacking</h3>
+                    <p class="text-xs font-body text-muted">The hacking grid stays open while Hugh moves. Keep dodging
+                        enemy attacks during the hack — taking a hit mid-hack cancels it entirely. You can start the
+                        hack, dodge an attack, and resume cursor movement.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card">
+                    <span class="font-display text-cyan text-xs tracking-widest block mb-2">TIP 03</span>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Never Use Same Node Twice
+                    </h3>
+                    <p class="text-xs font-body text-muted">Passing through the same Yellow node twice on one enemy
+                        gives you diminishing returns. Always carry two different Yellow nodes to mix on a single grid —
+                        the combination yields far better results.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card">
+                    <span class="font-display text-cyan text-xs tracking-widest block mb-2">TIP 04</span>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Save Overdrive for Bosses
+                    </h3>
+                    <p class="text-xs font-body text-muted">Don't use Overdrive Protocol on standard enemies. Save it
+                        for boss phase transitions or ambush rooms where you're surrounded by multiple armored targets
+                        simultaneously.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card">
+                    <span class="font-display text-cyan text-xs tracking-widest block mb-2">TIP 05</span>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Sticky Bombs Strip Red
+                        Nodes</h3>
+                    <p class="text-xs font-body text-muted">In late-game boss encounters, Sticky Bombs can remove Error
+                        nodes from the hacking grid before you begin. This is near-essential for fights where Red nodes
+                        are densely clustered around the optimal path.</p>
+                </div>
+
+                <div class="bg-panel border border-border p-5 clip-card">
+                    <span class="font-display text-cyan text-xs tracking-widest block mb-2">TIP 06</span>
+                    <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Decode = Boss Node,
+                        Multihack = Crowd Node</h3>
+                    <p class="text-xs font-body text-muted">Keep both nodes in rotation — swap them based on the
+                        encounter type in your loadout before each sector. Decode excels on solo bosses; Multihack is
+                        built for multi-enemy rooms. Never enter with only one.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         RELATED GUIDES
+    ============================================================ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10" aria-label="Related guides">
+            <p class="section-eyebrow">// Continue Mastering Pragmata</p>
+            <h2 class="section-title text-xl sm:text-2xl mb-6">Related <span>Guides</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="/upgrades/" class="block bg-panel border border-border p-5 card-hover glow-box group">
+                    <span
+                        class="text-xs font-mono text-amber-400 border border-amber-400/30 px-2 py-0.5 mb-2 inline-block">UPGRADES</span>
+                    <h3
+                        class="font-display text-sm text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Upgrade Priority Guide</h3>
+                    <p class="text-muted text-xs font-body">Firmware Updater vs Unit Printer — full breakdown of what to
+                        spend first and why.</p>
+                    <span class="mt-3 block text-cyan text-xs font-mono tracking-widest">READ →</span>
+                </a>
+                <a href="/bosses/" class="block bg-panel border border-border p-5 card-hover glow-box group">
+                    <span
+                        class="text-xs font-mono text-red-400 border border-red-400/30 px-2 py-0.5 mb-2 inline-block">BOSSES</span>
+                    <h3
+                        class="font-display text-sm text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        All Bosses Guide</h3>
+                    <p class="text-muted text-xs font-body">Hacking grid strategies for every boss — which nodes to use
+                        at each phase transition.</p>
+                    <span class="mt-3 block text-cyan text-xs font-mono tracking-widest">READ →</span>
+                </a>
+                <a href="/builds/" class="block bg-panel border border-border p-5 card-hover glow-box group">
+                    <span
+                        class="text-xs font-mono text-orange-400 border border-orange-400/30 px-2 py-0.5 mb-2 inline-block">BUILDS</span>
+                    <h3
+                        class="font-display text-sm text-white uppercase tracking-wide mb-1 group-hover:text-cyan transition-colors">
+                        Best Builds &amp; Mods</h3>
+                    <p class="text-muted text-xs font-body">Eagle Eye + Multihack combos, top perk stackings, and
+                        optimal node routing for late-game.</p>
+                    <span class="mt-3 block text-cyan text-xs font-mono tracking-widest">READ →</span>
+                </a>
+            </div>
+        </section>
+
+        <hr class="hr-cyan max-w-7xl mx-auto" aria-hidden="true" />
+
+        <!-- ============================================================
+         FAQ
+    ============================================================ -->
+        <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-16" aria-labelledby="faq-heading">
+            <p class="section-eyebrow">// Frequently Asked</p>
+            <h2 class="section-title text-2xl sm:text-3xl mb-10" id="faq-heading">Hacking <span>FAQ</span></h2>
+
+            <div class="max-w-3xl space-y-3">
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        What do the node colors mean in Pragmata?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text"><strong class="text-white">Blue</strong> — built-in Open nodes that boost
+                            damage and extend vulnerability windows. <strong class="text-white">Yellow</strong> —
+                            equipped hacking abilities from your loadout (Decode, Multihack, etc.). <strong
+                                class="text-white">Purple</strong> — rare high-tier abilities from the Unit Printer.
+                            <strong class="text-white">Red</strong> — Error nodes: instantly cancel the hack if touched
+                            — avoid. <strong class="text-white">Gray</strong> — impassable barriers that force
+                            rerouting. <strong class="text-white">Green</strong> — the EXE goal node that completes the
+                            hack.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        How do I activate Overdrive Protocol?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Press <strong class="text-white">L3 + R3</strong> (click both sticks
+                            simultaneously) when Diana's Hacking Gauge — the segmented ring next to Hugh's health bar —
+                            is completely full. The gauge charges through successful hacking, not weapon kills.
+                            Overdrive releases a hacking pulse that opens, damages, and stuns all nearby enemies at
+                            once.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        What is the best hacking node in Pragmata?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text"><strong class="text-white">Decode</strong> is the top general-purpose node
+                            for boss fights and solo encounters. <strong class="text-white">Multihack</strong> is the
+                            best node for group encounters, allowing simultaneous opening of multiple enemies. Running
+                            Decode + a second node (Expose or Multihack) is the recommended standard loadout. Always mix
+                            two different nodes to avoid diminishing returns.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        What happens if I touch a red Error node?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Touching a red Error node <strong class="text-white">immediately ejects Diana
+                                from the hacking matrix</strong> and briefly jams her — preventing hacking for a short
+                            period. The hack fails entirely and must be restarted. In late-game encounters, Sticky Bombs
+                            can strip Red nodes from the grid before you begin the hack.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        What should I upgrade first for Diana's hacking?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">At the <strong class="text-white">Firmware Updater</strong>, always
+                            prioritize Diana's Hacking first — it increases base hack damage and extends the Weakpoint
+                            Exposure duration, multiplying the value of every Yellow node you use. At the <strong
+                                class="text-white">Unit Printer</strong>, start with Decode, then Multihack. Delay
+                            Auto-Hacking and situational nodes like Confuse until core upgrades are done.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        Can I hack without solving the grid manually?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes — <strong class="text-white">Auto-Hacking</strong> (a Unit Printer
+                            unlock) solves the grid automatically at the cost of two bars of Diana's Hacking Gauge.
+                            However, it does not trigger limited-use Yellow nodes like Multihack or Confuse. Manual
+                            hacking remains the stronger option for maximizing node effects and preserving your
+                            Overdrive gauge for critical moments.</p>
+                    </div>
+                </details>
+
+                <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+                    itemtype="https://schema.org/Question">
+                    <summary
+                        class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+                        itemprop="name">
+                        How do I hack environmental terminals?
+                        <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none"
+                            aria-hidden="true">+</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Terminal hacking uses a <strong class="text-white">circular button-prompt
+                                interface</strong> rather than the combat grid. Press the correct button inputs starting
+                            from the outer ring and working inward step by step. Terminals are typically marked by a red
+                            glow and are used to open doors, activate lifts, and alter the environment — they're
+                            progression-critical, so always look for them when stuck.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8" aria-label="Site disclaimer">
+            <div class="bg-panel border border-border/60 rounded p-5 flex flex-col sm:flex-row gap-4 items-start">
+                <div class="flex-shrink-0" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="12" stroke="#8892a4" stroke-width="1.5" />
+                        <path d="M14 9v5M14 18v1" stroke="#8892a4" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <p class="text-muted text-sm font-body">
+                    <strong class="text-white">Not affiliated with Capcom.</strong> PragmataGuide is an independent
+                    fan-made resource. PRAGMATA™ is a trademark of CAPCOM CO., LTD. This site may display advertisements
+                    via Google AdSense.
+                    <a href="/privacy/" class="text-cyan hover:underline ml-1">Privacy Policy</a> ·
+                    <a href="/disclosure/" class="text-cyan hover:underline ml-1">Ad Disclosure</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+                            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                                stroke-width="1.5" />
+                            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+                        </svg>
+                        <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                                class="text-cyan">Guide</span></span>
+                    </div>
+                    <p class="text-muted text-sm font-body max-w-xs">Independent guide site for Pragmata (2026) by
+                        Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.</p>
+                </div>
+                <nav aria-label="Guide pages footer links">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+                        <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+                        <li><a href="/weapons/" class="hover:text-cyan transition-colors">Best Weapons</a></li>
+                        <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+                        <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+                        <li><a href="/hacking-guide/" class="text-cyan">Hacking Guide</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Site pages footer links">
+                    <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+                    <ul class="space-y-2 text-sm font-body text-muted">
+                        <li><a href="/about/" class="hover:text-cyan transition-colors">About</a></li>
+                        <li><a href="/contact/" class="hover:text-cyan transition-colors">Contact</a></li>
+                        <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+                        <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+                        <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr class="hr-cyan mb-6" aria-hidden="true" />
+            <div
+                class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+                <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+                <p class="text-right">PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span
+                        class="blink ml-1 text-cyan">_</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('mobile-nav');
+        const iconM = document.getElementById('icon-menu');
+        const iconC = document.getElementById('icon-close');
+        toggle.addEventListener('click', () => {
+            const isOpen = !nav.classList.contains('hidden');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            iconM.classList.toggle('hidden', !isOpen);
+            iconC.classList.toggle('hidden', isOpen);
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+    </script>
+
+</body>
+
+</html>
