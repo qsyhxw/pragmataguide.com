@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">PragmataGuide Favicon</title>
+  <desc id="desc">A sci-fi icon with a cyan hexagon and crescent moon for PragmataGuide.</desc>
+
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#060810"/>
+
+  <path
+    d="M32 10 48 19.2V37.6L32 46.8 16 37.6V19.2Z"
+    fill="none"
+    stroke="#00E5FF"
+    stroke-width="3.6"
+    stroke-linejoin="round"/>
+
+  <circle cx="31" cy="29" r="8.5" fill="#00E5FF"/>
+  <circle cx="34.5" cy="27.5" r="8.5" fill="#060810"/>
+
+  <circle cx="40.5" cy="24.5" r="2.6" fill="#FFB703"/>
+
+  <path
+    d="M23 40.5H41"
+    stroke="#00E5FF"
+    stroke-width="3"
+    stroke-linecap="round"
+    opacity="0.95"/>
+</svg>
