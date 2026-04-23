@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /trophies-achievements/
+       Title: 57 chars | Desc: 155 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Trophies &amp; Achievements Guide – Full List</title>
+  <meta name="description"
+    content="Verified Pragmata trophies and achievements guide with the full list, platform differences, roadmap, missable warning, and safe Platinum route." />
+  <link rel="canonical" href="https://pragmataguide.com/trophies-achievements/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Trophies &amp; Achievements Guide – Full List" />
+  <meta property="og:description"
+    content="Full Pragmata trophy and achievement list, plus platform differences, roadmap, and the safest route to Platinum or 100%." />
+  <meta property="og:url" content="https://pragmataguide.com/trophies-achievements/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Trophies &amp; Achievements Guide – Full List" />
+  <meta name="twitter:description"
+    content="Verified Pragmata achievement list with Platinum roadmap, missable warning, Unknown Signal notes, and full milestone table." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .danger-box {
+      border-left: 2px solid #f87171;
+      background: rgba(248, 113, 113, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .breadcrumb a {
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.87rem;
+    }
+
+    .data-table th {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #00e5ff;
+      border-bottom: 1px solid #1e2d45;
+      padding: 0.7rem 0.9rem;
+      text-align: left;
+    }
+
+    .data-table td {
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid rgba(30, 45, 69, 0.6);
+      color: #c9d1e0;
+      vertical-align: top;
+    }
+
+    .data-table tr:hover td {
+      background: rgba(0, 229, 255, 0.03);
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .tag-story {
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.35);
+      background: rgba(0, 229, 255, 0.08);
+    }
+
+    .tag-combat {
+      color: #ffb703;
+      border: 1px solid rgba(255, 183, 3, 0.35);
+      background: rgba(255, 183, 3, 0.08);
+    }
+
+    .tag-collect {
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.35);
+      background: rgba(74, 222, 128, 0.08);
+    }
+
+    .tag-post {
+      color: #f87171;
+      border: 1px solid rgba(248, 113, 113, 0.35);
+      background: rgba(248, 113, 113, 0.08);
+    }
+  </style>
+</head>
+
+<body class="relative">
+  <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden="true"></div>
+
+  <header class="relative z-10 border-b border-border bg-space/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0" aria-label="PragmataGuide home">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+              stroke-width="1.5" />
+            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm font-bold tracking-widest text-white uppercase">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/bosses/" class="nav-link">Bosses</a>
+          <a href="/collectibles/" class="nav-link">Collectibles</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/bosses/" class="nav-link py-1">Bosses</a>
+      <a href="/collectibles/" class="nav-link py-1">Collectibles</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Trophies &amp; Achievements</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.4fr_0.8fr] gap-6 items-stretch">
+        <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8 fade-up">
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">PS5: 36 Trophies</span>
+            <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Steam: 35 Achievements</span>
+            <span class="text-xs font-mono text-redline border border-redline/30 px-2 py-0.5">1 High-Risk Missable</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Verified Apr 16–23, 2026</span>
+          </div>
+          <p class="section-eyebrow">// Completion Route</p>
+          <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+            Pragmata <span class="text-cyan">Trophies &amp; Achievements</span> Guide
+          </h1>
+          <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+            This page is built for the cleanest completion route, not just a raw list. The high-confidence picture is:
+            PlayStation has <strong class="text-white">36 trophies including Platinum</strong>, Steam has
+            <strong class="text-white">35 shared milestones without Platinum</strong>, and the safest plan is still
+            <strong class="text-white">two playthroughs</strong> because <strong class="text-white">Lunatic</strong>
+            sits behind a first clear.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#roadmap" class="btn-cyan">Roadmap</a>
+            <a href="#full-list" class="btn-cyan">Full List</a>
+            <a href="#high-risk" class="btn-cyan">High-Risk Trophies</a>
+            <a href="#faq" class="btn-cyan">FAQ</a>
+          </div>
+        </div>
+
+        <aside class="grid gap-4 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Quick Facts</p>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><strong class="text-white">Online:</strong> none required.</li>
+              <li><strong class="text-white">Platinum time:</strong> launch-week guides cluster around roughly 20–30 hours.</li>
+              <li><strong class="text-white">Post-game:</strong> Unknown Signal is central to full cleanup.</li>
+              <li><strong class="text-white">Main warning:</strong> Sweeper bot coverage is the least forgiving part of the list.</li>
+            </ul>
+          </div>
+
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Important nuance:</strong> collectibles are broadly cleanup-friendly in Unknown
+            Signal, but stronger roadmap coverage still flags <strong class="text-white">You're Not Getting Away That
+              Easy</strong> as the one trophy with real missable risk because Sweeper bot spawns are limited.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-1">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">PlayStation</p>
+          <p class="font-display text-3xl text-white mb-2">36</p>
+          <p class="text-sm text-muted">1 Platinum, 5 Gold, 9 Silver, 21 Bronze according to the strongest launch-week roadmap.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-2">
+          <p class="text-xs font-mono text-amber tracking-widest uppercase mb-2">Steam</p>
+          <p class="font-display text-3xl text-white mb-2">35</p>
+          <p class="text-sm text-muted">Same milestone set without the PlayStation Platinum layer.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-redline tracking-widest uppercase mb-2">Playthroughs</p>
+          <p class="font-display text-3xl text-white mb-2">2</p>
+          <p class="text-sm text-muted">One clear to unlock Lunatic, one Lunatic run for the hardest platform-wide milestone.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Cleanup Mode</p>
+          <p class="font-display text-3xl text-white mb-2">Unknown Signal</p>
+          <p class="text-sm text-muted">Post-story mode matters for 100% sectors, special pods, and the full completion route.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Recommended Order</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Safe Trophy <span>Roadmap</span></h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">1. Story Run + Natural Cleanup</h3>
+          <p class="text-sm text-muted mb-3">
+            Use the first playthrough to clear the story trophies, print as much gear as possible, unlock Shelter
+            systems, and clean up easy combat or collectible milestones while the route is still fresh.
+          </p>
+          <div class="tip-box text-sm">
+            The safest first-run companion pages are <a href="/collectibles/" class="text-cyan hover:underline">All Collectibles</a>,
+            <a href="/walkthrough/" class="text-cyan hover:underline">Walkthrough</a>, and
+            <a href="/bosses/" class="text-cyan hover:underline">Boss Guides</a>.
+          </div>
+        </div>
+
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">2. Unknown Signal + 100% Systems</h3>
+          <p class="text-sm text-muted mb-3">
+            This is the cleanup-heavy phase: sector percentages, special sector missions, stronger boss revisits, and
+            the mode most trophy roadmaps tie to the real end of the completion route.
+          </p>
+          <div class="warn-box text-sm">
+            If you skipped Safe Boxes, Pure Lunum, Red Zones, or Mini Cabins earlier, this is where those omissions
+            start affecting <strong class="text-white">The Right Man for the Job</strong>.
+          </div>
+        </div>
+
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">3. Lunatic Difficulty</h3>
+          <p class="text-sm text-muted mb-3">
+            Leave the hardest difficulty for last unless you already know the route. By then you should understand boss
+            timings, matrix pressure, and which loadouts reduce late-run volatility.
+          </p>
+          <div class="ok-box text-sm">
+            Current coverage is consistent that Lunatic is the run that usually decides whether your Platinum or 100%
+            push stays efficient.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+      <p class="section-eyebrow">// Platform Split</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Trophies Vs <span>Achievements</span></h2>
+
+      <div class="overflow-x-auto rounded border border-border">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Total</th>
+              <th>What Changes</th>
+              <th>Best Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-panel/70">
+              <td class="text-white font-semibold">PS5</td>
+              <td>36</td>
+              <td>Includes the extra <strong class="text-white">Pragmata</strong> Platinum trophy.</td>
+              <td>Use this if you want tier counts and true Platinum planning.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="text-white font-semibold">Steam</td>
+              <td>35</td>
+              <td>Uses the shared milestone list without Platinum.</td>
+              <td>Use this as the base milestone checklist if you want one platform-neutral table.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="full-list" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Full Table</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Shared Achievement <span>Milestones</span></h2>
+      <p class="text-muted max-w-3xl mb-6">
+        This table uses the 35 shared milestones seen on Steam and then layers the PlayStation Platinum on top. The
+        goal is quick planning: which trophies are automatic, which are cleanup-sensitive, and which ones usually need
+        deliberate setup.
+      </p>
+
+      <div class="overflow-x-auto rounded border border-border">
+        <table class="data-table min-w-[920px]">
+          <thead>
+            <tr>
+              <th>Milestone</th>
+              <th>Category</th>
+              <th>Unlock Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Rendezvous</td><td><span class="tag tag-story">Story</span></td><td>Reach the Shelter.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Power Trip</td><td><span class="tag tag-story">Story</span></td><td>Restore power.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">The Purr-fect Guide</td><td><span class="tag tag-story">Story</span></td><td>Reach the Comms Tower.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Another Pragmata</td><td><span class="tag tag-story">Story</span></td><td>Meet the trapped girl.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Entrusted Memory</td><td><span class="tag tag-story">Story</span></td><td>Get the stop code.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Mission Unveiled</td><td><span class="tag tag-story">Story</span></td><td>Make it to Nexus Tower.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Awakening</td><td><span class="tag tag-story">Story</span></td><td>Fix up Diana.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Sentinel Breach</td><td><span class="tag tag-story">Story</span></td><td>Take down the Sentinel.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Our Promise</td><td><span class="tag tag-story">Story</span></td><td>Complete the game on any difficulty.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Lunar Supremacy</td><td><span class="tag tag-post">Difficulty</span></td><td>Finish the game on Lunatic.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">The Right Man for the Job</td><td><span class="tag tag-post">Post-Game</span></td><td>Complete Unknown Signal.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">A Lunar Challenge</td><td><span class="tag tag-post">Post-Game</span></td><td>Clear one special sector mission.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Small Talk</td><td><span class="tag tag-collect">Shelter</span></td><td>Talk to Diana in the Shelter.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">For Me?</td><td><span class="tag tag-collect">REM</span></td><td>Give Diana an REM.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Thanks for Everything!</td><td><span class="tag tag-collect">REM</span></td><td>Receive a picture as a present.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Peekaboo</td><td><span class="tag tag-collect">Shelter</span></td><td>Win at hide-and-seek.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Replicating Extraordinaire!</td><td><span class="tag tag-collect">REM</span></td><td>Complete an REM series.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Blackout!</td><td><span class="tag tag-collect">Stamp Board</span></td><td>Finish a Cabin Stamp Board.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Well Spotted!</td><td><span class="tag tag-collect">Mini Cabin</span></td><td>Shoot one Mini Cabin.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Mini-Hunter Supreme</td><td><span class="tag tag-collect">Mini Cabin</span></td><td>Shoot every Mini Cabin.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Wall? What Wall?</td><td><span class="tag tag-collect">Exploration</span></td><td>Find a Holo-Wall.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Red-Zoned and Loving It</td><td><span class="tag tag-collect">Red Zone</span></td><td>Secure a Red Zone.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Cradle Surveyor</td><td><span class="tag tag-collect">Completion</span></td><td>Reach 100% sector progress in a sector.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Escape Artist</td><td><span class="tag tag-collect">Completion</span></td><td>Unlock every escape hatch.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Top-Shelf Item</td><td><span class="tag tag-collect">Upgrade</span></td><td>Use Pure Lunum on a weapon upgrade.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Can't Stop, Won't Stop</td><td><span class="tag tag-collect">Printer</span></td><td>Print all obtainable story-era weapons, nodes, and abilities.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Mister Simulator</td><td><span class="tag tag-combat">Sim</span></td><td>Complete one Training Sim main objective.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Master of the Simulator</td><td><span class="tag tag-combat">Sim</span></td><td>Complete every Training Sim main objective.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">You're Not Getting Away That Easy</td><td><span class="tag tag-combat">Combat</span></td><td>Defeat a Sweeper bot.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Round 'Em Up</td><td><span class="tag tag-combat">Combat</span></td><td>Use the Lim Recycler to defeat three enemies at once.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Courage in Desperation</td><td><span class="tag tag-combat">Combat</span></td><td>Repel LunaDigger during the Lunum Mines route.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Can I Borrow That?</td><td><span class="tag tag-combat">Combat</span></td><td>Confuse a certain enemy and take its shield.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Clean Up on Aisle Three</td><td><span class="tag tag-combat">Combat</span></td><td>Cleanse three or more enemies at the same time.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">IT'S OVER 6000!</td><td><span class="tag tag-combat">Damage</span></td><td>Deal 6000 gunshot damage in one second.</td></tr>
+            <tr class="bg-panel/70"><td class="text-white font-semibold">Who Needs Guns!?</td><td><span class="tag tag-combat">Damage</span></td><td>Deal 3000 hacking damage in a single hack.</td></tr>
+            <tr class="bg-panel/40"><td class="text-white font-semibold">Pragmata</td><td><span class="tag tag-post">Platinum</span></td><td>PlayStation-only meta trophy for earning all other trophies.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="high-risk" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Watch List</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">High-Risk <span>Trophies</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div class="danger-box text-sm">
+          <strong class="text-redline">You're Not Getting Away That Easy</strong><br />
+          This is the one current roadmap coverage most clearly treats as missable. The problem is not the requirement
+          itself; it is the limited and somewhat inconsistent Sweeper bot spawn coverage. If you care about clean
+          completion, do not leave this one for “later.”
+        </div>
+        <div class="warn-box text-sm">
+          <strong class="text-amber">The Right Man for the Job</strong><br />
+          Unknown Signal is not just a bonus mode. Stronger guides treat it as the post-story completion route that
+          pulls together collectibles, pod clears, and the game's last serious cleanup layer.
+        </div>
+        <div class="tip-box text-sm">
+          <strong class="text-cyan">Can't Stop, Won't Stop</strong><br />
+          This is safer if you keep your <a href="/upgrades/" class="text-cyan hover:underline">Unit Printer</a> planning clean during the main story instead of assuming post-game will cover every printable requirement.
+        </div>
+        <div class="ok-box text-sm">
+          <strong class="text-greenline">Master of the Simulator</strong><br />
+          Training Sim work is time-consuming rather than deceptive. Treat it like a structured checklist task, not a
+          combat challenge you randomly mop up late.
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Related Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Completion Support</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="/collectibles/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">All Collectibles</p>
+          <p class="text-xs text-muted">The broadest support page for Cradle Surveyor, Unknown Signal cleanup, and sector percentages.</p>
+        </a>
+        <a href="/collectibles/mini-cabins/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Mini Cabins</p>
+          <p class="text-xs text-muted">Best internal companion for Well Spotted! and Mini-Hunter Supreme.</p>
+        </a>
+        <a href="/collectibles/red-zones/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Red Zones</p>
+          <p class="text-xs text-muted">Use this for Red-Zoned and Loving It and for key-spending that affects post-game efficiency.</p>
+        </a>
+        <a href="/endings/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Endings</p>
+          <p class="text-xs text-muted">Important if you want to understand where story completion, Unknown Signal, and final-route timing overlap.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Trophies <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            How many trophies and achievements are in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current launch-week tracking shows 36 trophies on PlayStation 5 including Platinum, and 35 achievements on Steam without a Platinum equivalent.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Is anything missable?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Most cleanup-heavy trophies are post-story friendly, but stronger roadmap coverage still flags You're Not Getting Away That Easy as the one meaningful missable-risk trophy because Sweeper bot spawns are limited.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Do you need two playthroughs?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes, that is still the safest assumption. Current trophy roadmaps consistently tie Lunar Supremacy to a Lunatic clear, and Lunatic is treated as a post-first-clear unlock.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Does Unknown Signal matter for full completion?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Very much so. Current completion coverage treats Unknown Signal as the mode that ties together post-story cleanup, special sector missions, and one of the list's biggest endgame milestones.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
