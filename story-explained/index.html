@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /story-explained/
+       Title: 50 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Story Explained – Plot, Ending & Themes</title>
+  <meta name="description"
+    content="Verified Pragmata story explained guide covering Hugh, Diana, the Cradle, IDUS, the main ending, and how Unknown Signal changes the story payoff." />
+  <link rel="canonical" href="https://pragmataguide.com/story-explained/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Story Explained – Plot, Ending & Themes" />
+  <meta property="og:description"
+    content="Spoiler-aware Pragmata story breakdown covering the setting, character arc, ending meaning, and the narrative role of Unknown Signal." />
+  <meta property="og:url" content="https://pragmataguide.com/story-explained/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Story Explained – Plot, Ending & Themes" />
+  <meta name="twitter:description"
+    content="Pragmata story explained: Hugh, Diana, the Cradle, rogue AI conflict, ending meaning, and post-game story extension." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+          <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+          <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
+          <a href="/endings/" class="nav-link text-sm font-medium font-body">Endings</a>
+          <a href="/post-game/" class="nav-link text-sm font-medium font-body">Post-Game</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="max-w-4xl fade-up">
+          <p class="section-eyebrow">// Story Explained</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight text-white uppercase tracking-[0.08em] mb-6">
+            Pragmata <span class="text-cyan glow-cyan">Story Explained</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-300 max-w-3xl">
+            A spoiler-aware breakdown of <strong class="text-white">Hugh</strong>, <strong class="text-white">Diana</strong>,
+            <strong class="text-white">the Cradle</strong>, the best-supported meaning of the main ending, and why
+            <strong class="text-white">Unknown Signal</strong> works more like an epilogue than a throwaway challenge mode.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <a href="#story-setup" class="btn-cyan">Story Setup</a>
+            <a href="#ending-explained" class="btn-cyan">Ending Explained</a>
+            <a href="#themes" class="btn-cyan">Themes</a>
+            <a href="#faq" class="btn-cyan">FAQ</a>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 mt-12 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Main Characters</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">Hugh & Diana</p>
+            <p class="text-sm text-muted mt-2">A stranded investigator and a young android whose bond defines the story.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Setting</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">The Cradle</p>
+            <p class="text-sm text-muted mt-2">A moonbase tied to Delphi, hostile machines, and rogue AI control.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Core Conflict</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">Escape & Truth</p>
+            <p class="text-sm text-muted mt-2">The plot is both a survival mystery and a story about what Diana really means.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Best Companion</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">Endings + Post-Game</p>
+            <p class="text-sm text-muted mt-2">Use those for exact unlock steps; use this page for the narrative reading.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="story-setup" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Story Setup</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">What The Story <span>Starts As</span></h2>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">A Broken Lunar Facility</h3>
+            <p class="text-slate-300">
+              The highest-confidence setup is that <strong class="text-white">Hugh</strong> arrives at a lunar installation
+              called <strong class="text-white">the Cradle</strong>, linked to <strong class="text-white">Delphi</strong>,
+              and finds it under hostile machine and rogue AI pressure. From there, the main story becomes a survival run
+              through a station that is no longer operating under human control.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Diana Changes The Meaning Of The Plot</h3>
+            <p class="text-slate-300">
+              Very quickly, the story stops being only about “fix the moonbase problem.” Hugh meets
+              <strong class="text-white">Diana</strong>, a young android whose hacking is essential in combat and whose
+              personal significance gradually becomes more important than the station mystery itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="relationship" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Character Arc</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">What The Plot Is <span>Really About</span></h2>
+
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">1. Relationship Over Raw Lore</h3>
+            <p class="text-sm text-slate-300">Stronger launch-week coverage repeatedly frames the Hugh-Diana bond as the heart of the game, not a side note.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">2. Shelter Scenes Matter</h3>
+            <p class="text-sm text-slate-300">Official coverage explicitly treats Shelter conversations, REM scenes, and downtime with Diana as core narrative material.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">3. The Mystery Supports The Bond</h3>
+            <p class="text-sm text-slate-300">The Cradle, Delphi, AI control, and late reveals matter most because they raise the stakes around Diana's future.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 max-w-4xl space-y-4">
+          <p>
+            The safest interpretation of <em>Pragmata</em> is that it uses a corporate sci-fi mystery as a frame for a much
+            more intimate character story. Hugh starts as a practical adult trying to survive a disaster. Diana begins as the
+            mysterious childlike android who makes survival possible. By the late game, the real question is less “what happened
+            here?” and more <strong class="text-white">“what kind of future is Hugh trying to protect for Diana?”</strong>
+          </p>
+          <p>
+            That is why the Shelter matters so much to the story reading. Official material goes out of its way to say that
+            spending time with Diana, using REMs, and watching their relationship deepen is part of the narrative core, not just
+            optional flavor.
+          </p>
+        </div>
+      </section>
+
+      <section id="story-beats" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Spoiler-Lite Structure</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">The Main Plot In <span>Three Movements</span></h2>
+
+        <div class="space-y-5 max-w-5xl">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Act 1: Survive The Cradle</h3>
+            <p class="text-slate-300">
+              Early on, the story is about orientation and survival. Hugh is trapped in a dangerous lunar facility, and
+              Diana's hacking is what turns impossible encounters into manageable ones.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Act 2: Learn What The Station Is Hiding</h3>
+            <p class="text-slate-300">
+              Midgame, the plot expands into corporate and systems-level mystery. Delphi, lunafilament, the station's deeper
+              purpose, and the AI threat matter more here, but stronger summaries still frame those revelations as things that
+              sharpen the stakes around Diana rather than replace her as the center.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Act 3: Escape And Meaning</h3>
+            <p class="text-slate-300">
+              By the final stretch, the story is no longer just a moonbase escape thriller. It becomes a more direct argument
+              about protection, personhood, and whether Diana gets to reach a future that belongs to her.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ending-explained" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Ending Explained</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">What The Ending <span>Seems To Mean</span></h2>
+
+        <div class="warn-box max-w-4xl mb-6">
+          <strong class="text-amber">Spoiler note:</strong> this section explains the broad meaning of the ending and Unknown Signal,
+          but avoids writing disputed late-lore details as fixed fact.
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Main Ending</h3>
+            <p class="text-slate-300">
+              The safest reading of the base ending is that it resolves the immediate escape story while intentionally leaving
+              a larger emotional question hanging. Launch-week coverage repeatedly frames the conclusion as bittersweet rather
+              than purely triumphant.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Unknown Signal As Epilogue</h3>
+            <p class="text-slate-300">
+              Current high-confidence post-game coverage treats <strong class="text-white">Unknown Signal</strong> as more
+              than a bonus mode. It returns you to the Shelter before the final boss, opens the
+              <strong class="text-white">Hidden Chamber</strong>, and functions like an epilogue route that extends the
+              story payoff.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 max-w-4xl space-y-4">
+          <p>
+            That distinction matters because it changes how the full narrative reads. If you only watch the base credits,
+            <em>Pragmata</em> looks like a story about survival and sacrifice with a deliberate sting. If you include
+            <strong class="text-white">Unknown Signal</strong>, it starts to look more like a two-step structure:
+            the campaign gives you the immediate ending, while post-game supplies the fuller epilogue layer.
+          </p>
+          <p>
+            For the exact route details, use <a href="/endings/" class="text-cyan hover:underline">Endings</a> and
+            <a href="/post-game/" class="text-cyan hover:underline">Post-Game</a>. For story meaning, the highest-confidence
+            conclusion is that Unknown Signal was built to be part of the game's narrative closure, not just extra combat.
+          </p>
+        </div>
+      </section>
+
+      <section id="themes" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Themes</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best-Supported <span>Themes</span></h2>
+
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Protection</h3>
+            <p class="text-sm text-slate-300">The story keeps re-framing Hugh from investigator into protector.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Personhood</h3>
+            <p class="text-sm text-slate-300">Diana steadily stops reading like a tool and starts reading like a person whose future matters.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Corporate Pressure</h3>
+            <p class="text-sm text-slate-300">The moonbase, Delphi, and the AI takeover matter most because they pressure the central relationship.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 max-w-4xl space-y-4">
+          <p>
+            If you want one high-level reading that stays honest to the available sources, it is this:
+            <strong class="text-white">Pragmata is a moonbase AI mystery whose real subject is whether Diana gets to become someone, not something.</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <a href="/endings/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Endings</p>
+            <p class="text-xs text-muted">Use this for exact ending unlock conditions and route-specific requirements.</p>
+          </a>
+          <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+            <p class="text-xs text-muted">Best follow-up if you want the Hidden Chamber and Unknown Signal structure.</p>
+          </a>
+          <a href="/bosses/idea-eight/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Final Boss</p>
+            <p class="text-xs text-muted">Useful for the gameplay side of the final confrontation and endgame stretch.</p>
+          </a>
+          <a href="/trophies-achievements/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Trophies</p>
+            <p class="text-xs text-muted">Helpful when story completion turns into ending cleanup and post-game planning.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">Story Explained <span>FAQ</span></h2>
+
+        <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Who are the main characters in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Current high-confidence coverage identifies Hugh and Diana as the two central characters. Hugh is the adult protagonist navigating the Cradle, while Diana is the young android whose hacking and personal arc drive both gameplay and story.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What is the Cradle in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">The Cradle is the lunar facility where the game takes place. Current official and review coverage describes it as a moonbase or research installation tied to Delphi and overtaken by hostile AI control.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Is Unknown Signal part of the story?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">The strongest current reading is yes. While it is a post-game mode structurally, multiple sources treat Unknown Signal as a narrative epilogue that extends the ending rather than a purely mechanical bonus mode.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What is Pragmata mostly about?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">The safest high-level interpretation is that Pragmata is a sci-fi mystery built around Hugh protecting Diana and helping her reach a future of her own, with the moonbase disaster and rogue AI conflict serving as pressure around that relationship.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border/70 mt-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <p class="font-display text-lg text-white tracking-[0.16em] uppercase">PRAGMATA<span class="text-cyan">GUIDE</span></p>
+          <p class="text-sm text-muted mt-3 max-w-md">Spoiler-aware guides for Pragmata with walkthroughs, bosses, collectibles, endings, and post-game coverage.</p>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Explore</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Bosses</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">Collectibles</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Story</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">Endings</a></li>
+            <li><a href="/post-game/" class="hover:text-cyan transition-colors">Post-Game</a></li>
+            <li><a href="/trophies-achievements/" class="hover:text-cyan transition-colors">Trophies</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
