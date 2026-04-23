@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /post-game/
+       Title: 59 chars | Desc: 155 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Post-Game Guide – NG+ &amp; Unknown Signal</title>
+  <meta name="description"
+    content="Verified Pragmata post-game guide covering Unknown Signal, New Game Plus, Hidden Chamber, true ending prep, and the safest order after credits." />
+  <link rel="canonical" href="https://pragmataguide.com/post-game/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Post-Game Guide – NG+ &amp; Unknown Signal" />
+  <meta property="og:description"
+    content="What to do after finishing Pragmata: Unknown Signal, NG+, Hidden Chamber, post-story cleanup, and true ending prep." />
+  <meta property="og:url" content="https://pragmataguide.com/post-game/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Post-Game Guide – NG+ &amp; Unknown Signal" />
+  <meta name="twitter:description"
+    content="Verified Pragmata post-game route with Unknown Signal, NG+, Hidden Chamber, and true ending guidance." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'violet': '#a78bfa',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .danger-box {
+      border-left: 2px solid #f87171;
+      background: rgba(248, 113, 113, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .breadcrumb a {
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.87rem;
+    }
+
+    .data-table th {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #00e5ff;
+      border-bottom: 1px solid #1e2d45;
+      padding: 0.7rem 0.9rem;
+      text-align: left;
+    }
+
+    .data-table td {
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid rgba(30, 45, 69, 0.6);
+      color: #c9d1e0;
+      vertical-align: top;
+    }
+
+    .data-table tr:hover td {
+      background: rgba(0, 229, 255, 0.03);
+    }
+  </style>
+</head>
+
+<body class="relative">
+  <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden="true"></div>
+
+  <header class="relative z-10 border-b border-border bg-space/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0" aria-label="PragmataGuide home">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+              stroke-width="1.5" />
+            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm font-bold tracking-widest text-white uppercase">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/collectibles/" class="nav-link">Collectibles</a>
+          <a href="/weapons/" class="nav-link">Weapons</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/collectibles/" class="nav-link py-1">Collectibles</a>
+      <a href="/weapons/" class="nav-link py-1">Weapons</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Post-Game</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.75fr] gap-6 items-stretch">
+        <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8 fade-up">
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Unknown Signal</span>
+            <span class="text-xs font-mono text-violet border border-violet/30 px-2 py-0.5">New Game Plus</span>
+            <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Hidden Chamber</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Verified Apr 18–23, 2026</span>
+          </div>
+          <p class="section-eyebrow">// After Credits</p>
+          <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+            Pragmata <span class="text-violet">Post-Game</span> Guide
+          </h1>
+          <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+            Once the credits roll, Pragmata opens into two different follow-up routes: <strong class="text-white">Unknown Signal</strong>,
+            which acts as the game's real cleanup-and-challenge layer, and <strong class="text-white">New Game Plus</strong>,
+            which lets you replay the campaign with your build intact. The safest broad advice from current guide coverage is
+            simple: <strong class="text-white">do Unknown Signal first</strong>, then treat NG+ as your replay or build-maxing route.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#unknown-signal" class="btn-cyan">Unknown Signal</a>
+            <a href="#ng-plus" class="btn-cyan">NG+</a>
+            <a href="#best-order" class="btn-cyan">Best Order</a>
+            <a href="#faq" class="btn-cyan">FAQ</a>
+          </div>
+        </div>
+
+        <aside class="grid gap-4 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Quick Facts</p>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><strong class="text-white">Unlock:</strong> both modes appear after one full story clear.</li>
+              <li><strong class="text-white">Unknown Signal:</strong> returns you to a completed save near the final-boss stretch.</li>
+              <li><strong class="text-white">Hidden Chamber:</strong> this is where the post-game missions live.</li>
+              <li><strong class="text-white">Best use of NG+:</strong> replay, build carryover, and optional extra challenge.</li>
+            </ul>
+          </div>
+
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Planning tip:</strong> current coverage is much more consistent about
+            <strong class="text-white">what Unknown Signal does</strong> than about every exact NG+ ruleset. This page
+            keeps the NG+ section honest and a little more conservative where source wording diverges.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-1">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Unknown Signal</p>
+          <p class="font-display text-3xl text-white mb-2">10</p>
+          <p class="text-sm text-muted">Multiple sources agree the Hidden Chamber contains 10 post-game challenge missions.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-2">
+          <p class="text-xs font-mono text-violet tracking-widest uppercase mb-2">NG+</p>
+          <p class="font-display text-3xl text-white mb-2">Carryover</p>
+          <p class="text-sm text-muted">The stable consensus is that your major unlock and upgrade progress carries into a new run.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-amber tracking-widest uppercase mb-2">True Ending</p>
+          <p class="font-display text-3xl text-white mb-2">Post-Game</p>
+          <p class="text-sm text-muted">Current guide coverage consistently ties the extended ending route to Unknown Signal rather than NG+.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Cleanup</p>
+          <p class="font-display text-3xl text-white mb-2">All Sectors</p>
+          <p class="text-sm text-muted">Unknown Signal is treated as the broad post-story return path for sector cleanup and completion routing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="best-order" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Recommended Flow</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">What To Do <span>After Credits</span></h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">1. Start Unknown Signal</h3>
+          <p class="text-sm text-muted">
+            If your goal is completion, post-story cleanup, or the best-known route to the extra ending content, start
+            here first. This is the mode current guides consistently treat as the real post-game layer.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">2. Clean Up Sectors + Hidden Chamber</h3>
+          <p class="text-sm text-muted">
+            Use the post-story return path to finish collectibles, boss-related cleanup, and the Hidden Chamber mission chain instead of scattering that work across multiple half-finished runs.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">3. Use NG+ For Replay Value</h3>
+          <p class="text-sm text-muted">
+            Once your completion route is stable, NG+ becomes the cleaner place to replay the campaign with a stronger build and less setup friction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="unknown-signal" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      <p class="section-eyebrow">// Post-Game Route</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Unknown Signal <span>Explained</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">How It Starts</h3>
+          <p class="text-sm text-muted mb-3">
+            Stronger launch-week coverage agrees on the basic flow: after you finish the main story once, the main menu
+            gains an <strong class="text-white">Unknown Signal</strong> option tied to a completed save file.
+          </p>
+          <p class="text-sm text-muted">
+            When you enter it, the game places you back at the <strong class="text-white">Shelter</strong> near the end
+            of the story route, then opens access to the <strong class="text-white">Hidden Chamber</strong>.
+          </p>
+        </div>
+
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">What It Is Actually For</h3>
+          <p class="text-sm text-muted">
+            The highest-confidence description is not “bonus mode” but <strong class="text-white">post-story cleanup and challenge route</strong>.
+            This is where completionist coverage consistently places sector return trips, late rewards, Hidden Chamber
+            missions, and the broader true-ending chain.
+          </p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded border border-border mt-6">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Unknown Signal Step</th>
+              <th>What Is Stable</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-panel/70">
+              <td class="text-white font-semibold">Unlock</td>
+              <td>Finish the main story once, then use a completed save from the title screen.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="text-white font-semibold">New Area</td>
+              <td>The <strong class="text-white">Hidden Chamber</strong> opens as the post-game mission hub.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="text-white font-semibold">Challenge Structure</td>
+              <td>Current guide coverage consistently describes <strong class="text-white">10 missions / pods</strong>.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="text-white font-semibold">Completion Role</td>
+              <td>This is the safest place to finish sector cleanup and push toward full completion-related goals.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="text-white font-semibold">Ending Relevance</td>
+              <td>Unknown Signal is repeatedly tied to the route for the extra ending payoff, not just extra loot.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-5 mt-6">
+        <div class="warn-box text-sm">
+          <strong class="text-amber">Most common mistake:</strong> stronger post-game guides repeatedly warn that
+          clearing the 10 Hidden Chamber missions is <em>not</em> the whole route by itself if your goal is true
+          completion or the full ending payoff.
+        </div>
+        <div class="ok-box text-sm">
+          <strong class="text-greenline">What is safe to say about rewards:</strong> current sources consistently treat
+          Unknown Signal as the source of meaningful post-game rewards such as strong Mods, outfits, resources, and late
+          build options, even when individual reward lists vary by guide.
+        </div>
+      </div>
+    </section>
+
+    <section id="ng-plus" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Replay Route</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">New Game Plus <span>Explained</span></h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">What NG+ Does</h3>
+          <p class="text-sm text-muted">
+            High-confidence coverage agrees on the core idea: <strong class="text-white">NG+</strong> restarts the main
+            story while preserving the important parts of your build and progression so a second campaign run feels far
+            more flexible.
+          </p>
+        </div>
+
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">What Usually Carries Over</h3>
+          <p class="text-sm text-muted">
+            The stable overlap across guides is that your major <strong class="text-white">gear, unlocks, and upgrade progress</strong>
+            carry into NG+. That is the part broad enough to rely on safely.
+          </p>
+        </div>
+
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">What To Use It For</h3>
+          <p class="text-sm text-muted">
+            Treat NG+ as the place to replay the campaign with a mature loadout, test stronger weapon combinations, and
+            enjoy a less resource-starved route after your first clear.
+          </p>
+        </div>
+      </div>
+
+      <div class="warn-box text-sm mt-6">
+        <strong class="text-amber">NG+ caution:</strong> launch-week guides do not describe every NG+ rule the same
+        way, especially around exact difficulty pairing and a few reset details. This page intentionally avoids locking
+        those disputed specifics into hard facts.
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// True Ending Context</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Why Post-Game Matters <span>So Much</span></h2>
+
+      <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8">
+        <p class="text-muted mb-4">
+          The biggest reason this page matters is that Pragmata's post-game is not just there for optional replay.
+          Current ending and trophy coverage consistently connect <strong class="text-white">Unknown Signal</strong> to
+          the game's deeper completion layer: sector cleanup, Hidden Chamber progress, special post-game rewards, and
+          the route that leads into the stronger ending payoff.
+        </p>
+        <p class="text-muted">
+          If you care about the complete narrative route, pair this page with
+          <a href="/endings/" class="text-cyan hover:underline">Endings</a>,
+          <a href="/trophies-achievements/" class="text-cyan hover:underline">Trophies &amp; Achievements</a>,
+          and
+          <a href="/collectibles/" class="text-cyan hover:underline">All Collectibles</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Related Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="/endings/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Endings</p>
+          <p class="text-xs text-muted">Best companion if you want to understand how Unknown Signal feeds the extra ending route.</p>
+        </a>
+        <a href="/collectibles/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">All Collectibles</p>
+          <p class="text-xs text-muted">Use this when your post-game route turns into sector cleanup and completion tracking.</p>
+        </a>
+        <a href="/weapons/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Weapons</p>
+          <p class="text-xs text-muted">Helpful once post-game rewards and late-game loadout planning start to matter more.</p>
+        </a>
+        <a href="/trophies-achievements/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Trophies</p>
+          <p class="text-xs text-muted">Pairs with Unknown Signal if you are targeting the full completion route after credits.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Post-Game <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What unlocks after finishing Pragmata once?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current launch-week guide coverage agrees that finishing the main story unlocks both Unknown Signal and New Game Plus, giving you one post-story cleanup route and one replay route.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Should you play Unknown Signal or NG+ first?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The safest broad recommendation is Unknown Signal first, because stronger current guides treat it as Pragmata's real post-game completion path and the route tied to the extra ending payoff.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What is the Hidden Chamber?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The Hidden Chamber is the post-game area opened through Unknown Signal. Current coverage consistently describes it as the hub for the mode's extra challenge missions or pods.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Does NG+ replace Unknown Signal?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">No. Current guide coverage treats them as different routes: Unknown Signal is the structured post-game challenge and cleanup mode, while NG+ is the replay mode with progression carryover.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
