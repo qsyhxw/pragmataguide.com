@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /pc-settings/
+       Title: 49 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata PC Settings – Best Performance Guide</title>
+  <meta name="description"
+    content="Verified Pragmata PC settings guide covering system requirements, best graphics options, RT and path tracing trade-offs, upscaling, and Intel Arc fixes." />
+  <link rel="canonical" href="https://pragmataguide.com/pc-settings/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata PC Settings – Best Performance Guide" />
+  <meta property="og:description"
+    content="Best Pragmata PC settings for smoother performance, cleaner image quality, and smarter RT or path tracing choices." />
+  <meta property="og:url" content="https://pragmataguide.com/pc-settings/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata PC Settings – Best Performance Guide" />
+  <meta name="twitter:description"
+    content="Verified PC optimization advice for Pragmata: settings, RT/PT trade-offs, DLSS, FSR, and launch-week Intel Arc fixes." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+          <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+          <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
+          <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+          <a href="/builds/" class="nav-link text-sm font-medium font-body">Builds</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="max-w-4xl fade-up">
+          <p class="section-eyebrow">// PC Performance Guide</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight text-white uppercase tracking-[0.08em] mb-6">
+            Pragmata <span class="text-cyan glow-cyan">PC Settings</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-300 max-w-3xl">
+            This page focuses on the most reliable launch-week PC advice: what the official requirements actually say,
+            when to avoid plain <strong class="text-white">Ray Tracing</strong>, when <strong class="text-white">Path Tracing</strong>
+            is realistic, and what to do if you are on Intel Arc or a more mid-range GPU.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <a href="#quick-start" class="btn-cyan">Quick Start</a>
+            <a href="#best-settings" class="btn-cyan">Best Settings</a>
+            <a href="#rt-pt" class="btn-cyan">RT vs PT</a>
+            <a href="#faq" class="btn-cyan">FAQ</a>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 mt-12 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Official Floor</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">GTX 1660 / RX 5500 XT</p>
+            <p class="text-sm text-muted mt-2">Steam lists these as the baseline class for 1080p on the Performance preset.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Recommended</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">RTX 2060 Super / RX 6600</p>
+            <p class="text-sm text-muted mt-2">Good starting point if you want a smoother first playthrough without chasing path tracing.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Most Important Choice</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">RT Off For Most PCs</p>
+            <p class="text-sm text-muted mt-2">Current testing is much more consistent on this than on any single “best preset.”</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Launch Watchout</p>
+            <p class="font-display text-lg text-white uppercase tracking-wide">Intel Arc Driver</p>
+            <p class="text-sm text-muted mt-2">Arc users should not ignore the 32.0.101.8735 driver note.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="quick-start" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Quick Start</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">What To Do <span>First</span></h2>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">1. Start With Raster, Not RT</h3>
+            <p class="text-slate-300">
+              The safest first boot is simple: start with normal raster settings and only add heavier features later.
+              Launch-week testing is much more confident about this than about any ultra-specific all-hardware preset.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">2. Treat Path Tracing As Optional</h3>
+            <p class="text-slate-300">
+              <strong class="text-white">Path Tracing</strong> can look excellent, but current evidence does not support treating it
+              as the default “best” setting for most players. Think of it as an enthusiast mode, not the baseline experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="tip-box mt-6">
+          <strong class="text-cyan">Best safe baseline:</strong> play without RT first, aim for a stable 60 FPS class setup,
+          then only experiment with heavier lighting features after the game already feels smooth.
+        </div>
+      </section>
+
+      <section id="requirements" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Official Requirements</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">What Steam <span>Actually Lists</span></h2>
+
+        <div class="bg-panel border border-border clip-card p-6 glow-box overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-border text-white uppercase tracking-wide font-display text-xs">
+                <th class="py-3 pr-4">Tier</th>
+                <th class="py-3 pr-4">CPU</th>
+                <th class="py-3 pr-4">GPU</th>
+                <th class="py-3 pr-4">Memory</th>
+                <th class="py-3">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-300">
+              <tr class="border-b border-border/70">
+                <td class="py-3 pr-4 text-white">Minimum</td>
+                <td class="py-3 pr-4">Core i5-8500 / Ryzen 5 3500</td>
+                <td class="py-3 pr-4">GTX 1660 6 GB / RX 5500 XT 8 GB</td>
+                <td class="py-3 pr-4">16 GB RAM</td>
+                <td class="py-3">Windows 11 64-bit, DX12, 40 GB, SSD recommended, Performance preset target.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-white">Recommended</td>
+                <td class="py-3 pr-4">Core i7-8700 / Ryzen 5 5500</td>
+                <td class="py-3 pr-4">RTX 2060 Super 8 GB / RX 6600 8 GB</td>
+                <td class="py-3 pr-4">16 GB RAM</td>
+                <td class="py-3">Better starting point for a cleaner 1080p to 1440p style experience.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 space-y-4 max-w-4xl">
+          <p>
+            The important part is not just the GPU names. It is that the official floor already assumes
+            <strong class="text-white">Windows 11</strong>, <strong class="text-white">16 GB RAM</strong>, and an
+            <strong class="text-white">SSD-recommended</strong> setup. So if your PC is below that floor, fancy menu tweaks are unlikely to fully save the experience.
+          </p>
+        </div>
+      </section>
+
+      <section id="best-settings" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Best Settings</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best Safe Settings <span>By Hardware Tier</span></h2>
+
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">8 GB Mid-Range GPUs</h3>
+            <p class="text-sm text-slate-300">
+              Start closer to a <strong class="text-white">Balanced</strong> or medium-quality target. Keep
+              <strong class="text-white">Ray Tracing Off</strong>, and lower the settings that testing keeps flagging as expensive:
+              volumetric lighting, ambient occlusion, and shadow quality.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Stronger 16 GB-Class GPUs</h3>
+            <p class="text-sm text-slate-300">
+              A <strong class="text-white">Quality-first raster setup</strong> is the safest sweet spot. You can keep a cleaner image
+              without immediately paying the launch-week RT tax that current testing treats as questionable value.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">High-End RTX Builds</h3>
+            <p class="text-sm text-slate-300">
+              If you specifically bought the game to chase its PC-only lighting showcase, this is where
+              <strong class="text-white">Path Tracing</strong> becomes realistic. Even then, current testing still expects you
+              to lean on upscaling and frame generation.
+            </p>
+          </div>
+        </div>
+
+        <div class="warn-box mt-6 max-w-4xl">
+          <strong class="text-amber">Do not overfit to one community preset:</strong> current launch-week coverage is far more consistent
+          on the big trade-offs than on any one “copy these exact menu numbers” table.
+        </div>
+      </section>
+
+      <section id="rt-pt" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// RT vs PT</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Ray Tracing Or Path Tracing? <span>The Practical Answer</span></h2>
+
+        <div class="space-y-5 max-w-5xl">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Plain Ray Tracing Is Not The Easy Win</h3>
+            <p class="text-slate-300">
+              Current testing is surprisingly skeptical of the game's standard RT mode. The broad launch-week takeaway is not just
+              “it is expensive,” but also “it may not always look worth the cost.” For most PCs, keeping normal RT off is still the safest advice.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Path Tracing Looks Better, But Costs Much More</h3>
+            <p class="text-slate-300">
+              Path tracing is where the prettier lighting argument becomes much stronger. The problem is that it is also far more demanding,
+              to the point that smoother play generally depends on <strong class="text-white">upscaling</strong> and
+              <strong class="text-white">frame generation</strong>.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Vendor Reality Matters</h3>
+            <p class="text-slate-300">
+              Launch-week testing currently describes this as a vendor-dependent PC game. Nvidia's official messaging pushes DLSS,
+              Ray Reconstruction, and Frame Generation heavily, while independent testing also notes that Intel XeSS is absent and
+              Arc users may need to lean on FSR-style fallbacks instead.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="upscaling" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Upscaling & Drivers</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">What To Know About <span>DLSS, FSR, And Arc</span></h2>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">DLSS / FSR</h3>
+            <p class="text-slate-300">
+              The most stable conclusion is that <strong class="text-white">DLSS</strong> and <strong class="text-white">FSR</strong>
+              are not optional side features if you want to experiment with heavier lighting. They are part of how the game is expected to scale on PC.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Intel Arc</h3>
+            <p class="text-slate-300">
+              Arc users should be cautious with launch-week assumptions. A specific crash while loading into the game menu was called out in
+              Intel's <strong class="text-white">32.0.101.8735</strong> driver notes, so that update is not just housekeeping.
+            </p>
+          </div>
+        </div>
+
+        <div class="tip-box mt-6">
+          <strong class="text-cyan">If you are troubleshooting:</strong> update GPU drivers first, test the game with RT off second,
+          and only then start experimenting with frame generation or more aggressive visual features.
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <a href="/beginners-guide/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Beginner's Guide</p>
+            <p class="text-xs text-muted">Best next read if your problem is not hardware, but early-game systems overload.</p>
+          </a>
+          <a href="/weapons/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Weapons</p>
+            <p class="text-xs text-muted">Helpful once your FPS is stable and you want a stronger loadout baseline.</p>
+          </a>
+          <a href="/builds/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Builds</p>
+            <p class="text-xs text-muted">Good follow-up when performance is fine but your combat flow still feels rough.</p>
+          </a>
+          <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+            <p class="text-xs text-muted">Useful if you are tuning for Unknown Signal or a second run after credits.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">PC Settings <span>FAQ</span></h2>
+
+        <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Should I turn on Ray Tracing in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">For most PCs, the safest launch-week recommendation is no. Current testing is much more confident in standard raster settings than in the game's plain RT mode, which can cost a lot without always looking clearly better.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Is Path Tracing the best way to play?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">It can produce the richest image, but it is not the best default for most players. Current evidence treats it as an enthusiast option that usually depends on upscaling and frame generation for smooth results.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What should Intel Arc users do first?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Install Intel driver 32.0.101.8735 or newer first. Launch-week coverage and Intel's own release notes both call out a Pragmata menu-loading crash fix in that driver.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What matters more than copying one exact settings table?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">The big trade-offs matter most: RT off or on, raster versus path tracing, whether your hardware tier should use Balanced or Quality style targets, and whether your driver situation is already clean.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border/70 mt-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <p class="font-display text-lg text-white tracking-[0.16em] uppercase">PRAGMATA<span class="text-cyan">GUIDE</span></p>
+          <p class="text-sm text-muted mt-3 max-w-md">Pragmata walkthroughs, bosses, collectibles, builds, endings, and post-game guides.</p>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Explore</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/beginners-guide/" class="hover:text-cyan transition-colors">Beginner's Guide</a></li>
+            <li><a href="/weapons/" class="hover:text-cyan transition-colors">Weapons</a></li>
+            <li><a href="/builds/" class="hover:text-cyan transition-colors">Builds</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Later Game</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Bosses</a></li>
+            <li><a href="/post-game/" class="hover:text-cyan transition-colors">Post-Game</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">Endings</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
