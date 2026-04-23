@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /collectibles/red-zones/
+       Title: 61 chars | Desc: 152 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragmata Red Zones Guide – Keys, Rewards &amp; Best Route</title>
+  <meta name="description"
+    content="Verified Pragmata Red Zones guide with Red Gate Key rules, sector breakdown, reward logic, and the safest route for Pure Lunum-focused clears." />
+  <link rel="canonical" href="https://pragmataguide.com/collectibles/red-zones/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Red Zones Guide – Keys, Rewards &amp; Best Route" />
+  <meta property="og:description"
+    content="How Red Zones work in Pragmata, where they appear, how Red Gate Keys work, and which clears matter most." />
+  <meta property="og:url" content="https://pragmataguide.com/collectibles/red-zones/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Red Zones Guide – Keys, Rewards &amp; Best Route" />
+  <meta name="twitter:description"
+    content="All Pragmata Red Zones explained, with Red Gate Key rules, reward planning, and safest early clears." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .blink { animation: blink 1.1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
+    .card-hover { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+    .card-hover:hover { transform: translateY(-4px); }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .hr-cyan { border: none; height: 1px; background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent); }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); padding: 0.9rem 1rem; border-radius: 2px; }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.04); padding: 0.9rem 1rem; border-radius: 2px; }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.04); padding: 0.9rem 1rem; border-radius: 2px; }
+    .danger-box { border-left: 2px solid #f87171; background: rgba(248, 113, 113, 0.04); padding: 0.9rem 1rem; border-radius: 2px; }
+    .breadcrumb a { color: #8892a4; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #00e5ff; }
+  </style>
+</head>
+
+<body class="relative">
+  <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden="true"></div>
+
+  <header class="relative z-10 border-b border-border bg-space/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0" aria-label="PragmataGuide home">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5" />
+            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm font-bold tracking-widest text-white uppercase">Pragmata<span class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/collectibles/" class="nav-link text-cyan">Collectibles</a>
+          <a href="/bosses/" class="nav-link">Bosses</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull" aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/collectibles/" class="nav-link py-1 text-cyan">Collectibles</a>
+      <a href="/bosses/" class="nav-link py-1">Bosses</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <a href="/collectibles/">Collectibles</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Red Zones</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.75fr] gap-6 items-stretch">
+        <div class="bg-hull/70 border border-border clip-card glow-box p-6 sm:p-8 fade-up">
+          <div class="flex flex-wrap gap-3 mb-5">
+            <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">9 Red Zones</span>
+            <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Key-Gated Challenges</span>
+            <span class="text-xs font-mono text-white border border-border px-2 py-0.5">Updated Apr 23, 2026</span>
+          </div>
+          <p class="section-eyebrow">// Optional Challenge Rooms</p>
+          <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+            Pragmata <span class="text-cyan">Red Zones</span> Guide
+          </h1>
+          <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+            Red Zones are some of Pragmata's highest-value optional rooms because they combine difficult combat with
+            some of the game's most important side rewards. This page focuses on the safest shared facts: where Red
+            Zones appear, how Red Gate Keys work, which sectors contain the most challenge rooms, and why early key
+            routing can shape your Pure Lunum curve more than most players expect.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#counts" class="btn-cyan">Sector Counts</a>
+            <a href="#route" class="btn-cyan">Best Route</a>
+            <a href="/collectibles/pure-lunum/" class="btn-cyan">Pure Lunum</a>
+          </div>
+        </div>
+
+        <aside class="grid gap-4 fade-up delay-1">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">At A Glance</p>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><strong class="text-white">Requirement:</strong> every Red Zone needs a `Red Gate Key`.</li>
+              <li><strong class="text-white">Key rule:</strong> keys are not region-locked.</li>
+              <li><strong class="text-white">Common rewards:</strong> `Pure Lunum`, `Mods`, and hacking-gauge upgrades.</li>
+              <li><strong class="text-white">Best early clear:</strong> Shopping District remains the safest first Pure Lunum spike.</li>
+            </ul>
+          </div>
+
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Important:</strong> the biggest Red Zone mistake is spending the first few keys
+            wherever the nearest door happens to be, instead of aiming for the reward package your build actually needs.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-1">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Total Zones</p>
+          <p class="font-display text-3xl text-white mb-2">9</p>
+          <p class="text-sm text-muted">Current sector breakdowns support nine Red Zones across the campaign.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-2">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Most In One Sector</p>
+          <p class="font-display text-3xl text-white mb-2">3</p>
+          <p class="text-sm text-muted">Terra Dome is the biggest single-sector Red Zone cluster.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Key Logic</p>
+          <p class="font-display text-3xl text-white mb-2">Any</p>
+          <p class="text-sm text-muted">Any Red Gate Key can open any Red Zone, so routing matters more than location matching.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Completion Role</p>
+          <p class="font-display text-3xl text-white mb-2">Indirect</p>
+          <p class="text-sm text-muted">The rooms themselves are optional, but their reward items feed 100% completion and upgrades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="counts" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      <p class="section-eyebrow">// Sector Split</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Red Zone <span>Counts</span> By Sector</h2>
+
+      <div class="overflow-x-auto rounded border border-border">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-hull text-white font-display uppercase text-xs tracking-widest">
+            <tr>
+              <th class="px-4 py-3">Sector</th>
+              <th class="px-4 py-3">Red Zones</th>
+              <th class="px-4 py-3">What To Expect</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Mass Production Array</td>
+              <td class="px-4 py-3 text-cyan font-mono">2</td>
+              <td class="px-4 py-3 text-muted">The first real key-routing sector, led by Shopping District and Business District.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Terra Dome</td>
+              <td class="px-4 py-3 text-cyan font-mono">3</td>
+              <td class="px-4 py-3 text-muted">The densest Red Zone sector, with Plant Factory, Eco Modelling Lab, and Terrarium.</td>
+            </tr>
+            <tr class="bg-panel/70">
+              <td class="px-4 py-3 text-white font-semibold">Lunum Mines</td>
+              <td class="px-4 py-3 text-cyan font-mono">2</td>
+              <td class="px-4 py-3 text-muted">Warehouse and Main Excavation Site push tougher fights and strong late rewards.</td>
+            </tr>
+            <tr class="bg-panel/40">
+              <td class="px-4 py-3 text-white font-semibold">Central Port</td>
+              <td class="px-4 py-3 text-cyan font-mono">2</td>
+              <td class="px-4 py-3 text-muted">Late-game labs become premium key sinks once Director-level keys start flowing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Core Rules</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">How Red Zones <span>Work</span></h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Optional Combat Rooms</h3>
+          <p class="text-sm text-muted">
+            Red Zones are optional challenge rooms built around heavier combat pressure than the surrounding route.
+            They are never normal main-path encounters.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Red Gate Keys</h3>
+          <p class="text-sm text-muted">
+            Entry always requires a <strong class="text-white">Red Gate Key</strong>. Public key guides consistently
+            note that keys can come from field pickups or Cabin's Stamp Club boards, depending on where you are in the game.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Keys Are Flexible</h3>
+          <p class="text-sm text-muted">
+            The biggest route rule is also the simplest one:
+            <strong class="text-white">any Red Gate Key can open any Red Zone</strong>. This turns Red Zones into a
+            routing choice, not a lock-and-key matching puzzle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+      <p class="section-eyebrow">// Rewards</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Why Red Zones <span>Matter</span></h2>
+
+      <div class="space-y-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Pure Lunum And Premium Side Rewards</h3>
+          <p class="text-muted mb-4">
+            The safest shared reward summary is that Red Zones frequently hand out
+            <strong class="text-white">Pure Lunum</strong>, strong <strong class="text-white">Mods</strong>, and
+            sometimes hacking-gauge or progression-adjacent upgrades. That reward density is why even optional clears can
+            feel mandatory for efficient endgame prep.
+          </p>
+          <div class="tip-box text-sm">
+            <strong class="text-cyan">Completion logic:</strong> the room itself is not a normal counted collectible,
+            but the things you earn inside often are.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Stamp Club Synergy</h3>
+          <p class="text-muted mb-4">
+            Route guides consistently frame Red Zones and Cabin's Stamp Club as a loop, not two separate systems. Keys
+            can come from boards, and Red Zone clears can feed the next round of upgrades or reward chasing.
+          </p>
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Practical reading:</strong> if you ignore Stamp Club planning, your key route is
+            usually less efficient than it looks.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="route" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Best Route</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Safest <span>Red Zone Route</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Best Early Clears</h3>
+          <ol class="space-y-3 text-sm text-muted list-decimal list-inside">
+            <li><strong class="text-white">Shopping District</strong> is the cleanest first Red Zone and the safest early `Pure Lunum` spike.</li>
+            <li><strong class="text-white">Business District</strong> is the next strong early key sink if you want to keep momentum in Sector 2.</li>
+            <li><strong class="text-white">Eco Modelling Lab</strong> is one of the most repeatedly praised Sector 3 reward packages.</li>
+          </ol>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Late-Game Key Spending</h3>
+          <p class="text-sm text-muted mb-3">
+            By late game, the route question stops being “can I open a door?” and becomes “which power spike helps my
+            build most?” That is why Central Port lab zones and Lunum Mines Warehouse clears get so much attention in
+            route guides.
+          </p>
+          <div class="danger-box text-sm">
+            <strong class="text-redline">Main mistake:</strong> opening the nearest late-game Red Zone without checking
+            whether your build needs Pure Lunum, a Mod, or a different reward package more.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Internal Links</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Guides</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="/collectibles/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">All Collectibles</p>
+          <p class="text-xs text-muted">Use the hub if you want Red Zones in the wider 100% context.</p>
+        </a>
+        <a href="/collectibles/pure-lunum/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Pure Lunum</p>
+          <p class="text-xs text-muted">Most Red Zone route decisions make more sense through the Pure Lunum lens.</p>
+        </a>
+        <a href="/upgrades/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Upgrades</p>
+          <p class="text-xs text-muted">Use this when deciding whether a key should fund a weapon spike or not.</p>
+        </a>
+        <a href="/walkthrough/mass-production-array/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Mass Production Array</p>
+          <p class="text-xs text-muted">Sector 2 is where Red Zone routing starts becoming a real choice.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Red Zones <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+            How many Red Zones are in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current sector guides support 9 total Red Zones: 2 in Mass Production Array, 3 in Terra Dome, 2 in Lunum Mines, and 2 in Central Port.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+            Can any Red Gate Key open any Red Zone?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. Current key-route guides consistently state that Red Gate Keys are not region-locked.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+            Are Red Zones required for 100% completion?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Indirectly, often yes. The rooms themselves are optional challenge spaces, but the Pure Lunum and Mods they award feed both completion and upgrade progress.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+            Which Red Zone should I clear first?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Shopping District is the safest first answer in current route coverage because it is an early Pure Lunum spike with manageable difficulty.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">Collectibles</a></li>
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
