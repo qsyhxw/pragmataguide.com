@@ -1,0 +1,24 @@
+{
+  "name": "PragmataGuide",
+  "short_name": "PragmataGuide",
+  "description": "Independent guide site for PRAGMATA with walkthroughs, bosses, collectibles, endings, and post-game help.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#060810",
+  "theme_color": "#060810",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
