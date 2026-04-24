@@ -712,8 +712,12 @@
               <p class="text-xs text-muted">Sector totals, spend planning, and the most important late-game upgrade material.</p>
             </a>
             <a href="/collectibles/red-zones/" class="block border border-border rounded p-4 card-hover glow-box">
-              <p class="font-display text-xs text-white uppercase tracking-wide mb-2">Red Zones &amp; Gate Keys</p>
-              <p class="text-xs text-muted">Challenge-room counts, key routing, and the best early Red Zone reward path.</p>
+              <p class="font-display text-xs text-white uppercase tracking-wide mb-2">Red Zones</p>
+              <p class="text-xs text-muted">Challenge-room counts, reward logic, and the safest Red Zone cleanup path.</p>
+            </a>
+            <a href="/red-gate-keys/" class="block border border-border rounded p-4 card-hover glow-box">
+              <p class="font-display text-xs text-white uppercase tracking-wide mb-2">Red Gate Keys</p>
+              <p class="text-xs text-muted">All documented key sources, Stamp Club board slots, and the core rules for opening Red Zones.</p>
             </a>
           </div>
         </div>
@@ -820,7 +824,7 @@
               <td><strong class="text-white">Training Data</strong></td>
               <td class="font-display text-blue-400 font-bold">6</td>
               <td class="text-muted text-xs">Unlock Training Simulation challenges at the Shelter. Required for the
-                Master of the Simulator trophy.</td>
+                Master of the Simulator trophy. See the <a href="/collectibles/training-data/" class="text-cyan hover:underline">full Training Data guide</a>.</td>
               <td><span class="badge-yes">YES</span></td>
               <td><span class="badge-yes">YES</span></td>
               <td class="text-muted text-xs">Master of the Simulator (complete all Training Sims)</td>
@@ -1129,7 +1133,7 @@
         <!-- Training Data + misc -->
         <div class="bg-panel border border-border rounded overflow-hidden lg:col-span-2">
           <div class="px-4 py-3 border-b border-border flex items-center justify-between">
-            <span class="font-display text-xs text-white uppercase tracking-wide">Training Data /
+            <span class="font-display text-xs text-white uppercase tracking-wide"><a href="/collectibles/training-data/" class="hover:text-cyan transition-colors">Training Data</a> /
               <a href="/collectibles/storage-expanders/" class="hover:text-cyan transition-colors">Storage Expanders</a> /
               Cartridge Holders</span>
             <span class="text-xs font-mono text-muted">6 + 5 + 2 = 13 total · All count ✓</span>
@@ -1311,11 +1315,11 @@
             <p class="text-sm font-body text-muted">All Red Zone counts, Red Gate Key rules, best early clears, and the
               safest Pure Lunum route planning.</p>
           </a>
-          <div class="bg-panel border border-red-400/20 rounded p-4">
-            <p class="font-mono text-xs text-red-400 tracking-widest uppercase mb-3">Quick Rule</p>
-            <p class="text-sm font-body text-muted">Any Red Gate Key can open any Red Zone. The real question is not
-              <em>can</em> you open one, but <em>which</em> reward package helps your build most right now.</p>
-          </div>
+          <a href="/red-gate-keys/" class="bg-panel border border-red-400/20 rounded p-4 card-hover glow-box">
+            <p class="font-mono text-xs text-red-400 tracking-widest uppercase mb-3">Red Gate Keys Guide</p>
+            <p class="text-sm font-body text-muted">All documented key pickups, Stamp Club sources, and the safest way
+              to keep Red Zone access online throughout the campaign.</p>
+          </a>
         </div>
       </div>
     </section>
@@ -1698,10 +1702,10 @@
         { id: 'eh-note', label: '(Remaining Hatches — see per-sector guides for all 27)' },
       ],
       misc: [
-        { id: 'td-s2-1', label: 'Training Data — S2 Mass Production Array (see S2 guide)' },
-        { id: 'td-s3-1', label: 'Training Data — S3 Terra Dome (see S3 guide)' },
-        { id: 'td-s4-1', label: 'Training Data — S4 Lunum Mines (see S4 guide)' },
-        { id: 'td-s5-1', label: 'Training Data — S5 Central Port (multiple, see S5 guide)' },
+        { id: 'td-s2-1', label: 'Training Data 1-2 — S3 Terra Dome (broken Cabin room + Soil Research)' },
+        { id: 'td-s3-1', label: 'Training Data 3-4 — S4 Lunum Mines (zipline room + Tower Access Point)' },
+        { id: 'td-s4-1', label: 'Training Data 5-6 — S5 Central Port (Research Sector + Connect Center)' },
+        { id: 'td-s5-1', label: 'Training Data total — 6 confirmed across S3-S5' },
         { id: 'se-s1-1', label: 'Storage Expander 1 — S1 Generator Entrance [Lim Eraser required]' },
         { id: 'se-s2-1', label: 'Storage Expander 2 — S3 Terrarium Red Zone' },
         { id: 'se-s3-1', label: 'Storage Expander 3 — S4 Mine Entrance [late backtrack]' },
@@ -1709,7 +1713,7 @@
         { id: 'se-s5-1', label: 'Storage Expander 5 — S5 Lunafilament Lab Red Zone' },
         { id: 'ch-s1-1', label: 'Cartridge Holder 1 — S1 Main Control Lobby (near tram stop)' },
         { id: 'ch-s2-1', label: 'Cartridge Holder 2 — S2 Mass Production Array (see S2 guide)' },
-        { id: 'td-note', label: '(Training Data: 6 total — see per-sector guides for exact room locations)' },
+        { id: 'td-note', label: '(Training Data: 6 total — see the full Training Data guide for route notes)' },
       ],
     };
 
