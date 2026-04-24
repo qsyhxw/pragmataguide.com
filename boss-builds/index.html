@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO — /boss-builds/
+       Title: 57 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata Boss Builds Guide - Best Loadouts for Every Boss</title>
+  <meta name="description"
+    content="Verified Pragmata boss builds guide with safe loadouts for SectorGuard, Creator, Garden Keeper, LunaDigger, and Idea or Eight, plus swap logic by fight." />
+  <link rel="canonical" href="https://pragmataguide.com/boss-builds/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Boss Builds Guide - Best Loadouts for Every Boss" />
+  <meta property="og:description"
+    content="Boss-specific loadout guidance for all five main Pragmata bosses, built around stable weapon overlap and safer hacking windows." />
+  <meta property="og:url" content="https://pragmataguide.com/boss-builds/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Boss Builds Guide - Best Loadouts for Every Boss" />
+  <meta name="twitter:description"
+    content="Best safe boss loadouts for SectorGuard, Creator, Garden Keeper, LunaDigger, and the final boss in Pragmata." />
+  <meta name="twitter:image" content="https://pragmataguide.com/og-cover.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+            'violetline': '#c084fc',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .danger-box {
+      border-left: 2px solid #f87171;
+      background: rgba(248, 113, 113, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .breadcrumb a {
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+
+    .table-shell {
+      overflow-x: auto;
+      border: 1px solid #1e2d45;
+      background: rgba(17, 24, 39, 0.88);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+    }
+
+    th,
+    td {
+      padding: 0.95rem 1rem;
+      border-bottom: 1px solid rgba(30, 45, 69, 0.9);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e5f6ff;
+      background: rgba(0, 229, 255, 0.05);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    figcaption {
+      color: #8892a4;
+      font-size: 0.85rem;
+      padding: 0.75rem 1rem 1rem;
+      border-top: 1px solid rgba(30, 45, 69, 0.9);
+    }
+
+    details summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="relative">
+  <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden="true"></div>
+
+  <header class="relative z-10 border-b border-border bg-space/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 shrink-0" aria-label="PragmataGuide home">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+              stroke-width="1.5" />
+            <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm font-bold tracking-widest text-white uppercase">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/bosses/" class="nav-link">Bosses</a>
+          <a href="/builds/" class="nav-link">Builds</a>
+          <a href="/weapons/" class="nav-link">Weapons</a>
+          <a href="/upgrades/" class="nav-link">Upgrades</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/bosses/" class="nav-link py-1">Bosses</a>
+      <a href="/builds/" class="nav-link py-1">Builds</a>
+      <a href="/weapons/" class="nav-link py-1">Weapons</a>
+      <a href="/upgrades/" class="nav-link py-1">Upgrades</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Boss Builds</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.78fr] gap-6 items-stretch">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-3 mb-5">
+              <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">5 Main Bosses</span>
+              <span class="text-xs font-mono text-violetline border border-violetline/30 px-2 py-0.5">Boss-Safe Loadouts</span>
+              <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Verified Apr 17-24, 2026</span>
+            </div>
+            <p class="section-eyebrow">Bosses / Builds Bridge</p>
+            <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+              Pragmata <span class="text-cyan">Boss Builds</span> Guide
+            </h1>
+            <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+              This page connects the stable overlap between the main <a href="/bosses/" class="text-cyan hover:underline">boss guides</a>
+              and the broader <a href="/builds/" class="text-cyan hover:underline">builds guide</a>. The goal is not to
+              force one rigid meta, but to show which loadout pieces reliably recur when current coverage talks about
+              safer boss clears: short-window burst, cleaner hacking paths, and enough defensive margin to survive a bad phase.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <a href="#core-build" class="btn-cyan">Core Boss Build</a>
+              <a href="#boss-table" class="btn-cyan">Boss Matchups</a>
+              <a href="#swap-logic" class="btn-cyan">Swap Logic</a>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="tip-box">
+              <strong class="text-white">Most repeated boss tools</strong><br />
+              Charge Piercer, Sticky Bombs, and Decoy Generator show up most consistently when boss loadouts are discussed.
+            </div>
+            <div class="ok-box">
+              <strong class="text-white">Boss fights are window fights</strong><br />
+              Public boss coverage repeatedly describes short punish windows after hacks or weak-point exposure.
+            </div>
+            <div class="warn-box">
+              <strong class="text-white">Swap Tactical first</strong><br />
+              If your hack route is the problem, changing Sticky Bombs, Stasis Net, or Code Generator usually matters more than changing Primary.
+            </div>
+            <div class="danger-box">
+              <strong class="text-white">Final boss confidence is lower</strong><br />
+              The safest overlap around Idea or Eight is late-game matrix pressure, not one fully unanimous four-slot list.
+            </div>
+          </div>
+        </article>
+
+        <aside class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+          <img src="/images/pragmata/boss-builds/pragmata-boss-builds-sectorguard-01.jpg"
+            alt="SectorGuard boss battle screenshot used as the hero image for the Pragmata boss builds page"
+            class="hero-image" />
+          <div class="p-5 border-t border-border">
+            <p class="font-display text-xs uppercase tracking-[0.22em] text-cyan mb-3">Quick Readout</p>
+            <dl class="space-y-3 text-sm">
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Best first-clear pivot</dt>
+                <dd class="font-mono text-white">Stasis Net</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Best short-window burst</dt>
+                <dd class="font-mono text-white">Charge Piercer</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Best matrix relief</dt>
+                <dd class="font-mono text-white">Sticky Bombs</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Best safety reset</dt>
+                <dd class="font-mono text-white">Decoy Generator</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-1">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Default Primary</p>
+          <p class="font-display text-3xl text-white mb-2">Pulse Carbine</p>
+          <p class="text-sm text-muted">The safest late-campaign boss anchor when you want a stable, all-purpose ranged core.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-2">
+          <p class="text-xs font-mono text-violetline tracking-widest uppercase mb-2">Burst Pick</p>
+          <p class="font-display text-3xl text-white mb-2">Charge Piercer</p>
+          <p class="text-sm text-muted">The most repeated single-target boss recommendation across current weapons and boss guides.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-amber tracking-widest uppercase mb-2">Hack Support</p>
+          <p class="font-display text-3xl text-white mb-2">Sticky Bombs</p>
+          <p class="text-sm text-muted">Often recommended because it makes hard boss matrices easier to convert into clean damage windows.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 card-hover glow-box fade-up delay-3">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Defensive Core</p>
+          <p class="font-display text-3xl text-white mb-2">Decoy Generator</p>
+          <p class="text-sm text-muted">The broadest safe fallback when a boss setup starts breaking down under pressure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Build Logic</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">How Boss Builds <span>Differentiate</span></h2>
+
+      <div class="grid lg:grid-cols-3 gap-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">1. Bosses Reward Conversion, Not Just Raw Damage</h3>
+          <p class="text-sm text-muted">
+            Current guides are most aligned on one principle: you need to survive the hack, expose the boss, then cash out quickly.
+            That is why boss loadouts keep circling back to burst and matrix support instead of pure room-clear tools.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">2. Attack and Tactical Slots Matter Most</h3>
+          <p class="text-sm text-muted">
+            Boss-specific advice usually changes your Attack and Tactical tools first. Primary keeps the run stable, while
+            the swap pieces decide whether a given fight feels controlled or messy.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">3. Late Bosses Increase Matrix Value</h3>
+          <p class="text-sm text-muted">
+            The farther you get into the campaign, the more coverage leans toward Sticky Bombs and Code Generator style support,
+            especially once boss phases start stacking more movement and hack pressure at the same time.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="core-build" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      <p class="section-eyebrow">// Safe Core</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Safest Universal <span>Boss Build</span></h2>
+
+      <div class="grid lg:grid-cols-[1.02fr_0.98fr] gap-6 items-start">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Default Loadout Direction</h3>
+          <p class="text-sm text-muted mb-4">
+            <strong class="text-white">Pulse Carbine</strong> +
+            <strong class="text-white">Charge Piercer</strong> +
+            <strong class="text-white">Sticky Bombs</strong> +
+            <strong class="text-white">Decoy Generator</strong>
+          </p>
+          <p class="text-sm text-muted">
+            This is the best one-page answer if you want a boss build that stays useful across all five main fights.
+            It mirrors the strongest overlap between current build guides and boss writeups: stable ranged pressure,
+            high-value burst during short openings, lighter hack friction, and a defensive reset button when the arena gets ugly.
+          </p>
+        </article>
+
+        <div class="space-y-4">
+          <div class="tip-box text-sm">
+            <strong class="text-cyan">When to use Shockwave Gun instead:</strong> early or midgame bosses that let you stay close,
+            especially SectorGuard, can reward a more aggressive short-range burst swap.
+          </div>
+          <div class="warn-box text-sm">
+            <strong class="text-amber">When to use Stasis Net instead:</strong> if the boss itself is manageable but the hack setup feels rushed,
+            the safer move is often to slow or stabilize the window rather than chase more damage.
+          </div>
+          <div class="ok-box text-sm">
+            <strong class="text-greenline">When to use Code Generator instead:</strong> late-game fights and the final boss are where build coverage most clearly shifts toward extra matrix help.
+          </div>
+        </div>
+      </div>
+
+      <figure class="mt-6 bg-panel border border-border clip-card overflow-hidden glow-box">
+        <img src="/images/pragmata/boss-builds/pragmata-boss-builds-charge-piercer-01.jpg"
+          alt="Charge Piercer weapon screenshot illustrating a high-burst boss build option in Pragmata"
+          class="w-full h-auto object-cover" />
+        <figcaption>
+          Charge Piercer is the most stable boss-burst recommendation on this page, so it earns the main weapon image slot.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="boss-table" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Matchups</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Boss-by-Boss <span>Loadout Direction</span></h2>
+
+      <div class="table-shell clip-card glow-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Boss</th>
+              <th>Safest Build Direction</th>
+              <th>Why It Fits</th>
+              <th>Best Internal Link</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr>
+              <td><strong class="text-white">SectorGuard</strong><br /><span class="text-muted">Solar Power Plant</span></td>
+              <td>Grip Gun or Pulse Carbine + Shockwave Gun + Stasis Net + Decoy Generator</td>
+              <td class="text-muted">Current coverage treats SectorGuard as the first hack-to-burst tutorial, with close-range punish windows and a back weak point.</td>
+              <td><a href="/bosses/sector-guard/" class="text-cyan hover:underline">SectorGuard boss guide</a></td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Creator</strong><br /><span class="text-muted">Mass Production Array</span></td>
+              <td>Pulse Carbine + Charge Piercer + Sticky Bombs + Decoy Generator</td>
+              <td class="text-muted">Creator pushes longer arena control and face-window burst, so the safer direction is stronger single-target punish with cleaner matrix routing.</td>
+              <td><a href="/bosses/creator/" class="text-cyan hover:underline">Creator boss guide</a></td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Garden Keeper</strong><br /><span class="text-muted">Terra Dome</span></td>
+              <td>Pulse Carbine + Charge Piercer or Photon Laser + Sticky Bombs or Code Generator + Decoy Generator</td>
+              <td class="text-muted">Most guide overlap describes a fast boss with a tail-focused damage plan, which raises the value of precision burst and matrix simplification.</td>
+              <td><a href="/bosses/garden-keeper/" class="text-cyan hover:underline">Garden Keeper guide</a></td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">LunaDigger</strong><br /><span class="text-muted">Lunum Mines</span></td>
+              <td>Pulse Carbine + Charge Piercer + Sticky Bombs + Decoy Generator</td>
+              <td class="text-muted">LunaDigger offers brief openings in a low-gravity end-of-sector fight, so stable ranged control plus fast burst remains the safest repeated theme.</td>
+              <td><a href="/bosses/luna-digger/" class="text-cyan hover:underline">LunaDigger guide</a></td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Idea or Eight</strong><br /><span class="text-muted">Central Port</span></td>
+              <td>Pulse Carbine + Charge Piercer + Sticky Bombs or Code Generator + Decoy Generator</td>
+              <td class="text-muted">Reliable overlap is strongest around higher matrix pressure and multi-phase strain, so the safest final-boss swaps prioritize consistency over greed.</td>
+              <td><a href="/bosses/idea-eight/" class="text-cyan hover:underline">Idea or Eight guide</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+      <p class="section-eyebrow">// Fight Notes</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Why Each <span>Swap Works</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-6 mb-6">
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/boss-builds/pragmata-boss-builds-sticky-bombs-01.jpg"
+            alt="Sticky Bombs weapon screenshot illustrating hack-support value in Pragmata boss fights"
+            class="w-full h-auto object-cover" />
+          <figcaption>
+            Sticky Bombs are featured here because late-campaign boss advice repeatedly leans on matrix simplification.
+          </figcaption>
+        </figure>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/boss-builds/pragmata-boss-builds-lunadigger-01.jpg"
+            alt="LunaDigger boss screenshot showing a late-game fight where precise burst and stable movement matter"
+            class="w-full h-auto object-cover" />
+          <figcaption>
+            LunaDigger is a good visual example of why short-window burst and stable ranged control matter more in late boss fights.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="space-y-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">SectorGuard: Learn The Loop, Then Cash Out Fast</h3>
+          <p class="text-sm text-muted mb-3">
+            SectorGuard is still the cleanest example of Pragmata's core boss language: hack the target, expose a reliable weak point,
+            then punish hard before the window closes. That is why more conservative first-clear advice repeatedly favors
+            <strong class="text-white">Shockwave Gun</strong> and <strong class="text-white">Stasis Net</strong>.
+          </p>
+          <div class="tip-box text-sm">
+            <strong class="text-cyan">Best use case:</strong> if you are entering the first real boss with limited confidence,
+            build for control first and let the damage come from clean windows instead of greed.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Creator: Keep The Burst, Respect The Arena</h3>
+          <p class="text-sm text-muted mb-3">
+            Creator is where the game starts punishing weak setup discipline. Coverage most often emphasizes the face weak point,
+            the arena-control burden, and the need to clear disruption before trying to score.
+            That naturally favors <strong class="text-white">Charge Piercer</strong> and
+            <strong class="text-white">Sticky Bombs</strong> over room-clear tools that do not convert hard enough.
+          </p>
+          <div class="warn-box text-sm">
+            <strong class="text-amber">Build mistake to avoid:</strong> loading too hard into crowd clear and then discovering your real boss window still feels underpowered.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Garden Keeper: Precision Beats Comfort</h3>
+          <p class="text-sm text-muted mb-3">
+            Garden Keeper tends to push dodge timing and tail-target discipline harder than the earlier bosses.
+            Because current boss coverage repeatedly points players toward the tail for better damage, this fight rewards
+            more precise burst tools and any Tactical piece that keeps the matrix from getting messy during fast phases.
+          </p>
+          <div class="ok-box text-sm">
+            <strong class="text-greenline">Safe direction:</strong> keep one precise ranged burst option, then decide whether your second swap needs more matrix help or more emergency safety.
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">LunaDigger and Idea or Eight: Build For Pressure, Not Theory</h3>
+          <p class="text-sm text-muted mb-3">
+            Late-game boss coverage grows less unanimous on one perfect four-slot list, but it stays consistent on the direction:
+            keep a stable ranged core, preserve short-window burst, and add matrix support instead of overcommitting to fragile damage.
+            That is why <strong class="text-white">Sticky Bombs</strong>, <strong class="text-white">Code Generator</strong>,
+            and <strong class="text-white">Decoy Generator</strong> keep showing up around the end of the campaign.
+          </p>
+          <div class="danger-box text-sm">
+            <strong class="text-redline">Final boss rule:</strong> the safest advice is to arrive prepared and finish any side cleanup you care about before the fight, because multiple guides treat it as the push into the ending sequence.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="swap-logic" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Swap Logic</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">When To <span>Change Your Boss Build</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-5">
+        <div class="tip-box text-sm">
+          <strong class="text-cyan">If the window is too short:</strong> move toward Charge Piercer or another precision burst option.
+        </div>
+        <div class="warn-box text-sm">
+          <strong class="text-amber">If the hack path is the real problem:</strong> change Tactical first, usually toward Sticky Bombs, Stasis Net, or Code Generator.
+        </div>
+        <div class="ok-box text-sm">
+          <strong class="text-greenline">If the arena feels noisy:</strong> keep Decoy Generator in the defensive slot and stop trying to solve every wipe with more damage.
+        </div>
+        <div class="danger-box text-sm">
+          <strong class="text-redline">If you are near the endgame:</strong> bias toward consistency, because the last two boss pages are where coverage becomes less unanimous on niche optimizations.
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Related Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <a href="/bosses/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Bosses</p>
+          <p class="text-xs text-muted">Use the boss hub if you want weak points, phase notes, and fight order before refining a loadout.</p>
+        </a>
+        <a href="/builds/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Builds</p>
+          <p class="text-xs text-muted">Go back here if you need broader all-rounder or post-game loadout planning beyond bosses only.</p>
+        </a>
+        <a href="/weapons/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Weapons</p>
+          <p class="text-xs text-muted">Best companion for understanding why Charge Piercer, Sticky Bombs, and Decoy Generator recur so often.</p>
+        </a>
+        <a href="/upgrades/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Upgrades</p>
+          <p class="text-xs text-muted">Helpful if you need to decide whether your next boss failure is really a loadout issue or an upgrade issue.</p>
+        </a>
+        <a href="/hacking-guide/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Hacking Guide</p>
+          <p class="text-xs text-muted">Most useful when a boss feels hard because the matrix itself is collapsing under pressure.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Boss Builds <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What is the safest boss build in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The safest broad direction is Pulse Carbine, Charge Piercer, Sticky Bombs, and Decoy Generator, then swapping one slot for Shockwave Gun, Stasis Net, or Code Generator when a specific boss asks for more control.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Which boss benefits most from Charge Piercer?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Current overlap is strongest around Creator, LunaDigger, and the final boss, because those fights are frequently described as short-window punish encounters where precise burst matters more.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Should I swap Primary or Tactical first for bosses?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Usually Tactical first. If the hack route is what keeps failing, current guide overlap points to Sticky Bombs, Stasis Net, or Code Generator as the cleaner fix before you change your Primary weapon.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Do I need a different final-boss build?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Not a completely different foundation, but current coverage does lean harder toward matrix support for the final fight, which is why Sticky Bombs, Code Generator, and conservative defensive swaps rise in value there.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+            <li><a href="/builds/" class="hover:text-cyan transition-colors">Best Builds</a></li>
+            <li><a href="/weapons/" class="hover:text-cyan transition-colors">Weapons</a></li>
+            <li><a href="/upgrades/" class="hover:text-cyan transition-colors">Upgrades</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
