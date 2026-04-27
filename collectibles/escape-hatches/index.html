@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /collectibles/escape-hatches/
+       Title: 58 chars | Desc: 153 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata Escape Hatches Guide - All 27 Tram Return Points</title>
+  <meta name="description"
+    content="Verified Pragmata Escape Hatches guide with all 27 documented return points, sector counts, Tram routing basics, and the safest Escape Artist cleanup plan." />
+  <link rel="canonical" href="https://pragmataguide.com/collectibles/escape-hatches/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Escape Hatches Guide - All 27 Tram Return Points" />
+  <meta property="og:description"
+    content="Every documented Escape Hatch in Pragmata, plus sector counts, Shelter return rules, Tram Terminal routing, and Escape Artist support." />
+  <meta property="og:url" content="https://pragmataguide.com/collectibles/escape-hatches/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/storage-expanders/pragmata-storage-expander-solar-01.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Escape Hatches Guide - All 27 Tram Return Points" />
+  <meta name="twitter:description"
+    content="All 27 documented Escape Hatches in Pragmata, including sector counts, Tram travel basics, and Escape Artist route advice." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/storage-expanders/pragmata-storage-expander-solar-01.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .danger-box {
+      border-left: 2px solid #f87171;
+      background: rgba(248, 113, 113, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .table-shell {
+      overflow-x: auto;
+      border: 1px solid rgba(30, 45, 69, 1);
+      background: rgba(12, 15, 26, 0.8);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 740px;
+    }
+
+    th,
+    td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid rgba(30, 45, 69, 1);
+      vertical-align: top;
+    }
+
+    th {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #00e5ff;
+      text-align: left;
+      background: rgba(0, 229, 255, 0.04);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(0, 229, 255, 0.24);
+      color: #dbeafe;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.45rem;
+      background: rgba(0, 229, 255, 0.05);
+    }
+
+    details>summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details>summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-icon {
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary~* {
+      animation: fadeUp 0.3s ease forwards;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+
+      .hero-image {
+        min-height: 220px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pragmataguide.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Collectibles", "item": "https://pragmataguide.com/collectibles/" },
+          { "@type": "ListItem", "position": 3, "name": "Escape Hatches", "item": "https://pragmataguide.com/collectibles/escape-hatches/" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Pragmata Escape Hatches Guide - All 27 Tram Return Points",
+        "description": "Verified Pragmata Escape Hatches guide covering all 27 documented return points, sector counts, Tram routing basics, and Escape Artist cleanup planning.",
+        "datePublished": "2026-04-27",
+        "dateModified": "2026-04-27",
+        "author": { "@type": "Organization", "name": "PragmataGuide" },
+        "publisher": { "@type": "Organization", "name": "PragmataGuide", "url": "https://pragmataguide.com/" },
+        "mainEntityOfPage": "https://pragmataguide.com/collectibles/escape-hatches/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many Escape Hatches are in Pragmata?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Current full collectible coverage documents 27 Escape Hatches across the five main sectors of Pragmata." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does an Escape Hatch do in Pragmata?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Escape Hatches function as optional checkpoints that return Hugh and Diana to the Shelter. Gameplay guides also consistently describe enemy respawns after using them, and the Tram Terminal can later redeploy you to any activated hatch." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need every Escape Hatch for Escape Artist?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Escape Artist trophy and achievement is awarded for unlocking every Escape Hatch." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do Escape Hatches count toward 100% sector progress?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Public launch-week guides disagree on this point. The safest completion advice is to treat Escape Hatches as their own checklist layer and unlock all 27 anyway, because they are definitely required for Escape Artist and improve route control through the Tram network." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-space/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3" aria-label="PragmataGuide home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" stroke="#00e5ff" stroke-width="1.5" />
+            <circle cx="14" cy="14" r="3" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm sm:text-base font-bold tracking-[0.22em] uppercase text-white">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/collectibles/" class="nav-link text-cyan">Collectibles</a>
+          <a href="/bosses/" class="nav-link">Bosses</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/collectibles/" class="nav-link py-1 text-cyan">Collectibles</a>
+      <a href="/bosses/" class="nav-link py-1">Bosses</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <a href="/collectibles/">Collectibles</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Escape Hatches</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.78fr] gap-6 items-stretch">
+        <article
+          class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+          <div>
+            <p class="section-eyebrow">Collectibles / Escape Hatches</p>
+            <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+              Pragmata <span class="text-cyan">Escape Hatches</span> Guide
+            </h1>
+            <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+              This page covers the highest-confidence Escape Hatch facts in Pragmata: the current full-game total, the
+              per-sector split, how these return points connect to the Shelter and Tram Terminal, and the safest route
+              for players chasing Escape Artist or just trying to make cleanup less painful.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <a href="#sector-breakdown" class="btn-cyan">View Sector Counts</a>
+              <a href="#route" class="btn-cyan">See Best Route</a>
+              <a href="/trophies-achievements/" class="btn-cyan">Escape Artist Help</a>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="tip-box">
+              <strong class="text-white">27 documented hatches</strong><br />
+              Current full collectible coverage supports a total of 27 Escape Hatches across the five main sectors.
+            </div>
+            <div class="ok-box">
+              <strong class="text-white">Tram-linked fast travel</strong><br />
+              Once activated, Escape Hatches become selectable destinations from the Shelter's Tram Terminal.
+            </div>
+            <div class="warn-box">
+              <strong class="text-white">Shelter return point first</strong><br />
+              Their most stable function is as optional checkpoint-style return points that send you back to the Shelter.
+            </div>
+            <div class="danger-box">
+              <strong class="text-white">100% progress wording is not fully settled</strong><br />
+              Launch-week sources disagree on whether Escape Hatches count toward sector percentage, so this page treats
+              Escape Artist as the hard requirement and progress % as a caution point.
+            </div>
+          </div>
+        </article>
+
+        <aside class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+          <img src="/images/pragmata/collectibles/storage-expanders/pragmata-storage-expander-solar-01.png"
+            alt="Industrial corridor screenshot used locally to illustrate an Escape Hatch route and Shelter return loop"
+            class="hero-image" />
+          <div class="p-5 border-t border-border">
+            <p class="font-display text-xs uppercase tracking-[0.22em] text-cyan mb-3">Quick Readout</p>
+            <dl class="space-y-3 text-sm">
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Full game total</dt>
+                <dd class="font-mono text-white">27 documented</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Largest sector count</dt>
+                <dd class="font-mono text-white">Lunum Mines - 7</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Trophy link</dt>
+                <dd class="font-mono text-white">Escape Artist</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Best bridge pages</dt>
+                <dd class="font-mono text-white">Trophies - Walkthrough - Post-Game</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <div class="grid lg:grid-cols-3 gap-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box fade-up delay-1">
+          <p class="section-eyebrow">// Shelter Loop</p>
+          <h2 class="font-display text-lg text-white uppercase tracking-wide mb-3">Checkpoint Logic</h2>
+          <p class="text-muted text-sm">
+            Major gameplay guides consistently frame Escape Hatches as optional checkpoint-style rests. The important
+            practical result is simple: they let you bail out to the Shelter, heal, spend resources, and then re-enter
+            from a cleaner position.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box fade-up delay-2">
+          <p class="section-eyebrow">// Tram Link</p>
+          <h2 class="font-display text-lg text-white uppercase tracking-wide mb-3">Return Point Network</h2>
+          <p class="text-muted text-sm">
+            The Shelter's Tram Terminal is what makes Escape Hatches valuable long-term. Once a hatch is activated, it
+            stops being a one-off relief point and becomes a route anchor you can reuse for cleanup, boss retries, and
+            trophy work.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box fade-up delay-3">
+          <p class="section-eyebrow">// Completion</p>
+          <h2 class="font-display text-lg text-white uppercase tracking-wide mb-3">Separate Checklist Value</h2>
+          <p class="text-muted text-sm">
+            Even if you are not yet sure how your sector percentage is behaving, all 27 Escape Hatches are still worth
+            unlocking because they support route control and are definitely required for the Escape Artist trophy or
+            achievement.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sector-breakdown" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Sector Breakdown</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">All Documented <span>Escape Hatches by Sector</span></h2>
+      <p class="text-muted max-w-3xl mb-6">
+        The table below sticks to the stable cross-checked facts: the documented count in each sector, where the density
+        spikes, and how to think about these return points from a route-planning perspective.
+      </p>
+
+      <div class="table-shell clip-card glow-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Sector</th>
+              <th>Documented Hatch Count</th>
+              <th>Route Read</th>
+              <th>Why It Matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr>
+              <td><strong class="text-white">Solar Power Plant</strong></td>
+              <td><span class="badge">3 total</span></td>
+              <td><span class="text-white">Early tutorial spread</span></td>
+              <td class="text-muted">Sector 1 teaches the core rhythm early, with fewer hatches and less route pressure than later zones.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Mass Production Array</strong></td>
+              <td><span class="badge">5 total</span></td>
+              <td><span class="text-white">First real network growth</span></td>
+              <td class="text-muted">This is where the tram-return logic starts feeling useful instead of incidental, especially during collectible cleanup.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Terra Dome</strong></td>
+              <td><span class="badge">6 total</span></td>
+              <td><span class="text-white">Longer detour coverage</span></td>
+              <td class="text-muted">Terra Dome's wider spread makes activated hatches feel more valuable because backtracking lines get longer.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Lunum Mines</strong></td>
+              <td><span class="badge">7 total</span></td>
+              <td><span class="text-white">Highest density sector</span></td>
+              <td class="text-muted">Lunum Mines contains the most documented hatches, so it is the biggest single checkpoint swing for Escape Artist progress.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Central Port</strong></td>
+              <td><span class="badge">6 total</span></td>
+              <td><span class="text-white">Final route stabilizer</span></td>
+              <td class="text-muted">Central Port finishes the set and matters most to players doing late cleanup, post-story routing, or final trophy mop-up.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Full Game</strong></td>
+              <td><span class="badge">27 total</span></td>
+              <td class="text-muted">The sector sums above reconcile with current full collectible coverage and the Escape Artist requirement.</td>
+              <td class="text-muted">If you are short on the total, start with Lunum Mines and Central Port, since they contain 13 of the 27 documented hatches together.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="mechanics" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 items-start">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <p class="section-eyebrow">// How They Work</p>
+          <h2 class="section-title text-xl sm:text-2xl mb-5">Escape Hatch <span>Rules That Matter</span></h2>
+          <div class="space-y-4 text-sm sm:text-base text-muted">
+            <p>
+              The most stable description across current guides is that Escape Hatches work like optional checkpoint
+              rests. Use one, return to the Shelter, regroup, then head back out through the Tram Terminal.
+            </p>
+            <p>
+              Current gameplay coverage also agrees on the cost side: enemies respawn when you use an Escape Hatch, and
+              some puzzle states can reset with that rest cycle. In practice, that usually matters less than the route
+              control you gain.
+            </p>
+            <p>
+              The Tram Terminal is what turns activation into long-term value. Once you have touched a hatch, later
+              redeploys can target that point instead of forcing a longer run from the sector's main start.
+            </p>
+            <div class="warn-box">
+              <strong class="text-white">Completion note:</strong><br />
+              Public launch-week guides disagree on whether Escape Hatches feed sector completion percentage directly.
+              Because of that, the safest advice is not to rely on percentage math here. Unlock all 27 for Escape
+              Artist, then treat any extra progress % benefit as a bonus rather than a guarantee.
+            </div>
+          </div>
+        </article>
+
+        <aside class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/collectibles/storage-expanders/pragmata-storage-expander-terra-01.jpg"
+            alt="Map-like local screenshot used to illustrate route planning around Tram Terminal redeploy points"
+            class="hero-image" />
+          <div class="p-5 border-t border-border">
+            <p class="font-display text-xs uppercase tracking-[0.22em] text-cyan mb-3">Route Planning Tip</p>
+            <p class="text-sm text-muted">
+              Think of each activated hatch as a future time-save rather than just a one-time heal. The more maze-like
+              the sector becomes, the more valuable those redeploy anchors feel.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="route" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Best Route</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Safest <span>Escape Artist Route</span></h2>
+      <div class="grid lg:grid-cols-[1fr_0.9fr] gap-6 items-start">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <ul class="space-y-3 text-sm sm:text-base text-muted list-disc pl-5">
+            <li>Activate hatches as you naturally pass them instead of leaving the entire checklist for post-story cleanup.</li>
+            <li>Do not treat Solar Power Plant as "done forever" just because it is small. It still holds 3 documented hatches and is easy to forget once the route gets more complex.</li>
+            <li>Mass Production Array is the first sector where hatch tracking starts paying off because the map branches and collectible detours become more noticeable.</li>
+            <li>Make Lunum Mines your biggest manual audit point. It has the highest documented hatch count at 7 and is the easiest place to lose track if you rush story momentum.</li>
+            <li>Use Central Port as your final verification sweep before wrapping Escape Artist, because it finishes the network and overlaps well with late collectible cleanup.</li>
+            <li>If you are already in Unknown Signal or broader completion cleanup, combine hatch verification with your remaining Safe Box, Mod, and REM checks to avoid isolated return trips.</li>
+          </ul>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-4">Best Internal Companions</p>
+          <div class="space-y-4 text-sm text-muted">
+            <div class="tip-box">
+              <strong class="text-white">Trophies route</strong><br />
+              Pair this page with the trophy roadmap if you want Escape Artist folded into a broader Platinum or 100% plan.
+            </div>
+            <div class="ok-box">
+              <strong class="text-white">Walkthrough support</strong><br />
+              Sector walkthrough pages are still the best companion when you are missing one specific hatch in a late area.
+            </div>
+            <div class="warn-box">
+              <strong class="text-white">Post-game cleanup</strong><br />
+              If you are already cleaning up Unknown Signal requirements, use that phase to verify hatches too rather than making a separate pass later.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Internal Links</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Guides</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <a href="/collectibles/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">All Collectibles</p>
+          <p class="text-xs text-muted">Use the main tracker if you want Escape Hatches lined up against Safe Boxes, REMs, Mods, and the wider cleanup route.</p>
+        </a>
+        <a href="/trophies-achievements/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Trophies</p>
+          <p class="text-xs text-muted">Best companion for Escape Artist, Cradle Surveyor pressure, and 100% route planning.</p>
+        </a>
+        <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+          <p class="text-xs text-muted">Useful if you plan to sweep missing hatches during Unknown Signal cleanup instead of your first run.</p>
+        </a>
+        <a href="/walkthrough/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Walkthrough</p>
+          <p class="text-xs text-muted">Best entry point if you need sector-by-sector context for where a missing hatch likely sits.</p>
+        </a>
+        <a href="/missable-guide/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Missable Guide</p>
+          <p class="text-xs text-muted">Helpful if you are building a low-risk completion route and want to keep trophy anxiety under control.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Escape Hatches <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" open>
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            How many Escape Hatches are currently documented in Pragmata?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Current full collectible coverage supports <strong class="text-white">27 documented Escape Hatches</strong> across Solar Power Plant, Mass Production Array, Terra Dome, Lunum Mines, and Central Port.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            What happens when I use one?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Current gameplay guides describe Escape Hatches as <strong class="text-white">optional checkpoint-style returns to the Shelter</strong>. They also consistently note that enemies respawn after use, so think of them as route resets with better positioning rather than free map completion.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            Are Escape Hatches connected to the Tram?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p><strong class="text-white">Yes.</strong> Once activated, current guide coverage says they become selectable destinations at the <strong class="text-white">Tram Terminal</strong>, which is why they matter so much for cleanup and backtracking efficiency.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            Do they count toward 100% sector completion?
+            <span class="faq-icon flex-shrink-0 text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>That part is <strong class="text-white">not fully settled in public launch-week coverage</strong>. Some guides treat Escape Hatches as separate from the percentage math, while others describe nearly every collectible type except Mini Cabins as part of sector progress. The safest practical answer is to unlock all 27 anyway, because that is definitely required for <strong class="text-white">Escape Artist</strong>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 border-t border-border bg-hull/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+      <p class="text-sm text-muted">Pragmata guide hub for walkthroughs, collectibles, bosses, endings, and route planning.</p>
+      <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        <a href="/about/" class="nav-link">About</a>
+        <a href="/privacy/" class="nav-link">Privacy</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+
+    if (menuToggle && mobileNav && iconMenu && iconClose) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = !mobileNav.classList.contains('hidden');
+        mobileNav.classList.toggle('hidden');
+        iconMenu.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+  </script>
+</body>
+
+</html>
