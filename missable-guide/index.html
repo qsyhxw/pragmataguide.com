@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /missable-guide/
+       Title: 58 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata Missable Guide - Safe Trophy & Cleanup Route</title>
+  <meta name="description"
+    content="Verified Pragmata missable guide covering the one high-risk trophy, Unknown Signal cleanup, Lunatic route timing, and what you can safely leave for post-game." />
+  <link rel="canonical" href="https://pragmataguide.com/missable-guide/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Missable Guide - Safe Trophy & Cleanup Route" />
+  <meta property="og:description"
+    content="What is actually missable in Pragmata, what Unknown Signal can clean up, and which completion goals deserve early attention." />
+  <meta property="og:url" content="https://pragmataguide.com/missable-guide/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/mods/pragmata-mods-hero-01.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Missable Guide - Safe Trophy & Cleanup Route" />
+  <meta name="twitter:description"
+    content="The safest current answer on missables, post-game cleanup, Sweeper bots, and full-completion routing in Pragmata." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/mods/pragmata-mods-hero-01.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+            'violetline': '#c084fc',
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #060810;
+      color: #c9d1e0;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .glow-cyan {
+      text-shadow: 0 0 18px rgba(0, 229, 255, 0.55);
+    }
+
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07);
+    }
+
+    .glow-box:hover {
+      box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14);
+    }
+
+    .clip-card {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+
+    .blink {
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.65s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.22s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.34s;
+    }
+
+    .card-hover {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-link {
+      position: relative;
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: #00e5ff;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-cyan:hover {
+      background: rgba(0, 229, 255, 0.12);
+      color: #fff;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2e8f0;
+    }
+
+    .section-title span {
+      color: #00e5ff;
+    }
+
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #00e5ff;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hr-cyan {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+    }
+
+    .tip-box {
+      border-left: 2px solid #00e5ff;
+      background: rgba(0, 229, 255, 0.04);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .warn-box {
+      border-left: 2px solid #ffb703;
+      background: rgba(255, 183, 3, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .ok-box {
+      border-left: 2px solid #4ade80;
+      background: rgba(74, 222, 128, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .danger-box {
+      border-left: 2px solid #f87171;
+      background: rgba(248, 113, 113, 0.05);
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid rgba(0, 229, 255, 0.22);
+      color: #00e5ff;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+
+    .breadcrumb a {
+      color: #8892a4;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #00e5ff;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .table-shell {
+      overflow-x: auto;
+      border: 1px solid #1e2d45;
+      background: rgba(17, 24, 39, 0.88);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+    }
+
+    th,
+    td {
+      padding: 0.95rem 1rem;
+      border-bottom: 1px solid rgba(30, 45, 69, 0.9);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e5f6ff;
+      background: rgba(0, 229, 255, 0.05);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    figcaption {
+      color: #8892a4;
+      font-size: 0.85rem;
+      padding: 0.75rem 1rem 1rem;
+      border-top: 1px solid rgba(30, 45, 69, 0.9);
+    }
+
+    details summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+
+      .hero-image {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body class="grid-bg">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-space/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3" aria-label="PragmataGuide home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" stroke="#00e5ff" stroke-width="1.5" />
+            <circle cx="14" cy="14" r="3" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm sm:text-base font-bold tracking-[0.22em] uppercase text-white">Pragmata<span
+              class="text-cyan">Guide</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/walkthrough/" class="nav-link">Walkthrough</a>
+          <a href="/collectibles/" class="nav-link">Collectibles</a>
+          <a href="/trophies-achievements/" class="nav-link text-cyan">Trophies</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+        </nav>
+
+        <button id="menu-toggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan"
+          aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull"
+      aria-label="Mobile navigation">
+      <a href="/walkthrough/" class="nav-link py-1">Walkthrough</a>
+      <a href="/collectibles/" class="nav-link py-1">Collectibles</a>
+      <a href="/trophies-achievements/" class="nav-link py-1 text-cyan">Trophies</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="mx-2 text-muted">/</span>
+        <span class="text-white">Missable Guide</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.78fr] gap-6 items-stretch">
+        <article
+          class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-3 mb-5">
+              <span class="text-xs font-mono text-redline border border-redline/30 px-2 py-0.5">1 High-Risk Missable</span>
+              <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Unknown Signal Cleanup</span>
+              <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Verified Apr 16-27, 2026</span>
+            </div>
+            <p class="section-eyebrow">Completion / Missable Guide</p>
+            <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+              Pragmata <span class="text-cyan">Missable Guide</span>
+            </h1>
+            <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+              If you are chasing achievements, Platinum, or a clean 100% file, the safest current answer is simple:
+              <strong class="text-white">most of Pragmata is cleanup-friendly</strong>, but there is still
+              <strong class="text-white">one trophy with real missable risk</strong>. This page separates what you must
+              do early from what you can safely leave for <strong class="text-white">Unknown Signal</strong>.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <a href="#what-is-missable" class="btn-cyan">What Is Missable</a>
+              <a href="#route" class="btn-cyan">Safe Route</a>
+              <a href="#checklist" class="btn-cyan">First-Run Checklist</a>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="danger-box">
+              <strong class="text-white">High-risk now</strong><br />
+              Current trophy roadmaps consistently flag Sweeper bot coverage as the only meaningful missable risk.
+            </div>
+            <div class="ok-box">
+              <strong class="text-white">Safe for post-game</strong><br />
+              Collectibles, sector cleanup, and most completion systems are broadly recoverable in Unknown Signal.
+            </div>
+            <div class="warn-box">
+              <strong class="text-white">Route-sensitive</strong><br />
+              Some goals are not clearly hard-missable, but become slower or require a second run if you ignore them too long.
+            </div>
+            <div class="tip-box">
+              <strong class="text-white">Best order</strong><br />
+              Story run first, Unknown Signal cleanup second, Lunatic last remains the safest broad route.
+            </div>
+          </div>
+        </article>
+
+        <aside class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+          <img src="/images/pragmata/collectibles/mods/pragmata-mods-hero-01.jpg"
+            alt="Late-game combat screenshot used locally to represent completion and trophy cleanup planning"
+            class="hero-image" />
+          <div class="p-5 border-t border-border">
+            <p class="font-display text-xs uppercase tracking-[0.22em] text-cyan mb-3">Quick Readout</p>
+            <dl class="space-y-3 text-sm">
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Real missable risk</dt>
+                <dd class="font-mono text-white">Sweeper bot trophy</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Cleanup mode</dt>
+                <dd class="font-mono text-white">Unknown Signal</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Safest playthrough count</dt>
+                <dd class="font-mono text-white">2</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt class="text-muted">Biggest route trap</dt>
+                <dd class="font-mono text-white">Assuming all risk can wait</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <div class="grid lg:grid-cols-3 gap-5">
+        <article class="bg-panel border border-border clip-card p-6 glow-box fade-up delay-1">
+          <p class="section-eyebrow">// Stable Answer</p>
+          <h2 class="font-display text-lg text-white uppercase tracking-wide mb-3">Mostly Cleanup-Friendly</h2>
+          <p class="text-muted text-sm">
+            The broad completion picture is much kinder than the word “missable” suggests. Unknown Signal exists
+            specifically to let you return to sectors, finish completion metrics, and close out most leftover systems.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box fade-up delay-2">
+          <p class="section-eyebrow">// Real Warning</p>
+          <h2 class="font-display text-lg text-white uppercase tracking-wide mb-3">One Trophy Stands Out</h2>
+          <p class="text-muted text-sm">
+            Stronger roadmaps repeatedly single out <strong class="text-white">You're Not Getting Away That Easy</strong>
+            because Sweeper bot encounters are limited enough that “I will do it later” is not a safe plan.
+          </p>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box fade-up delay-3">
+          <p class="section-eyebrow">// Best Use</p>
+          <h2 class="font-display text-lg text-white uppercase tracking-wide mb-3">Completion Planning Page</h2>
+          <p class="text-muted text-sm">
+            Use this page as a route filter: what to lock down during the story, what to save for post-game, and what
+            deserves a backup plan before you commit to a Lunatic run.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="what-is-missable" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Risk Split</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">What Is Actually <span>Missable</span>?</h2>
+      <p class="text-muted max-w-3xl mb-6">
+        This table uses the most conservative current reading of launch-week coverage. The goal is not to be dramatic.
+        It is to tell you what needs early attention, what is merely route-sensitive, and what you can honestly leave
+        for post-story cleanup.
+      </p>
+
+      <div class="table-shell clip-card glow-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Item Type</th>
+              <th>Current Risk Level</th>
+              <th>Why</th>
+              <th>Best Handling</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr>
+              <td><strong class="text-white">You're Not Getting Away That Easy</strong></td>
+              <td><span class="badge" style="color:#f87171;border-color:rgba(248,113,113,.35)">High Risk</span></td>
+              <td class="text-muted">Multiple trophy roadmaps say Sweeper bot spawns are limited and can become awkward or impossible to rely on later.</td>
+              <td class="text-muted">Do it as soon as you see a Sweeper bot instead of saving it for cleanup.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Can't Stop, Won't Stop</strong></td>
+              <td><span class="badge" style="color:#ffb703;border-color:rgba(255,183,3,.35)">Route-Sensitive</span></td>
+              <td class="text-muted">The trophy wording says “during the main story,” so delaying printer coverage can force extra route management even if it is not universally documented as a hard missable.</td>
+              <td class="text-muted">Print story-era weapons, nodes, and abilities steadily instead of assuming post-game will solve it all.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Collectibles and sector completion</strong></td>
+              <td><span class="badge">Low Risk</span></td>
+              <td class="text-muted">Current cleanup coverage treats Unknown Signal as the mode that lets you revisit sectors and finish missing items.</td>
+              <td class="text-muted">Use <a href="/post-game/" class="text-cyan hover:underline">Unknown Signal</a> rather than forcing a perfect blind first run.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Training Sims</strong></td>
+              <td><span class="badge">Low Risk</span></td>
+              <td class="text-muted">These are checklist-heavy and time-consuming, but current sources do not treat them as the main missable problem.</td>
+              <td class="text-muted">Track them deliberately and pair them with <a href="/training-simulations/" class="text-cyan hover:underline">Training Simulations</a> planning.</td>
+            </tr>
+            <tr>
+              <td><strong class="text-white">Lunatic difficulty</strong></td>
+              <td><span class="badge" style="color:#c084fc;border-color:rgba(192,132,252,.35)">Not Missable, But Separate</span></td>
+              <td class="text-muted">It unlocks after one clear and requires a fresh run rather than NG+, so it is a route commitment more than a missable.</td>
+              <td class="text-muted">Save it for the final phase once your completion file is already clean.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 items-start">
+        <div>
+          <p class="section-eyebrow">// Why It Works</p>
+          <h2 class="section-title text-xl sm:text-2xl mb-6">Why Unknown Signal <span>Changes Everything</span></h2>
+
+          <div class="space-y-5">
+            <article class="bg-panel border border-border clip-card p-6 glow-box">
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Post-Story Return Path</h3>
+              <p class="text-sm text-muted">
+                Current completion coverage agrees that Unknown Signal opens after one full clear and acts as the real
+                post-story cleanup route. This is the page you should mentally attach to collectibles, sector
+                percentages, Hidden Chamber progress, and the last big non-Lunatic checklist pushes.
+              </p>
+            </article>
+
+            <article class="bg-panel border border-border clip-card p-6 glow-box">
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Collectibles Carry Over</h3>
+              <p class="text-sm text-muted">
+                Stronger roadmaps explicitly describe your collectibles as carrying over into Unknown Signal. That is
+                why broad statements like “nothing is missable” can sound true in casual conversation even though one
+                specific trophy still deserves caution.
+              </p>
+            </article>
+
+            <article class="bg-panel border border-border clip-card p-6 glow-box">
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Do Not Confuse Safety With Efficiency</h3>
+              <p class="text-sm text-muted">
+                Being cleanup-friendly does not mean every route is equally efficient. The point of this page is to keep
+                you from wasting time on low-risk panic while still protecting the one area current evidence treats as
+                genuinely fragile.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/collectibles/training-data/pragmata-training-data-shelter-01.webp"
+            alt="Shelter image used locally to support post-game cleanup and completion-route planning"
+            class="w-full h-auto object-cover" />
+          <figcaption>
+            Unknown Signal starts from the Shelter side of the game loop, which is why so many “missed” tasks become
+            cleanup tasks instead of hard failures after the credits.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="route" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Best Route</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Safest <span>Completion Order</span></h2>
+
+      <div class="grid lg:grid-cols-4 gap-5">
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">1. Story Run</h3>
+          <p class="text-sm text-muted">
+            Play naturally, but do not ignore obvious early side systems. This is the run where you should handle a
+            Sweeper bot if one appears and steadily build your printer progress.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">2. Unknown Signal Cleanup</h3>
+          <p class="text-sm text-muted">
+            Use post-game for collectibles, sector percentages, special sector progress, and Hidden Chamber work rather
+            than trying to perfect every sector blind on the first pass.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">3. Finish Endgame Checklist</h3>
+          <p class="text-sm text-muted">
+            This is the right time to close Training Sims, Cabin boards, REM chains, and any remaining systemic
+            milestones that are tedious rather than fragile.
+          </p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">4. Lunatic Last</h3>
+          <p class="text-sm text-muted">
+            Start the fresh Lunatic run only after your first file has done the heavy completion lifting. That keeps the
+            hardest playthrough focused instead of cluttered.
+          </p>
+        </div>
+      </div>
+
+      <div class="warn-box text-sm mt-6">
+        <strong class="text-amber">Planning rule:</strong> the user question should not be “can this be cleaned up later?”
+        but “is this the kind of task current sources explicitly trust Unknown Signal to clean up?” If the answer is no,
+        handle it sooner.
+      </div>
+    </section>
+
+    <section id="checklist" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// First Run</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">First-Playthrough <span>Safety Checklist</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-5">
+        <article class="danger-box text-sm">
+          <strong class="text-redline">Defeat a Sweeper bot as soon as practical</strong><br />
+          This is the single cleanest “do not procrastinate” task supported by the current roadmap evidence.
+        </article>
+        <article class="tip-box text-sm">
+          <strong class="text-cyan">Keep the Unit Printer moving</strong><br />
+          Do not let story-era printable gear pile up too long if you care about
+          <strong class="text-white">Can't Stop, Won't Stop</strong>.
+        </article>
+        <article class="ok-box text-sm">
+          <strong class="text-greenline">Do not panic over missed collectibles</strong><br />
+          If your concern is Mini Cabins, Safe Boxes, Pure Lunum, Training Data, or general sector cleanup, Unknown Signal is the normal answer.
+        </article>
+        <article class="warn-box text-sm">
+          <strong class="text-amber">Know what the second run is for</strong><br />
+          Lunatic is a separate fresh run requirement, not the place where you want to discover a sloppy first-file completion route.
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Internal Links</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Guides</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <a href="/trophies-achievements/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Trophies</p>
+          <p class="text-xs text-muted">Best companion if you want the full milestone list after you understand the missable split.</p>
+        </a>
+        <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+          <p class="text-xs text-muted">Use this next if your main question is what Unknown Signal can really clean up.</p>
+        </a>
+        <a href="/training-simulations/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Training Simulations</p>
+          <p class="text-xs text-muted">Helpful when your route shifts from true missables to long-form checklist cleanup.</p>
+        </a>
+        <a href="/collectibles/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">All Collectibles</p>
+          <p class="text-xs text-muted">Best hub for the things this page says are broadly safe to leave for cleanup.</p>
+        </a>
+        <a href="/endings/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Endings</p>
+          <p class="text-xs text-muted">Useful if your completion route is really building toward Unknown Signal and the extra ending payoff.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Missable Guide <span>FAQ</span></h2>
+
+      <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Is anything missable in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">The safest current answer is that most of the game is cleanup-friendly, but You're Not Getting Away That Easy is still the one trophy stronger roadmap coverage treats as having real missable risk because Sweeper bot spawns are limited.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Can Unknown Signal clean up missed collectibles?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. Current completion guides explicitly treat Unknown Signal as the post-story route for sector cleanup, and they describe collectibles as carrying over into that mode.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            Do you need two playthroughs for full completion?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">That is still the safest assumption, because Lunatic unlocks only after one clear and current guides treat it as a fresh run rather than a New Game+ option.</p>
+          </div>
+        </details>
+
+        <details class="bg-panel border border-border group" itemscope itemprop="mainEntity"
+          itemtype="https://schema.org/Question">
+          <summary
+            class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors"
+            itemprop="name">
+            What should you prioritize on a first playthrough?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body" itemscope itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer">
+            <p itemprop="text">Handle a Sweeper bot when you get the chance, keep printer progress reasonably current, and do not stress over perfectionist collectible cleanup until Unknown Signal opens.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+            <li><a href="/trophies-achievements/" class="hover:text-cyan transition-colors">Trophies</a></li>
+            <li><a href="/collectibles/" class="hover:text-cyan transition-colors">All Collectibles</a></li>
+            <li><a href="/post-game/" class="hover:text-cyan transition-colors">Post-Game</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr class="hr-cyan mb-5" aria-hidden="true" />
+
+      <div
+        class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+        <p>© 2026 PragmataGuide · Independent fan site · Not affiliated with Capcom</p>
+        <p>PRAGMATA™ is a trademark of CAPCOM CO., LTD.<span class="blink ml-1 text-cyan">_</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+
+    if (menuToggle && mobileNav) {
+      menuToggle.addEventListener('click', () => {
+        const isHidden = mobileNav.classList.contains('hidden');
+        mobileNav.classList.toggle('hidden');
+        iconMenu.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+        menuToggle.setAttribute('aria-expanded', String(isHidden));
+      });
+    }
+  </script>
+</body>
+
+</html>
