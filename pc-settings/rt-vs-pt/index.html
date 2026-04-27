@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /pc-settings/rt-vs-pt/
+       Title: 59 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata RT vs PT Guide - Ray Tracing or Path Tracing?</title>
+  <meta name="description"
+    content="Verified Pragmata RT vs PT guide covering visual differences, performance cost, GPU tier fit, and when ray tracing or path tracing is actually worth enabling." />
+  <link rel="canonical" href="https://pragmataguide.com/pc-settings/rt-vs-pt/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata RT vs PT Guide - Ray Tracing or Path Tracing?" />
+  <meta property="og:description"
+    content="A practical Pragmata PC guide to the real trade-off between raster, ray tracing, and path tracing." />
+  <meta property="og:url" content="https://pragmataguide.com/pc-settings/rt-vs-pt/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/pc-settings/rt-vs-pt/pragmata-rt-vs-pt-raster-rt-01.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata RT vs PT Guide - Ray Tracing or Path Tracing?" />
+  <meta name="twitter:description"
+    content="What ray tracing and path tracing actually change in Pragmata, how much they cost, and which one fits your GPU tier." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/pc-settings/rt-vs-pt/pragmata-rt-vs-pt-raster-rt-01.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'greenline': '#4ade80',
+            'redline': '#f87171'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box, .danger-box { padding: 0.9rem 1rem; border-radius: 2px; }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.04); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.04); }
+    .danger-box { border-left: 2px solid #f87171; background: rgba(248, 113, 113, 0.05); }
+    .hero-image, .section-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image { min-height: 280px; }
+    .section-image { min-height: 250px; }
+    .table-shell {
+      overflow-x: auto;
+      border: 1px solid rgba(30, 45, 69, 1);
+      background: rgba(12, 15, 26, 0.82);
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 0.9rem 1rem; border-bottom: 1px solid rgba(30, 45, 69, 1); vertical-align: top; }
+    th {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #00e5ff;
+      text-align: left;
+      background: rgba(0, 229, 255, 0.04);
+    }
+    tr:last-child td { border-bottom: none; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .hero-image, .section-image { min-height: 220px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I use ray tracing or path tracing in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most PCs, standard ray tracing is the more practical ceiling and raster is still the safer baseline. Path tracing produces the better image, but current testing and NVIDIA's own guidance both treat it as a high-end mode that leans heavily on DLSS and frame generation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ray tracing expensive in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but it is much lighter than path tracing. Tom's Hardware describes Pragmata's standard RT implementation as relatively easy on hardware compared to many recent games, while path tracing is a completely different performance class."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does path tracing need DLSS or frame generation in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Practically, yes for most players. NVIDIA and independent benchmark coverage both frame Pragmata's path tracing mode around DLSS, Ray Reconstruction, and frame generation support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is raster still the better choice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Raster is still the better choice when you want the easiest route to stable frame rates, lower latency, broader GPU compatibility, or simply do not think the image gain from RT or PT is worth the extra cost."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/pc-settings/" class="nav-link text-sm font-medium font-body text-cyan">PC Settings</a>
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+          <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+          <a href="/builds/" class="nav-link text-sm font-medium font-body">Builds</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="grid lg:grid-cols-[1.25fr_0.95fr] gap-6 items-stretch">
+          <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-3 mb-5">
+                <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Raster / RT / PT</span>
+                <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Verified Apr 2026</span>
+                <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Official + Benchmarked</span>
+              </div>
+              <p class="section-eyebrow">// RT vs PT</p>
+              <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+                Pragmata <span class="text-cyan">RT vs PT</span>
+              </h1>
+              <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+                The short version is easy: <strong class="text-white">Path Tracing</strong> looks better,
+                <strong class="text-white">Ray Tracing</strong> is much easier to run, and
+                <strong class="text-white">plain raster</strong> is still the smartest default for a lot of PCs.
+                This page is about the practical gap between those three choices, not the marketing version.
+              </p>
+              <p class="text-slate-300 mb-6">
+                Current coverage is unusually consistent on two points:
+                Pragmata's standard RT mode is relatively usable, while PT is a much heavier mode that makes the most
+                sense on higher-end RTX hardware with upscaling and frame generation already on the table.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <a href="#glance" class="btn-cyan">RT vs PT At A Glance</a>
+                <a href="#visual-diff" class="btn-cyan">Visual Difference</a>
+                <a href="#faq" class="btn-cyan">FAQ</a>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Safest Default</p>
+                <p class="text-sm text-white font-semibold">Raster first</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Most Practical Ceiling</p>
+                <p class="text-sm text-white font-semibold">Selective RT</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Enthusiast Mode</p>
+                <p class="text-sm text-white font-semibold">PT with DLSS help</p>
+              </div>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+            <img src="/images/pragmata/pc-settings/rt-vs-pt/pragmata-rt-vs-pt-raster-rt-01.jpg"
+              alt="Pragmata PC screenshot used to compare raster rendering and standard ray tracing"
+              class="hero-image" />
+            <figcaption class="text-muted text-sm p-4">
+              In Pragmata, the important question is not whether PT looks better. It does. The real question is whether it is worth the cost on your hardware.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="glance" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Quick Comparison</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">RT vs PT <span>At A Glance</span></h2>
+        <div class="table-shell clip-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Mode</th>
+                <th>What It Improves</th>
+                <th>What It Costs</th>
+                <th>Best Fit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="text-white">Raster</strong></td>
+                <td class="text-slate-300">The simplest path to stable image quality and predictable performance.</td>
+                <td class="text-slate-300">Lowest lighting and reflection realism of the three, plus more visible screen-space artifacts in some scenes.</td>
+                <td class="text-slate-300">Most 8GB cards, stability-first builds, or anyone chasing a clean 60 FPS baseline.</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Ray Tracing</strong></td>
+                <td class="text-slate-300">Better reflections and cleaner handling of several raster image issues, with a much lighter cost than PT.</td>
+                <td class="text-slate-300">Still expensive enough to matter, and Tom's notes that some new reflections can look faint or blobby.</td>
+                <td class="text-slate-300">12GB-class cards, stronger 1440p rigs, or players who want extra fidelity without jumping to a full PT workflow.</td>
+              </tr>
+              <tr>
+                <td><strong class="text-white">Path Tracing</strong></td>
+                <td class="text-slate-300">The biggest image-quality jump: better shadows, reflections, ambient occlusion, and global illumination.</td>
+                <td class="text-slate-300">A dramatically heavier mode that current guidance treats as dependent on DLSS, Ray Reconstruction, and often frame generation.</td>
+                <td class="text-slate-300">Higher-end RTX setups where image quality is the priority and latency trade-offs are acceptable.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="visual-diff" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 items-start">
+          <div>
+            <p class="section-eyebrow">// Image Quality</p>
+            <h2 class="section-title text-xl sm:text-2xl mb-6">Visual <span>Difference</span></h2>
+            <div class="space-y-5">
+              <article class="bg-panel border border-border clip-card p-6 glow-box">
+                <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Ray Tracing Fixes Some Real Raster Problems</h3>
+                <p class="text-sm text-slate-300">
+                  Tom's Hardware found that Pragmata's base raster image can look noisy or fuzzy, especially in shiny
+                  scenes. Standard RT helps clean up a lot of that and removes several screen-space reflection errors,
+                  which is why it can look like a good middle ground even before PT enters the conversation.
+                </p>
+              </article>
+
+              <article class="bg-panel border border-border clip-card p-6 glow-box">
+                <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Path Tracing Is The Real Lighting Showcase</h3>
+                <p class="text-sm text-slate-300">
+                  Tom's and NVIDIA both line up here: PT is the mode where shadows, reflections, ambient occlusion, and
+                  global illumination start looking materially better, not just a little cleaner. PC Gamer's own side-by-side
+                  screenshots reached the same broad conclusion.
+                </p>
+              </article>
+
+              <article class="bg-panel border border-border clip-card p-6 glow-box">
+                <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">But RT Is Not Automatically "Bad"</h3>
+                <p class="text-sm text-slate-300">
+                  PC Gamer's practical read is useful here: PT clearly looks better, but the regular RT image still
+                  looks strong enough that many players will prefer the extra headroom. In other words, RT is a compromise,
+                  not a failed mode.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+            <img src="/images/pragmata/pc-settings/rt-vs-pt/pragmata-rt-vs-pt-path-tracing-01.jpg"
+              alt="Pragmata PC screenshot used to illustrate the visual gain and performance cost of path tracing"
+              class="section-image" />
+            <figcaption class="text-muted text-sm p-4">
+              PT is where Pragmata's lighting model starts to look like a flagship PC feature, but it is also where the hardware bill arrives.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="perf-cost" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Performance Cost</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Performance <span>Cost</span></h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">RT Is Relatively Light By Modern Standards</h3>
+            <p class="text-sm text-slate-300">
+              Tom's describes Pragmata's basic RT implementation as relatively easy on hardware compared to many recent
+              PC games. That does not make it free, but it does explain why RT is the first "nice to have" step above raster
+              instead of a total non-starter.
+            </p>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">PT Is A Different Performance Class</h3>
+            <p class="text-sm text-slate-300">
+              Tom's is even more direct on PT: native path tracing is a very different beast, and NVIDIA's own launch
+              messaging clearly assumes DLSS Super Resolution, Ray Reconstruction, and frame generation are part of the
+              expected experience.
+            </p>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Real-World Playability Still Favors RT</h3>
+            <p class="text-sm text-slate-300">
+              PC Gamer's 4K testing on an RTX 5070 Ti found regular RT smooth enough to feel great with DLSS Balanced
+              and 2x frame generation, while PT dropped performance into a much less comfortable range. That is exactly
+              why this page treats PT as an enthusiast choice, not a default recommendation.
+            </p>
+          </article>
+        </div>
+
+        <div class="warn-box mt-6 text-sm">
+          <strong class="text-amber">Practical reading:</strong> RT is a settings decision. PT is usually a whole-stack
+          decision involving GPU tier, DLSS mode, frame generation tolerance, and whether you care more about fidelity than latency.
+        </div>
+      </section>
+
+      <section id="best-by-tier" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// GPU Fit</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best Use <span>By GPU Tier</span></h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">8GB Class</p>
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Raster First</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              Steam's baseline and recommended specs both live in the 6GB to 8GB class, but the official RT support line
+              already jumps to 12GB cards. That is the clearest signal that 8GB rigs should default to raster and only
+              flirt with RT cautiously.
+            </p>
+            <div class="tip-box text-sm">
+              Best fit: 1080p, performance-minded settings, RT off first.
+            </div>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">12GB Class</p>
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Selective RT Territory</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              Steam explicitly names the RTX 3060 12GB and RX 6700 XT 12GB as the requirement tier for RT support.
+              This is the cleanest class for players who want to experiment with RT without pretending PT is a free upgrade.
+            </p>
+            <div class="ok-box text-sm">
+              Best fit: 1080p or 1440p with realistic expectations and upscaling available.
+            </div>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">16GB+ RTX Class</p>
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">PT Starts Making Sense</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              NVIDIA's launch article positions PT around GeForce RTX 50-series hardware and DLSS assistance, while
+              Tom's shows how much heavier native PT is than standard RT. That does not mean 16GB magically makes PT
+              easy, but it is the first class where the overall proposition becomes realistic.
+            </p>
+            <div class="ok-box text-sm">
+              Best fit: image-quality-first play with DLSS, Ray Reconstruction, and frame generation already accepted.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="raster-better" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Practical Choice</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">When <span>Raster Is Still Better</span></h2>
+        <div class="grid lg:grid-cols-2 gap-6">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">Raster Wins When You Want Simplicity</h3>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li><strong class="text-white">You want stable frame rates first.</strong> Raster is still the easiest way to get there.</li>
+              <li><strong class="text-white">You are on non-RTX or lower-VRAM hardware.</strong> The official RT step-up already hints that not every card should chase lighting features.</li>
+              <li><strong class="text-white">You dislike frame generation trade-offs.</strong> PT especially assumes a tolerance for those compromises.</li>
+            </ul>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">Raster Also Avoids Some RT/PT Weirdness</h3>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li><strong class="text-white">Standard RT can introduce weaker-looking reflections.</strong> Tom's calls some of them faint and blobby.</li>
+              <li><strong class="text-white">PT is not artifact-free.</strong> Tom's notes that some translucent displays and reflective textures can get smeary with the PT plus Ray Reconstruction stack.</li>
+              <li><strong class="text-white">Not every scene needs the extra cost.</strong> PC Gamer's take is basically that regular RT already looks good enough for sane people.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <a href="/pc-settings/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">PC Settings</p>
+            <p class="text-xs text-muted">Use the broader settings page if you want official requirements and general optimization advice in one place.</p>
+          </a>
+          <a href="/pc-settings/gpu-tier-guide/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">GPU Tier Guide</p>
+            <p class="text-xs text-muted">Best follow-up if you already know you care more about VRAM class than about rendering theory.</p>
+          </a>
+          <a href="/pc-settings/intel-arc-fixes/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Intel Arc Fixes</p>
+            <p class="text-xs text-muted">Helpful if your problem is not visual preference but stability, drivers, or ReBAR setup.</p>
+          </a>
+          <a href="/walkthrough/100-percent-route/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">100% Route</p>
+            <p class="text-xs text-muted">Good next stop once the game runs the way you want and the next question is route discipline.</p>
+          </a>
+          <a href="/weapons/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Weapons</p>
+            <p class="text-xs text-muted">Best follow-up if the game is already stable and you want stronger combat choices instead of more PC tweaking.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">RT vs PT <span>FAQ</span></h2>
+        <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Should I use ray tracing or path tracing in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">For most PCs, standard ray tracing is the more practical ceiling and raster is still the safer baseline. Path tracing looks better, but current benchmark and vendor guidance both treat it as a high-end mode that leans on DLSS and frame generation.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Is ray tracing expensive in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes, but it is much lighter than path tracing. Tom's Hardware describes Pragmata's standard RT implementation as relatively easy on hardware compared to many recent titles.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Does path tracing need DLSS or frame generation in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Practically, yes for most players. NVIDIA's own PT launch guidance and independent benchmark coverage both frame Pragmata's path tracing mode around DLSS, Ray Reconstruction, and frame generation support.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              When is raster still the better choice?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Raster is still the better choice when you want the easiest route to stable performance, lower latency, broader hardware compatibility, or simply do not think the image gain from RT or PT is worth the extra cost.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+                <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                  stroke-width="1.5" />
+                <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+              </svg>
+              <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                  class="text-cyan">Guide</span></span>
+            </div>
+            <p class="text-muted text-sm font-body max-w-xs">
+              Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+            </p>
+          </div>
+
+          <nav aria-label="Guide pages footer links">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+            <ul class="space-y-2 text-sm font-body text-muted">
+              <li><a href="/pc-settings/" class="hover:text-cyan transition-colors">PC Settings</a></li>
+              <li><a href="/collectibles/" class="hover:text-cyan transition-colors">Collectibles</a></li>
+              <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+              <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Site pages footer links">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+            <ul class="space-y-2 text-sm font-body text-muted">
+              <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+              <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+              <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+              <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+          <p>(c) 2026 PragmataGuide - Independent fan site - Not affiliated with Capcom</p>
+          <p>PRAGMATA (TM) is a trademark of CAPCOM CO., LTD.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
