@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /pc-settings/gpu-tier-guide/
+       Title: 61 chars | Desc: 156 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata GPU Tier Guide - Best 8GB, 12GB, 16GB+ Settings</title>
+  <meta name="description"
+    content="Verified Pragmata GPU tier guide with practical 8GB, 12GB, and 16GB+ settings advice for 1080p, 1440p, RT, path tracing, DLSS, and FSR." />
+  <link rel="canonical" href="https://pragmataguide.com/pc-settings/gpu-tier-guide/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata GPU Tier Guide - Best 8GB, 12GB, 16GB+ Settings" />
+  <meta property="og:description"
+    content="A practical Pragmata settings page for 8GB, 12GB, and 16GB+ GPUs, built around official requirements and launch-week PC testing." />
+  <meta property="og:url" content="https://pragmataguide.com/pc-settings/gpu-tier-guide/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/pc-settings/gpu-tier-guide/pragmata-gpu-tier-guide-raster-rt-01.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata GPU Tier Guide - Best 8GB, 12GB, 16GB+ Settings" />
+  <meta name="twitter:description"
+    content="How to set up Pragmata on 8GB, 12GB, and 16GB+ GPUs without guessing your way through RT, path tracing, or upscaling." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/pc-settings/gpu-tier-guide/pragmata-gpu-tier-guide-raster-rt-01.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'greenline': '#4ade80'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box { padding: 0.9rem 1rem; border-radius: 2px; }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.04); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.04); }
+    .hero-image, .section-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image { min-height: 280px; }
+    .section-image { min-height: 260px; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .hero-image, .section-image { min-height: 220px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is 8GB VRAM enough for Pragmata on PC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but the safest target is still a 1080p raster setup with Ray Tracing off. Steam's baseline and launch-week testing both point 8GB-class cards toward a more conservative performance-first configuration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does 12GB VRAM matter in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12GB becomes more relevant once you move into Ray Tracing, higher 1440p targets, or heavier texture and lighting combinations. Steam's official RT recommendation already moves up to 12GB cards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need 16GB VRAM for Path Tracing in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a realistic Path Tracing setup, 16GB-class RTX hardware is the safer starting point. Official NVIDIA guidance and independent launch-week benchmarks both treat Path Tracing as a high-end feature that depends heavily on DLSS and frame generation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What setting should I lower first in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turn Ray Tracing off first if you need a quick win. After that, shadows, volumetrics, and upscaling mode are the most practical levers before you start trimming every small option."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/pc-settings/" class="nav-link text-sm font-medium font-body text-cyan">PC Settings</a>
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+          <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+          <a href="/builds/" class="nav-link text-sm font-medium font-body">Builds</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="grid lg:grid-cols-[1.25fr_0.95fr] gap-6 items-stretch">
+          <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-3 mb-5">
+                <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">8GB / 12GB / 16GB+</span>
+                <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Verified Apr 2026</span>
+                <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Official + Benchmarked</span>
+              </div>
+              <p class="section-eyebrow">// GPU Tier Guide</p>
+              <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+                Pragmata <span class="text-cyan">GPU Tier Guide</span>
+              </h1>
+              <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+                This page answers the practical question most PC players actually have: what settings make sense for
+                an <strong class="text-white">8GB</strong> card, when does <strong class="text-white">12GB</strong>
+                start to matter, and when does <strong class="text-white">16GB+</strong> become the realistic class
+                for <strong class="text-white">Path Tracing</strong> instead of wishful thinking.
+              </p>
+              <p class="text-slate-300 mb-6">
+                The tier split below is an <strong class="text-white">evidence-based interpretation</strong> of
+                Pragmata's official Steam requirements plus launch-week PC testing. It is meant to get you close fast,
+                not trap you in one brittle copy-paste preset.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <a href="#tier-8gb" class="btn-cyan">8GB Tier</a>
+                <a href="#tier-12gb" class="btn-cyan">12GB Tier</a>
+                <a href="#tier-16gb" class="btn-cyan">16GB+ Tier</a>
+                <a href="#faq" class="btn-cyan">FAQ</a>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">8GB Baseline</p>
+                <p class="text-sm text-white font-semibold">1080p raster first</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">12GB Shift</p>
+                <p class="text-sm text-white font-semibold">RT or cleaner 1440p</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">16GB+ Target</p>
+                <p class="text-sm text-white font-semibold">PT with DLSS help</p>
+              </div>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+            <img src="/images/pragmata/pc-settings/gpu-tier-guide/pragmata-gpu-tier-guide-raster-rt-01.jpg"
+              alt="Pragmata benchmark screenshot comparing raster rendering and ray tracing behavior on PC"
+              class="hero-image" />
+            <figcaption class="text-muted text-sm p-4">
+              The cleanest first decision is still simple: decide whether your GPU tier should live in raster, RT, or PT land.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="official-split" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Official Floor</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Why The VRAM Split <span>Exists At All</span></h2>
+        <div class="bg-panel border border-border clip-card p-6 glow-box overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-border text-white uppercase tracking-wide font-display text-xs">
+                <th class="py-3 pr-4">Mode</th>
+                <th class="py-3 pr-4">Official GPU Class</th>
+                <th class="py-3 pr-4">VRAM</th>
+                <th class="py-3">Practical Reading</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-300">
+              <tr class="border-b border-border/70">
+                <td class="py-3 pr-4 text-white">Minimum</td>
+                <td class="py-3 pr-4">GTX 1660 / RX 5500 XT</td>
+                <td class="py-3 pr-4">6GB / 8GB</td>
+                <td class="py-3">Steam ties this to 1080p/60 on the Performance preset, which is why 8GB-class advice should stay conservative.</td>
+              </tr>
+              <tr class="border-b border-border/70">
+                <td class="py-3 pr-4 text-white">Recommended</td>
+                <td class="py-3 pr-4">RTX 2060 Super / RX 6600</td>
+                <td class="py-3 pr-4">8GB</td>
+                <td class="py-3">Still a raster-first class, but much more comfortable for 1080p and some lighter 1440p compromises.</td>
+              </tr>
+              <tr class="border-b border-border/70">
+                <td class="py-3 pr-4 text-white">Ray Tracing</td>
+                <td class="py-3 pr-4">RTX 3060 / RX 6700 XT</td>
+                <td class="py-3 pr-4">12GB</td>
+                <td class="py-3">This is the first official point where Pragmata clearly moves beyond an 8GB recommendation.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-white">Path Tracing</td>
+                <td class="py-3 pr-4">RTX 4070 Ti Super / RTX 5080</td>
+                <td class="py-3 pr-4">16GB</td>
+                <td class="py-3">NVIDIA's own PT guidance and launch-week benchmarks both treat this as high-end territory that leans on DLSS and frame generation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tip-box mt-6">
+          <strong class="text-cyan">Best way to read this page:</strong> treat VRAM as a useful shortcut for the kind of
+          settings budget you have, not as the only thing that matters more than raw GPU speed.
+        </div>
+      </section>
+
+      <section id="tier-8gb" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// 8GB Tier</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best Settings For <span>8GB GPUs</span></h2>
+        <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-6 items-start">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <div class="space-y-4 text-slate-300">
+              <p>
+                If your card sits in the broad <strong class="text-white">GTX 1660 to RTX 2060 Super / RX 6600 class</strong>,
+                the safest plan is still <strong class="text-white">1080p, raster first, Ray Tracing off</strong>.
+                Steam's baseline already frames this part of the stack around performance-oriented presets, and launch-week
+                testing keeps showing that PT is where 8GB cards fall out of the comfortable zone fastest.
+              </p>
+              <p>
+                In practice, 8GB is the tier where you should protect frame pacing before chasing extra lighting. If the
+                game looks good but feels uneven, RT is the first thing to cut, not the last.
+              </p>
+            </div>
+            <div class="bg-hull/80 border border-border clip-card p-5 mt-6">
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">8GB Starting Preset</h3>
+              <ul class="space-y-3 text-sm text-slate-300 list-disc pl-5">
+                <li>Resolution target: <strong class="text-white">1080p</strong></li>
+                <li>Lighting target: <strong class="text-white">Raster only</strong></li>
+                <li>Upscaling: <strong class="text-white">Balanced first</strong>, then Quality if headroom exists</li>
+                <li>Lower first: <strong class="text-white">Ray Tracing, shadows, volumetrics</strong></li>
+                <li>Avoid as a default: <strong class="text-white">Path Tracing</strong></li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">Who This Tier Fits</h3>
+            <ul class="space-y-3 text-sm text-slate-300 list-disc pl-5">
+              <li>Players targeting a stable first playthrough instead of screenshot settings.</li>
+              <li>Cards that match or only modestly exceed Steam's minimum and recommended GPU classes.</li>
+              <li>Anyone who wants 60 FPS behavior to feel normal before experimenting with heavier features.</li>
+            </ul>
+            <div class="warn-box mt-6">
+              <strong class="text-white">Do not read official RT support as an 8GB promise.</strong><br />
+              Pragmata's own RT recommendation already moves to 12GB cards, which is a good clue that 8GB is better spent on a cleaner raster setup.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tier-12gb" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// 12GB Tier</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best Settings For <span>12GB GPUs</span></h2>
+        <div class="grid lg:grid-cols-2 gap-6 items-stretch">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <div class="space-y-4 text-slate-300">
+              <p>
+                <strong class="text-white">12GB</strong> is where Pragmata starts feeling less like a strict compromise page and
+                more like a real tuning page. Steam's official RT recommendation lands here, and launch-week testing from Tom's
+                Hardware repeatedly shows <strong class="text-white">12GB and 16GB cards separating from smaller VRAM cards at 1440p</strong>,
+                especially once RT enters the conversation.
+              </p>
+              <p>
+                This does not mean every 12GB card is suddenly a PT machine. It means 12GB is the first tier where
+                <strong class="text-white">1440p raster</strong>, <strong class="text-white">selective RT use</strong>, and
+                a cleaner image target start to feel reasonable without immediately collapsing into troubleshooting mode.
+              </p>
+            </div>
+            <div class="bg-hull/80 border border-border clip-card p-5 mt-6">
+              <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">12GB Starting Preset</h3>
+              <ul class="space-y-3 text-sm text-slate-300 list-disc pl-5">
+                <li>Resolution target: <strong class="text-white">1080p high quality</strong> or <strong class="text-white">1440p balanced</strong></li>
+                <li>Lighting target: <strong class="text-white">RT is optional, not mandatory</strong></li>
+                <li>Upscaling: <strong class="text-white">Quality first</strong>, step down only if you need it</li>
+                <li>Best use case: <strong class="text-white">clean raster or selective RT</strong></li>
+                <li>Still risky as a default: <strong class="text-white">Path Tracing</strong></li>
+              </ul>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+            <img src="/images/pragmata/pc-settings/gpu-tier-guide/pragmata-gpu-tier-guide-pt-01.jpg"
+              alt="Pragmata benchmark screenshot used to illustrate the performance cost of path tracing on PC"
+              class="section-image" />
+            <figcaption class="text-muted text-sm p-4">
+              Path Tracing can look meaningfully better, but this is also where launch-week testing shows the sharpest performance tax.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="ok-box mt-6">
+          <strong class="text-white">Good rule of thumb:</strong><br />
+          If you have 12GB, start by building the best raster or light-RT setup you can actually hold, then treat PT as a separate experiment rather than the default plan.
+        </div>
+      </section>
+
+      <section id="tier-16gb" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// 16GB+ Tier</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best Settings For <span>16GB+ GPUs</span></h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">The Real PT Entry Point</h3>
+            <p class="text-sm text-slate-300">
+              NVIDIA's own PT guidance starts at the <strong class="text-white">RTX 4070 Ti Super 16GB</strong> class for
+              1440p-style play and climbs to the <strong class="text-white">RTX 5080 16GB</strong> class for a higher-end
+              PT target. That lines up with independent testing, which treats PT as an enthusiast feature instead of a normal preset.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">What 16GB Buys You</h3>
+            <p class="text-sm text-slate-300">
+              This tier is where you can more realistically combine <strong class="text-white">1440p</strong>,
+              <strong class="text-white">heavier RT/PT options</strong>, and cleaner texture or lighting choices without the whole setup feeling fragile.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">What It Still Does Not Buy</h3>
+            <p class="text-sm text-slate-300">
+              It does not make native PT free. Launch-week coverage still expects you to lean on
+              <strong class="text-white">DLSS</strong> and, on supported RTX cards, <strong class="text-white">Frame Generation</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-panel border border-border clip-card p-6 glow-box mt-6">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">16GB+ Starting Preset</h3>
+          <div class="grid lg:grid-cols-2 gap-6">
+            <ul class="space-y-3 text-sm text-slate-300 list-disc pl-5">
+              <li>Resolution target: <strong class="text-white">1440p quality</strong> or <strong class="text-white">4K raster</strong></li>
+              <li>Lighting target: <strong class="text-white">RT is realistic, PT is situationally realistic</strong></li>
+              <li>Upscaling: <strong class="text-white">DLSS or FSR should still be part of the plan</strong></li>
+            </ul>
+            <ul class="space-y-3 text-sm text-slate-300 list-disc pl-5">
+              <li>Best use case: <strong class="text-white">high-end raster, serious RT, or PT experiments</strong></li>
+              <li>If PT feels noisy or unstable, a premium raster or RT setup may still be the better play.</li>
+              <li>For Intel Arc, troubleshoot the platform first on the <a href="/pc-settings/intel-arc-fixes/" class="text-cyan hover:underline">Intel Arc fixes page</a>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="what-to-lower" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Fast Tuning</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">What To Lower <span>First</span></h2>
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">1</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Ray Tracing</p>
+            <p class="text-xs text-muted">The biggest practical off-switch if your current tier feels too ambitious.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">2</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Upscaling Mode</p>
+            <p class="text-xs text-muted">Balanced is usually a safer early move than gutting lots of smaller settings.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">3</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Shadows</p>
+            <p class="text-xs text-muted">A clean place to claw back headroom without flattening the whole image.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">4</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Volumetrics</p>
+            <p class="text-xs text-muted">Worth trimming before you start throwing away texture clarity on stronger cards.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="vendor-notes" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Vendor Notes</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">DLSS, FSR, And Why PT Is <span>Not A Free Toggle</span></h2>
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">NVIDIA</h3>
+            <p class="text-slate-300">
+              NVIDIA's launch coverage positions Pragmata as a
+              <strong class="text-white">DLSS 4 + Multi Frame Generation + Ray Reconstruction + Path Tracing</strong>
+              showcase. That is a useful signal: PT in this game is built around RTX-specific assistance, not around native brute force alone.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">AMD And Arc Reality</h3>
+            <p class="text-slate-300">
+              Pragmata also ships with <strong class="text-white">AMD FSR upscaling</strong>, which matters if you are not on RTX hardware.
+              If you are on Intel Arc, get your driver and platform baseline sorted first, then come back and tune by tier.
+            </p>
+          </div>
+        </div>
+        <div class="warn-box mt-6">
+          <strong class="text-white">Practical takeaway:</strong><br />
+          PT can be beautiful, but the most dependable "best settings" answer for most players is still a strong raster or light-RT configuration that stays smooth.
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <a href="/pc-settings/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">PC Settings</p>
+            <p class="text-xs text-muted">Use the broader PC page if you want the official requirements and RT/PT overview in one place.</p>
+          </a>
+          <a href="/pc-settings/intel-arc-fixes/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Intel Arc Fixes</p>
+            <p class="text-xs text-muted">Best next stop if your issue is Arc stability, ReBAR, or a menu-loading crash.</p>
+          </a>
+          <a href="/beginners-guide/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Beginner's Guide</p>
+            <p class="text-xs text-muted">Helpful if the game feels rough for reasons that are not purely performance-related.</p>
+          </a>
+          <a href="/weapons/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Weapons</p>
+            <p class="text-xs text-muted">Good follow-up once the game is stable and you want a stronger combat baseline.</p>
+          </a>
+          <a href="/builds/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Builds</p>
+            <p class="text-xs text-muted">Useful after your settings are stable and you want the rest of the run to feel cleaner too.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">GPU Tier Guide <span>FAQ</span></h2>
+        <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Is 8GB VRAM enough for Pragmata on PC?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes, but the safest target is still a 1080p raster setup with Ray Tracing off. Steam's baseline and launch-week testing both point 8GB-class cards toward a more conservative performance-first configuration.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              When does 12GB VRAM matter in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">12GB matters much more once you step into Ray Tracing, higher 1440p targets, or heavier texture and lighting combinations. Pragmata's official RT recommendation already moves into 12GB-class cards.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Do I need 16GB VRAM for Path Tracing in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">For a realistic Path Tracing setup, 16GB-class RTX hardware is the safer starting point. Official NVIDIA guidance and independent launch-week benchmarks both treat PT as a high-end feature that still depends heavily on DLSS and frame generation.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What setting should I lower first in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Turn Ray Tracing off first if you need a quick win. After that, shadows, volumetrics, and upscaling mode are the most practical levers before you start trimming lots of smaller options.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border/70 mt-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <p class="font-display text-lg text-white tracking-[0.16em] uppercase">PRAGMATA<span class="text-cyan">GUIDE</span></p>
+          <p class="text-sm text-muted mt-3 max-w-md">Pragmata walkthroughs, bosses, collectibles, builds, endings, and post-game guides.</p>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Explore</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/pc-settings/" class="hover:text-cyan transition-colors">PC Settings</a></li>
+            <li><a href="/weapons/" class="hover:text-cyan transition-colors">Weapons</a></li>
+            <li><a href="/builds/" class="hover:text-cyan transition-colors">Builds</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Site</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/about/" class="hover:text-cyan transition-colors">About</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy</a></li>
+            <li><a href="/contact/" class="hover:text-cyan transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
