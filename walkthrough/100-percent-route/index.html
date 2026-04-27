@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /walkthrough/100-percent-route/
+       Title: 64 chars | Desc: 157 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata 100% Route Guide - Best Order, Cleanup & Unknown Signal</title>
+  <meta name="description"
+    content="Verified Pragmata 100% route guide with the best story order, Lim Eraser backtrack timing, red barrier cleanup logic, and the safest Unknown Signal finish." />
+  <link rel="canonical" href="https://pragmataguide.com/walkthrough/100-percent-route/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata 100% Route Guide - Best Order, Cleanup & Unknown Signal" />
+  <meta property="og:description"
+    content="A practical Pragmata completion route covering first-playthrough order, Lim Eraser cleanup, red barrier cleanup, and post-story Unknown Signal timing." />
+  <meta property="og:url" content="https://pragmataguide.com/walkthrough/100-percent-route/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/walkthrough/checklists/pragmata-walkthrough-checklists-hero-solar-01.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata 100% Route Guide - Best Order, Cleanup & Unknown Signal" />
+  <meta name="twitter:description"
+    content="Use this verified Pragmata completion route to plan story progress, backtracking, and the safest final cleanup window." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/walkthrough/checklists/pragmata-walkthrough-checklists-hero-solar-01.webp" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'greenline': '#4ade80',
+            'violetline': '#a78bfa',
+            'redline': '#f87171'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box, .danger-box {
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.04); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.04); }
+    .danger-box { border-left: 2px solid #f87171; background: rgba(248, 113, 113, 0.05); }
+    .hero-image, .section-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image { min-height: 280px; }
+    .section-image { min-height: 240px; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .hero-image, .section-image { min-height: 220px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best 100% route in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current guide coverage supports a simple route: play the first two sectors normally, use Lim Eraser for the first deliberate backtrack, keep moving through Terra Dome and Lunum Mines without over-forcing every late gate, finish Central Port, then do final cleanup in Unknown Signal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I backtrack in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first strong backtrack point is after unlocking Lim Eraser in Mass Production Array. Red barrier cleanup is safer later, once the end-of-fourth-level red-clearing ability is unlocked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I do Unknown Signal before New Game Plus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Current post-game guides recommend checking Unknown Signal first, because it continues your completed save and is the cleanest place to finish leftover completion work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are collectibles missable in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current walkthrough coverage treats collectible cleanup as safe, because late abilities and post-story revisit windows let you recover leftovers instead of forcing a perfect first pass."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body text-cyan">Walkthrough</a>
+          <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+          <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
+          <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="grid lg:grid-cols-[1.2fr_0.95fr] gap-6 items-stretch">
+          <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-3 mb-5">
+                <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">100% Route</span>
+                <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Best Order</span>
+                <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Verified Apr 2026+</span>
+              </div>
+              <p class="section-eyebrow">// Completion Route</p>
+              <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+                Pragmata <span class="text-cyan">100% Route</span>
+              </h1>
+              <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+                This page is for the run where you care less about perfect blind-play purity and more about
+                <strong class="text-white">finishing the file cleanly</strong>. The best current route is simple:
+                push the story through the first two sectors, use
+                <strong class="text-white">Lim Eraser</strong> for the first smart return, keep late red-barrier cleanup
+                disciplined, and use <strong class="text-white">Unknown Signal</strong> as the safest final sweep.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <a href="#overview" class="btn-cyan">Best Order</a>
+                <a href="#cleanup-after-lim" class="btn-cyan">Lim Eraser Cleanup</a>
+                <a href="#faq" class="btn-cyan">FAQ</a>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Main Sectors</p>
+                <p class="text-sm text-white font-semibold">5 confirmed</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">First Real Return</p>
+                <p class="text-sm text-white font-semibold">After Lim Eraser</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Best Final Cleanup</p>
+                <p class="text-sm text-white font-semibold">Unknown Signal</p>
+              </div>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+            <img src="/images/pragmata/walkthrough/checklists/pragmata-walkthrough-checklists-hero-solar-01.webp"
+              alt="Pragmata Solar Power Plant screenshot used as the hero image for the 100 percent route guide"
+              class="hero-image" />
+            <figcaption class="text-muted text-sm p-4">
+              The clean route is not the one with zero revisits. It is the one with the fewest pointless revisits.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="overview" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Best Order</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best 100% Order <span>Overview</span></h2>
+        <div class="grid lg:grid-cols-5 sm:grid-cols-2 gap-5">
+          <article class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Step 1</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Solar Power Plant</p>
+            <p class="text-xs text-muted">Play it mostly straight. Current collectible guides agree some pickups are meant to wait for Lim Eraser.</p>
+          </article>
+          <article class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Step 2</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Mass Production Array</p>
+            <p class="text-xs text-muted">Finish the sector and unlock Lim Eraser. This is the first route pivot that really matters.</p>
+          </article>
+          <article class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Step 3</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Lim Eraser Return</p>
+            <p class="text-xs text-muted">Backtrack through the easy blue-crystal leftovers before the route gets busier.</p>
+          </article>
+          <article class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Step 4</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Terra Dome to Central Port</p>
+            <p class="text-xs text-muted">Stay disciplined in the middle and late sectors. Do not force every red gate as soon as you see it.</p>
+          </article>
+          <article class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Step 5</p>
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Unknown Signal</p>
+            <p class="text-xs text-muted">Use the post-story revisit window to sweep what remains before thinking about New Game Plus.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="first-run" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 items-start">
+          <div>
+            <p class="section-eyebrow">// Story Phase</p>
+            <h2 class="section-title text-xl sm:text-2xl mb-6">First-Playthrough <span>Route</span></h2>
+            <div class="space-y-5">
+              <article class="bg-panel border border-border clip-card p-6 glow-box">
+                <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Play Sector 1 Without Over-Optimizing</h3>
+                <p class="text-sm text-slate-300">
+                  Both VGC and GamesRadar treat Solar Power Plant as a sector where some useful items are
+                  intentionally unreachable on the first visit. That means the best completionist habit is not to waste
+                  time trying to solve every blocked path before the game has given you the tool for it.
+                </p>
+              </article>
+
+              <article class="bg-panel border border-border clip-card p-6 glow-box">
+                <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Finish Mass Production Array Cleanly</h3>
+                <p class="text-sm text-slate-300">
+                  Current guide coverage agrees that <strong class="text-white">Lim Eraser</strong> is unlocked toward
+                  the end of Mass Production Array. This is the moment where “100% route” starts becoming a real
+                  routing problem instead of just “play the story and look around.”
+                </p>
+              </article>
+
+              <div class="warn-box text-sm">
+                <strong class="text-amber">Practical rule:</strong> if an early area is blocked by blue crystals, let it go.
+                The first pass is for momentum, not for perfect cleanup.
+              </div>
+            </div>
+          </div>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+            <img src="/images/pragmata/walkthrough/checklists/pragmata-walkthrough-checklists-central-map-01.webp"
+              alt="Pragmata map-style screenshot used for planning a full completion route across the station"
+              class="section-image" />
+            <figcaption class="text-muted text-sm p-4">
+              The route starts simple, then turns into a cleanup problem only after Sector 2 gives you the first barrier-breaking tool.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="cleanup-after-lim" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Backtrack Window</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Post-<span>Lim Eraser</span> Cleanup</h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Return To Solar First</h3>
+            <p class="text-sm text-slate-300">
+              This is the cleanest early backtrack in current coverage. GamesRadar and VGC both point to Solar Power
+              Plant as the obvious first place to cash in Lim Eraser because its blocked upgrade paths are easy to
+              remember and easy to resolve.
+            </p>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Sweep Mass Production Array While It Is Fresh</h3>
+            <p class="text-sm text-slate-300">
+              Sector 2 itself also benefits from an immediate audit. The area is large, but the game loops you back
+              through relevant spaces late in the level, so this is one of the least painful moments to close blue-crystal gaps.
+            </p>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Do Not Turn It Into A Full-Game Sweep Yet</h3>
+            <p class="text-sm text-slate-300">
+              The point of this cleanup window is to remove the easy early leftovers, not to exhaust every future
+              return case. Terra Dome, Lunum Mines, and late red barriers can still wait.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="endgame-cleanup" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Final Sweep</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Endgame / <span>Unknown Signal</span> Cleanup</h2>
+        <div class="space-y-5">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Red Barrier Logic Belongs Late</h3>
+            <p class="text-sm text-slate-300">
+              Current red-barrier guides agree that the second barrier-clearing tool arrives near the end of the fourth
+              level. That is why Terra Dome and Lunum Mines are poor candidates for obsessive first-pass cleanup if you
+              are still seeing red blocks or Dead Filament gates.
+            </p>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Finish The Story Before Starting NG+</h3>
+            <p class="text-sm text-slate-300">
+              VGC's post-game coverage explicitly recommends checking
+              <strong class="text-white">Unknown Signal before New Game Plus</strong>. It continues your completed save
+              in the safer cleanup state, which is exactly what a completion route wants.
+            </p>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Use Unknown Signal As The Final Audit Table</h3>
+            <p class="text-sm text-slate-300">
+              Current walkthrough coverage consistently treats Unknown Signal as the best last stop for leftover
+              collectible and completion work. If your file still feels uneven after Central Port, this is the moment to
+              reconcile the missing sectors, the late abilities, and your true-ending prep.
+            </p>
+          </article>
+
+          <div class="ok-box text-sm">
+            <strong class="text-greenline">Clean order:</strong> finish Central Port, open Unknown Signal, clear any leftover
+            sector work, then move into the Hidden Chamber and the rest of the post-story sequence.
+          </div>
+        </div>
+      </section>
+
+      <section id="safe-now-later" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Route Discipline</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Safe Now <span>Vs Safe Later</span></h2>
+        <div class="grid lg:grid-cols-2 gap-6">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">Safe To Prioritize Now</h3>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li><strong class="text-white">Normal sector flow through Solar and Mass Production Array.</strong> Momentum matters more than squeezing every early detour.</li>
+              <li><strong class="text-white">Solar cleanup after Lim Eraser.</strong> This is the highest-confidence early return in the current public guides.</li>
+              <li><strong class="text-white">Mid-run Shelter checks.</strong> Keep REM, upgrade, and reward systems from piling up into one ugly endgame dump.</li>
+            </ul>
+          </article>
+
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">Safer To Leave For Later</h3>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li><strong class="text-white">Red-barrier leftovers in Terra Dome and beyond.</strong> The game simply has not given you the right tool yet.</li>
+              <li><strong class="text-white">Late cleanup in maze-like sectors.</strong> Central Port and Unknown Signal are better checkpoints for a calmer audit.</li>
+              <li><strong class="text-white">NG+ decisions.</strong> Handle Unknown Signal and your 100% file first, then decide if you want another run.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <a href="/walkthrough/checklists/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Checklist Hub</p>
+            <p class="text-xs text-muted">Use the checklist hub if you want the sector-by-sector control panel behind this route.</p>
+          </a>
+          <a href="/missable-guide/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Missable Guide</p>
+            <p class="text-xs text-muted">Best companion page if your priority is avoiding the few genuinely high-risk completion mistakes.</p>
+          </a>
+          <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+            <p class="text-xs text-muted">Use this when the route hands off from main-story cleanup to Unknown Signal and beyond.</p>
+          </a>
+          <a href="/collectibles/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">All Collectibles</p>
+            <p class="text-xs text-muted">The best page for the full 184 sector item checklist once you know the route order.</p>
+          </a>
+          <a href="/walkthrough/solar-power-plant/#checklist" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Solar Checklist</p>
+            <p class="text-xs text-muted">The most important early revisit page after Lim Eraser comes online.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">100% Route <span>FAQ</span></h2>
+        <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What is the best 100% route in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">The strongest current route is to play the first two sectors normally, use Lim Eraser for the first deliberate cleanup pass, continue through the later sectors without forcing every red gate, then finish the file in Unknown Signal before moving on to New Game Plus.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              When should I backtrack in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">The first important backtrack point is right after unlocking Lim Eraser in Mass Production Array. Late red-barrier cleanup is safer after the red-clearing story ability is unlocked near the end of the fourth level.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Should I do Unknown Signal before New Game Plus?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes. Current post-game guides recommend checking Unknown Signal first because it continues your completed save in the best state for leftover completion work.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Can I still get 100% if I miss early collectibles?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Current walkthrough coverage treats early missed collectibles as recoverable through late abilities and post-story revisit windows, which is why this route favors clean timing over panic-clearing every room on the first pass.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+                <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                  stroke-width="1.5" />
+                <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+              </svg>
+              <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                  class="text-cyan">Guide</span></span>
+            </div>
+            <p class="text-muted text-sm font-body max-w-xs">
+              Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+            </p>
+          </div>
+
+          <nav aria-label="Guide pages footer links">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+            <ul class="space-y-2 text-sm font-body text-muted">
+              <li><a href="/collectibles/" class="hover:text-cyan transition-colors">Collectibles</a></li>
+              <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+              <li><a href="/bosses/" class="hover:text-cyan transition-colors">Boss Guides</a></li>
+              <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Site pages footer links">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+            <ul class="space-y-2 text-sm font-body text-muted">
+              <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+              <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+              <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+              <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+          <p>(c) 2026 PragmataGuide - Independent fan site - Not affiliated with Capcom</p>
+          <p>PRAGMATA (TM) is a trademark of CAPCOM CO., LTD.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
