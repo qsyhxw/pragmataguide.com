@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /pc-settings/intel-arc-fixes/
+       Title: 56 chars | Desc: 152 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata Intel Arc Fixes - Driver & ReBAR Guide</title>
+  <meta name="description"
+    content="Verified Pragmata Intel Arc fixes guide covering driver 32.0.101.8735, Resizable BAR, UEFI and clean-install steps for Arc launch issues." />
+  <link rel="canonical" href="https://pragmataguide.com/pc-settings/intel-arc-fixes/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Intel Arc Fixes - Driver & ReBAR Guide" />
+  <meta property="og:description"
+    content="A focused Pragmata troubleshooting page for Intel Arc users: driver crash fix, ReBAR, UEFI, clean install, and safe first-boot settings." />
+  <meta property="og:url" content="https://pragmataguide.com/pc-settings/intel-arc-fixes/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/mods/pragmata-mods-hero-02.avif" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Intel Arc Fixes - Driver & ReBAR Guide" />
+  <meta name="twitter:description"
+    content="What Intel Arc users should do first in Pragmata: update the driver, verify ReBAR, confirm UEFI, and use a clean install if needed." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/mods/pragmata-mods-hero-02.avif" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box { padding: 0.9rem 1rem; border-radius: 2px; }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.04); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.04); }
+    .hero-image { width: 100%; height: 100%; min-height: 260px; object-fit: cover; display: block; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) { body { font-size: 16px; } .hero-image { min-height: 220px; } }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should Intel Arc users do first for Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install Intel Graphics Driver 32.0.101.8735 or newer first. Intel's official April 21, 2026 release notes specifically list a Pragmata DX12 crash fix for loading into the game menu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need Resizable BAR for Intel Arc in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Resizable BAR is required for optimal performance on Intel Arc, though the GPU can still function without it. Intel's own Arc guidance recommends enabling Re-Size BAR or Smart Access Memory, along with Above 4G Decoding and UEFI mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What BIOS settings matter for Intel Arc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intel's Arc quick-start guidance says to disable CSM or Legacy Mode, enable UEFI boot, and turn on Above 4G Decoding plus Re-Size BAR Support. Updated motherboard firmware can also matter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I do a clean Intel driver install?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If a normal driver update does not resolve the issue, Intel recommends using the clean-install checkbox in the graphics driver installer. If that still fails, Intel's support article provides a full manual clean-install path."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/pc-settings/" class="nav-link text-sm font-medium font-body text-cyan">PC Settings</a>
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+          <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+          <a href="/builds/" class="nav-link text-sm font-medium font-body">Builds</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="grid lg:grid-cols-[1.35fr_0.85fr] gap-6 items-stretch">
+          <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-3 mb-5">
+                <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Intel Arc</span>
+                <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">DX12 Crash Fix</span>
+                <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Verified Apr 21, 2026+</span>
+              </div>
+              <p class="section-eyebrow">// Intel Arc Troubleshooting</p>
+              <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">Pragmata <span class="text-cyan">Intel Arc Fixes</span></h1>
+              <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+                This is the narrow, high-confidence fix page for Intel Arc users. If Pragmata is crashing at the menu,
+                running poorly, or behaving oddly on Arc, the safest order is:
+                <strong class="text-white">update to driver 32.0.101.8735 or newer</strong>, verify
+                <strong class="text-white">Resizable BAR</strong>, confirm your system is in
+                <strong class="text-white">UEFI mode with CSM disabled</strong>, and only then move on to a clean reinstall.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <a href="#first-fix" class="btn-cyan">First Fix</a>
+                <a href="#rebar" class="btn-cyan">ReBAR</a>
+                <a href="#clean-install" class="btn-cyan">Clean Install</a>
+                <a href="#faq" class="btn-cyan">FAQ</a>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Driver</p>
+                <p class="text-sm text-white font-semibold">32.0.101.8735+</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">BIOS</p>
+                <p class="text-sm text-white font-semibold">UEFI + Above 4G + ReBAR</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Last Resort</p>
+                <p class="text-sm text-white font-semibold">Intel clean driver install</p>
+              </div>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+            <img src="/images/pragmata/collectibles/mods/pragmata-mods-hero-02.avif"
+              alt="PC settings themed local Pragmata image used for an Intel Arc fixes page"
+              class="hero-image" />
+            <figcaption class="text-muted text-sm p-4">
+              For Intel Arc, the fix order matters more than any one ultra-specific settings preset.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="first-fix" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// First Fix</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Start With The <span>Driver</span></h2>
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Why 32.0.101.8735 Matters</h3>
+            <p class="text-slate-300">
+              Intel's official <strong class="text-white">April 21, 2026</strong> driver release notes for
+              <strong class="text-white">32.0.101.8735</strong> specifically list a
+              <strong class="text-white">Pragmata (DX12) application crash while loading into the game menu</strong>
+              as a fixed issue for Intel Arc A-Series, Intel Arc B-Series, and Intel Core Ultra systems with Intel Arc graphics.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">What To Do First</h3>
+            <p class="text-slate-300">
+              If you are below <strong class="text-white">32.0.101.8735</strong>, do not start by endlessly changing
+              in-game graphics options. Update the Intel graphics driver first. For this specific launch issue, the
+              driver is not a generic maybe step. It is the first verified fix.
+            </p>
+          </div>
+        </div>
+        <div class="ok-box mt-6">
+          <strong class="text-white">Shortest version:</strong><br />
+          Menu crash on Intel Arc: update the graphics driver before changing anything else.
+        </div>
+      </section>
+
+      <section id="rebar" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// ReBAR & BIOS</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Verify <span>Resizable BAR</span></h2>
+        <div class="grid lg:grid-cols-[1fr_1fr] gap-6 items-start">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <div class="space-y-4 text-slate-300">
+              <p>
+                Intel's Arc documentation is very clear that
+                <strong class="text-white">Resizable BAR must be enabled for optimal performance</strong>.
+                Intel also says Arc can still function without ReBAR, but this is not the configuration you want to
+                troubleshoot performance from if you are trying to get a stable, normal experience.
+              </p>
+              <p>
+                On Intel's quick-start guide, the required BIOS path is also explicit:
+                <strong class="text-white">disable CSM or Legacy Mode</strong>,
+                <strong class="text-white">enable UEFI boot</strong>,
+                <strong class="text-white">turn on Above 4G Decoding</strong>, and
+                <strong class="text-white">turn on Re-Size BAR Support</strong>.
+              </p>
+            </div>
+          </article>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">Safe ReBAR Checklist</h3>
+            <ul class="space-y-3 text-sm text-slate-300 list-disc pl-5">
+              <li>Confirm the system is booting in `UEFI`, not `Legacy` or `CSM` mode.</li>
+              <li>Enable `Above 4G Decoding` in BIOS.</li>
+              <li>Enable `Re-Size BAR Support` or `Smart Access Memory`.</li>
+              <li>Use Intel `Driver & Support Assistant` or Intel Graphics Software to confirm ReBAR is detected.</li>
+              <li>Update motherboard firmware if the ReBAR option is missing or unstable.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="warn-box mt-6">
+          <strong class="text-white">Important nuance:</strong><br />
+          Intel says Arc can still work without ReBAR, but it does not treat that as the optimal target. If you are chasing frame pacing or odd performance swings, check ReBAR before assuming the game itself is the only problem.
+        </div>
+      </section>
+
+      <section id="os-baseline" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Platform Baseline</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Match The Official <span>Floor</span></h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Windows 11 First</h3>
+            <p class="text-sm text-slate-300">Steam lists <strong class="text-white">Windows 11 (64-bit)</strong> as Pragmata's official OS requirement.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">DirectX 12</h3>
+            <p class="text-sm text-slate-300">The Steam requirements also fix the game on <strong class="text-white">DX12</strong>, so old DX11-style assumptions are the wrong baseline.</p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-5 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">SSD Recommended</h3>
+            <p class="text-sm text-slate-300">Capcom's Steam page calls out an <strong class="text-white">SSD-recommended</strong> setup, which matters for load behavior before you even start tuning visuals.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="clean-install" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Clean Install</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">When To Use A <span>Clean Driver Install</span></h2>
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">Intel's Official Path</h3>
+            <p class="text-slate-300">
+              Intel's own support article says a clean installation removes old drivers and restores Intel settings to default.
+              If a normal update does not resolve the problem, Intel recommends checking the
+              <strong class="text-white">Execute a clean installation</strong> box in the graphics driver installer.
+            </p>
+          </div>
+          <div class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">OEM Systems Need Extra Caution</h3>
+            <p class="text-slate-300">
+              Intel also warns that generic drivers can overwrite OEM-customized drivers. On laptops or prebuilt systems,
+              Intel's own guidance is to check the computer manufacturer first if you suspect platform-specific packaging
+              or stability differences.
+            </p>
+          </div>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box mt-6">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">Safe Escalation Order</h3>
+          <ol class="space-y-3 text-sm text-slate-300 list-decimal pl-5">
+            <li>Update to `32.0.101.8735` or newer.</li>
+            <li>Verify `UEFI`, `Above 4G Decoding`, and `Re-Size BAR Support`.</li>
+            <li>Retest the game with `RT off` before experimenting with heavier features.</li>
+            <li>Run Intel's `clean installation` option if the issue remains.</li>
+            <li>Only after that, move on to a deeper manual clean install path.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <a href="/pc-settings/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">PC Settings</p>
+            <p class="text-xs text-muted">Use this if your issue is broader than Arc-specific troubleshooting.</p>
+          </a>
+          <a href="/builds/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Builds</p>
+            <p class="text-xs text-muted">Helpful once the game is stable and you want a stronger combat baseline.</p>
+          </a>
+          <a href="/weapons/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Weapons</p>
+            <p class="text-xs text-muted">Good follow-up if your problem feels like weak damage rather than weak performance.</p>
+          </a>
+          <a href="/beginners-guide/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Beginner's Guide</p>
+            <p class="text-xs text-muted">Best next read if your system is fine but the game's dual-control loop still feels rough.</p>
+          </a>
+          <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+            <p class="text-xs text-muted">Useful if you are tuning Arc for Unknown Signal or second-run cleanup.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">Intel Arc Fixes <span>FAQ</span></h2>
+        <div class="max-w-3xl space-y-3" itemscope itemtype="https://schema.org/FAQPage">
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What should Intel Arc users do first for Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Install Intel Graphics Driver 32.0.101.8735 or newer first. Intel's official April 21, 2026 release notes specifically list a Pragmata DX12 crash fix for loading into the game menu.</p>
+            </div>
+          </details>
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              Do I need Resizable BAR for Intel Arc in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Resizable BAR is required for optimal performance on Intel Arc, though the GPU can still function without it. Intel's own Arc guidance recommends enabling Re-Size BAR or Smart Access Memory, along with Above 4G Decoding and UEFI mode.</p>
+            </div>
+          </details>
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              What BIOS settings matter for Intel Arc?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Intel's Arc quick-start guidance says to disable CSM or Legacy Mode, enable UEFI boot, and turn on Above 4G Decoding plus Re-Size BAR Support. Updated motherboard firmware can also matter.</p>
+            </div>
+          </details>
+          <details class="bg-panel border border-border group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors" itemprop="name">
+              When should I do a clean Intel driver install?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">If a normal driver update does not resolve the issue, Intel recommends using the clean-install checkbox in the graphics driver installer. If that still fails, Intel's support article provides a full manual clean-install path.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border/70 mt-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <p class="font-display text-lg text-white tracking-[0.16em] uppercase">PRAGMATA<span class="text-cyan">GUIDE</span></p>
+          <p class="text-sm text-muted mt-3 max-w-md">Pragmata walkthroughs, bosses, collectibles, builds, endings, and post-game guides.</p>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Explore</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/pc-settings/" class="hover:text-cyan transition-colors">PC Settings</a></li>
+            <li><a href="/weapons/" class="hover:text-cyan transition-colors">Weapons</a></li>
+            <li><a href="/builds/" class="hover:text-cyan transition-colors">Builds</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-3">Site</p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="/about/" class="hover:text-cyan transition-colors">About</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy</a></li>
+            <li><a href="/contact/" class="hover:text-cyan transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
