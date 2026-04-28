@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /post-game/black-box-mod/
+       Title: 58 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+
+  <title>Pragmata Black Box Mod Guide - Get It, Use It, Ending</title>
+  <meta name="description"
+    content="Verified Pragmata Black Box Mod guide covering how to unlock it, where it comes from in Unknown Signal, what it does, and how it triggers the extra ending." />
+  <link rel="canonical" href="https://pragmataguide.com/post-game/black-box-mod/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Black Box Mod Guide - Get It, Use It, Ending" />
+  <meta property="og:description"
+    content="A verified Black Box Mod guide covering the Architect's vault, Unknown Signal requirements, item purpose, and the extra ending trigger." />
+  <meta property="og:url" content="https://pragmataguide.com/post-game/black-box-mod/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/post-game/black-box-mod/pragmata-black-box-mod-hero-01.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Black Box Mod Guide - Get It, Use It, Ending" />
+  <meta name="twitter:description"
+    content="How to get the Black Box Mod in Pragmata, what it actually does, and how to use it for the extra ending route." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/post-game/black-box-mod/pragmata-black-box-mod-hero-01.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'violet': '#a78bfa',
+            'redline': '#f87171',
+            'greenline': '#4ade80'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .card-hover { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+    .card-hover:hover { transform: translateY(-4px); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box, .danger-box { padding: 0.9rem 1rem; border-radius: 2px; }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.05); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.05); }
+    .danger-box { border-left: 2px solid #f87171; background: rgba(248, 113, 113, 0.05); }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid rgba(0, 229, 255, 0.22);
+      color: #00e5ff;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: #8892a4; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #00e5ff; }
+    .hero-image { width: 100%; height: 100%; min-height: 260px; object-fit: cover; display: block; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) { body { font-size: 16px; } .hero-image { min-height: 220px; } }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pragmataguide.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Post-Game", "item": "https://pragmataguide.com/post-game/" },
+        { "@type": "ListItem", "position": 3, "name": "Black Box Mod", "item": "https://pragmataguide.com/post-game/black-box-mod/" }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you get the Black Box Mod in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The strongest source overlap says you must finish the full Unknown Signal route: reach 100% completion across all five sectors, defeat the four enhanced sector bosses, clear all 10 Hidden Chamber challenge missions, then collect the Black Box Mod from the Architect's vault."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Black Box Mod have any gameplay effect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current Black Box coverage says it provides no combat benefit. Its importance is narrative: it is the required mod for the extra ending route."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you use the Black Box Mod for the extra ending?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Equip the Black Box Mod to Hugh at the Shelter, then return to the final boss rematch in Central Port and clear that fight again. The extra ending scene only triggers if the mod is equipped before the rematch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Black Box Mod the only reward from the Architect's vault?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The strongest reward overlap also includes the Lim Cannon weapon and Obsidia outfits for Hugh and Diana, but the Black Box Mod is the reward most directly tied to story completion."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-space/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3" aria-label="PragmataGuide home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" stroke="#00e5ff" stroke-width="1.5" />
+            <circle cx="14" cy="14" r="3" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm sm:text-base font-bold tracking-[0.22em] uppercase text-white">Pragmata<span class="text-cyan">Guide</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/post-game/" class="nav-link text-cyan">Post-Game</a>
+          <a href="/post-game/unknown-signal-rewards/" class="nav-link">Unknown Signal</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+          <a href="/story/" class="nav-link">Story</a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull" aria-label="Mobile navigation">
+      <a href="/post-game/" class="nav-link py-1 text-cyan">Post-Game</a>
+      <a href="/post-game/unknown-signal-rewards/" class="nav-link py-1">Unknown Signal</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+      <a href="/story/" class="nav-link py-1">Story</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="mx-2 text-muted">/</span><a href="/post-game/">Post-Game</a><span class="mx-2 text-muted">/</span><span class="text-white">Black Box Mod</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.78fr] gap-6 items-stretch">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-3 mb-5">
+              <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Post-Game</span>
+              <span class="text-xs font-mono text-violet border border-violet/30 px-2 py-0.5">True Ending Route</span>
+              <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Verified Apr 28 2026</span>
+            </div>
+            <p class="section-eyebrow">Post-Game / Black Box Mod</p>
+            <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">Pragmata <span class="text-cyan">Black Box Mod</span> Guide</h1>
+            <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+              The <strong class="text-white">Black Box Mod</strong> is the post-game reward that matters most to ending hunters.
+              It comes from the <strong class="text-white">Architect's vault</strong> at the end of the full
+              <strong class="text-white">Unknown Signal</strong> route, but simply owning it is not enough. You need to
+              equip it before the final rematch if you want Pragmata's extra ending payoff.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <a href="#how-to-get" class="btn-cyan">How To Get It</a>
+              <a href="#what-it-does" class="btn-cyan">What It Does</a>
+              <a href="#ending-route" class="btn-cyan">Ending Route</a>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="border border-border bg-panel/70 p-4">
+                <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Source</p>
+                <p class="text-sm text-muted">Architect's vault in the Hidden Chamber reward chain.</p>
+              </div>
+              <div class="border border-border bg-panel/70 p-4">
+                <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Combat Value</p>
+                <p class="text-sm text-muted">No stable gameplay benefit documented by current launch-week guides.</p>
+              </div>
+              <div class="border border-border bg-panel/70 p-4">
+                <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Main Use</p>
+                <p class="text-sm text-muted">Triggering the extra ending on the final boss rematch.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <figure class="bg-hull/95 border border-border clip-card glow-box overflow-hidden fade-up delay-1">
+          <img src="/images/pragmata/post-game/black-box-mod/pragmata-black-box-mod-hero-01.jpg"
+            alt="Post-game mod-themed image used as the hero image for the Black Box Mod guide" class="hero-image" />
+          <figcaption class="px-4 py-3 text-xs text-muted border-t border-border">
+            Black Box Mod is the last step that turns Unknown Signal completion into the extra ending route.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="how-to-get" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Unlock Path</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">How To Get The <span>Black Box Mod</span></h2>
+      <div class="grid lg:grid-cols-[0.92fr_1.08fr] gap-6 items-start">
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/post-game/black-box-mod/pragmata-black-box-mod-hidden-chamber-01.jpg"
+            alt="Challenge screenshot used to represent Hidden Chamber progress for the Black Box Mod route" class="hero-image" />
+          <figcaption class="px-4 py-3 text-xs text-muted border-t border-border">
+            Current launch-week guides agree that the Black Box Mod is not a random drop. It sits at the end of the Hidden Chamber route.
+          </figcaption>
+        </figure>
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="space-y-4 text-muted">
+            <p>
+              The clearest source overlap is that you do <strong class="text-white">not</strong> get the Black Box Mod from
+              a single mission. It unlocks only after the full Unknown Signal reward chain is finished and the
+              <strong class="text-white">Architect's vault</strong> opens.
+            </p>
+            <p>
+              The stable requirement set across current coverage is:
+            </p>
+            <ol class="list-decimal list-inside space-y-2 text-sm text-muted">
+              <li>Finish the main story once and unlock <strong class="text-white">Unknown Signal</strong>.</li>
+              <li>Reach <strong class="text-white">100% completion across all five sectors</strong>.</li>
+              <li>Defeat the <strong class="text-white">four enhanced sector bosses</strong>.</li>
+              <li>Clear all <strong class="text-white">10 Hidden Chamber challenge missions</strong>.</li>
+              <li>Open the <strong class="text-white">Architect's vault</strong> and collect the reward set.</li>
+            </ol>
+            <div class="warn-box">
+              <strong class="text-white">Naming note:</strong><br />
+              Some guides call these Hidden Chamber activities `Secret Missions`, some call them `Sim Pods`, and some call them `Big Cabin challenges`. The stable fact is the count and the completion requirement, not the exact label.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="vault" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Reward Set</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">What Comes Out Of The <span>Architect's Vault</span></h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="space-y-4 text-muted">
+            <p>
+              The strongest reward overlap for the final vault is:
+              <strong class="text-white">Lim Cannon</strong>,
+              <strong class="text-white">Black Box Mod</strong>, and
+              <strong class="text-white">Obsidia outfits for Hugh and Diana</strong>.
+            </p>
+            <p>
+              That split is useful because each reward fills a different role. `Lim Cannon` is the gameplay or build reward,
+              `Obsidia` is the cosmetic reward, and `Black Box Mod` is the narrative-critical reward that matters for ending hunters.
+            </p>
+            <div class="ok-box">
+              <strong class="text-white">Best simple framing:</strong><br />
+              If you only care about story payoff, treat Black Box Mod as the one vault item you cannot ignore.
+            </div>
+          </div>
+        </article>
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">Stable Final Reward Cluster</h3>
+          <div class="space-y-3 text-sm text-muted">
+            <div class="flex items-center justify-between gap-4 border border-border p-4">
+              <span>Weapon</span>
+              <span class="badge">Lim Cannon</span>
+            </div>
+            <div class="flex items-center justify-between gap-4 border border-border p-4">
+              <span>Mod</span>
+              <span class="badge">Black Box Mod</span>
+            </div>
+            <div class="flex items-center justify-between gap-4 border border-border p-4">
+              <span>Cosmetics</span>
+              <span class="badge">Obsidia</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="what-it-does" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Actual Use</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">What The Black Box Mod <span>Actually Does</span></h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="space-y-4 text-muted">
+            <p>
+              Current guide coverage is unusually consistent on one point:
+              <strong class="text-white">Black Box Mod has no combat value</strong>.
+              It is not a damage boost, not a survivability perk, and not a general-purpose build piece for ordinary post-game combat.
+            </p>
+            <p>
+              Instead, its importance is narrative. One guide quotes the in-game description as saying it
+              <strong class="text-white">"may suppress the spread of dead filament in organic life"</strong>,
+              which is why players immediately connect it to Hugh's condition and the extra ending route.
+            </p>
+            <div class="danger-box">
+              <strong class="text-white">Do not overread the item:</strong><br />
+              The item description strongly hints at story meaning, but current public coverage still treats the exact lore implications as interpretation rather than hard-confirmed science text.
+            </div>
+          </div>
+        </article>
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">Best Safe Summary</h3>
+          <div class="space-y-4 text-sm text-muted">
+            <div class="border border-border p-4">
+              <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Gameplay</p>
+              <p>No stable combat benefit documented.</p>
+            </div>
+            <div class="border border-border p-4">
+              <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Narrative</p>
+              <p>Directly tied to the extra ending trigger.</p>
+            </div>
+            <div class="border border-border p-4">
+              <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Lore Hint</p>
+              <p>Its description points toward dead filament suppression in organic life.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ending-route" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Ending Trigger</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">How It Connects To The <span>Extra Ending</span></h2>
+      <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 items-start">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="space-y-4 text-muted">
+            <p>
+              This is the most important distinction on the whole page:
+              <strong class="text-white">getting the Black Box Mod and using the Black Box Mod are separate steps</strong>.
+              The extra ending does not trigger just because the item is sitting in your inventory.
+            </p>
+            <p>
+              The stable route is:
+            </p>
+            <ol class="list-decimal list-inside space-y-2 text-sm text-muted">
+              <li>Collect the mod from the Architect's vault.</li>
+              <li>Return to the <strong class="text-white">Shelter</strong>.</li>
+              <li><strong class="text-white">Equip Black Box Mod to Hugh</strong>.</li>
+              <li>Go back to the final rematch in <strong class="text-white">Central Port</strong>.</li>
+              <li>Defeat the enhanced final boss again.</li>
+              <li>Watch the normal ending sequence continue into the extra post-credits payoff.</li>
+            </ol>
+            <div class="warn-box">
+              <strong class="text-white">Most common mistake:</strong><br />
+              Players finish Unknown Signal, grab the mod, and assume the ending will change automatically. Current guides agree the equip step is mandatory.
+            </div>
+          </div>
+        </article>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/post-game/black-box-mod/pragmata-black-box-mod-final-rematch-01.jpg"
+            alt="Boss-fight image used to represent the final rematch step for the Black Box Mod route" class="hero-image" />
+          <figcaption class="px-4 py-3 text-xs text-muted border-t border-border">
+            Black Box Mod matters at the rematch step, not during the earlier Hidden Chamber or vault clear itself.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="why-it-matters" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Why It Matters</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Why This Mod Gets Its <span>Own Page</span></h2>
+      <div class="grid lg:grid-cols-3 gap-5">
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">It Solves A Specific Search Intent</h3>
+          <p class="text-sm text-muted">Players usually search this item because they already finished Unknown Signal or are trying to confirm the exact ending trigger.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">It Is Not A Normal Build Reward</h3>
+          <p class="text-sm text-muted">Unlike most Mods, Black Box matters more for story completion than raw combat value.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">It Bridges Two Clusters</h3>
+          <p class="text-sm text-muted">This one item links the Unknown Signal reward path to the endings cluster more directly than almost any other post-game reward.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Related Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
+        <a href="/post-game/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+          <p class="text-xs text-muted">Best top-level route if you want Unknown Signal, NG+, and cleanup order in one page.</p>
+        </a>
+        <a href="/post-game/unknown-signal-rewards/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Unknown Signal Rewards</p>
+          <p class="text-xs text-muted">Use this if you want the full reward table instead of the Black Box Mod route alone.</p>
+        </a>
+        <a href="/endings/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Endings</p>
+          <p class="text-xs text-muted">Best companion if your real question is which ending Black Box Mod actually changes.</p>
+        </a>
+        <a href="/walkthrough/100-percent-route/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">100% Route</p>
+          <p class="text-xs text-muted">Helpful if you want the cleanest order for sector completion before the vault grind.</p>
+        </a>
+        <a href="/collectibles/best-mods/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Best Mods</p>
+          <p class="text-xs text-muted">Useful if you want to compare Black Box with ordinary combat-focused Mods.</p>
+        </a>
+        <a href="/story/hugh-explained/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Hugh Explained</p>
+          <p class="text-xs text-muted">Helpful once the Black Box lore hint turns into questions about Hugh's fate.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Black Box Mod <span>FAQ</span></h2>
+      <div class="max-w-3xl space-y-3">
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            How do you get the Black Box Mod in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>The strongest source overlap says you must finish the full Unknown Signal route: reach 100% completion across all five sectors, defeat the four enhanced sector bosses, clear all 10 Hidden Chamber challenge missions, then collect the Black Box Mod from the Architect's vault.</p>
+          </div>
+        </details>
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            Does the Black Box Mod have any gameplay effect?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Current Black Box coverage says it provides no combat benefit. Its importance is narrative: it is the required mod for the extra ending route.</p>
+          </div>
+        </details>
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            How do you use the Black Box Mod for the extra ending?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Equip the Black Box Mod to Hugh at the Shelter, then return to the final boss rematch in Central Port and clear that fight again. The extra ending scene only triggers if the mod is equipped before the rematch.</p>
+          </div>
+        </details>
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            Is the Black Box Mod the only reward from the Architect's vault?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>No. The strongest reward overlap also includes the Lim Cannon weapon and Obsidia outfits for Hugh and Diana, but the Black Box Mod is the reward most directly tied to story completion.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/post-game/" class="hover:text-cyan transition-colors">Post-Game</a></li>
+            <li><a href="/post-game/unknown-signal-rewards/" class="hover:text-cyan transition-colors">Unknown Signal Rewards</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">Endings</a></li>
+            <li><a href="/story/" class="hover:text-cyan transition-colors">Story Hub</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
