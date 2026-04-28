@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /trophies-achievements/tracker/
+       Title: 58 chars | Desc: 156 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+
+  <title>Pragmata Trophy Tracker - Checklist Tool for 35/36 Goals</title>
+  <meta name="description"
+    content="Interactive Pragmata trophy tracker for 35 shared achievements or 36 PS5 trophies, with filters, roadmap phases, exportable progress, and missable watch notes." />
+  <link rel="canonical" href="https://pragmataguide.com/trophies-achievements/tracker/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Trophy Tracker - Checklist Tool for 35/36 Goals" />
+  <meta property="og:description"
+    content="A tool-first Pragmata trophy and achievement tracker with platform toggle, phase filters, exportable progress, and high-risk completion notes." />
+  <meta property="og:url" content="https://pragmataguide.com/trophies-achievements/tracker/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/trophies-achievements/tracker/pragmata-trophy-tracker-hero-01.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Trophy Tracker - Checklist Tool for 35/36 Goals" />
+  <meta name="twitter:description"
+    content="Track Pragmata trophies and achievements with PS5 and Steam support, route filters, local saves, and exportable checklist progress." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/trophies-achievements/tracker/pragmata-trophy-tracker-hero-01.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'greenline': '#4ade80',
+            'violetline': '#a78bfa'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .card-hover { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+    .card-hover:hover { transform: translateY(-4px); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan, .btn-amber, .btn-muted {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      min-height: 42px;
+      padding: 0.6rem 1rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-cyan { background: transparent; color: #00e5ff; border-color: rgba(0, 229, 255, 0.5); }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .btn-amber { background: transparent; color: #ffb703; border-color: rgba(255, 183, 3, 0.45); }
+    .btn-amber:hover { background: rgba(255, 183, 3, 0.12); color: #fff; }
+    .btn-muted { background: transparent; color: #cbd5e1; border-color: rgba(136, 146, 164, 0.4); }
+    .btn-muted:hover { background: rgba(136, 146, 164, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box, .danger-box { padding: 0.95rem 1rem; border-radius: 2px; }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.05); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.05); }
+    .danger-box { border-left: 2px solid #f87171; background: rgba(248, 113, 113, 0.05); }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid rgba(0, 229, 255, 0.22);
+      color: #00e5ff;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .hero-image, .section-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image { min-height: 280px; }
+    .section-image { min-height: 240px; }
+    .breadcrumb a { color: #8892a4; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #00e5ff; }
+    .tool-input, .tool-select, .tool-textarea {
+      width: 100%;
+      background: rgba(12, 15, 26, 0.95);
+      border: 1px solid #1e2d45;
+      color: #e2e8f0;
+      border-radius: 2px;
+      padding: 0.8rem 0.9rem;
+      font-size: 0.95rem;
+    }
+    .tool-textarea { min-height: 160px; resize: vertical; }
+    .progress-rail { width: 100%; height: 10px; background: rgba(136, 146, 164, 0.16); overflow: hidden; }
+    .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #00e5ff, #00b4d8); transition: width 0.22s ease; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid rgba(0, 229, 255, 0.18);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: #cbd5e1;
+    }
+    .phase-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 0.8rem;
+      border: 1px solid rgba(0, 229, 255, 0.18);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      background: rgba(12, 15, 26, 0.7);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      cursor: pointer;
+    }
+    .phase-btn.is-active, .phase-btn:hover {
+      color: #00e5ff;
+      border-color: rgba(0, 229, 255, 0.45);
+      background: rgba(0, 229, 255, 0.08);
+    }
+    .list-shell { display: grid; gap: 1rem; }
+    .ach-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.8rem;
+      align-items: start;
+      padding: 0.85rem 0.9rem;
+      border: 1px solid rgba(30, 45, 69, 0.9);
+      background: rgba(6, 8, 16, 0.86);
+    }
+    .ach-item.is-complete { opacity: 0.72; }
+    .ach-item.is-complete .item-title { text-decoration: line-through; }
+    .check-toggle { width: 18px; height: 18px; accent-color: #00e5ff; cursor: pointer; flex-shrink: 0; margin-top: 0.15rem; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.45rem; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.14rem 0.45rem;
+      border: 1px solid rgba(136, 146, 164, 0.18);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      color: #cbd5e1;
+    }
+    .tag-risk { color: #f87171; border-color: rgba(248, 113, 113, 0.25); }
+    .tag-post { color: #a78bfa; border-color: rgba(167, 139, 250, 0.25); }
+    .tag-story { color: #4ade80; border-color: rgba(74, 222, 128, 0.25); }
+    .tag-collect { color: #ffb703; border-color: rgba(255, 183, 3, 0.25); }
+    .pill {
+      min-width: 92px;
+      text-align: center;
+      padding: 0.18rem 0.55rem;
+      border: 1px solid rgba(0, 229, 255, 0.18);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: #00e5ff;
+    }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 768px) {
+      .ach-item { grid-template-columns: auto 1fr; }
+      .pill { grid-column: 2 / 3; justify-self: start; margin-top: 0.3rem; }
+    }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .hero-image, .section-image { min-height: 220px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pragmataguide.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Trophies & Achievements", "item": "https://pragmataguide.com/trophies-achievements/" },
+        { "@type": "ListItem", "position": 3, "name": "Tracker", "item": "https://pragmataguide.com/trophies-achievements/tracker/" }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many trophies and achievements does this tracker support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tracker supports the 35 shared achievements used on Steam and Xbox-style milestone lists, plus the extra PlayStation-only Platinum trophy for a 36-trophy PS5 view."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this page for both Steam and PS5?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use the platform toggle to track the shared 35-achievement set or turn on the PlayStation Platinum layer for the full PS5 trophy count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the biggest missable-risk trophy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current roadmap coverage most consistently flags You're Not Getting Away That Easy as the main missable-risk trophy, because Sweeper bot spawns are limited and can be lost if you leave them too late."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the tool separate first-run, post-game, and Lunatic phases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That split reflects the most stable roadmap advice: finish story progression first, use Unknown Signal for cleanup and special sector work, and then do Lunatic as the second playthrough requirement."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-space/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3" aria-label="PragmataGuide home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" stroke="#00e5ff" stroke-width="1.5" />
+            <circle cx="14" cy="14" r="3" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm sm:text-base font-bold tracking-[0.22em] uppercase text-white">Pragmata<span class="text-cyan">Guide</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/trophies-achievements/" class="nav-link text-cyan">Trophies</a>
+          <a href="/post-game/" class="nav-link">Post-Game</a>
+          <a href="/collectibles/" class="nav-link">Collectibles</a>
+          <a href="/walkthrough/100-percent-route/" class="nav-link">100%</a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull" aria-label="Mobile navigation">
+      <a href="/trophies-achievements/" class="nav-link py-1 text-cyan">Trophies</a>
+      <a href="/post-game/" class="nav-link py-1">Post-Game</a>
+      <a href="/collectibles/" class="nav-link py-1">Collectibles</a>
+      <a href="/walkthrough/100-percent-route/" class="nav-link py-1">100%</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="mx-2 text-muted">/</span><a href="/trophies-achievements/">Trophies &amp; Achievements</a><span class="mx-2 text-muted">/</span><span class="text-white">Tracker</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.42fr_0.82fr] gap-6 items-stretch">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-3 mb-5">
+              <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Tracker Tool</span>
+              <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">35 Shared Goals</span>
+              <span class="text-xs font-mono text-redline border border-redline/30 px-2 py-0.5">1 Main Watch List Trophy</span>
+              <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Verified Apr 2026+</span>
+            </div>
+            <p class="section-eyebrow">Trophies / Completion Tracker</p>
+            <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+              Pragmata <span class="text-cyan">Trophy Tracker</span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+              This page is the dedicated checklist tool for players who want a cleaner way to track the
+              <strong class="text-white">35 shared achievements</strong>, optionally add the
+              <strong class="text-white">PlayStation Platinum</strong>, and keep first-run, post-game, and Lunatic work separated.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <a href="#tool" class="btn-cyan">Open Tracker</a>
+              <a href="#phase-notes" class="btn-cyan">Phase Notes</a>
+              <a href="#faq" class="btn-cyan">FAQ</a>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-4 gap-4">
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Steam / Shared</p>
+              <p class="text-sm text-white font-semibold">35 goals</p>
+            </div>
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">PS5</p>
+              <p class="text-sm text-white font-semibold">36 trophies</p>
+            </div>
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-redline tracking-widest uppercase mb-2">Main Risk</p>
+              <p class="text-sm text-white font-semibold">Sweeper trophy</p>
+            </div>
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-violetline tracking-widest uppercase mb-2">Endgame Core</p>
+              <p class="text-sm text-white font-semibold">Unknown Signal</p>
+            </div>
+          </div>
+        </article>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+          <img src="/images/pragmata/trophies-achievements/tracker/pragmata-trophy-tracker-hero-01.jpg"
+            alt="Pragmata Hidden Chamber screenshot used as the hero image for the trophy tracker page"
+            class="hero-image" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="tool" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-24">
+      <div class="mb-8">
+        <p class="section-eyebrow">// Interactive Tool</p>
+        <h2 class="section-title text-xl sm:text-3xl mb-4">Platform Toggle, Phase Filters, <span>Clean Progress</span></h2>
+        <p class="text-slate-300 max-w-4xl">
+          The tracker follows the shared milestone list first, then lets PS5 players layer Platinum on top. That keeps the checklist stable
+          across platforms while still matching the real platform split.
+        </p>
+      </div>
+
+      <div class="grid xl:grid-cols-[0.92fr_1.08fr] gap-6 items-start">
+        <aside class="bg-hull/95 border border-border clip-card p-5 sm:p-6 glow-box xl:sticky xl:top-24">
+          <div class="mb-5">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <span class="font-display text-sm uppercase tracking-wide text-white">Visible Progress</span>
+              <span id="progress-text" class="text-sm font-mono text-cyan">0 / 35</span>
+            </div>
+            <div class="progress-rail">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 xl:grid-cols-1 gap-4 mb-5">
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-1">Platform</p>
+              <select id="platform-filter" class="tool-select">
+                <option value="steam">Steam / Shared 35</option>
+                <option value="ps5">PS5 / 36 with Platinum</option>
+              </select>
+            </div>
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-1">Category</p>
+              <select id="category-filter" class="tool-select">
+                <option value="all">All categories</option>
+                <option value="Story">Story</option>
+                <option value="Post-Game">Post-Game</option>
+                <option value="Shelter">Shelter / Sim</option>
+                <option value="Collectible">Collectible / Completion</option>
+                <option value="Combat">Combat / Challenge</option>
+                <option value="Platinum">Platinum</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 xl:grid-cols-1 gap-4 mb-5">
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-1">Search</p>
+              <input id="search-input" class="tool-input" type="search" placeholder="Unknown Signal, Sweeper, Sim..." />
+            </div>
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-3">List Mode</p>
+              <div class="flex flex-wrap gap-3">
+                <label class="chip"><input id="hide-complete" type="checkbox" class="check-toggle" /> Hide Complete</label>
+                <label class="chip"><input id="watch-only" type="checkbox" class="check-toggle" /> Watch List</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-panel/70 border border-border p-4 clip-card mb-5">
+            <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-3">Phase Presets</p>
+            <div class="grid grid-cols-2 gap-3">
+              <button class="phase-btn is-active" data-phase="all">All</button>
+              <button class="phase-btn" data-phase="first-run">First Run</button>
+              <button class="phase-btn" data-phase="cleanup">Cleanup</button>
+              <button class="phase-btn" data-phase="post-game">Post-Game</button>
+              <button class="phase-btn" data-phase="lunatic">Lunatic</button>
+              <button class="phase-btn" data-phase="watch">Watch List</button>
+            </div>
+          </div>
+
+          <div class="bg-panel/70 border border-border p-4 clip-card mb-5">
+            <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-3">Tool Actions</p>
+            <div class="grid sm:grid-cols-2 xl:grid-cols-1 gap-3">
+              <button id="export-json" class="btn-cyan">Export JSON</button>
+              <button id="export-csv" class="btn-cyan">Export CSV</button>
+              <button id="import-btn" class="btn-muted">Import JSON</button>
+              <button id="reset-btn" class="btn-amber">Reset Tracker</button>
+            </div>
+            <input id="import-file" type="file" accept="application/json" class="hidden" />
+          </div>
+
+          <div class="bg-panel/70 border border-border p-4 clip-card">
+            <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-2">Run Notes</p>
+            <textarea id="notes-input" class="tool-textarea"
+              placeholder="Add your own trophy route notes here: Sweeper already done, Lunatic reserved for second run, Unknown Signal left for cleanup, etc."></textarea>
+          </div>
+        </aside>
+
+        <div class="space-y-6">
+          <div class="bg-hull/95 border border-border clip-card p-5 sm:p-6 glow-box">
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+              <span class="badge">Local Save</span>
+              <span class="badge">Platform Aware</span>
+              <span class="badge">Export Ready</span>
+            </div>
+            <p class="text-slate-300">
+              The route logic here is simple: secure the obvious story trophies on run one, do not forget the Sweeper trophy, use Unknown Signal for cleanup,
+              and treat Lunatic as the clean second-run requirement.
+            </p>
+          </div>
+
+          <div id="tracker-list" class="list-shell" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="phase-notes" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-24">
+      <div class="grid lg:grid-cols-[1.06fr_0.94fr] gap-6 items-center">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+          <p class="section-eyebrow">// Route Notes</p>
+          <h2 class="section-title text-xl sm:text-3xl mb-5">How To Split The <span>Trophy Route</span></h2>
+          <div class="space-y-4 text-slate-300">
+            <div class="tip-box">
+              <strong class="text-white">First run:</strong> let story milestones happen naturally, but do not sleep on <strong class="text-white">You're Not Getting Away That Easy</strong>.
+            </div>
+            <div class="ok-box">
+              <strong class="text-white">Cleanup:</strong> use <strong class="text-white">Unknown Signal</strong> for leftovers like collectibles, special sector work, and broader completion tasks.
+            </div>
+            <div class="warn-box">
+              <strong class="text-white">Lunatic:</strong> current roadmap coverage still supports treating this as the dedicated second playthrough requirement.
+            </div>
+          </div>
+        </article>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/trophies-achievements/tracker/pragmata-trophy-tracker-sim-01.jpg"
+            alt="Pragmata Training Simulation screenshot used to illustrate simulator trophies and post-story checklist planning"
+            class="section-image" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+          <p class="section-eyebrow">// Watch List</p>
+          <h2 class="section-title text-xl sm:text-3xl mb-5">The Main <span>Failure Point</span></h2>
+          <div class="space-y-4 text-slate-300">
+            <div class="danger-box">
+              <strong class="text-white">You're Not Getting Away That Easy</strong><br />
+              Current roadmap coverage most consistently treats this as the one trophy with meaningful missable risk, because Sweeper bots can escape and their spawns are limited enough to punish careless routing.
+            </div>
+            <p>
+              That is why the tracker gives it a dedicated watch-list flag. If you clear it early, the rest of the list becomes much calmer.
+            </p>
+          </div>
+        </article>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/trophies-achievements/tracker/pragmata-trophy-tracker-combat-01.jpg"
+            alt="Pragmata combat screenshot used to support challenge and damage trophy planning"
+            class="section-image" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Related Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <a href="/trophies-achievements/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Main Trophy Guide</p>
+          <p class="text-xs text-muted">Use the parent page if you want the full roadmap, platform explanation, and broader completion context.</p>
+        </a>
+        <a href="/post-game/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+          <p class="text-xs text-muted">Best companion if your remaining trophy work now depends on Unknown Signal and Hidden Chamber routing.</p>
+        </a>
+        <a href="/collectibles/mini-cabins/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Mini Cabins</p>
+          <p class="text-xs text-muted">Useful if Mini-Hunter Supreme or Well Spotted! is still sitting in your cleanup pile.</p>
+        </a>
+        <a href="/walkthrough/100-percent-route/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">100 Percent Route</p>
+          <p class="text-xs text-muted">Good follow-up if you want the cleanest order for Cradle Surveyor, Unknown Signal, and the wider endgame sweep.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-5xl mx-auto px-4 sm:px-6 py-14 scroll-mt-24">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Trophy Tracker <span>FAQ</span></h2>
+      <div class="space-y-4">
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box" open>
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">How many trophies does this page track?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            It tracks the 35 shared achievements used on Steam and similar platform-neutral lists, with an optional PlayStation Platinum layer that raises the PS5 total to 36 trophies.
+          </div>
+        </details>
+
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">What should I prioritize on the first run?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            Story milestones take care of themselves, so the real first-run priority is not forgetting You&apos;re Not Getting Away That Easy while Sweeper bot opportunities are still convenient.
+          </div>
+        </details>
+
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">Does Unknown Signal matter for the tracker?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            Very much. Current completion and ending coverage ties Unknown Signal to cleanup-friendly routing, Hidden Chamber mission work, and The Right Man for the Job.
+          </div>
+        </details>
+
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">Why does Lunatic get its own phase filter?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            Because the strongest roadmap overlap still treats Lunatic as a separate second-run requirement rather than something you naturally complete during the first story file.
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 border-t border-border/70 bg-space/90 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-sm tracking-[0.18em] uppercase text-white">Pragmata<span class="text-cyan">Guide</span></p>
+        <p class="text-sm text-muted">Tool-first completion support for Pragmata players chasing clean 100% progress.</p>
+      </div>
+      <nav class="flex flex-wrap gap-4 text-sm text-muted">
+        <a href="/about/" class="hover:text-cyan transition-colors">About</a>
+        <a href="/privacy/" class="hover:text-cyan transition-colors">Privacy</a>
+        <a href="/contact/" class="hover:text-cyan transition-colors">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const STORAGE_KEY = 'pragmataTrophyTrackerV1';
+    const achievements = [
+      { id: 'rendezvous', name: 'Rendezvous', desc: 'Make it to the Shelter.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'power-trip', name: 'Power Trip', desc: 'Restore power.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'purrfect-guide', name: 'The Purr-fect Guide', desc: 'Reach the Comms Tower.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'another-pragmata', name: 'Another Pragmata', desc: 'Meet the trapped girl.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'entrusted-memory', name: 'Entrusted Memory', desc: 'Get the stop code.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'mission-unveiled', name: 'Mission Unveiled', desc: 'Make it to Nexus Tower.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'awakening', name: 'Awakening', desc: 'Fix up Diana.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'sentinel-breach', name: 'Sentinel Breach', desc: 'Take down the Sentinel.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'our-promise', name: 'Our Promise', desc: 'Complete the game on any difficulty.', category: 'Story', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'lunar-supremacy', name: 'Lunar Supremacy', desc: 'Complete the game on Lunatic difficulty.', category: 'Post-Game', phase: 'lunatic', watch: false, platform: 'shared' },
+      { id: 'right-man', name: 'The Right Man for the Job', desc: 'Complete Unknown Signal.', category: 'Post-Game', phase: 'post-game', watch: false, platform: 'shared' },
+      { id: 'lunar-challenge', name: 'A Lunar Challenge', desc: 'Complete a mission in a special sector.', category: 'Post-Game', phase: 'post-game', watch: false, platform: 'shared' },
+      { id: 'small-talk', name: 'Small Talk', desc: 'Talk to Diana in the Shelter.', category: 'Shelter', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'for-me', name: 'For Me?', desc: 'Give an REM as a present.', category: 'Shelter', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'thanks-for-everything', name: 'Thanks for Everything!', desc: 'Receive a picture as a present.', category: 'Shelter', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'peekaboo', name: 'Peekaboo', desc: 'Win at hide-and-seek.', category: 'Shelter', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'replicating-extraordinaire', name: 'Replicating Extraordinaire!', desc: 'Complete an REM series.', category: 'Shelter', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'blackout', name: 'Blackout!', desc: 'Complete a Cabin Stamp Board.', category: 'Shelter', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'mister-simulator', name: 'Mister Simulator', desc: 'Complete the main objective in a Training Sim.', category: 'Shelter', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'master-simulator', name: 'Master of the Simulator', desc: 'Complete the main objective in every Training Sim.', category: 'Shelter', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'well-spotted', name: 'Well Spotted!', desc: 'Shoot a Mini Cabin.', category: 'Collectible', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'mini-hunter', name: 'Mini-Hunter Supreme', desc: 'Shoot every Mini Cabin.', category: 'Collectible', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'wall-what-wall', name: 'Wall? What Wall?', desc: 'Find a Holo-Wall.', category: 'Collectible', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'red-zoned', name: 'Red-Zoned and Loving It', desc: 'Secure a Red Zone.', category: 'Collectible', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'cradle-surveyor', name: 'Cradle Surveyor', desc: 'Reach 100% sector progress in a sector.', category: 'Collectible', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'escape-artist', name: 'Escape Artist', desc: 'Unlock every escape hatch.', category: 'Collectible', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'top-shelf', name: 'Top-Shelf Item', desc: 'Upgrade a weapon using Pure Lunum.', category: 'Collectible', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'cant-stop', name: "Can't Stop, Won't Stop", desc: 'Print all obtainable weapons, hacking nodes, and abilities during the main story.', category: 'Collectible', phase: 'cleanup', watch: true, platform: 'shared' },
+      { id: 'sweeper', name: "You're Not Getting Away That Easy", desc: 'Defeat a Sweeper bot.', category: 'Combat', phase: 'watch', watch: true, platform: 'shared' },
+      { id: 'round-em-up', name: "Round 'Em Up", desc: 'Defeat three enemies at the same time with the Lim Recycler.', category: 'Combat', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'courage', name: 'Courage in Desperation', desc: 'Repel the LunaDigger while progressing through the Lunum Mines.', category: 'Combat', phase: 'first-run', watch: false, platform: 'shared' },
+      { id: 'borrow-that', name: 'Can I Borrow That?', desc: 'Confuse a certain enemy and borrow its shield.', category: 'Combat', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'clean-up', name: 'Clean Up on Aisle Three', desc: 'Cleanse three or more enemies at the same time.', category: 'Combat', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'over-6000', name: "IT'S OVER 6000!", desc: 'Deal 6000 gunshot damage in one second.', category: 'Combat', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'who-needs-guns', name: 'Who Needs Guns!?', desc: 'Deal 3000 hacking damage in a single hack.', category: 'Combat', phase: 'cleanup', watch: false, platform: 'shared' },
+      { id: 'platinum', name: 'Pragmata', desc: 'Obtain all trophies.', category: 'Platinum', phase: 'post-game', watch: false, platform: 'ps5' }
+    ];
+
+    const defaultState = { checked: {}, notes: '', phase: 'all' };
+    let state = loadState();
+
+    const progressText = document.getElementById('progress-text');
+    const progressFill = document.getElementById('progress-fill');
+    const platformFilter = document.getElementById('platform-filter');
+    const categoryFilter = document.getElementById('category-filter');
+    const searchInput = document.getElementById('search-input');
+    const hideComplete = document.getElementById('hide-complete');
+    const watchOnly = document.getElementById('watch-only');
+    const notesInput = document.getElementById('notes-input');
+    const trackerList = document.getElementById('tracker-list');
+    const exportJsonBtn = document.getElementById('export-json');
+    const exportCsvBtn = document.getElementById('export-csv');
+    const importBtn = document.getElementById('import-btn');
+    const importFile = document.getElementById('import-file');
+    const resetBtn = document.getElementById('reset-btn');
+    const phaseButtons = document.querySelectorAll('[data-phase]');
+
+    notesInput.value = state.notes || '';
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return { ...defaultState };
+        const parsed = JSON.parse(raw);
+        return {
+          checked: parsed.checked || {},
+          notes: parsed.notes || '',
+          phase: parsed.phase || 'all'
+        };
+      } catch (error) {
+        return { ...defaultState };
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function visiblePool() {
+      const platform = platformFilter.value;
+      return achievements.filter(item => platform === 'ps5' || item.platform !== 'ps5');
+    }
+
+    function filteredItems() {
+      const pool = visiblePool();
+      const category = categoryFilter.value;
+      const search = searchInput.value.trim().toLowerCase();
+      return pool.filter(item => {
+        if (category !== 'all' && item.category !== category) return false;
+        if (state.phase !== 'all') {
+          if (state.phase === 'watch' && !item.watch) return false;
+          if (state.phase !== 'watch' && item.phase !== state.phase) return false;
+        }
+        if (watchOnly.checked && !item.watch) return false;
+        if (hideComplete.checked && state.checked[item.id]) return false;
+        if (!search) return true;
+        return item.name.toLowerCase().includes(search) || item.desc.toLowerCase().includes(search) || item.category.toLowerCase().includes(search);
+      });
+    }
+
+    function totalVisible() {
+      return visiblePool().length;
+    }
+
+    function checkedVisible() {
+      return visiblePool().filter(item => state.checked[item.id]).length;
+    }
+
+    function updateProgress() {
+      const done = checkedVisible();
+      const total = totalVisible();
+      progressText.textContent = `${done} / ${total}`;
+      progressFill.style.width = `${total ? (done / total) * 100 : 0}%`;
+    }
+
+    function renderList() {
+      const items = filteredItems();
+      if (!items.length) {
+        trackerList.innerHTML = `
+          <div class="bg-hull/95 border border-border clip-card p-6 glow-box">
+            <p class="font-display text-sm uppercase tracking-wide text-white mb-2">No Matching Trophies</p>
+            <p class="text-slate-300">Try changing the platform view, clearing the search, or turning off the current phase filter.</p>
+          </div>
+        `;
+        updateProgress();
+        return;
+      }
+
+      trackerList.innerHTML = items.map(item => `
+        <label class="ach-item ${state.checked[item.id] ? 'is-complete' : ''}">
+          <input class="check-toggle" type="checkbox" data-id="${item.id}" ${state.checked[item.id] ? 'checked' : ''} />
+          <div>
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="item-title font-display text-sm sm:text-base uppercase tracking-wide text-white">${item.name}</span>
+            </div>
+            <p class="text-sm text-slate-300 mt-2">${item.desc}</p>
+            <div class="tag-row">
+              <span class="tag ${item.category === 'Story' ? 'tag-story' : item.category === 'Collectible' ? 'tag-collect' : item.category === 'Post-Game' || item.category === 'Platinum' ? 'tag-post' : ''}">${item.category}</span>
+              <span class="tag">${item.phase === 'first-run' ? 'First Run' : item.phase === 'cleanup' ? 'Cleanup' : item.phase === 'post-game' ? 'Post-Game' : item.phase === 'lunatic' ? 'Lunatic' : 'Watch List'}</span>
+              ${item.watch ? '<span class="tag tag-risk">Watch</span>' : ''}
+              ${item.platform === 'ps5' ? '<span class="tag tag-post">PS5 Only</span>' : '<span class="tag">Shared</span>'}
+            </div>
+          </div>
+          <span class="pill">${item.platform === 'ps5' ? 'Platinum' : item.category}</span>
+        </label>
+      `).join('');
+
+      trackerList.querySelectorAll('input[data-id]').forEach(input => {
+        input.addEventListener('change', event => {
+          const id = event.target.getAttribute('data-id');
+          state.checked[id] = event.target.checked;
+          saveState();
+          renderList();
+        });
+      });
+
+      updateProgress();
+    }
+
+    function downloadFile(filename, content, mimeType) {
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = filename;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function buildExportPayload() {
+      return {
+        exportedAt: new Date().toISOString(),
+        platform: platformFilter.value,
+        phase: state.phase,
+        checked: state.checked,
+        notes: state.notes || ''
+      };
+    }
+
+    platformFilter.addEventListener('change', renderList);
+    categoryFilter.addEventListener('change', renderList);
+    searchInput.addEventListener('input', renderList);
+    hideComplete.addEventListener('change', renderList);
+    watchOnly.addEventListener('change', renderList);
+    notesInput.addEventListener('input', event => {
+      state.notes = event.target.value;
+      saveState();
+    });
+
+    phaseButtons.forEach(button => {
+      if (button.dataset.phase === state.phase) button.classList.add('is-active');
+      button.addEventListener('click', () => {
+        state.phase = button.dataset.phase;
+        phaseButtons.forEach(node => node.classList.remove('is-active'));
+        button.classList.add('is-active');
+        saveState();
+        renderList();
+      });
+    });
+
+    exportJsonBtn.addEventListener('click', () => {
+      downloadFile('pragmata-trophy-tracker.json', JSON.stringify(buildExportPayload(), null, 2), 'application/json');
+    });
+
+    exportCsvBtn.addEventListener('click', () => {
+      const rows = [['id', 'name', 'category', 'phase', 'platform', 'checked', 'description']];
+      visiblePool().forEach(item => {
+        rows.push([item.id, item.name, item.category, item.phase, item.platform, state.checked[item.id] ? 'yes' : 'no', item.desc]);
+      });
+      rows.push([]);
+      rows.push(['notes', '', '', '', '', '', state.notes || '']);
+      const csv = rows.map(row => row.map(cell => `"${String(cell ?? '').replace(/"/g, '""')}"`).join(',')).join('\n');
+      downloadFile('pragmata-trophy-tracker.csv', csv, 'text/csv;charset=utf-8;');
+    });
+
+    importBtn.addEventListener('click', () => importFile.click());
+    importFile.addEventListener('change', event => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = loadEvent => {
+        try {
+          const parsed = JSON.parse(loadEvent.target.result);
+          state = {
+            checked: parsed.checked || {},
+            notes: parsed.notes || '',
+            phase: parsed.phase || 'all'
+          };
+          notesInput.value = state.notes;
+          phaseButtons.forEach(node => node.classList.toggle('is-active', node.dataset.phase === state.phase));
+          saveState();
+          renderList();
+        } catch (error) {
+          alert('That file could not be imported. Please use a JSON export from this trophy tracker.');
+        }
+      };
+      reader.readAsText(file);
+      importFile.value = '';
+    });
+
+    resetBtn.addEventListener('click', () => {
+      if (!confirm('Reset all trophy tracker progress and notes for this page?')) return;
+      state = { checked: {}, notes: '', phase: 'all' };
+      notesInput.value = '';
+      phaseButtons.forEach(node => node.classList.toggle('is-active', node.dataset.phase === 'all'));
+      saveState();
+      renderList();
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav.classList.toggle('hidden');
+      iconMenu.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+
+    renderList();
+  </script>
+</body>
+
+</html>
