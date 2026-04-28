@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /walkthrough/sector-order/
+       Title: 59 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+
+  <title>Pragmata Sector Order Guide - Chapter and Mission Sequence</title>
+  <meta name="description"
+    content="Verified Pragmata sector order guide covering chapter order, mission flow, the 5 main sectors plus Prologue, and when Unknown Signal starts after the story." />
+  <link rel="canonical" href="https://pragmataguide.com/walkthrough/sector-order/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Sector Order Guide - Chapter and Mission Sequence" />
+  <meta property="og:description"
+    content="A lightweight Pragmata order guide covering Prologue, the five main sectors, and where Unknown Signal fits after the story." />
+  <meta property="og:url" content="https://pragmataguide.com/walkthrough/sector-order/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/walkthrough/sector-order/pragmata-sector-order-hero-01.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Sector Order Guide - Chapter and Mission Sequence" />
+  <meta name="twitter:description"
+    content="See Pragmata's clean chapter and sector order, from the Prologue through Central Port and into post-story Unknown Signal." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/walkthrough/sector-order/pragmata-sector-order-hero-01.webp" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'greenline': '#4ade80',
+            'violetline': '#a78bfa'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .card-hover { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+    .card-hover:hover { transform: translateY(-4px); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box {
+      padding: 0.9rem 1rem;
+      border-radius: 2px;
+    }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.04); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.04); }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid rgba(0, 229, 255, 0.22);
+      color: #00e5ff;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .hero-image, .section-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image { min-height: 280px; }
+    .section-image { min-height: 240px; }
+    .breadcrumb a { color: #8892a4; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #00e5ff; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .hero-image, .section-image { min-height: 220px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pragmataguide.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Walkthrough", "item": "https://pragmataguide.com/walkthrough/" },
+        { "@type": "ListItem", "position": 3, "name": "Sector Order", "item": "https://pragmataguide.com/walkthrough/sector-order/" }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the chapter order in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cleanest story order is Prologue, then the five numbered sectors in sequence: Solar Power Plant, Mass Production Array, Terra Dome, Lunum Mines, and Central Port."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many main sectors are in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pragmata has five numbered main sectors. Many walkthroughs also count the opening Prologue separately, which is why some pages describe the full story as six chapters including the Prologue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Unknown Signal change the main story order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Unknown Signal starts after the main story and is treated as post-game content rather than a sector inserted into the middle of the campaign route."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is the first real backtrack point in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current walkthrough coverage consistently treats the Lim Eraser unlock in Mass Production Array as the first meaningful backtrack point for missed pickups and blocked routes."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body text-cyan">Walkthrough</a>
+          <a href="/bosses/" class="nav-link text-sm font-medium font-body">Bosses</a>
+          <a href="/collectibles/" class="nav-link text-sm font-medium font-body">Collectibles</a>
+          <a href="/post-game/" class="nav-link text-sm font-medium font-body">Post-Game</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+        <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+          <a href="/">Home</a><span class="mx-2 text-muted">/</span><a href="/walkthrough/">Walkthrough</a><span class="mx-2 text-muted">/</span><span class="text-white">Sector Order</span>
+        </nav>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        <div class="grid lg:grid-cols-[1.2fr_0.95fr] gap-6 items-stretch">
+          <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-3 mb-5">
+                <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Story Order</span>
+                <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">5 Main Sectors</span>
+                <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Verified Apr 2026+</span>
+              </div>
+              <p class="section-eyebrow">// Quick Order</p>
+              <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+                Pragmata <span class="text-cyan">Sector Order</span>
+              </h1>
+              <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+                If you only need the clean story sequence, the answer is simple:
+                <strong class="text-white">Prologue</strong>, then
+                <strong class="text-white">Solar Power Plant</strong>,
+                <strong class="text-white">Mass Production Array</strong>,
+                <strong class="text-white">Terra Dome</strong>,
+                <strong class="text-white">Lunum Mines</strong>, and
+                <strong class="text-white">Central Port</strong>.
+                <strong class="text-white">Unknown Signal</strong> begins after that as post-game content.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <a href="#main-order" class="btn-cyan">Main Order</a>
+                <a href="#chapter-vs-sector" class="btn-cyan">Chapter Terms</a>
+                <a href="#faq" class="btn-cyan">FAQ</a>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-4 gap-4">
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Story Start</p>
+                <p class="text-sm text-white font-semibold">Prologue</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Main Sectors</p>
+                <p class="text-sm text-white font-semibold">5 numbered</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-amber tracking-widest uppercase mb-2">First Backtrack</p>
+                <p class="text-sm text-white font-semibold">After Lim Eraser</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-violetline tracking-widest uppercase mb-2">Post-Game</p>
+                <p class="text-sm text-white font-semibold">Unknown Signal</p>
+              </div>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+            <img src="/images/pragmata/walkthrough/sector-order/pragmata-sector-order-hero-01.webp"
+              alt="Pragmata route overview image used as the hero for the sector order page"
+              class="hero-image" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="main-order" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Main Story Sequence</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Pragmata <span>Chapter and Sector Order</span></h2>
+
+        <div class="grid lg:grid-cols-[1.06fr_0.94fr] gap-6 items-start">
+          <div class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+            <ol class="space-y-4 list-decimal list-inside text-slate-300">
+              <li><strong class="text-white">Prologue</strong>: the opening setup chapter before the numbered sector flow properly begins.</li>
+              <li><strong class="text-white">Sector 1 - Solar Power Plant</strong>: the first full sector and your real tutorial stretch.</li>
+              <li><strong class="text-white">Sector 2 - Mass Production Array</strong>: the first major route-expanding sector and the Lim Eraser unlock point.</li>
+              <li><strong class="text-white">Sector 3 - Terra Dome</strong>: the largest early-midgame sector and a noticeable jump in collectible density.</li>
+              <li><strong class="text-white">Sector 4 - Lunum Mines</strong>: the low-gravity lunar sector and the last big pre-endgame route block.</li>
+              <li><strong class="text-white">Sector 5 - Central Port</strong>: the final main story sector before post-game content opens.</li>
+              <li><strong class="text-white">Unknown Signal</strong>: post-story cleanup and challenge content, not part of the main five-sector story chain.</li>
+            </ol>
+          </div>
+
+          <div class="space-y-5">
+            <div class="ok-box">
+              <strong class="text-white">Shortest answer:</strong> if you searched for mission order, just play the five numbered sectors in order after the Prologue. There is no alternate main campaign route you need to worry about.
+            </div>
+            <div class="tip-box">
+              <strong class="text-white">Best route nuance:</strong> although the sector order is fixed, the first smart cleanup pause is after the <strong class="text-white">Lim Eraser</strong> unlock in Sector 2.
+            </div>
+            <div class="warn-box">
+              <strong class="text-white">Do not overread Unknown Signal:</strong> it matters a lot for cleanup and endings, but it does <em>not</em> replace or reshuffle the main chapter order.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="chapter-vs-sector" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <div class="grid lg:grid-cols-[1fr_0.95fr] gap-6 items-center">
+          <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+            <p class="section-eyebrow">// Terminology</p>
+            <h2 class="section-title text-xl sm:text-2xl mb-6">Chapter Order vs <span>Sector Order</span></h2>
+            <div class="space-y-4 text-slate-300">
+              <p>
+                Most Pragmata pages use <strong class="text-white">sector order</strong> and <strong class="text-white">mission order</strong>
+                almost interchangeably for the five numbered story zones. The one thing that makes the wording look different is the
+                <strong class="text-white">Prologue</strong>.
+              </p>
+              <p>
+                So the clean reading is:
+                <strong class="text-white">6 chapters including Prologue</strong>, or
+                <strong class="text-white">5 numbered main sectors</strong> once the real sector chain begins.
+              </p>
+              <div class="tip-box">
+                <strong class="text-white">Easy memory rule:</strong> if someone says “chapter order,” include the Prologue. If someone says “sector order,” they usually mean Solar through Central.
+              </div>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+            <img src="/images/pragmata/walkthrough/sector-order/pragmata-sector-order-postgame-01.jpg"
+              alt="Pragmata Hidden Chamber screenshot used to illustrate that Unknown Signal belongs after the main sector order"
+              class="section-image" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+          <a href="/walkthrough/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Walkthrough Hub</p>
+            <p class="text-xs text-muted">Best next stop if you want the full chapter-by-chapter walkthrough instead of just the order summary.</p>
+          </a>
+          <a href="/walkthrough/checklists/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Checklist Hub</p>
+            <p class="text-xs text-muted">Useful once the order is clear and you want a control panel for cleanup timing and sector jumps.</p>
+          </a>
+          <a href="/walkthrough/100-percent-route/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">100% Route</p>
+            <p class="text-xs text-muted">Open this if your real question is less “what order?” and more “what is the best completionist order?”</p>
+          </a>
+          <a href="/post-game/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Post-Game</p>
+            <p class="text-xs text-muted">Best follow-up if you searched for mission order and were really trying to understand where Unknown Signal begins.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-5xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">Sector Order <span>FAQ</span></h2>
+        <div class="space-y-4">
+          <details class="bg-hull/95 border border-border clip-card p-5 glow-box" open>
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">What is the sector order in Pragmata?</span>
+              <span class="text-cyan text-xl leading-none">+</span>
+            </summary>
+            <div class="mt-4 text-slate-300">
+              The fixed main order is Solar Power Plant, Mass Production Array, Terra Dome, Lunum Mines, and Central Port, after the opening Prologue.
+            </div>
+          </details>
+
+          <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">How many chapters are in Pragmata?</span>
+              <span class="text-cyan text-xl leading-none">+</span>
+            </summary>
+            <div class="mt-4 text-slate-300">
+              The cleanest walkthrough reading is six chapters if you include the Prologue, or five main sectors once you start counting only the numbered story zones.
+            </div>
+          </details>
+
+          <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">Can I choose a different mission order?</span>
+              <span class="text-cyan text-xl leading-none">+</span>
+            </summary>
+            <div class="mt-4 text-slate-300">
+              Not for the main campaign flow. The order of the numbered sectors is fixed, even though cleanup timing and post-story routing can branch later.
+            </div>
+          </details>
+
+          <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+            <summary class="flex items-center justify-between gap-4">
+              <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">Where does Unknown Signal fit?</span>
+              <span class="text-cyan text-xl leading-none">+</span>
+            </summary>
+            <div class="mt-4 text-slate-300">
+              Unknown Signal comes after Central Port as post-game content. It is important for cleanup and endings, but it is not a sixth numbered sector in the main story route.
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
