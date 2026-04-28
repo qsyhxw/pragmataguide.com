@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /pc-settings/4k-settings/
+       Title: 59 chars | Desc: 155 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+  <title>Pragmata 4K Settings Guide - Best High-End PC Setup</title>
+  <meta name="description"
+    content="Verified Pragmata 4K settings guide covering native vs upscaled 4K, RT and path tracing cost, DLSS and FSR, and the best setup for high-end PCs." />
+  <link rel="canonical" href="https://pragmataguide.com/pc-settings/4k-settings/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata 4K Settings Guide - Best High-End PC Setup" />
+  <meta property="og:description"
+    content="A practical Pragmata guide for 4K players deciding between native 4K, upscaled 4K, ray tracing, and path tracing." />
+  <meta property="og:url" content="https://pragmataguide.com/pc-settings/4k-settings/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/pc-settings/4k-settings/pragmata-4k-settings-hero-01.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata 4K Settings Guide - Best High-End PC Setup" />
+  <meta name="twitter:description"
+    content="Best Pragmata 4K settings for high-end PCs, including when native 4K, RT, and PT are actually worth the cost." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/pc-settings/4k-settings/pragmata-4k-settings-hero-01.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'greenline': '#4ade80',
+            'redline': '#f87171'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px,
+          rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box, .danger-box { padding: 0.9rem 1rem; border-radius: 2px; }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.04); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.04); }
+    .danger-box { border-left: 2px solid #f87171; background: rgba(248, 113, 113, 0.05); }
+    .hero-image, .section-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image { min-height: 280px; }
+    .section-image { min-height: 250px; }
+    .table-shell {
+      overflow-x: auto;
+      border: 1px solid rgba(30, 45, 69, 1);
+      background: rgba(12, 15, 26, 0.82);
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: 0.9rem 1rem; border-bottom: 1px solid rgba(30, 45, 69, 1); vertical-align: top; }
+    th {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #00e5ff;
+      text-align: left;
+      background: rgba(0, 229, 255, 0.04);
+    }
+    tr:last-child td { border-bottom: none; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .hero-image, .section-image { min-height: 220px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pragmataguide.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "PC Settings",
+          "item": "https://pragmataguide.com/pc-settings/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "4K Settings",
+          "item": "https://pragmataguide.com/pc-settings/4k-settings/"
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is native 4K practical in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can be practical for raster on top-end GPUs, but launch-week benchmark coverage treats native 4K path tracing as a much more demanding target. In practice, upscaled 4K is the safer recommendation for most high-end PCs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use 4K ray tracing or 4K path tracing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most players, 4K ray tracing is the more realistic ceiling. Path tracing looks better, but both NVIDIA's launch guidance and independent testing frame it as a high-end mode that depends heavily on DLSS, Ray Reconstruction, and frame generation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best 4K setup for most high-end PCs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most reliable answer is usually upscaled 4K with strong raster settings or selective ray tracing. That gives you a premium image without turning every other setting into damage control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does 4K path tracing make sense without DLSS or frame generation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually not. Current official guidance and benchmark coverage both treat Pragmata's path tracing mode as a feature that benefits heavily from DLSS Super Resolution, Ray Reconstruction, and frame generation support."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <div class="relative z-10">
+    <header class="border-b border-border/70 bg-space/85 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="font-display text-base sm:text-lg tracking-[0.18em] uppercase text-white">PRAGMATA<span class="text-cyan">GUIDE</span></a>
+        <nav class="hidden md:flex items-center gap-5">
+          <a href="/pc-settings/" class="nav-link text-sm font-medium font-body text-cyan">PC Settings</a>
+          <a href="/walkthrough/" class="nav-link text-sm font-medium font-body">Walkthrough</a>
+          <a href="/weapons/" class="nav-link text-sm font-medium font-body">Weapons</a>
+          <a href="/builds/" class="nav-link text-sm font-medium font-body">Builds</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="grid lg:grid-cols-[1.25fr_0.95fr] gap-6 items-stretch">
+          <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-3 mb-5">
+                <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">4K / RT / PT</span>
+                <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Verified Apr 2026</span>
+                <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Official + Benchmarked</span>
+              </div>
+              <p class="section-eyebrow">// 4K Settings</p>
+              <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+                Pragmata <span class="text-cyan">4K Settings</span>
+              </h1>
+              <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+                This page is for the specific PC question that sits above general optimization:
+                what is the <strong class="text-white">best 4K setup</strong> in Pragmata, when is
+                <strong class="text-white">native 4K</strong> actually sensible, and when should you stop pretending
+                <strong class="text-white">4K Path Tracing</strong> is a normal default.
+              </p>
+              <p class="text-slate-300 mb-6">
+                The short answer is that most high-end systems get the best overall result from
+                <strong class="text-white">upscaled 4K</strong> plus either strong raster settings or selective RT.
+                PT remains a showcase mode, not the universal recommendation.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <a href="#glance" class="btn-cyan">4K At A Glance</a>
+                <a href="#best-raster" class="btn-cyan">4K Raster</a>
+                <a href="#best-rt" class="btn-cyan">4K RT</a>
+                <a href="#faq" class="btn-cyan">FAQ</a>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Safest 4K Bet</p>
+                <p class="text-sm text-white font-semibold">Upscaled 4K raster</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">4K RT Ceiling</p>
+                <p class="text-sm text-white font-semibold">High-end with DLSS or FSR</p>
+              </div>
+              <div class="bg-panel/80 border border-border p-4 clip-card">
+                <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">4K PT Reality</p>
+                <p class="text-sm text-white font-semibold">Showcase mode with heavy help</p>
+              </div>
+            </div>
+          </article>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+            <img src="/images/pragmata/pc-settings/4k-settings/pragmata-4k-settings-hero-01.jpg"
+              alt="Pragmata PC screenshot used for a 4K settings guide hero image"
+              class="hero-image" />
+            <figcaption class="text-sm text-muted p-4">
+              At 4K, the real decision is not just image quality. It is whether you want premium raster, practical RT, or a PT showcase stack.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="glance" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// 4K Overview</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">4K At A <span>Glance</span></h2>
+        <div class="table-shell clip-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Mode</th>
+                <th>Best Fit</th>
+                <th>What The Evidence Suggests</th>
+                <th>Recommendation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-white font-semibold">Native 4K Raster</td>
+                <td>Top-end GPUs</td>
+                <td>Independent testing shows 4K without upscaling is mostly a high-end-only comfort zone, even before PT enters the picture.</td>
+                <td>Use if you already have excess headroom and want the cleanest baseline.</td>
+              </tr>
+              <tr>
+                <td class="text-white font-semibold">Upscaled 4K Raster</td>
+                <td>Most high-end PCs</td>
+                <td>It preserves a premium image while freeing enough headroom to avoid constant compromise elsewhere.</td>
+                <td>Best default recommendation.</td>
+              </tr>
+              <tr>
+                <td class="text-white font-semibold">4K Ray Tracing</td>
+                <td>High-end cards with upscaling</td>
+                <td>Current coverage treats standard RT as much more practical than PT, but still not something every 4K setup should run natively.</td>
+                <td>Worth trying after raster feels stable.</td>
+              </tr>
+              <tr>
+                <td class="text-white font-semibold">4K Path Tracing</td>
+                <td>Enthusiast RTX setups</td>
+                <td>NVIDIA and benchmark coverage both frame PT around DLSS, Ray Reconstruction, and frame generation rather than native brute force.</td>
+                <td>Use as a showcase setting, not a universal goal.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="native-vs-upscaled" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
+          <div>
+            <p class="section-eyebrow">// Resolution Strategy</p>
+            <h2 class="section-title text-xl sm:text-2xl mb-5">Native 4K Vs <span>Upscaled 4K</span></h2>
+            <p class="text-slate-300 mb-4">
+              If you care about the best all-around 4K experience, the evidence leans away from a stubborn
+              <strong class="text-white">native-or-bust</strong> mindset. Tom's Hardware and DSOGaming both show that
+              Pragmata becomes dramatically more expensive once you push into the heaviest lighting paths, especially PT.
+            </p>
+            <p class="text-slate-300 mb-4">
+              That is why this page treats <strong class="text-white">upscaled 4K</strong> as the practical sweet spot.
+              It keeps the image sharp enough for a 4K display while protecting your budget for shadows, textures,
+              RT, or simply cleaner frame pacing.
+            </p>
+            <div class="tip-box text-sm">
+              <strong class="text-white">Use native 4K</strong> when you already know your card has headroom.
+              <strong class="text-white">Use upscaled 4K</strong> when you want the strongest total package.
+            </div>
+          </div>
+
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+            <img src="/images/pragmata/pc-settings/4k-settings/pragmata-4k-settings-raster-01.jpg"
+              alt="Pragmata gameplay screenshot representing a high-end raster or ray traced 4K setup"
+              class="section-image" />
+            <figcaption class="text-muted text-sm p-4">
+              For most 4K players, a premium raster image with smart upscaling is a better first target than a purity test.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="best-raster" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Best 4K Raster</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best 4K <span>Raster Settings</span></h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Start Here First</h3>
+            <p class="text-sm text-slate-300">
+              For a lot of expensive rigs, the best 4K preset is still just a
+              <strong class="text-white">very strong raster setup</strong> with no RT overhead.
+              This gives you the cleanest route to stable performance and the least dependence on reconstruction tricks.
+            </p>
+          </article>
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Use Upscaling Intelligently</h3>
+            <p class="text-sm text-slate-300">
+              Pragmata supports <strong class="text-white">DLSS Super Resolution</strong> and
+              <strong class="text-white">AMD FSR upscaling</strong>, which makes a high-quality upscaled 4K image far easier to justify than brute-force native rendering.
+            </p>
+          </article>
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Protect The Big Levers</h3>
+            <p class="text-sm text-slate-300">
+              If you need more headroom, change <strong class="text-white">upscaling mode</strong>,
+              <strong class="text-white">shadows</strong>, or <strong class="text-white">volumetrics</strong> before you start flattening everything else.
+            </p>
+          </article>
+        </div>
+        <div class="ok-box mt-6 text-sm">
+          <strong class="text-white">Best default:</strong> 4K output, upscaling enabled, raster first, and only move upward from there if the frame rate margin is obviously healthy.
+        </div>
+      </section>
+
+      <section id="best-rt" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-6 items-center">
+          <figure class="bg-panel border border-border clip-card overflow-hidden glow-box order-2 lg:order-1">
+            <img src="/images/pragmata/pc-settings/4k-settings/pragmata-4k-settings-path-tracing-01.jpg"
+              alt="Pragmata benchmark screenshot representing path tracing and heavier lighting on a high-end PC"
+              class="section-image" />
+            <figcaption class="text-muted text-sm p-4">
+              The visual gain from heavier lighting is real, but at 4K the cost jumps fast and PT especially stops being casual.
+            </figcaption>
+          </figure>
+
+          <div class="order-1 lg:order-2">
+            <p class="section-eyebrow">// 4K Lighting</p>
+            <h2 class="section-title text-xl sm:text-2xl mb-5">Best 4K <span>RT Settings</span></h2>
+            <p class="text-slate-300 mb-4">
+              Officially, Pragmata's RT requirements already step up to
+              <strong class="text-white">RTX 3060 12GB</strong> or <strong class="text-white">RX 6700 XT 12GB</strong>.
+              That is a useful signal for 4K players too: RT is not the place to act as if VRAM and bandwidth do not matter.
+            </p>
+            <p class="text-slate-300 mb-4">
+              The more practical 4K RT path is to start from a good upscaled raster base, then test whether standard RT still
+              feels smooth enough for your tolerance. Current launch-week coverage is unusually consistent that
+              <strong class="text-white">standard RT is much more realistic than PT</strong>.
+            </p>
+            <div class="warn-box text-sm">
+              <strong class="text-white">Use 4K RT when:</strong> you want better lighting and reflections, you already accept upscaling, and you still have comfortable headroom after raster tuning.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pt-worth-it" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Path Tracing</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">When 4K PT Is <span>Actually Worth It</span></h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Worth It</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li>You are on a high-end <strong class="text-white">RTX</strong> card and already accept <strong class="text-white">DLSS</strong>, <strong class="text-white">Ray Reconstruction</strong>, and <strong class="text-white">Frame Generation</strong>.</li>
+              <li>You care more about image fidelity than latency purity.</li>
+              <li>You are treating PT as a premium showcase mode, not the mandatory baseline.</li>
+            </ul>
+          </article>
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-amber tracking-widest uppercase mb-3">Maybe Not</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li>You want native 4K without help from upscaling or frame generation.</li>
+              <li>You are sensitive to extra latency or reconstruction artifacts.</li>
+              <li>You mainly want a smooth first playthrough rather than a screenshot-heavy setup.</li>
+            </ul>
+          </article>
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-redline tracking-widest uppercase mb-3">What Benchmarks Imply</p>
+            <p class="text-sm text-slate-300">
+              Tom's Hardware and DSOGaming both treat <strong class="text-white">native 4K PT</strong> as a brutal target,
+              even on ultra-high-end hardware. That is the clearest reason to recommend PT as an optional destination instead of the default answer.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="gpu-class" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Best Fit</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Best 4K Setup By <span>GPU Class</span></h2>
+        <div class="grid lg:grid-cols-3 gap-5">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">12GB Class</p>
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Do Not Force 4K RT</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              Official RT support starts here, but that does not magically make 4K RT the smart answer.
+              For this class, the safer play is still <strong class="text-white">upscaled 4K raster</strong> or a cleaner 1440p RT setup from the <a href="/pc-settings/gpu-tier-guide/" class="text-cyan hover:underline">GPU tier guide</a>.
+            </p>
+            <div class="tip-box text-sm">Best fit: image-quality-first raster, not a prestige RT toggle.</div>
+          </article>
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">16GB RTX Class</p>
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Best Overall 4K Zone</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              This is the class where <strong class="text-white">upscaled 4K RT</strong> starts to feel genuinely reasonable,
+              and where PT becomes a serious experiment instead of pure fantasy.
+            </p>
+            <div class="ok-box text-sm">Best fit: upscaled 4K raster by default, 4K RT next, PT only if the whole stack feels comfortable.</div>
+          </article>
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">5080 / 5090 Class</p>
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-3">Native 4K Finally Makes Sense</h3>
+            <p class="text-sm text-slate-300 mb-3">
+              This is where native 4K raster and heavier lighting modes are most plausible, but even here,
+              native 4K PT is still a very expensive target in independent testing.
+            </p>
+            <div class="warn-box text-sm">Best fit: native 4K raster or upscaled 4K PT, depending on whether you value responsiveness or spectacle more.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="raster-better" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// Practical Answer</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">When Raster Is Still <span>Better At 4K</span></h2>
+        <div class="grid lg:grid-cols-2 gap-6">
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">Raster Wins On Cleanliness</h3>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li><strong class="text-white">Lower latency.</strong> You stay less dependent on frame generation and reconstruction layers.</li>
+              <li><strong class="text-white">Simpler tuning.</strong> You can spend your time dialing image quality instead of rescuing one prestige setting.</li>
+              <li><strong class="text-white">Broader GPU sanity.</strong> It is the only 4K target that still scales down gracefully.</li>
+            </ul>
+          </article>
+          <article class="bg-panel border border-border clip-card p-6 glow-box">
+            <h3 class="font-display text-sm text-white uppercase tracking-wide mb-4">Raster Also Avoids Forced Trade-Offs</h3>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li><strong class="text-white">PT is not free quality.</strong> It asks for a whole support stack and still carries a heavy cost.</li>
+              <li><strong class="text-white">RT can be a narrower upgrade.</strong> It is often a good addition, but not always the best use of 4K budget.</li>
+              <li><strong class="text-white">A premium raster image is already strong.</strong> That matters more than checkbox prestige for a lot of players.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <p class="section-eyebrow">// Related Guides</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <a href="/pc-settings/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">PC Settings</p>
+            <p class="text-xs text-muted">Use the broader page if you want official requirements and general optimization in one place.</p>
+          </a>
+          <a href="/pc-settings/gpu-tier-guide/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">GPU Tier Guide</p>
+            <p class="text-xs text-muted">Best follow-up if you want the same tuning logic split cleanly by 8GB, 12GB, and 16GB+ classes.</p>
+          </a>
+          <a href="/pc-settings/rt-vs-pt/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">RT vs PT</p>
+            <p class="text-xs text-muted">Best follow-up if you want the visual and performance difference explained without the 4K angle.</p>
+          </a>
+          <a href="/pc-settings/intel-arc-fixes/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Intel Arc Fixes</p>
+            <p class="text-xs text-muted">Helpful if your issue is platform stability rather than pure high-end tuning.</p>
+          </a>
+          <a href="/builds/" class="bg-panel border border-border clip-card p-5 glow-box">
+            <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Builds</p>
+            <p class="text-xs text-muted">Once your PC settings are settled, this is the next clean way to improve the run itself.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+        <p class="section-eyebrow">// FAQ</p>
+        <h2 class="section-title text-xl sm:text-2xl mb-8">4K Settings <span>FAQ</span></h2>
+        <div class="max-w-3xl space-y-3">
+          <details class="bg-panel border border-border group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+              Is native 4K practical in Pragmata?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300">
+              <p>It can be practical for raster on top-end GPUs, but native 4K path tracing is a much harsher target. For most high-end PCs, upscaled 4K is the safer recommendation.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+              Should I use 4K ray tracing or 4K path tracing?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300">
+              <p>For most players, 4K ray tracing is the more realistic ceiling. Path tracing looks better, but it is still the more demanding enthusiast option.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+              What is the best 4K setup for most high-end PCs?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300">
+              <p>Upscaled 4K with strong raster settings or selective RT is the most dependable answer. It gives you a premium image without turning the rest of the settings menu into repair work.</p>
+            </div>
+          </details>
+
+          <details class="bg-panel border border-border group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+              Does 4K path tracing make sense without DLSS or frame generation?
+              <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-slate-300">
+              <p>Usually not. Current official guidance and benchmark coverage both treat PT as a feature that benefits heavily from DLSS, Ray Reconstruction, and frame generation.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+                <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff"
+                  stroke-width="1.5" />
+                <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+              </svg>
+              <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span
+                  class="text-cyan">Guide</span></span>
+            </div>
+            <p class="text-muted text-sm font-body max-w-xs">
+              Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+            </p>
+          </div>
+
+          <nav aria-label="Guide pages footer links">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+            <ul class="space-y-2 text-sm font-body text-muted">
+              <li><a href="/pc-settings/" class="hover:text-cyan transition-colors">PC Settings</a></li>
+              <li><a href="/collectibles/" class="hover:text-cyan transition-colors">Collectibles</a></li>
+              <li><a href="/walkthrough/" class="hover:text-cyan transition-colors">Walkthrough</a></li>
+              <li><a href="/endings/" class="hover:text-cyan transition-colors">All Endings</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Site pages footer links">
+            <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+            <ul class="space-y-2 text-sm font-body text-muted">
+              <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+              <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+              <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+              <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-muted font-mono">
+          <p>(c) 2026 PragmataGuide - Independent fan site - Not affiliated with Capcom</p>
+          <p>PRAGMATA (TM) is a trademark of CAPCOM CO., LTD.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
