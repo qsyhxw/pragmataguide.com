@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /collectibles/checklist-tool/
+       Title: 57 chars | Desc: 155 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+
+  <title>Pragmata Collectibles Checklist Tool - Track 184 Items</title>
+  <meta name="description"
+    content="Interactive Pragmata collectibles checklist tool for tracking 184 sector items, 15 Mini Cabins, sector totals, cleanup notes, and exportable progress." />
+  <link rel="canonical" href="https://pragmataguide.com/collectibles/checklist-tool/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Collectibles Checklist Tool - Track 184 Items" />
+  <meta property="og:description"
+    content="A tool-first Pragmata checklist page with five-sector totals, Mini Cabin tracking, exportable progress, and late-game cleanup notes." />
+  <meta property="og:url" content="https://pragmataguide.com/collectibles/checklist-tool/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/checklist-tool/pragmata-checklist-tool-hero-01.avif" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Collectibles Checklist Tool - Track 184 Items" />
+  <meta name="twitter:description"
+    content="Track Pragmata sector collectibles, Mini Cabins, cleanup notes, and exportable progress from one dedicated checklist tool." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/collectibles/checklist-tool/pragmata-checklist-tool-hero-01.avif" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'greenline': '#4ade80',
+            'violetline': '#a78bfa',
+            'redline': '#f87171'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .card-hover { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+    .card-hover:hover { transform: translateY(-4px); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan, .btn-amber, .btn-muted {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      min-height: 42px;
+      padding: 0.6rem 1rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-cyan { background: transparent; color: #00e5ff; border-color: rgba(0, 229, 255, 0.5); }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .btn-amber { background: transparent; color: #ffb703; border-color: rgba(255, 183, 3, 0.45); }
+    .btn-amber:hover { background: rgba(255, 183, 3, 0.12); color: #fff; }
+    .btn-muted { background: transparent; color: #cbd5e1; border-color: rgba(136, 146, 164, 0.4); }
+    .btn-muted:hover { background: rgba(136, 146, 164, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box {
+      padding: 0.95rem 1rem;
+      border-radius: 2px;
+    }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.05); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.05); }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid rgba(0, 229, 255, 0.22);
+      color: #00e5ff;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .hero-image, .section-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-image { min-height: 280px; }
+    .section-image { min-height: 240px; }
+    .breadcrumb a { color: #8892a4; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #00e5ff; }
+    .tool-input, .tool-select, .tool-textarea {
+      width: 100%;
+      background: rgba(12, 15, 26, 0.95);
+      border: 1px solid #1e2d45;
+      color: #e2e8f0;
+      border-radius: 2px;
+      padding: 0.8rem 0.9rem;
+      font-size: 0.95rem;
+    }
+    .tool-textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+    .progress-rail {
+      width: 100%;
+      height: 10px;
+      background: rgba(136, 146, 164, 0.16);
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #00e5ff, #00b4d8);
+      transition: width 0.22s ease;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid rgba(0, 229, 255, 0.18);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: #cbd5e1;
+    }
+    .list-shell { display: grid; gap: 1rem; }
+    .check-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.8rem;
+      align-items: center;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid rgba(30, 45, 69, 0.9);
+      background: rgba(6, 8, 16, 0.86);
+    }
+    .check-item.is-complete { opacity: 0.72; }
+    .check-item.is-complete .item-label { text-decoration: line-through; }
+    .check-toggle {
+      width: 18px;
+      height: 18px;
+      accent-color: #00e5ff;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .mini-label { color: #ffb703; }
+    .counter-pill {
+      min-width: 86px;
+      text-align: center;
+      padding: 0.18rem 0.55rem;
+      border: 1px solid rgba(0, 229, 255, 0.18);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: #00e5ff;
+    }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 768px) {
+      .check-item { grid-template-columns: auto 1fr; }
+      .counter-pill { grid-column: 2 / 3; justify-self: start; }
+    }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .hero-image, .section-image { min-height: 220px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pragmataguide.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Collectibles", "item": "https://pragmataguide.com/collectibles/" },
+        { "@type": "ListItem", "position": 3, "name": "Checklist Tool", "item": "https://pragmataguide.com/collectibles/checklist-tool/" }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many sector collectibles does this checklist track?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool tracks 184 main sector collectibles across Solar Power Plant, Mass Production Array, Terra Dome, Lunum Mines, and Central Port. Mini Cabins are tracked in a separate optional panel because they are usually treated as their own collectible set."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this page include Mini Cabins?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The main progress bar covers the 184 standard sector collectibles, while a second tracker covers all 15 Mini Cabins separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this checklist after finishing the story?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Current walkthrough coverage treats Unknown Signal Mode as the safest post-story cleanup window for missed collectibles, which makes this tool useful both during the first run and after the ending."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are the entries numbered instead of listing every item name here?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This page is designed as a stable progress tool first. It uses verified sector totals and separate route links rather than forcing uncertain item labels into one checklist view."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-space/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3" aria-label="PragmataGuide home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" stroke="#00e5ff" stroke-width="1.5" />
+            <circle cx="14" cy="14" r="3" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm sm:text-base font-bold tracking-[0.22em] uppercase text-white">Pragmata<span class="text-cyan">Guide</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/collectibles/" class="nav-link text-cyan">Collectibles</a>
+          <a href="/walkthrough/checklists/" class="nav-link">Walkthrough</a>
+          <a href="/missable-guide/" class="nav-link">Missables</a>
+          <a href="/upgrades/" class="nav-link">Upgrades</a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull" aria-label="Mobile navigation">
+      <a href="/collectibles/" class="nav-link py-1 text-cyan">Collectibles</a>
+      <a href="/walkthrough/checklists/" class="nav-link py-1">Walkthrough</a>
+      <a href="/missable-guide/" class="nav-link py-1">Missables</a>
+      <a href="/upgrades/" class="nav-link py-1">Upgrades</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="mx-2 text-muted">/</span><a href="/collectibles/">Collectibles</a><span class="mx-2 text-muted">/</span><span class="text-white">Checklist Tool</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.42fr_0.82fr] gap-6 items-stretch">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-3 mb-5">
+              <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Checklist Tool</span>
+              <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">184 Sector Items</span>
+              <span class="text-xs font-mono text-greenline border border-greenline/30 px-2 py-0.5">Verified Apr 2026+</span>
+            </div>
+            <p class="section-eyebrow">Collectibles / Progress Tracker</p>
+            <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">
+              Pragmata <span class="text-cyan">Collectibles Checklist Tool</span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-300 max-w-3xl mb-6">
+              This page is built as a dedicated progress console for players who want a cleaner way to track
+              <strong class="text-white">all 184 standard sector collectibles</strong>, keep
+              <strong class="text-white">Mini Cabins separate</strong>, and export their run state without digging through longer route articles every time.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <a href="#tool" class="btn-cyan">Open Tool</a>
+              <a href="#sector-totals" class="btn-cyan">Sector Totals</a>
+              <a href="#faq" class="btn-cyan">FAQ</a>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-4 gap-4">
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Main Sectors</p>
+              <p class="text-sm text-white font-semibold">5 confirmed</p>
+            </div>
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-2">Tracked Here</p>
+              <p class="text-sm text-white font-semibold">184 sector items</p>
+            </div>
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-amber tracking-widest uppercase mb-2">Separate Set</p>
+              <p class="text-sm text-white font-semibold">15 Mini Cabins</p>
+            </div>
+            <div class="bg-panel/80 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-greenline tracking-widest uppercase mb-2">Best Cleanup</p>
+              <p class="text-sm text-white font-semibold">Unknown Signal</p>
+            </div>
+          </div>
+        </article>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box fade-up delay-1">
+          <img src="/images/pragmata/collectibles/checklist-tool/pragmata-checklist-tool-hero-01.avif"
+            alt="Pragmata Shelter screenshot used as the hero image for the collectibles checklist tool"
+            class="hero-image" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="tool" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-24">
+      <div class="mb-8">
+        <p class="section-eyebrow">// Interactive Tool</p>
+        <h2 class="section-title text-xl sm:text-3xl mb-4">Track, Filter, Export, <span>Repeat</span></h2>
+        <p class="text-slate-300 max-w-4xl">
+          The main tracker uses verified sector totals rather than forcing uncertain item-name mapping into one crowded page.
+          Treat each numbered slot as a stable progress marker, then use the linked sector guides when you need exact route detail.
+        </p>
+      </div>
+
+      <div class="grid xl:grid-cols-[0.92fr_1.08fr] gap-6 items-start">
+        <aside class="bg-hull/95 border border-border clip-card p-5 sm:p-6 glow-box xl:sticky xl:top-24">
+          <div class="mb-5">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <span class="font-display text-sm uppercase tracking-wide text-white">Main Progress</span>
+              <span id="main-progress-text" class="text-sm font-mono text-cyan">0 / 184</span>
+            </div>
+            <div class="progress-rail">
+              <div id="main-progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <span class="font-display text-sm uppercase tracking-wide text-white">Mini Cabins</span>
+              <span id="mini-progress-text" class="text-sm font-mono text-amber">0 / 15</span>
+            </div>
+            <div class="progress-rail">
+              <div id="mini-progress-fill" class="progress-fill" style="background: linear-gradient(90deg, #ffb703, #f59e0b);"></div>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 xl:grid-cols-1 gap-4 mb-5">
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-1">Search</p>
+              <input id="search-input" class="tool-input" type="search" placeholder="Solar, Terra, Mini..." />
+            </div>
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-1">Sector Filter</p>
+              <select id="sector-filter" class="tool-select">
+                <option value="all">All sectors</option>
+                <option value="Solar Power Plant">Solar Power Plant</option>
+                <option value="Mass Production Array">Mass Production Array</option>
+                <option value="Terra Dome">Terra Dome</option>
+                <option value="Lunum Mines">Lunum Mines</option>
+                <option value="Central Port">Central Port</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 xl:grid-cols-1 gap-4 mb-5">
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-3">List Mode</p>
+              <div class="flex flex-wrap gap-3">
+                <label class="chip"><input id="toggle-main" type="checkbox" checked class="check-toggle" /> Main 184</label>
+                <label class="chip"><input id="toggle-mini" type="checkbox" checked class="check-toggle" /> Mini Cabins</label>
+                <label class="chip"><input id="hide-complete" type="checkbox" class="check-toggle" /> Hide Complete</label>
+              </div>
+            </div>
+            <div class="bg-panel/70 border border-border p-4 clip-card">
+              <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-3">Tool Actions</p>
+              <div class="grid sm:grid-cols-2 xl:grid-cols-1 gap-3">
+                <button id="export-json" class="btn-cyan">Export JSON</button>
+                <button id="export-csv" class="btn-cyan">Export CSV</button>
+                <button id="import-btn" class="btn-muted">Import JSON</button>
+                <button id="reset-btn" class="btn-amber">Reset Tool</button>
+              </div>
+              <input id="import-file" type="file" accept="application/json" class="hidden" />
+            </div>
+          </div>
+
+          <div class="bg-panel/70 border border-border p-4 clip-card">
+            <p class="text-xs font-mono text-cyan uppercase tracking-wide mb-2">Run Notes</p>
+            <textarea id="notes-input" class="tool-textarea"
+              placeholder="Write your cleanup notes here: blocked blue filament path, missed tram stop, unknown signal sweep reminders..."></textarea>
+          </div>
+        </aside>
+
+        <div class="space-y-6">
+          <div class="bg-hull/95 border border-border clip-card p-5 sm:p-6 glow-box">
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+              <span class="badge">Browser Save</span>
+              <span class="badge">Export Ready</span>
+              <span class="badge">Sector Totals Only</span>
+            </div>
+            <p class="text-slate-300">
+              Progress saves locally in your browser. The numbered slots are intentional: they stay stable even when public item-by-item naming differs across guides.
+            </p>
+          </div>
+
+          <div id="tool-list" class="list-shell" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sector-totals" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-24">
+      <div class="grid lg:grid-cols-[1.06fr_0.94fr] gap-6 items-center">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+          <p class="section-eyebrow">// Verified Layout</p>
+          <h2 class="section-title text-xl sm:text-3xl mb-5">Five-Sector <span>Checklist Totals</span></h2>
+          <p class="text-slate-300 mb-5">
+            The cleanest stable split for a full Pragmata collectible pass is still the five main sectors. Terra Dome is the biggest single block,
+            Solar Power Plant is the lightest, and Mini Cabins remain best treated as a separate trophy-style sweep.
+          </p>
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[620px] text-left border-collapse">
+              <thead>
+                <tr class="border-b border-border">
+                  <th class="py-3 pr-4 font-display text-xs tracking-wide uppercase text-cyan">Sector</th>
+                  <th class="py-3 pr-4 font-display text-xs tracking-wide uppercase text-cyan">Tracked Slots</th>
+                  <th class="py-3 pr-4 font-display text-xs tracking-wide uppercase text-cyan">Mini Cabins</th>
+                  <th class="py-3 font-display text-xs tracking-wide uppercase text-cyan">Route Note</th>
+                </tr>
+              </thead>
+              <tbody class="align-top">
+                <tr class="border-b border-border/70">
+                  <td class="py-3 pr-4 text-white">Solar Power Plant</td>
+                  <td class="py-3 pr-4">15</td>
+                  <td class="py-3 pr-4">3</td>
+                  <td class="py-3 text-slate-300">Best early route anchor. Several return checks open after Lim Eraser.</td>
+                </tr>
+                <tr class="border-b border-border/70">
+                  <td class="py-3 pr-4 text-white">Mass Production Array</td>
+                  <td class="py-3 pr-4">39</td>
+                  <td class="py-3 pr-4">3</td>
+                  <td class="py-3 text-slate-300">The first sector where cleanup timing matters in a serious way.</td>
+                </tr>
+                <tr class="border-b border-border/70">
+                  <td class="py-3 pr-4 text-white">Terra Dome</td>
+                  <td class="py-3 pr-4">47</td>
+                  <td class="py-3 pr-4">3</td>
+                  <td class="py-3 text-slate-300">Largest current sector total. Good place to slow down and audit the route.</td>
+                </tr>
+                <tr class="border-b border-border/70">
+                  <td class="py-3 pr-4 text-white">Lunum Mines</td>
+                  <td class="py-3 pr-4">45</td>
+                  <td class="py-3 pr-4">3</td>
+                  <td class="py-3 text-slate-300">Dense mid-late cleanup sector that benefits from strong notes.</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-4 text-white">Central Port</td>
+                  <td class="py-3 pr-4">38</td>
+                  <td class="py-3 pr-4">3</td>
+                  <td class="py-3 text-slate-300">Best final audit before or during Unknown Signal cleanup.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/collectibles/checklist-tool/pragmata-checklist-tool-upgrades-01.png"
+            alt="Pragmata upgrade screenshot used to illustrate why collectible tracking matters for long-term progression"
+            class="section-image" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+          <p class="section-eyebrow">// Why This Tool Exists</p>
+          <h2 class="section-title text-xl sm:text-3xl mb-5">Built For <span>Cleanup Discipline</span></h2>
+          <div class="space-y-4 text-slate-300">
+            <p>
+              A long collectibles guide is good when you need route explanation. It is less good when you just want to know what is left in Terra,
+              whether you already cleaned Central Port, or if your Mini Cabin sweep is lagging behind your main 184 progress.
+            </p>
+            <p>
+              That is why this page keeps the tracking surface narrow: verified sector totals, separate Mini Cabin coverage, exportable saves,
+              and one notes field for route friction that public checklists usually ignore.
+            </p>
+            <div class="ok-box">
+              <strong class="text-white">Good fit:</strong> players doing a full first run, post-Lim-Eraser return pass, or Unknown Signal cleanup.
+            </div>
+          </div>
+        </article>
+
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/collectibles/checklist-tool/pragmata-checklist-tool-shelter-01.webp"
+            alt="Pragmata Shelter simulation image used to support collectible planning and endgame cleanup notes"
+            class="section-image" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+          <p class="section-eyebrow">// Cleanup Timing</p>
+          <h2 class="section-title text-xl sm:text-3xl mb-5">Best Time To <span>Use It</span></h2>
+          <div class="space-y-4 text-slate-300">
+            <div class="tip-box">
+              <strong class="text-white">First pass:</strong> track obvious story-path pickups, but do not over-obsess in Sector 1.
+            </div>
+            <div class="tip-box">
+              <strong class="text-white">After Lim Eraser:</strong> this is the first smart moment to reconcile your notes against earlier sector gaps.
+            </div>
+            <div class="ok-box">
+              <strong class="text-white">Unknown Signal:</strong> current walkthrough coverage consistently treats this as the safest cleanup window for leftovers and late audits.
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box">
+          <p class="section-eyebrow">// Known Limits</p>
+          <h2 class="section-title text-xl sm:text-3xl mb-5">What This Page <span>Does Not Pretend</span> To Do</h2>
+          <div class="space-y-4 text-slate-300">
+            <p>
+              This is not a replacement for every per-item collectible route. Public guide coverage still varies in how it labels certain item positions,
+              especially when one page folds Red Zone rewards, side rewards, or return-only pickups into a different naming scheme.
+            </p>
+            <div class="warn-box">
+              <strong class="text-white">Practical choice:</strong> use this page to track totals cleanly, then jump to the relevant sector or collectible guide for exact spot-by-spot routing.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Related Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <a href="/collectibles/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">All Collectibles Hub</p>
+          <p class="text-xs text-muted">Use the parent hub if you want the wider collectible rules, type breakdowns, and the main cluster entry point.</p>
+        </a>
+        <a href="/walkthrough/checklists/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Walkthrough Checklists</p>
+          <p class="text-xs text-muted">Best next stop if you want the checklist tool folded into story order and sector route timing.</p>
+        </a>
+        <a href="/walkthrough/100-percent-route/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">100 Percent Route</p>
+          <p class="text-xs text-muted">Useful when you care less about raw tracking and more about the safest completionist order.</p>
+        </a>
+        <a href="/missable-guide/" class="bg-hull/95 border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Missable Guide</p>
+          <p class="text-xs text-muted">Good sanity-check page if you are using this tracker late and want to confirm cleanup safety.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-5xl mx-auto px-4 sm:px-6 py-14 scroll-mt-24">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Checklist Tool <span>FAQ</span></h2>
+      <div class="space-y-4">
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box" open>
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">How many collectibles does this tool track?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            The main checklist tracks 184 standard sector collectibles across the five main sectors. Mini Cabins are separated into their own 15-slot panel because current guide coverage treats them as a distinct collectible set.
+          </div>
+        </details>
+
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">Does this replace the longer collectibles guide?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            Not really. This page is the cleaner tracking surface, while the parent collectibles pages are better for exact routes, side-system explanation, and type-specific context.
+          </div>
+        </details>
+
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">Can I clean up missed collectibles after the story?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            Current walkthrough and completion coverage consistently points to Unknown Signal Mode as the safest cleanup window for missed sector items, which is why this page is still useful after the ending.
+          </div>
+        </details>
+
+        <details class="bg-hull/95 border border-border clip-card p-5 glow-box">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="font-display text-sm sm:text-base text-white uppercase tracking-wide">Why separate Mini Cabins from the main progress bar?</span>
+            <span class="text-cyan text-xl leading-none">+</span>
+          </summary>
+          <div class="mt-4 text-slate-300">
+            Because they behave differently in player routing. Current coverage treats the full set as 15 total, three per sector, and they are commonly discussed outside the normal sector-completion math.
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 border-t border-border/70 bg-space/90 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-sm tracking-[0.18em] uppercase text-white">Pragmata<span class="text-cyan">Guide</span></p>
+        <p class="text-sm text-muted">Tool-first collectible tracking and route support for Pragmata players.</p>
+      </div>
+      <nav class="flex flex-wrap gap-4 text-sm text-muted">
+        <a href="/about/" class="hover:text-cyan transition-colors">About</a>
+        <a href="/privacy/" class="hover:text-cyan transition-colors">Privacy</a>
+        <a href="/contact/" class="hover:text-cyan transition-colors">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const STORAGE_KEY = 'pragmataChecklistToolV1';
+    const sectorData = [
+      { sector: 'Solar Power Plant', type: 'main', count: 15, prefix: 'SPP' },
+      { sector: 'Mass Production Array', type: 'main', count: 39, prefix: 'MPA' },
+      { sector: 'Terra Dome', type: 'main', count: 47, prefix: 'TD' },
+      { sector: 'Lunum Mines', type: 'main', count: 45, prefix: 'LM' },
+      { sector: 'Central Port', type: 'main', count: 38, prefix: 'CP' }
+    ];
+    const miniCabins = [
+      { sector: 'Solar Power Plant', type: 'mini', count: 3, prefix: 'MC-SPP' },
+      { sector: 'Mass Production Array', type: 'mini', count: 3, prefix: 'MC-MPA' },
+      { sector: 'Terra Dome', type: 'mini', count: 3, prefix: 'MC-TD' },
+      { sector: 'Lunum Mines', type: 'mini', count: 3, prefix: 'MC-LM' },
+      { sector: 'Central Port', type: 'mini', count: 3, prefix: 'MC-CP' }
+    ];
+
+    const items = [];
+    sectorData.forEach(group => {
+      for (let i = 1; i <= group.count; i++) {
+        items.push({
+          id: `${group.prefix}-${String(i).padStart(2, '0')}`,
+          sector: group.sector,
+          groupLabel: `${group.sector} Main Checklist`,
+          label: `${group.sector} Item ${String(i).padStart(2, '0')}`,
+          type: 'main'
+        });
+      }
+    });
+    miniCabins.forEach(group => {
+      for (let i = 1; i <= group.count; i++) {
+        items.push({
+          id: `${group.prefix}-${String(i).padStart(2, '0')}`,
+          sector: group.sector,
+          groupLabel: `${group.sector} Mini Cabins`,
+          label: `${group.sector} Mini Cabin ${String(i).padStart(2, '0')}`,
+          type: 'mini'
+        });
+      }
+    });
+
+    const defaultState = { checked: {}, notes: '' };
+    let state = loadState();
+
+    const toolList = document.getElementById('tool-list');
+    const mainProgressText = document.getElementById('main-progress-text');
+    const miniProgressText = document.getElementById('mini-progress-text');
+    const mainProgressFill = document.getElementById('main-progress-fill');
+    const miniProgressFill = document.getElementById('mini-progress-fill');
+    const searchInput = document.getElementById('search-input');
+    const sectorFilter = document.getElementById('sector-filter');
+    const toggleMain = document.getElementById('toggle-main');
+    const toggleMini = document.getElementById('toggle-mini');
+    const hideComplete = document.getElementById('hide-complete');
+    const notesInput = document.getElementById('notes-input');
+    const exportJsonBtn = document.getElementById('export-json');
+    const exportCsvBtn = document.getElementById('export-csv');
+    const importBtn = document.getElementById('import-btn');
+    const importFile = document.getElementById('import-file');
+    const resetBtn = document.getElementById('reset-btn');
+
+    notesInput.value = state.notes || '';
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return { ...defaultState };
+        const parsed = JSON.parse(raw);
+        return {
+          checked: parsed.checked || {},
+          notes: parsed.notes || ''
+        };
+      } catch (error) {
+        return { ...defaultState };
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function getCheckedCount(type) {
+      return items.filter(item => item.type === type && state.checked[item.id]).length;
+    }
+
+    function updateProgress() {
+      const mainDone = getCheckedCount('main');
+      const miniDone = getCheckedCount('mini');
+      mainProgressText.textContent = `${mainDone} / 184`;
+      miniProgressText.textContent = `${miniDone} / 15`;
+      mainProgressFill.style.width = `${(mainDone / 184) * 100}%`;
+      miniProgressFill.style.width = `${(miniDone / 15) * 100}%`;
+    }
+
+    function groupVisibleItems() {
+      const searchValue = searchInput.value.trim().toLowerCase();
+      const sectorValue = sectorFilter.value;
+      return items.filter(item => {
+        if (!toggleMain.checked && item.type === 'main') return false;
+        if (!toggleMini.checked && item.type === 'mini') return false;
+        if (sectorValue !== 'all' && item.sector !== sectorValue) return false;
+        if (hideComplete.checked && state.checked[item.id]) return false;
+        if (!searchValue) return true;
+        return item.label.toLowerCase().includes(searchValue) || item.sector.toLowerCase().includes(searchValue);
+      }).reduce((groups, item) => {
+        if (!groups[item.groupLabel]) groups[item.groupLabel] = [];
+        groups[item.groupLabel].push(item);
+        return groups;
+      }, {});
+    }
+
+    function renderList() {
+      const grouped = groupVisibleItems();
+      const groupNames = Object.keys(grouped);
+
+      if (!groupNames.length) {
+        toolList.innerHTML = `
+          <div class="bg-hull/95 border border-border clip-card p-6 glow-box">
+            <p class="font-display text-sm uppercase tracking-wide text-white mb-2">No Matching Entries</p>
+            <p class="text-slate-300">Try clearing the search box, showing completed entries again, or re-enabling a hidden checklist group.</p>
+          </div>
+        `;
+        updateProgress();
+        return;
+      }
+
+      toolList.innerHTML = groupNames.map(groupName => {
+        const entries = grouped[groupName];
+        const done = entries.filter(entry => state.checked[entry.id]).length;
+        const isMiniGroup = entries[0].type === 'mini';
+        return `
+          <section class="bg-hull/95 border border-border clip-card p-5 sm:p-6 glow-box">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div>
+                <h3 class="font-display text-sm sm:text-base uppercase tracking-wide ${isMiniGroup ? 'mini-label' : 'text-white'}">${groupName}</h3>
+                <p class="text-xs text-muted">${entries[0].sector}</p>
+              </div>
+              <span class="counter-pill">${done} / ${entries.length}</span>
+            </div>
+            <div class="space-y-3">
+              ${entries.map(entry => `
+                <label class="check-item ${state.checked[entry.id] ? 'is-complete' : ''}">
+                  <input class="check-toggle" type="checkbox" data-id="${entry.id}" ${state.checked[entry.id] ? 'checked' : ''} />
+                  <span class="item-label ${entry.type === 'mini' ? 'mini-label' : 'text-slate-200'}">${entry.label}</span>
+                  <span class="counter-pill">${entry.type === 'mini' ? 'Mini Cabin' : 'Sector Item'}</span>
+                </label>
+              `).join('')}
+            </div>
+          </section>
+        `;
+      }).join('');
+
+      toolList.querySelectorAll('input[data-id]').forEach(input => {
+        input.addEventListener('change', event => {
+          const id = event.target.getAttribute('data-id');
+          state.checked[id] = event.target.checked;
+          saveState();
+          renderList();
+        });
+      });
+
+      updateProgress();
+    }
+
+    function downloadFile(filename, content, mimeType) {
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = filename;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function buildExportPayload() {
+      return {
+        exportedAt: new Date().toISOString(),
+        mainChecked: getCheckedCount('main'),
+        miniChecked: getCheckedCount('mini'),
+        checked: state.checked,
+        notes: state.notes || ''
+      };
+    }
+
+    searchInput.addEventListener('input', renderList);
+    sectorFilter.addEventListener('change', renderList);
+    toggleMain.addEventListener('change', renderList);
+    toggleMini.addEventListener('change', renderList);
+    hideComplete.addEventListener('change', renderList);
+    notesInput.addEventListener('input', event => {
+      state.notes = event.target.value;
+      saveState();
+    });
+
+    exportJsonBtn.addEventListener('click', () => {
+      downloadFile('pragmata-checklist-progress.json', JSON.stringify(buildExportPayload(), null, 2), 'application/json');
+    });
+
+    exportCsvBtn.addEventListener('click', () => {
+      const rows = [['id', 'sector', 'type', 'label', 'checked']];
+      items.forEach(item => {
+        rows.push([item.id, item.sector, item.type, item.label, state.checked[item.id] ? 'yes' : 'no']);
+      });
+      rows.push([]);
+      rows.push(['notes', '', '', `"${(state.notes || '').replace(/"/g, '""')}"`, '']);
+      const csv = rows.map(row => row.map(cell => `"${String(cell ?? '').replace(/"/g, '""')}"`).join(',')).join('\n');
+      downloadFile('pragmata-checklist-progress.csv', csv, 'text/csv;charset=utf-8;');
+    });
+
+    importBtn.addEventListener('click', () => importFile.click());
+    importFile.addEventListener('change', event => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = loadEvent => {
+        try {
+          const parsed = JSON.parse(loadEvent.target.result);
+          state = {
+            checked: parsed.checked || {},
+            notes: parsed.notes || ''
+          };
+          notesInput.value = state.notes;
+          saveState();
+          renderList();
+        } catch (error) {
+          alert('That file could not be imported. Please use a JSON export from this checklist tool.');
+        }
+      };
+      reader.readAsText(file);
+      importFile.value = '';
+    });
+
+    resetBtn.addEventListener('click', () => {
+      if (!confirm('Reset all checklist progress and notes for this page?')) return;
+      state = { checked: {}, notes: '' };
+      notesInput.value = '';
+      saveState();
+      renderList();
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const iconMenu = document.getElementById('icon-menu');
+    const iconClose = document.getElementById('icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+      mobileNav.classList.toggle('hidden');
+      iconMenu.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+
+    renderList();
+  </script>
+</body>
+
+</html>
