@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO - /story/lunafilament-explained/
+       Title: 55 chars | Desc: 154 chars
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTSCMBVPKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TTSCMBVPKQ');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+    crossorigin="anonymous"></script>
+
+  <title>Pragmata Lunafilament Explained - Lore, Uses & Barriers</title>
+  <meta name="description"
+    content="Verified Pragmata Lunafilament explained guide covering what it is, how Diana and Delphi connect to it, what blue and red barriers mean, and why it shapes progression." />
+  <link rel="canonical" href="https://pragmataguide.com/story/lunafilament-explained/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00e5ff" />
+  <meta name="theme-color" content="#060810" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Pragmata Lunafilament Explained - Lore, Uses & Barriers" />
+  <meta property="og:description"
+    content="A spoiler-aware Lunafilament guide covering the material itself, Diana's connection to it, upgrade use, and the barrier types that shape backtracking." />
+  <meta property="og:url" content="https://pragmataguide.com/story/lunafilament-explained/" />
+  <meta property="og:site_name" content="PragmataGuide" />
+  <meta property="og:image"
+    content="https://pragmataguide.com/images/pragmata/story/lunafilament-explained/pragmata-lunafilament-explained-hero-01.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pragmata Lunafilament Explained - Lore, Uses & Barriers" />
+  <meta name="twitter:description"
+    content="What Lunafilament is in Pragmata, why Delphi and Diana revolve around it, and how it controls both upgrades and route gating." />
+  <meta name="twitter:image"
+    content="https://pragmataguide.com/images/pragmata/story/lunafilament-explained/pragmata-lunafilament-explained-hero-01.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'space': '#060810',
+            'hull': '#0c0f1a',
+            'panel': '#111827',
+            'cyan': '#00e5ff',
+            'cyan2': '#00b4d8',
+            'amber': '#ffb703',
+            'muted': '#8892a4',
+            'border': '#1e2d45',
+            'redline': '#f87171',
+            'violetline': '#c084fc',
+            'greenline': '#4ade80'
+          },
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Rajdhani', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #060810; color: #c9d1e0; font-family: 'Rajdhani', sans-serif; font-size: 17px; line-height: 1.7; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.015) 2px, rgba(0, 229, 255, 0.015) 4px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .glow-cyan { text-shadow: 0 0 18px rgba(0, 229, 255, 0.55); }
+    .glow-box { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.2), 0 0 28px rgba(0, 229, 255, 0.07); }
+    .glow-box:hover { box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.14); }
+    .clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .nav-link { position: relative; color: #8892a4; transition: color 0.2s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background: #00e5ff;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #00e5ff; }
+    .nav-link:hover::after { width: 100%; }
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: #00e5ff;
+      border: 1px solid rgba(0, 229, 255, 0.5);
+      padding: 0.55rem 1.3rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cyan:hover { background: rgba(0, 229, 255, 0.12); color: #fff; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #e2e8f0; }
+    .section-title span { color: #00e5ff; }
+    .section-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #00e5ff; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tip-box, .warn-box, .ok-box { padding: 0.9rem 1rem; border-radius: 2px; }
+    .tip-box { border-left: 2px solid #00e5ff; background: rgba(0, 229, 255, 0.04); }
+    .warn-box { border-left: 2px solid #ffb703; background: rgba(255, 183, 3, 0.05); }
+    .ok-box { border-left: 2px solid #4ade80; background: rgba(74, 222, 128, 0.05); }
+    .danger-box { border-left: 2px solid #f87171; background: rgba(248, 113, 113, 0.05); padding: 0.9rem 1rem; border-radius: 2px; }
+    .breadcrumb a { color: #8892a4; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #00e5ff; }
+    .hero-image { width: 100%; height: 100%; min-height: 260px; object-fit: cover; display: block; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
+    @media (max-width: 640px) { body { font-size: 16px; } .hero-image { min-height: 220px; } }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pragmataguide.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Story", "item": "https://pragmataguide.com/story-explained/" },
+        { "@type": "ListItem", "position": 3, "name": "Lunafilament Explained", "item": "https://pragmataguide.com/story/lunafilament-explained/" }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Lunafilament in Pragmata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lunafilament is the moon-origin material at the center of Pragmata's setting. Official public descriptions frame it as a substance that can create almost anything when paired with the right data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Diana connected to Lunafilament?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Official character descriptions present Diana as a unique android, or Pragmata, created using Lunafilament. That makes the material both a lore concept and a direct part of her identity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Lunafilament only a story term?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Launch-week gameplay coverage also treats Lunafilament or blue Lim as a practical resource you spend at Unit Printers, so it matters for upgrades as well as lore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do the blue and red Lunafilament barriers mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The blue growths are early Lunafilament barriers that become clearable once you obtain the Lim Eraser. The red Dead Lunafilament blocks are a later gate tied to a separate endgame-clearing ability, which is why many collectibles are safer to finish during cleanup."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="grid-bg">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-space/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3" aria-label="PragmataGuide home">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" stroke="#00e5ff" stroke-width="1.5" />
+            <circle cx="14" cy="14" r="3" fill="#00e5ff" />
+          </svg>
+          <span class="font-display text-sm sm:text-base font-bold tracking-[0.22em] uppercase text-white">Pragmata<span class="text-cyan">Guide</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm font-body" aria-label="Primary navigation">
+          <a href="/story-explained/" class="nav-link text-cyan">Story</a>
+          <a href="/story/diana-explained/" class="nav-link">Diana</a>
+          <a href="/endings/" class="nav-link">Endings</a>
+          <a href="/post-game/" class="nav-link">Post-Game</a>
+        </nav>
+        <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-cyan" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
+          <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+          <svg id="icon-close" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden flex-col gap-3 px-4 pb-4 md:hidden border-t border-border bg-hull" aria-label="Mobile navigation">
+      <a href="/story-explained/" class="nav-link py-1 text-cyan">Story</a>
+      <a href="/story/diana-explained/" class="nav-link py-1">Diana</a>
+      <a href="/endings/" class="nav-link py-1">Endings</a>
+      <a href="/post-game/" class="nav-link py-1">Post-Game</a>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10">
+      <nav class="breadcrumb text-xs font-mono tracking-wide uppercase mb-5" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="mx-2 text-muted">/</span><a href="/story-explained/">Story</a><span class="mx-2 text-muted">/</span><span class="text-white">Lunafilament Explained</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-[1.45fr_0.78fr] gap-6 items-stretch">
+        <article class="bg-hull/95 border border-border clip-card p-6 sm:p-8 glow-box fade-up min-h-full flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-3 mb-5">
+              <span class="text-xs font-mono text-cyan border border-cyan/30 px-2 py-0.5">Lore + Systems</span>
+              <span class="text-xs font-mono text-violetline border border-violetline/30 px-2 py-0.5">Story Focus</span>
+              <span class="text-xs font-mono text-amber border border-amber/30 px-2 py-0.5">Verified Apr 28 2026</span>
+            </div>
+            <p class="section-eyebrow">Story / Lunafilament Explained</p>
+            <h1 class="font-display text-3xl sm:text-5xl font-black leading-tight text-white glow-cyan mb-5">Pragmata <span class="text-cyan">Lunafilament Explained</span></h1>
+            <p class="text-base sm:text-lg text-muted max-w-3xl mb-6">
+              Lunafilament is one of the few Pragmata terms that matters in <strong class="text-white">three different ways at once</strong>.
+              It is the moon-origin material behind the setting, the technology that ties <strong class="text-white">Diana</strong> to
+              <strong class="text-white">Delphi</strong> and the lunar research station, and the resource logic behind both
+              <strong class="text-white">upgrades</strong> and several of the game's most important path-blocking barriers.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-6">
+              <a href="#what-it-is" class="btn-cyan">What It Is</a>
+              <a href="#story-meaning" class="btn-cyan">Story Meaning</a>
+              <a href="#barriers" class="btn-cyan">Barrier Types</a>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="border border-border bg-panel/70 p-4">
+                <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Material</p>
+                <p class="text-sm text-muted">Official descriptions say it can create almost anything when fed the right data.</p>
+              </div>
+              <div class="border border-border bg-panel/70 p-4">
+                <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Identity</p>
+                <p class="text-sm text-muted">Diana is publicly described as a Pragmata created using Lunafilament.</p>
+              </div>
+              <div class="border border-border bg-panel/70 p-4">
+                <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Progression</p>
+                <p class="text-sm text-muted">Blue and red filament barriers decide when cleanup and backtracking become efficient.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <figure class="bg-hull/95 border border-border clip-card glow-box overflow-hidden fade-up delay-1">
+          <img src="/images/pragmata/story/lunafilament-explained/pragmata-lunafilament-explained-hero-01.jpg"
+            alt="Hugh and Diana in Pragmata used as the hero image for Lunafilament explained" class="hero-image" />
+          <figcaption class="px-4 py-3 text-xs text-muted border-t border-border">
+            Lunafilament sits at the center of Pragmata's worldbuilding, Diana's origin, and several key route gates.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="what-it-is" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Core Material</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">What Lunafilament <span>Actually Is</span></h2>
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-6 items-start">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="space-y-4 text-muted">
+            <p>
+              The highest-confidence definition comes from official store and platform descriptions:
+              <strong class="text-white">Lunafilament is the moon material that makes Pragmata's technology boom possible</strong>.
+              Public marketing repeatedly frames it as a substance that can create almost anything, as long as the
+              system has the correct data or blueprint to work from.
+            </p>
+            <p>
+              That single idea explains why the setting is not just a generic sci-fi moonbase. Lunafilament is the reason
+              the station exists, the reason advanced fabrication matters, and the reason so many systems in the game
+              feel like they sit halfway between industry, AI research, and survival horror.
+            </p>
+            <div class="tip-box">
+              <strong class="text-white">Safe reading:</strong><br />
+              When Pragmata uses Lunafilament in broad story language, it usually means the foundational material that makes the moon project worth building in the first place.
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">At A Glance</h3>
+          <div class="space-y-4 text-sm text-muted">
+            <div class="border border-border p-4">
+              <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Origin</p>
+              <p>Moon-derived research material.</p>
+            </div>
+            <div class="border border-border p-4">
+              <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Official Hook</p>
+              <p>Can create almost anything with the right data.</p>
+            </div>
+            <div class="border border-border p-4">
+              <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Practical Result</p>
+              <p>It drives fabrication, progression resources, and environment gating.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="story-meaning" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Story Meaning</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Why Lunafilament Matters To <span>Diana, Delphi, And The Station</span></h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/story/lunafilament-explained/pragmata-lunafilament-explained-diana-01.jpg"
+            alt="Diana-related image used to illustrate her connection to Lunafilament" class="hero-image" />
+          <figcaption class="px-4 py-3 text-xs text-muted border-t border-border">
+            Official character material directly ties Diana's existence to Lunafilament.
+          </figcaption>
+        </figure>
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="space-y-4 text-muted">
+            <p>
+              Diana is where Lunafilament stops being abstract. Official character descriptions present her as a
+              <strong class="text-white">unique android, or Pragmata, created using Lunafilament</strong>.
+              That means the term is not just part of the station's background research. It is also part of the
+              central relationship the entire story is built around.
+            </p>
+            <p>
+              On the wider setting side, current official and launch-week coverage places
+              <strong class="text-white">Delphi Corporation</strong> around the same lunar research project built on
+              Lunafilament's promise. In practical terms, that makes Lunafilament the cleanest bridge between the
+              corporate plot, the moonbase disaster, and Diana's identity.
+            </p>
+            <div class="ok-box">
+              <strong class="text-white">Best connective reading:</strong><br />
+              If you want one term that links the station, the corporation, and Diana without forcing spoiler-heavy theory, Lunafilament is that term.
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-5 mt-6">
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Delphi</p>
+          <p class="text-sm text-muted">The corporation most strongly associated with the Lunafilament push and the larger moon project.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">The Station</p>
+          <p class="text-sm text-muted">A lunar research site built around the promise and danger of Lunafilament-driven technology.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <p class="text-xs font-mono text-cyan uppercase tracking-[0.18em] mb-2">Diana</p>
+          <p class="text-sm text-muted">The most personal example of what Lunafilament means when the material becomes a person instead of a project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="systems" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// System Use</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Lunafilament As A <span>Gameplay Resource</span></h2>
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 items-start">
+        <figure class="bg-panel border border-border clip-card overflow-hidden glow-box">
+          <img src="/images/pragmata/story/lunafilament-explained/pragmata-lunafilament-explained-cradle-01.jpg"
+            alt="Moonbase image used to support Lunafilament's role in station progression and upgrades" class="hero-image" />
+          <figcaption class="px-4 py-3 text-xs text-muted border-t border-border">
+            Most route and upgrade guides treat blue Lunafilament or Lim as the common resource you spend at Unit Printers.
+          </figcaption>
+        </figure>
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <div class="space-y-4 text-muted">
+            <p>
+              Lunafilament also shows up on the mechanical side of the game. Multiple launch-week upgrade guides describe
+              <strong class="text-white">blue Lunafilament, often shortened to Lim, as the common printer resource</strong>
+              that fuels basic fabrication and early upgrade decisions at the Unit Printer.
+            </p>
+            <p>
+              That is why this term appears in both story discussions and route planning. When players talk about whether
+              to print a new weapon part now, save resources for a Shelter return, or postpone a low-value purchase, they
+              are still dealing with the same Lunafilament ecosystem that the lore pages talk about.
+            </p>
+            <p>
+              It is also worth keeping a clean distinction here: <a href="/collectibles/pure-lunum/" class="text-cyan hover:text-white transition-colors">Pure Lunum</a>
+              is usually discussed as a separate rare upgrade item, while core Lunafilament or Lim is the more common
+              fabricating resource that shows up during normal progression.
+            </p>
+            <div class="warn-box">
+              <strong class="text-white">Do not flatten everything into one currency bucket:</strong><br />
+              Public sources are strong on common Lunafilament being spendable. They are weaker on fully documenting every subtype relationship, so this page keeps the terminology separated where coverage is clearer.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="barriers" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Route Gating</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Blue vs Red <span>Lunafilament Barriers</span></h2>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">Blue Growths</h3>
+          <div class="space-y-4 text-muted">
+            <p>
+              The early barriers are the blue Lunafilament growths that many guides describe as
+              <strong class="text-white">Filament Mass</strong> or misprinted Lim.
+              These become manageable once Hugh picks up the <strong class="text-white">Lim Eraser</strong>, which is why
+              so many collectible routes treat Sector 2 as the first real turning point for cleanup freedom.
+            </p>
+            <div class="tip-box">
+              <strong class="text-white">What this means in practice:</strong><br />
+              If an early detour is blocked by blue growth, note it and come back after the Lim Eraser instead of brute-forcing a full first-pass sweep.
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-4">Red Or Dead Lunafilament</h3>
+          <div class="space-y-4 text-muted">
+            <p>
+              The later barrier type is the red growth often labeled <strong class="text-white">Dead Lunafilament</strong>.
+              Launch guides consistently agree that it needs a <strong class="text-white">later dedicated clearing ability</strong>,
+              which is why late-game and post-story cleanup routes keep warning players not to panic over every blocked
+              side room during the first run.
+            </p>
+            <div class="danger-box">
+              <strong class="text-white">Naming caveat:</strong><br />
+              Public guides are not fully consistent on the English label for the late red-filament-clearing ability. The reliable part is the gate itself, not the exact community naming.
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid lg:grid-cols-4 gap-5 mt-6">
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Early</h3>
+          <p class="text-xs text-muted">Blue growth blocks a path.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Mid</h3>
+          <p class="text-xs text-muted">Lim Eraser opens many earlier detours and pickups.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Late</h3>
+          <p class="text-xs text-muted">Red Dead Lunafilament still blocks full cleanup.</p>
+        </div>
+        <div class="bg-panel border border-border clip-card p-5 glow-box">
+          <h3 class="font-display text-sm text-white uppercase tracking-wide mb-2">Endgame</h3>
+          <p class="text-xs text-muted">A later protocol makes final collectible and route sweeps safer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-it-matters" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// Why It Matters</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Why Lunafilament Is One Of The <span>Best Bridge Terms</span></h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">For Lore Readers</h3>
+          <p class="text-muted">
+            Lunafilament is the cleanest shortcut for understanding why the moonbase exists, why Delphi matters, and why
+            Diana feels larger than a normal helper character. If you want a story-first follow-up, pair this page with
+            <a href="/story/idus-delphi-explained/" class="text-cyan hover:text-white transition-colors">IDUS &amp; Delphi Explained</a>
+            and <a href="/story/diana-explained/" class="text-cyan hover:text-white transition-colors">Diana Explained</a>.
+          </p>
+        </article>
+        <article class="bg-panel border border-border clip-card p-6 glow-box">
+          <h3 class="font-display text-lg text-white uppercase tracking-wide mb-3">For Completion Players</h3>
+          <p class="text-muted">
+            Lunafilament also tells you when not to over-clear. Once you understand the blue-growth and red-growth gates,
+            it becomes much easier to plan around <a href="/collectibles/ability-locked-items/" class="text-cyan hover:text-white transition-colors">ability-locked items</a>,
+            hold off on dead-end detours, and save your real cleanup pass for a later, safer route.
+          </p>
+        </article>
+      </div>
+
+      <div class="ok-box max-w-4xl mt-6">
+        <strong class="text-white">Short version:</strong><br />
+        Lunafilament is not just a term to memorize. It is one of the main words that explains why Pragmata's lore, upgrades, and route planning keep overlapping.
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+      <p class="section-eyebrow">// Related Guides</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-6">Continue With <span>Related Pages</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
+        <a href="/story/idus-delphi-explained/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">IDUS & Delphi</p>
+          <p class="text-xs text-muted">Best next stop if you want the corporate and station side of Lunafilament.</p>
+        </a>
+        <a href="/story/diana-explained/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Diana Explained</p>
+          <p class="text-xs text-muted">Use this when Lunafilament starts feeling more like a character question than a setting question.</p>
+        </a>
+        <a href="/upgrades/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Upgrades</p>
+          <p class="text-xs text-muted">Helpful if you want the spending side of Lim and Unit Printer priorities.</p>
+        </a>
+        <a href="/collectibles/pure-lunum/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Pure Lunum</p>
+          <p class="text-xs text-muted">The separate rare-material page for players mapping higher-tier upgrade cleanup.</p>
+        </a>
+        <a href="/collectibles/ability-locked-items/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">Ability-Locked Items</p>
+          <p class="text-xs text-muted">Best route companion if you care about blue and red barrier cleanup timing.</p>
+        </a>
+        <a href="/walkthrough/100-percent-route/" class="bg-panel border border-border clip-card p-5 glow-box card-hover">
+          <p class="font-display text-sm text-white uppercase tracking-wide mb-2">100% Route</p>
+          <p class="text-xs text-muted">Use this once the barrier logic turns into a full completion order problem.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 py-14 scroll-mt-20">
+      <p class="section-eyebrow">// FAQ</p>
+      <h2 class="section-title text-xl sm:text-2xl mb-8">Lunafilament Explained <span>FAQ</span></h2>
+      <div class="max-w-3xl space-y-3">
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            What is Lunafilament in Pragmata?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Lunafilament is the moon-origin material at the center of Pragmata's setting. Official public descriptions frame it as a substance that can create almost anything when paired with the right data.</p>
+          </div>
+        </details>
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            How is Diana connected to Lunafilament?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>Official character descriptions present Diana as a unique android, or Pragmata, created using Lunafilament. That makes the material both a lore concept and a direct part of her identity.</p>
+          </div>
+        </details>
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            Is Lunafilament only a story term?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>No. Launch-week gameplay coverage also treats Lunafilament or blue Lim as a practical resource you spend at Unit Printers, so it matters for upgrades as well as lore.</p>
+          </div>
+        </details>
+        <details class="bg-panel border border-border group">
+          <summary class="flex items-center justify-between gap-4 px-5 py-4 text-white font-body font-semibold hover:text-cyan transition-colors">
+            What do the blue and red Lunafilament barriers mean?
+            <span class="text-cyan font-mono text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-5 pb-5 text-muted text-sm font-body">
+            <p>The blue growths are early Lunafilament barriers that become clearable once you obtain the Lim Eraser. The red Dead Lunafilament blocks are a later gate tied to a separate endgame-clearing ability, which is why many collectibles are safer to finish during cleanup.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-hull mt-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-3" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,1 26,7.5 26,20.5 14,27 2,20.5 2,7.5" fill="none" stroke="#00e5ff" stroke-width="1.5" />
+              <circle cx="14" cy="14" r="2.5" fill="#00e5ff" />
+            </svg>
+            <span class="font-display text-xs font-bold tracking-widest text-white uppercase">Pragmata<span class="text-cyan">Guide</span></span>
+          </div>
+          <p class="text-muted text-sm font-body max-w-xs">
+            Independent guide site for Pragmata (2026) by Capcom. Not affiliated with or endorsed by Capcom Co., Ltd.
+          </p>
+        </div>
+        <nav aria-label="Guide pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Guides</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/story-explained/" class="hover:text-cyan transition-colors">Story Explained</a></li>
+            <li><a href="/story/diana-explained/" class="hover:text-cyan transition-colors">Diana Explained</a></li>
+            <li><a href="/endings/" class="hover:text-cyan transition-colors">Endings</a></li>
+            <li><a href="/post-game/" class="hover:text-cyan transition-colors">Post-Game</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Site pages footer links">
+          <p class="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Site</p>
+          <ul class="space-y-2 text-sm font-body text-muted">
+            <li><a href="/" class="hover:text-cyan transition-colors">Home</a></li>
+            <li><a href="/privacy/" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="/disclosure/" class="hover:text-cyan transition-colors">Ad Disclosure</a></li>
+            <li><a href="/sitemap.xml" class="hover:text-cyan transition-colors">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconM = document.getElementById('icon-menu');
+    const iconC = document.getElementById('icon-close');
+    toggle.addEventListener('click', () => {
+      const isOpen = !nav.classList.contains('hidden');
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+      iconM.classList.toggle('hidden', !isOpen);
+      iconC.classList.toggle('hidden', isOpen);
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
+</body>
+
+</html>
