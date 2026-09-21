@@ -8,3 +8,7 @@ _sources_pragmata_steam.html
 _training_shelter.html
 _training_sim.html
 pragmataguide.com.docx
+
+# Local working documents; not synced through Git
+/*.md
+/.artifacts/

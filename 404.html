@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | PragmataGuide</title>
+  <meta name="description" content="The requested PragmataGuide page could not be found." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#060810" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #e5e7eb;
+      background: radial-gradient(circle at 50% 20%, #13223d 0, #0b1020 38%, #060810 100%);
+      line-height: 1.65;
+    }
+    main { width: min(680px, calc(100% - 32px)); padding: 48px 0; }
+    .code { margin: 0; color: #67e8f9; font: 700 0.8rem/1.2 monospace; letter-spacing: 0.18em; }
+    h1 { margin: 12px 0 16px; color: #fff; font-size: clamp(2rem, 8vw, 4rem); line-height: 1.05; }
+    .panel { padding: clamp(24px, 6vw, 40px); background: #111827; border: 1px solid #22314d; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    a { color: #67e8f9; }
+    .button { display: inline-block; padding: 10px 16px; border: 1px solid #67e8f9; text-decoration: none; }
+    .links { margin-top: 26px; color: #9ca3af; font-size: 0.9rem; }
+    .links a { margin-right: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel" aria-labelledby="not-found-title">
+      <p class="code">ERROR // 404</p>
+      <h1 id="not-found-title">Signal lost.</h1>
+      <p>The page you requested does not exist or has moved. Return to the guide hub, or use one of the main routes below.</p>
+      <div class="actions">
+        <a class="button" href="/">Return home</a>
+        <a class="button" href="/walkthrough/">Open walkthrough</a>
+      </div>
+      <nav class="links" aria-label="Helpful links">
+        <a href="/beginners-guide/">Beginner guide</a>
+        <a href="/bosses/">Bosses</a>
+        <a href="/collectibles/">Collectibles</a>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>
