@@ -1,65 +1,66 @@
 (function () {
   'use strict';
 
-  var CONTAINER_ID = 'container-f1af66866cc5383aaa85c11c3fb2bc5b';
+  var containerId = 'container-f1af66866cc5383aaa85c11c3fb2bc5b';
+  var container = document.getElementById(containerId);
+  if (!container) return;
 
-  function hasRenderedAd(container) {
-    if (container.querySelector('iframe[src], img[src], video, object, embed')) {
-      return true;
+  var slot = container.closest('[data-native-ad]');
+  if (!slot) return;
+
+  var revealTimer;
+  var visible = false;
+
+  function hasAdContent() {
+    if (container.querySelector('iframe, object, embed, video')) return true;
+
+    var images = container.querySelectorAll('img');
+    for (var i = 0; i < images.length; i += 1) {
+      if (images[i].getAttribute('src')) return true;
     }
 
-    return Array.prototype.some.call(container.querySelectorAll('a[href]'), function (link) {
-      return Boolean(link.textContent.trim() || link.querySelector('img, picture, svg'));
-    });
-  }
-
-  function watchNativeAd(adRegion) {
-    if (adRegion.dataset.adWatcherReady === 'true') {
-      return;
+    var links = container.querySelectorAll('a');
+    for (var j = 0; j < links.length; j += 1) {
+      if (links[j].getAttribute('href')) return true;
     }
 
-    var container = adRegion.querySelector('#' + CONTAINER_ID);
-    var providerScript = adRegion.querySelector('script[src*="bauval.org/21/f1af66866cc5383aaa85c11c3fb2bc5b"]');
+    return container.textContent.trim().length > 0;
+  }
 
-    if (!container || !providerScript) {
-      return;
+  function updateVisibility() {
+    var ready = hasAdContent();
+    if (ready === visible) return;
+    visible = ready;
+
+    if (ready) {
+      slot.hidden = false;
+      slot.setAttribute('data-ad-state', 'ready');
+    } else {
+      slot.hidden = true;
+      slot.removeAttribute('data-ad-state');
     }
-
-    adRegion.dataset.adWatcherReady = 'true';
-
-    function revealWhenFilled() {
-      if (!hasRenderedAd(container)) {
-        return;
-      }
-
-      adRegion.dataset.adState = 'filled';
-      adRegion.removeAttribute('aria-hidden');
-    }
-
-    var observer = new MutationObserver(revealWhenFilled);
-    observer.observe(container, {
-      attributes: true,
-      childList: true,
-      characterData: true,
-      subtree: true
-    });
-
-    container.addEventListener('load', revealWhenFilled, true);
-    providerScript.addEventListener('load', revealWhenFilled);
-    providerScript.addEventListener('error', function () {
-      adRegion.dataset.adState = 'blocked';
-    });
-
-    revealWhenFilled();
   }
 
-  function initializeNativeAds() {
-    Array.prototype.forEach.call(document.querySelectorAll('[data-native-ad]'), watchNativeAd);
+  function scheduleCheck() {
+    window.clearTimeout(revealTimer);
+    revealTimer = window.setTimeout(updateVisibility, 250);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeNativeAds, { once: true });
-  } else {
-    initializeNativeAds();
+  slot.hidden = true;
+  new MutationObserver(scheduleCheck).observe(container, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    characterData: true
+  });
+
+  var providerScript = slot.querySelector('script[src*="bauval.org/21/f1af66866cc5383aaa85c11c3fb2bc5b"]');
+  if (providerScript) {
+    providerScript.addEventListener('load', scheduleCheck);
+    providerScript.addEventListener('error', updateVisibility);
   }
+
+  scheduleCheck();
+  window.setTimeout(updateVisibility, 3000);
+  window.setTimeout(updateVisibility, 10000);
 })();
