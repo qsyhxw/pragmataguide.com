@@ -1,13 +1,17 @@
-.pg-native-ad[hidden] {
-  display: none !important;
+.pg-native-ad {
+  position: absolute;
+  left: -200vw;
+  width: calc(100vw - 2rem);
+  max-width: 80rem;
+  box-sizing: border-box;
 }
 
-.pg-native-ad {
+.pg-native-ad[data-ad-state="filled"] {
+  position: static;
+  left: auto;
   width: 100%;
-  max-width: 80rem;
   margin: 0 auto;
   padding: 1rem 1rem 0;
-  box-sizing: border-box;
 }
 
 .pg-native-ad__frame {
@@ -41,7 +45,7 @@
 }
 
 @media (min-width: 640px) {
-  .pg-native-ad {
+  .pg-native-ad[data-ad-state="filled"] {
     padding: 1.25rem 1.5rem 0;
   }
 

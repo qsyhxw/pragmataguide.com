@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  var AD_SCRIPT_SRC = 'https://bauval.org/21/f1af66866cc5383aaa85c11c3fb2bc5b';
   var CONTAINER_ID = 'container-f1af66866cc5383aaa85c11c3fb2bc5b';
 
   function hasRenderedAd(container) {
@@ -14,54 +13,27 @@
     });
   }
 
-  function initializeNativeAd() {
-    if (window.__pragmataNativeAdLoaded || document.getElementById(CONTAINER_ID)) {
+  function watchNativeAd(adRegion) {
+    if (adRegion.dataset.adWatcherReady === 'true') {
       return;
     }
 
-    var main = document.querySelector('main');
-    var heading = main && main.querySelector('h1');
-    var intro = heading && heading.closest('section');
+    var container = adRegion.querySelector('#' + CONTAINER_ID);
+    var providerScript = adRegion.querySelector('script[src*="bauval.org/21/f1af66866cc5383aaa85c11c3fb2bc5b"]');
 
-    if (!main || !intro) {
+    if (!container || !providerScript) {
       return;
     }
 
-    window.__pragmataNativeAdLoaded = true;
-
-    var adRegion = document.createElement('section');
-    adRegion.className = 'pg-native-ad';
-    adRegion.hidden = true;
-    adRegion.dataset.adState = 'loading';
-    adRegion.setAttribute('aria-label', 'Advertisement');
-    var frame = document.createElement('div');
-    frame.className = 'pg-native-ad__frame';
-
-    var label = document.createElement('p');
-    label.className = 'pg-native-ad__label';
-    label.textContent = 'Advertisement';
-
-    var providerScript = document.createElement('script');
-    providerScript.async = true;
-    providerScript.dataset.cfasync = 'false';
-    providerScript.src = AD_SCRIPT_SRC;
-
-    var container = document.createElement('div');
-    container.id = CONTAINER_ID;
-
-    frame.appendChild(label);
-    frame.appendChild(container);
-    adRegion.appendChild(frame);
-
-    intro.insertAdjacentElement('afterend', adRegion);
+    adRegion.dataset.adWatcherReady = 'true';
 
     function revealWhenFilled() {
       if (!hasRenderedAd(container)) {
         return;
       }
 
-      adRegion.hidden = false;
       adRegion.dataset.adState = 'filled';
+      adRegion.removeAttribute('aria-hidden');
     }
 
     var observer = new MutationObserver(revealWhenFilled);
@@ -78,13 +50,16 @@
       adRegion.dataset.adState = 'blocked';
     });
 
-    frame.insertBefore(providerScript, container);
     revealWhenFilled();
   }
 
+  function initializeNativeAds() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-native-ad]'), watchNativeAd);
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeNativeAd, { once: true });
+    document.addEventListener('DOMContentLoaded', initializeNativeAds, { once: true });
   } else {
-    initializeNativeAd();
+    initializeNativeAds();
   }
 })();
