@@ -1,0 +1,51 @@
+.pg-native-ad[hidden] {
+  display: none !important;
+}
+
+.pg-native-ad {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
+  box-sizing: border-box;
+}
+
+.pg-native-ad__frame {
+  width: 100%;
+  padding: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  background: rgba(8, 15, 29, 0.72);
+  box-sizing: border-box;
+}
+
+.pg-native-ad__label {
+  margin: 0 0 0.5rem;
+  color: #94a3b8;
+  font: 500 0.6875rem/1.2 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#container-f1af66866cc5383aaa85c11c3fb2bc5b {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#container-f1af66866cc5383aaa85c11c3fb2bc5b iframe,
+#container-f1af66866cc5383aaa85c11c3fb2bc5b img,
+#container-f1af66866cc5383aaa85c11c3fb2bc5b video {
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .pg-native-ad {
+    padding: 1.25rem 1.5rem 0;
+  }
+
+  .pg-native-ad__frame {
+    padding: 1rem;
+  }
+}
